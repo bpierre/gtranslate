@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <!-- list all the packages being supplied by this jar -->
+  <RDF:Seq RDF:about="urn:mozilla:package:root">
+    <RDF:li RDF:resource="urn:mozilla:package:googtrans"/>
+  </RDF:Seq>
+
+  <!-- package information -->
+  <RDF:Description RDF:about="urn:mozilla:package:googtrans"
+	chrome:displayName="gTranslate 0.3"
+	chrome:author="Pau Tomas"
+	chrome:authorURL="mailto:pautomas@gmail.com"
+	chrome:name="googtrans"
+	chrome:extension="true"
+	chrome:description="Translates the selected text via Google Translate."
+	chrome:settingsURL="chrome://googtrans/content/googTransSettings.xul">
+  </RDF:Description>
+
+   <!-- overlay information -->
+	<RDF:Seq RDF:about="urn:mozilla:overlays">
+		<RDF:li RDF:resource="chrome://browser/content/browser.xul"/>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://browser/content/browser.xul">
+		<RDF:li>chrome://googtrans/content/googTransOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+</RDF:RDF>

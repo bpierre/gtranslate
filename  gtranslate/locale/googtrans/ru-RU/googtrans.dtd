@@ -1,0 +1,32 @@
+<!ENTITY options.title "Настройки - Отметить и перевести">
+<!ENTITY translatefrom.menu.label "Перевести текст с ...">
+<!ENTITY autodetection.caption.label "Автоопределение">
+<!ENTITY detectlocale.checkbox.label "Язык по-умолчанию в браузере">
+<!ENTITY detectpagelang.checkbox.label "Язык страницы">
+<!ENTITY english.to.german.label "английского на немецкий">
+<!ENTITY english.to.spanish.label "английского на испанский">
+<!ENTITY english.to.french.label "английского на французский">
+<!ENTITY english.to.italian.label "английского на итальянский">
+<!ENTITY english.to.portuguese.label "английского на португальский">
+<!ENTITY english.to.japanese.label "английского на японский БЕТА">
+<!ENTITY english.to.korean.label "английского на корейский БЕТА">
+<!ENTITY english.to.chinese.label "английского на китайский (упрощенный) БЕТА">
+<!ENTITY english.to.arabic.label "английского на арабский БЕТА">
+<!ENTITY german.to.english.label "немецкого на английский">
+<!ENTITY german.to.french.label "немецкого на французский">
+<!ENTITY spanish.to.english.label "испанского на английский">
+<!ENTITY french.to.english.label "французского на английский">
+<!ENTITY french.to.german.label "французского на немецкий">
+<!ENTITY italian.to.english.label "итальянского на английский">
+<!ENTITY portuguese.to.english.label "португальского на английский">
+<!ENTITY japanese.to.english.label "японского на английский БЕТА">
+<!ENTITY korean.to.english.label "корейского на английский БЕТА">
+<!ENTITY chinese.to.english.label "китайского (упрощенного) на английский БЕТА">
+<!ENTITY arabic.to.english.label "арабского на английский БЕТА">
+<!ENTITY translate.menuitem.label "Перевести">
+<!ENTITY replace.with.translation.label "Заменить переводом">
+<!ENTITY about.title "Справка по gTranslate">
+<!ENTITY created.by "Автор:">
+<!ENTITY localized.by "Перевод на английский:">
+<!ENTITY localized.author "Pau TomÃ s">
+<!ENTITY close.button "Закрыть">

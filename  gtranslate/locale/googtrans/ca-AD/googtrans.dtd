@@ -1,0 +1,32 @@
+<!ENTITY options.title "gTranslate - Propietats">
+<!ENTITY translatefrom.menu.label "Traduir text del...">
+<!ENTITY autodetection.caption.label "Detectar automàticament">
+<!ENTITY detectlocale.checkbox.label "Idioma del navegador">
+<!ENTITY detectpagelang.checkbox.label "Idioma de la pàgina">
+<!ENTITY english.to.german.label "Anglés al Alemany">
+<!ENTITY english.to.spanish.label "Anglés al Espanyol">
+<!ENTITY english.to.french.label "Anglés al Francés">
+<!ENTITY english.to.italian.label "Anglés al Italià">
+<!ENTITY english.to.portuguese.label "Anglés al Portugués">
+<!ENTITY english.to.japanese.label "Anglés al Japonés BETA">
+<!ENTITY english.to.korean.label "Anglés al Koreà BETA">
+<!ENTITY english.to.chinese.label "Anglés al Chinés (Simplificat) BETA">
+<!ENTITY english.to.arabic.label "Anglés al Àrab BETA">
+<!ENTITY german.to.english.label "Alemany al Anglés">
+<!ENTITY german.to.french.label "Alemany al Francés">
+<!ENTITY spanish.to.english.label "Espanyol al Anglés">
+<!ENTITY french.to.english.label "Francés al Anglés">
+<!ENTITY french.to.german.label "Francés al Alemany">
+<!ENTITY italian.to.english.label "Italià al Anglés">
+<!ENTITY portuguese.to.english.label "Portugués al Anglés">
+<!ENTITY japanese.to.english.label "Japonés al Anglés BETA">
+<!ENTITY korean.to.english.label "Koreà al Anglés BETA">
+<!ENTITY chinese.to.english.label "Chinés (Simplificat) al Anglés BETA">
+<!ENTITY arabic.to.english.label "Àrab al Anglés BETA">
+<!ENTITY translate.menuitem.label "Traduir">
+<!ENTITY replace.with.translation.label "Reemplaçar amb la traducció">
+<!ENTITY about.title "gTranslate - Sobre">
+<!ENTITY created.by "Creat Per:">
+<!ENTITY localized.by "Localització en Català per:">
+<!ENTITY localized.author "Pau Tomà s">
+<!ENTITY close.button "Tancar">

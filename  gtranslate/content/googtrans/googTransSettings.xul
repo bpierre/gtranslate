@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+
+<dialog id="imagetoolbarSettings"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept, cancel"
+        onload="sizeToContent(); googTransSettings.onLoad()"
+        ondialogaccept="return googTransSettings.onAccept();"
+        ondialogcancel="return googTransSettings.onCancel();"
+        title="&options.title;">
+
+        <script type="application/x-javascript" src="chrome://googtrans/content/googTransSettings.js"/>
+
+          <groupbox>
+          
+            <caption label="&translatefrom.menu.label;"/>
+
+            <menulist id="langpair">
+            
+              <menupopup>
+                
+                <menuitem label="&english.to.german.label;" value="en|de" />    
+                <menuitem label="&english.to.spanish.label;" value="en|es" />
+                <menuitem label="&english.to.french.label;" value="en|fr" />
+                <menuitem label="&english.to.italian.label;" value="en|it" />
+                <menuitem label="&english.to.portuguese.label;" value="en|pt" />
+								<menuitem label="&english.to.arabic.label;" value="en|ar"/>
+                <menuitem label="&english.to.japanese.label;" value="en|ja" />
+                <menuitem label="&english.to.korean.label;" value="en|ko" />
+                <menuitem label="&english.to.chinese.label;" value="en|zh-CN" />
+                <menuitem label="&german.to.english.label;" value="de|en" />
+                <menuitem label="&german.to.french.label;" value="de|fr" />
+                <menuitem label="&spanish.to.english.label;" value="es|en" />
+                <menuitem label="&french.to.english.label;" value="fr|en" />
+                <menuitem label="&french.to.german.label;" value="fr|de" />
+                <menuitem label="&italian.to.english.label;" value="it|en" />
+                <menuitem label="&portuguese.to.english.label;" value="pt|en" />
+								<menuitem label="&arabic.to.english.label;" value="ar|en"/>
+                <menuitem label="&japanese.to.english.label;" value="ja|en" />
+                <menuitem label="&korean.to.english.label;" value="ko|en" />
+                <menuitem label="&chinese.to.english.label;" value="zh-CN|en" />
+              </menupopup>
+
+            </menulist>     
+
+            
+          </groupbox>
+          <groupbox>
+
+	      <caption label="&autodetection.caption.label;"/>
+
+		<checkbox label="&detectpagelang.checkbox.label;" id="detectpagelang" checked="true"/>            
+	        <checkbox label="&detectlocale.checkbox.label;" id="detectlocale" checked="true"/>
+
+          </groupbox>
+         
+</dialog>

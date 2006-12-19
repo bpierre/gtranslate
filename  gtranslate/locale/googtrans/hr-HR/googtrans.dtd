@@ -1,0 +1,32 @@
+<!ENTITY options.title "Odabir i prijevod - Opcije">
+<!ENTITY translatefrom.menu.label "Prevedi tekst iz...">
+<!ENTITY autodetection.caption.label "Automatsko otkrivanje">
+<!ENTITY detectlocale.checkbox.label "Zadani jezik preglednika">
+<!ENTITY detectpagelang.checkbox.label "Jezik stranice">
+<!ENTITY english.to.german.label "Engleskog u njemački">
+<!ENTITY english.to.spanish.label "Engleskog u španjolski">
+<!ENTITY english.to.french.label "Engleskog u francuski">
+<!ENTITY english.to.italian.label "Engleskog u talijanski">
+<!ENTITY english.to.portuguese.label "Engleskog u portugalski">
+<!ENTITY english.to.japanese.label "Engleskog u japanski BETA">
+<!ENTITY english.to.korean.label "Engleskog u korejski BETA">
+<!ENTITY english.to.chinese.label "Engleskog u kineski (pojednostavljeni) BETA">
+<!ENTITY english.to.arabic.label "Engleskog u arapski BETA">
+<!ENTITY german.to.english.label "Njemačkog u engleski">
+<!ENTITY german.to.french.label "Njemačkog u francuski">
+<!ENTITY spanish.to.english.label "Španjolskog u engleski">
+<!ENTITY french.to.english.label "Francuskog u engleski">
+<!ENTITY french.to.german.label "Francuskog u njemački">
+<!ENTITY italian.to.english.label "Talijanskog u engleski">
+<!ENTITY portuguese.to.english.label "Portugalskog u engleski">
+<!ENTITY japanese.to.english.label "Japanskog u engleski BETA">
+<!ENTITY korean.to.english.label "Korejskog u engleski BETA">
+<!ENTITY chinese.to.english.label "Kineskog (pojednostavljeni) u engleski BETA">
+<!ENTITY arabic.to.english.label "Arapskog u engleski BETA">
+<!ENTITY translate.menuitem.label "Prevedi">
+<!ENTITY replace.with.translation.label "Zamijeni s prijevodom">
+<!ENTITY about.title "gTranslate - O">
+<!ENTITY created.by "Kreirao:">
+<!ENTITY localized.by "Hrvatski prijevod:">
+<!ENTITY localized.author "Krcko">
+<!ENTITY close.button "Zatvori">

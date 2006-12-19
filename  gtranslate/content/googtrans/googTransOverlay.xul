@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+
+<overlay id="googTransOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<stringbundleset id="stringbundleset">
+   <stringbundle id="googtrans-strings" src="chrome://googtrans/locale/googtrans.properties"/>
+</stringbundleset>
+
+// This imports our javascript.
+<script type="application/x-javascript" src="chrome://googtrans/content/googTransOverlay.js"></script>
+
+
+// This is for the right click menu.
+<popup id="contentAreaContextMenu">
+  <menuseparator id="translateSeparator"/>
+  <menu id="translate_main" label="&translate.menuitem.label;" onload="googTransInit();">
+    <menupopup id="Translate_popup" onpopupshowing="connect();">
+      <menuitem id="translate_menu" label="" disabled="" />
+      <menuitem id="translate_change" label="&replace.with.translation.label;" oncommand="replaceText()" />
+      <menuseparator id=""/>
+      <menu id="langpair_menu" label="">
+        <menupopup id="langpair_radiomenu">
+                <menuitem disabled="true" label="&translatefrom.menu.label;" />    
+		    <menuseparator />
+                <menuitem label="&english.to.german.label;" id="en|de" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />    
+                <menuitem label="&english.to.spanish.label;" id="en|es" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.french.label;" id="en|fr" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.italian.label;" id="en|it" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.portuguese.label;" id="en|pt" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+								<menuitem label="&english.to.arabic.label;" id="en|ar" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.japanese.label;" id="en|ja" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.korean.label;" id="en|ko" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&english.to.chinese.label;" id="en|zh-CN" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&german.to.english.label;" id="de|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&german.to.french.label;" id="de|fr" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&spanish.to.english.label;" id="es|en"	type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&french.to.english.label;" id="fr|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&french.to.german.label;" id="fr|de" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&italian.to.english.label;" id="it|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&portuguese.to.english.label;" id="pt|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+								<menuitem label="&arabic.to.english.label;" id="ar|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&japanese.to.english.label;" id="ja|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&korean.to.english.label;" id="ko|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+                <menuitem label="&chinese.to.english.label;" id="zh-CN|en" type="radio" name="lp"  oncommand="changeLangPair(this.id)" />
+				</menupopup>
+      </menu>
+    </menupopup>
+  </menu>
+</popup>
+
+
+</overlay>
+
+
