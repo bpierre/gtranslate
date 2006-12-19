@@ -13,7 +13,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="{aff87fa2-a58e-4edd-b852-0a20203c1e17}"
                    em:name="gTranslate"
-                   em:version="0.3.1"
+                   em:version="0.3.2"
                    em:creator="Pau Tomas"
                    em:description="localized description, see locale/.properties"
                    em:homepageURL="http://www.menjatallarins.com/extensions/#gtranslate"
