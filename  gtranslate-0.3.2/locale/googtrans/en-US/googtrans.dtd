@@ -1,0 +1,32 @@
+<!ENTITY options.title "Select and Translate - Options">
+<!ENTITY translatefrom.menu.label "Translate text from...">
+<!ENTITY autodetection.caption.label "Auto-detect">
+<!ENTITY detectlocale.checkbox.label "Browser default language">
+<!ENTITY detectpagelang.checkbox.label "Page language">
+<!ENTITY english.to.german.label "English to German">
+<!ENTITY english.to.spanish.label "English to Spanish">
+<!ENTITY english.to.french.label "English to French">
+<!ENTITY english.to.italian.label "English to Italian">
+<!ENTITY english.to.portuguese.label "English to Portuguese">
+<!ENTITY english.to.japanese.label "English to Japanese BETA">
+<!ENTITY english.to.korean.label "English to Korean BETA">
+<!ENTITY english.to.chinese.label "English to Chinese (Simplified) BETA">
+<!ENTITY english.to.arabic.label "English to Arabic BETA">
+<!ENTITY german.to.english.label "German to English">
+<!ENTITY german.to.french.label "German to French">
+<!ENTITY spanish.to.english.label "Spanish to English">
+<!ENTITY french.to.english.label "French to English">
+<!ENTITY french.to.german.label "French to German">
+<!ENTITY italian.to.english.label "Italian to English">
+<!ENTITY portuguese.to.english.label "Portuguese to English">
+<!ENTITY japanese.to.english.label "Japanese to English BETA">
+<!ENTITY korean.to.english.label "Korean to English BETA">
+<!ENTITY chinese.to.english.label "Chinese (Simplified) to English BETA">
+<!ENTITY arabic.to.english.label "Arabic to English BETA">
+<!ENTITY translate.menuitem.label "Translate">
+<!ENTITY replace.with.translation.label "Replace with translation">
+<!ENTITY about.title "gTranslate - About">
+<!ENTITY created.by "Created By:">
+<!ENTITY localized.by "English localization by:">
+<!ENTITY localized.author "Pau Tomàs">
+<!ENTITY close.button "Close">

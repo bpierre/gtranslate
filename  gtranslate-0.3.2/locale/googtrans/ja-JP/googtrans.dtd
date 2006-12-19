@@ -1,0 +1,32 @@
+<!ENTITY options.title "翻訳を選択 - オプション">
+<!ENTITY translatefrom.menu.label "テキストを翻訳してください">
+<!ENTITY autodetection.caption.label "自動検出">
+<!ENTITY detectlocale.checkbox.label "ブラウザのデフォルト言語">
+<!ENTITY detectpagelang.checkbox.label "ページ言語">
+<!ENTITY english.to.german.label "英語からドイツ語">
+<!ENTITY english.to.spanish.label "英語からスペイン語">
+<!ENTITY english.to.french.label "英語からフランス語">
+<!ENTITY english.to.italian.label "英語からイタリア語">
+<!ENTITY english.to.portuguese.label "英語からポルトガル語">
+<!ENTITY english.to.japanese.label "英語から日本語　BETA">
+<!ENTITY english.to.korean.label "英語から韓国語　BETA">
+<!ENTITY english.to.chinese.label "英語から中国語 (簡体) BETA">
+<!ENTITY english.to.arabic.label "英語からアラビア語 BETA">
+<!ENTITY german.to.english.label "ドイツ語から英語">
+<!ENTITY german.to.french.label "ドイツ語からフランス語">
+<!ENTITY spanish.to.english.label "スペイン語から英語">
+<!ENTITY french.to.english.label "フランス語から英語">
+<!ENTITY french.to.german.label "フランス語からドイツ語">
+<!ENTITY italian.to.english.label "イタリア語から英語">
+<!ENTITY portuguese.to.english.label "ポルトガル語から英語">
+<!ENTITY japanese.to.english.label "日本語から英語　BETA">
+<!ENTITY korean.to.english.label "韓国語から英語　BETA">
+<!ENTITY chinese.to.english.label "中国語 (簡体) から英語　BETA">
+<!ENTITY arabic.to.english.label "アラビア語から英語 BETA">
+<!ENTITY translate.menuitem.label "翻訳">
+<!ENTITY replace.with.translation.label "翻訳版に取り替えます">
+<!ENTITY about.title "gTranslate について">
+<!ENTITY created.by "作成者">
+<!ENTITY localized.by "日本語版翻訳者">
+<!ENTITY localized.author "Haebaru">
+<!ENTITY close.button "閉じる">

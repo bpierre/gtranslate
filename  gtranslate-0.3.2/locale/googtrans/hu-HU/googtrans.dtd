@@ -1,0 +1,32 @@
+<!ENTITY options.title "Beállítások">
+<!ENTITY translatefrom.menu.label "Fordítás ...">
+<!ENTITY autodetection.caption.label "Automatikus felismerés">
+<!ENTITY detectlocale.checkbox.label "A böngésződ alapnyelve">
+<!ENTITY detectpagelang.checkbox.label "Az oldal nyelve">
+<!ENTITY english.to.german.label "Angolról németre">
+<!ENTITY english.to.spanish.label "Angolról spanyolra">
+<!ENTITY english.to.french.label "Angolról franciára">
+<!ENTITY english.to.italian.label "Angolról olaszra">
+<!ENTITY english.to.portuguese.label "Angolról portugálra">
+<!ENTITY english.to.japanese.label "Angolról japánra BÉTA">
+<!ENTITY english.to.korean.label "Angolról koreaira BÉTA">
+<!ENTITY english.to.chinese.label "Angolról egyszerűsített kínaira BÉTA">
+<!ENTITY english.to.arabic.label "Angolról arabra BÉTA">
+<!ENTITY german.to.english.label "Németről angolra">
+<!ENTITY german.to.french.label "Németről franciára">
+<!ENTITY spanish.to.english.label "Spanyolról angolra">
+<!ENTITY french.to.english.label "Franciáról angolra">
+<!ENTITY french.to.german.label "Franciáról németre">
+<!ENTITY italian.to.english.label "Olaszról angolra">
+<!ENTITY portuguese.to.english.label "Portugálról angolra">
+<!ENTITY japanese.to.english.label "Japánról angolra BÉTA">
+<!ENTITY korean.to.english.label "Koreairól angolra BÉTA">
+<!ENTITY chinese.to.english.label "Egyszerűsített kinairól angolra BÉTA">
+<!ENTITY arabic.to.english.label "Arabról angolra BÉTA">
+<!ENTITY translate.menuitem.label "Fordítandó:">
+<!ENTITY replace.with.translation.label "Behelyetesítés a fordítással">
+<!ENTITY about.title "a  gTranslate névjegye">
+<!ENTITY created.by "Készítette:">
+<!ENTITY localized.by "Angol fordítás:">
+<!ENTITY localized.author "Paul Tomas">
+<!ENTITY close.button "Bezárás">

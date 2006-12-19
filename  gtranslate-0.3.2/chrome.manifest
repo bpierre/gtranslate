@@ -1,0 +1,18 @@
+overlay	chrome://browser/content/browser.xul	chrome://googtrans/content/googTransOverlay.xul
+content	googtrans	jar:chrome/googtrans.jar!/content/googtrans/
+skin	googtrans	classic	jar:chrome/googtrans.jar!/skin/classic/googtrans/
+
+locale	googtrans	ca-AD jar:chrome/googtrans.jar!/locale/googtrans/ca-AD/
+locale	googtrans	de-DE	jar:chrome/googtrans.jar!/locale/googtrans/de-DE/
+locale	googtrans	en-US	jar:chrome/googtrans.jar!/locale/googtrans/en-US/
+locale	googtrans	es-ES	jar:chrome/googtrans.jar!/locale/googtrans/es-ES/
+locale	googtrans	fr-FR	jar:chrome/googtrans.jar!/locale/googtrans/fr-FR/
+locale	googtrans	hr-HR	jar:chrome/googtrans.jar!/locale/googtrans/hr-HR/
+locale	googtrans	hu-HU	jar:chrome/googtrans.jar!/locale/googtrans/hu-HU/
+locale	googtrans	it-IT	jar:chrome/googtrans.jar!/locale/googtrans/it-IT/
+locale	googtrans	ja-JP	jar:chrome/googtrans.jar!/locale/googtrans/ja-JP/
+locale	googtrans ko-KR	jar:chrome/googtrans.jar!/locale/googtrans/ko-KR/
+locale	googtrans nl-NL	jar:chrome/googtrans.jar!/locale/googtrans/nl-NL/
+locale	googtrans pt-BR	jar:chrome/googtrans.jar!/locale/googtrans/pt-BR/
+locale	googtrans ru-RU	jar:chrome/googtrans.jar!/locale/googtrans/ru-RU/
+locale	googtrans zh-CN	jar:chrome/googtrans.jar!/locale/googtrans/zh-CN/

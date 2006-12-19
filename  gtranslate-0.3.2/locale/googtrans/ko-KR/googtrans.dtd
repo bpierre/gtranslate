@@ -1,0 +1,32 @@
+<!ENTITY options.title "gTranslate 설정">
+<!ENTITY translatefrom.menu.label "원본을...">
+<!ENTITY autodetection.caption.label "자동 감지">
+<!ENTITY detectlocale.checkbox.label "브라우저 기본 언어">
+<!ENTITY detectpagelang.checkbox.label "페이지 언어">
+<!ENTITY english.to.german.label "영어에서 독일어로 번역">
+<!ENTITY english.to.spanish.label "영어에서 스페인어로 번역">
+<!ENTITY english.to.french.label "영어에서 프랑스어로 번역">
+<!ENTITY english.to.italian.label "영어에서 이탈리아어로 번역">
+<!ENTITY english.to.portuguese.label "영어에서 포르투갈어로 번역">
+<!ENTITY english.to.japanese.label "영어에서 일본어로(베타) 번역">
+<!ENTITY english.to.korean.label "영어에서 한국어로(베타) 번역">
+<!ENTITY english.to.chinese.label "영어에서 중국어-간체로(베타) 번역">
+<!ENTITY english.to.arabic.label "English to Arabic BETA">
+<!ENTITY german.to.english.label "독일어에서 영어로 번역">
+<!ENTITY german.to.french.label "독일어에서 프랑스어로 번역">
+<!ENTITY spanish.to.english.label "스페인어에서 영어로 번역">
+<!ENTITY french.to.english.label "프랑스어에서 영어로 번역">
+<!ENTITY french.to.german.label "프랑스어에서 독일어로 번역">
+<!ENTITY italian.to.english.label "이탈리아어에서 영어로 번역">
+<!ENTITY portuguese.to.english.label "포르투갈어에서 영어로 번역">
+<!ENTITY japanese.to.english.label "일본어에서 영어로(베타) 번역">
+<!ENTITY korean.to.english.label "한국어에서 영어로(베타) 번역">
+<!ENTITY chinese.to.english.label "중국어-간체에서 영어로(베타) 번역">
+<!ENTITY arabic.to.english.label "Arabic to English BETA">
+<!ENTITY translate.menuitem.label "번역">
+<!ENTITY replace.with.translation.label "Replace with translation">
+<!ENTITY about.title "gTranslate는...">
+<!ENTITY created.by "제작자:">
+<!ENTITY localized.by "영문화:">
+<!ENTITY localized.author "Pau Tomàs">
+<!ENTITY close.button "닫기">

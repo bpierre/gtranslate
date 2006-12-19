@@ -1,0 +1,32 @@
+<!ENTITY options.title "gTranslate - 选项">
+<!ENTITY translatefrom.menu.label "翻译文字从...">
+<!ENTITY autodetection.caption.label "自动检测">
+<!ENTITY detectlocale.checkbox.label "浏览器默认语言">
+<!ENTITY detectpagelang.checkbox.label "页面语言">
+<!ENTITY english.to.german.label "英文 到 德文">
+<!ENTITY english.to.spanish.label "英文 到 西班牙文">
+<!ENTITY english.to.french.label "英文 到 法文">
+<!ENTITY english.to.italian.label "英文 到 意大利文">
+<!ENTITY english.to.portuguese.label "英文 到 葡萄牙文">
+<!ENTITY english.to.japanese.label "英文 到 日文 BETA">
+<!ENTITY english.to.korean.label "英文 到 韩文 BETA">
+<!ENTITY english.to.chinese.label "英文 到 中文 (简体) BETA">
+<!ENTITY english.to.arabic.label "英文 到 阿拉伯文 BETA">
+<!ENTITY german.to.english.label "德文 到 英文">
+<!ENTITY german.to.french.label "德文 到 法文">
+<!ENTITY spanish.to.english.label "西班牙文 到 英文">
+<!ENTITY french.to.english.label "法文 到 英文">
+<!ENTITY french.to.german.label "法文 到 德文">
+<!ENTITY italian.to.english.label "意大利文 到 英文">
+<!ENTITY portuguese.to.english.label "葡萄牙文 到 英文">
+<!ENTITY japanese.to.english.label "日文 到 英文 BETA">
+<!ENTITY korean.to.english.label "韩文 到 英文 BETA">
+<!ENTITY chinese.to.english.label "中文 (简体) 到 英文 BETA">
+<!ENTITY arabic.to.english.label "阿拉伯文 到 英文 BETA">
+<!ENTITY translate.menuitem.label "翻译">
+<!ENTITY replace.with.translation.label "用译文代替">
+<!ENTITY about.title "gTranslate - 关于">
+<!ENTITY created.by "创建者">
+<!ENTITY localized.by "简体中文本地化">
+<!ENTITY localized.author "Rick Cart">
+<!ENTITY close.button "关闭">
