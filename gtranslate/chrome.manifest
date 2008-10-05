@@ -1,0 +1,18 @@
+overlay chrome://browser/content/browser.xul    chrome://googtrans/content/googTransOverlay.xul
+content	googtrans	chrome/content/googtrans/
+skin	googtrans	classic	chrome/skin/classic/googtrans/
+
+locale	googtrans	ca-AD chrome/locale/googtrans/ca-AD/
+locale	googtrans	en-US	chrome/locale/googtrans/en-US/
+locale	googtrans	es-ES	chrome/locale/googtrans/es-ES/
+#locale	googtrans	de-DE	chrome/locale/googtrans/de-DE/
+#locale	googtrans	fr-FR	chrome/locale/googtrans/fr-FR/
+#locale	googtrans	hr-HR	chrome/locale/googtrans/hr-HR/
+#locale	googtrans	hu-HU	chrome/locale/googtrans/hu-HU/
+#locale	googtrans	it-IT	chrome/locale/googtrans/it-IT/
+#locale	googtrans	ja-JP	chrome/locale/googtrans/ja-JP/
+#locale	googtrans ko-KR	chrome/locale/googtrans/ko-KR/
+#locale	googtrans nl-NL	chrome/locale/googtrans/nl-NL/
+#locale	googtrans pt-BR	chrome/locale/googtrans/pt-BR/
+#locale	googtrans ru-RU	chrome/locale/googtrans/ru-RU/
+#locale	googtrans zh-CN	chrome/locale/googtrans/zh-CN/

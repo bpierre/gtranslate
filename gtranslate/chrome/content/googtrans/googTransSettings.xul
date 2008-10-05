@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+
+<dialog id="imagetoolbarSettings"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        width="250"
+        height="250"
+        onload="googTransSettings.onLoad()"
+        ondialogaccept="return googTransSettings.onAccept();"
+        ondialogcancel="return googTransSettings.onCancel();"
+        title="&options.title;">
+
+    <stringbundleset id="stringbundleset">
+       <stringbundle id="googtrans-strings" src="chrome://googtrans/locale/googtrans.properties"/>
+    </stringbundleset>
+
+    <script type="application/x-javascript" src="chrome://googtrans/content/langConf.js"></script>
+    <script type="application/x-javascript" src="chrome://googtrans/content/googTransSettings.js"/>
+
+    <groupbox>
+        <caption label="&translatefrom.menu.label;"/>
+        <menulist id="langpair_from" oncommand="googTransSettings.loadLangList_to()">
+            <menupopup id="lp_menupopup_from">
+            </menupopup>
+        </menulist>
+        <label value="&translate.to.label;" control="langpair_to"/>
+        <menulist id="langpair_to">
+            <menupopup id="lp_menupopup_to">
+            </menupopup>
+        </menulist>
+    </groupbox>
+    
+    <groupbox>
+        <caption label="&autodetection.caption.label;"/>
+        
+        <checkbox label="&detectpagelang.checkbox.label;" id="detectpagelang" checked="true"/>            
+        <checkbox label="&detectlocale.checkbox.label;" id="detectlocale" checked="true"/>
+   
+    </groupbox>
+         
+</dialog>

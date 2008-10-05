@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+
+<overlay id="googTransOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <stringbundleset id="stringbundleset">
+       <stringbundle id="googtrans-strings" src="chrome://googtrans/locale/googtrans.properties"/>
+    </stringbundleset>
+    
+    // This imports our javascript.
+    <script type="application/x-javascript" src="chrome://googtrans/content/langConf.js"></script>
+    <script type="application/x-javascript" src="chrome://googtrans/content/googTransOverlay.js"></script>
+    
+    // This is for the right click menu.
+    <popup id="contentAreaContextMenu">
+      <menuseparator id="translateSeparator"/>
+      <menu id="translate_main" label="&translate.menuitem.label;" onload="googTransInit();">
+        <menupopup id="Translate_popup" onpopupshowing="connect();">
+          <menuitem id="translate_menu" label="" disabled="" />
+          <menuitem id="translate_change" label="&replace.with.translation.label;" oncommand="replaceText()" />
+          <menuseparator id=""/>
+          <menu id="langpair_menu" label="">
+            <menupopup id="langpair_radiomenu">
+                <menuitem disabled="true" label="&translatefrom.menu.label;" />    
+    	        <menuseparator />
+    		</menupopup>
+          </menu>
+        </menupopup>
+      </menu>
+    </popup>
+
+
+</overlay>
+
+
