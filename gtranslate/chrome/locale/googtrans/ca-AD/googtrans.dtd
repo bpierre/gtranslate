@@ -4,6 +4,7 @@
 <!ENTITY detectlocale.checkbox.label "Idioma del navegador">
 <!ENTITY detectpagelang.checkbox.label "Idioma de la pàgina">
 <!ENTITY translate.to.label "a">
+<!ENTITY open.dictionary "Open dictionary">
 <!ENTITY translate.menuitem.label "Traduir">
 <!ENTITY replace.with.translation.label "Reemplaçar amb la traducció">
 <!ENTITY about.title "gTranslate - Sobre">

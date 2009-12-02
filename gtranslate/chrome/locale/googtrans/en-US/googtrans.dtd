@@ -4,8 +4,7 @@
 <!ENTITY detectlocale.checkbox.label "Browser default language">
 <!ENTITY detectpagelang.checkbox.label "Page language">
 <!ENTITY translate.to.label "to">
-
-
+<!ENTITY open.dictionary "Open dictionary">
 <!ENTITY translate.menuitem.label "Translate">
 <!ENTITY replace.with.translation.label "Replace with translation">
 <!ENTITY about.title "gTranslate - About">

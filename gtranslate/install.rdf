@@ -1,26 +1,51 @@
 <?xml version="1.0"?>
-<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
-         xmlns:NC="http://home.netscape.com/NC-rdf#"
-         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="rdf:#$Ubs0H3"
-                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-                   em:minVersion="1.0"
-                   em:maxVersion="3.0.*" />
-  <RDF:Description RDF:about="urn:mozilla:extension:file:googtrans.jar"
-                   em:package="content/googtrans/"
-                   em:skin="skin/classic/googtrans/">
-  </RDF:Description>
-  <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="{aff87fa2-a58e-4edd-b852-0a20203c1e17}"
-                   em:name="gTranslate"
-                   em:version="0.5.1"
-                   em:creator="Pau Tomas"
-                   em:description="localized description, see locale/.properties"
-                   em:homepageURL="http://www.menjatallarins.com/extensions/#gtranslate"
-                   em:iconURL="chrome://googtrans/skin/googtrans.png"
-                   em:optionsURL="chrome://googtrans/content/googTransSettings.xul"
-                   em:aboutURL="chrome://googtrans/content/about.xul">
-    <em:targetApplication RDF:resource="rdf:#$Ubs0H3"/>
-    <em:file RDF:resource="urn:mozilla:extension:file:googtrans.jar"/>
-  </RDF:Description>
-</RDF:RDF>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+     
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>gtranslate@pierrebertet.net</em:id>
+        <em:version>0.6</em:version>
+        <em:name>gTranslate</em:name>
+        <em:creator>Pau Tomas</em:creator>
+        <em:contributor>Pierre Bertet</em:contributor>
+        
+        <em:targetApplication>
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>3.0</em:minVersion>
+                <em:maxVersion>3.5.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        
+        <em:description>Translates the selected text via Google Translate.</em:description>
+        <em:homepageURL>https://addons.mozilla.org/fr/firefox/addon/918</em:homepageURL>
+        <em:optionsURL>chrome://googtrans/content/googTransSettings.xul</em:optionsURL>
+        <em:aboutURL>chrome://googtrans/content/about.xul</em:aboutURL>
+        <em:iconURL>chrome://googtrans/skin/googtrans.png</em:iconURL>
+        
+        <em:localized>
+            <Description>
+                <em:locale>ca-AD</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Tradueix el text seleccionat mitjançant Google Translate.</em:description>
+            </Description>
+        </em:localized>
+        
+        <em:localized>
+            <Description>
+                <em:locale>es-ES</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Traduce el texto seleccionado mediante Google Translate.</em:description>
+            </Description>
+        </em:localized>
+        
+        <em:localized>
+            <Description>
+                <em:locale>fr-FR</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Traduit le texte sélectionné en utilisant le service Google Translate.</em:description>
+            </Description>
+        </em:localized>
+        
+    </Description>
+</RDF>

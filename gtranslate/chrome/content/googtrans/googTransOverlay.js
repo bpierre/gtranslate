@@ -1,266 +1,340 @@
-googTransPrefs = Components.classes["@mozilla.org/preferences-service;1"]
-                      .getService(Components.interfaces.nsIPrefService)
-                      .getBranch("googTrans.");
+// Get Mozilla preferences
+var mozPrefs = Components.classes["@mozilla.org/preferences-service;1"]
+               .getService(Components.interfaces.nsIPrefService);
 
-if (!googTransPrefs.prefHasUserValue("langpair")) googTransPrefs.setCharPref("langpair","auto|en");
-if (!googTransPrefs.prefHasUserValue("detectpagelang")) googTransPrefs.setBoolPref("detectpagelang",true);
-if (!googTransPrefs.prefHasUserValue("detectlocale")) googTransPrefs.setBoolPref("detectlocale",true);
+// Get addon preferences
+var gtransPrefs = mozPrefs.getBranch("googTrans.");
 
-generalPrefs = Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefBranch);
+// Get current locale
+var currentLocale = mozPrefs.getBranch("general.").getCharPref("useragent.locale");
 
-var currentLocale = generalPrefs.getCharPref("general.useragent.locale");
+// Set default preferences
+if (!gtransPrefs.prefHasUserValue("langpair")) gtransPrefs.setCharPref("langpair", "auto|" + currentLocale);
+if (!gtransPrefs.prefHasUserValue("detectpagelang")) gtransPrefs.setBoolPref("detectpagelang", true);
+if (!gtransPrefs.prefHasUserValue("detectlocale")) gtransPrefs.setBoolPref("detectlocale", true);
 
-window.addEventListener("load",googTransInit,false);
-
-var xrequest = new XMLHttpRequest();
+// Global vars
 var selection = '';
-var trans = '';
-var last_selection = '';
-var url = '';
-var page_lang = '';
+var lastSelection = '';
+var pageLang = '';
 
-function dumpDebug(str) {
-    var enableWindowDump = true;//GBB.gbbPrefs.getBoolPref("enableWindowDump");
-    if (enableWindowDump)
-        window.dump("[GTR] "+str+"\n");
-}
+var curFromLang = '';
+var curToLang = '';
+var curTranslation = '';
 
-function trim(str) {
-    var x = str;
-    x = x.replace(/^\s*(.*)/, "$1");
-    x = x.replace(/(.*?)\s*$/, "$1");
-    return x;
-}
+// XUL elements array
+var elements = {};
 
-function googTransInit() {
-    // here we localize description on startup :-)
-    var googtransLocalizationPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.{aff87fa2-a58e-4edd-b852-0a20203c1e17}.");
-    var str = Components.classes[ "@mozilla.org/supports-string;1" ].createInstance( Components.interfaces.nsISupportsString );
-    str.data = document.getElementById("googtrans-strings").getString("GoogTransDescription");
-    googtransLocalizationPrefs.setComplexValue( "description", Components.interfaces.nsISupportsString, str ); 
-    document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", ongoogTransPopup, false);
+// On window load
+window.addEventListener("load", function() {
+	
+	// Right click event
+    document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", onGtransPopup, false);
     
+	// XUL elements
+    elements["gtranslate_strings"] = document.getElementById("gtranslate_strings");
+    elements["gtranslate_separator"] = document.getElementById("gtranslate_separator");
+    elements["gtranslate_main"] = document.getElementById("gtranslate_main");
+    elements["gtranslate_result"] = document.getElementById("gtranslate_result");
+    elements["gtranslate_replace"] = document.getElementById("gtranslate_replace");
+    elements["gtranslate_langpair_separator"] = document.getElementById("gtranslate_langpair_separator");
+    elements["gtranslate_langpair_main"] = document.getElementById("gtranslate_langpair_main");
+    elements["gtranslate_langpair_popup"] = document.getElementById("gtranslate_langpair_popup");
+    elements["gtranslate_langpairs"] = {};
+    
+	// Load langpairs list
     loadLangList();
+    
+}, false);
+
+// On right click event
+function onGtransPopup(event) {
+    
+	if (event.target.id != 'contentAreaContextMenu') return;
+	
+    elements["gtranslate_replace"].setAttribute('hidden', true);
+	elements["gtranslate_result"].setAttribute('disabled', true);
+    
+    var popupnode = document.popupNode;
+    
+	// Localized string : "Translate..."
+    var translateWord = elements["gtranslate_strings"].getString("TranslateWord");
+    
+	// Detect lang
+	page_lang = detectLang(popupnode);
+	
+	// Get and trim current selection
+	selection = GT.fn.trim(getSelection(popupnode));
+    
+    // Show and update (eventually with a substr) gTranslate menu
+    if (selection != '') {
+    	showMenu();
+        elements["gtranslate_main"].setAttribute( 'label', translateWord + ' "' + ( (selection.length > 23)? selection.substr(0,19)+'…' : selection ) + '"' );
+    }
+    
+    // Hide gTranslate
+    else {
+    	hideMenu();
+    }
 }
 
-function loadLangList() {   
-    fLangs = langConf.availableLangs_from.split(",");
-    tLangs = langConf.availableLangs_to.split(",");
-       
-    for (f in fLangs) {
-        if (fLangs[f]=='|') {
-            m = document.createElement('menuseparator');        
-        }else{
-            m = document.createElement('menu');       
-            m.setAttribute("label", document.getElementById("googtrans-strings").getString(langConf.langDict[fLangs[f]]+".label"));
-            m.setAttribute("id", fLangs[f]);
+// Connect to Google Translate service
+function initTranslate() {
+    
+    var langpair = GT.fn.getLangPair();
+	
+	var fromLang = (langpair[0] == 'auto')? page_lang : langpair[0];
+	var toLang = langpair[1];
+	
+    var changelang = elements["gtranslate_strings"].getString("ChangeLanguages");
+    
+    checkMenuItem(langpair[0], langpair[1]);
+    
+	elements["gtranslate_langpair_main"].setAttribute('label', changelang + " ( " + langpair.join(' > ') + " )");
+    
+    if (selection != '') {
+        
+        if (selection != lastSelection) {
             
-            mp = document.createElement('menupopup');             
+            var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
+            var strConnect = elements["gtranslate_strings"].getString("Connecting");
+			
+            elements["gtranslate_result"].setAttribute('label', connectgoogle);
+			
+			GT.fn.translationRequest(
+				fromLang,
+				toLang,
+				selection,
+				function(data) { // on load
+					updateTranslation(data);
+				},
+				function() { // on error
+					var connecterror = elements["gtranslate_strings"].getString("ConnectionError");
+					elements["gtranslate_result"].setAttribute('label', connecterror);
+				}
+			);
+        }
+        
+		else {
+			updateTranslation(curTranslation);
+        }
+    }
+}
+
+// Update translation popup
+function updateTranslation(result) {
+    
+    lastSelection = selection;
+    
+    curTranslation = result;
+    
+    if ( curTranslation == "" || curTranslation == selection ) {
+        var noTrans = elements["gtranslate_strings"].getString("NoTranslation");
+        elements["gtranslate_result"].setAttribute('label', noTrans + ' "' + selection + '"');
+	}
+	
+	else {
+        elements["gtranslate_result"].setAttribute('label', curTranslation);
+        elements["gtranslate_result"].setAttribute('oncommand', 'openPage()');
+        elements["gtranslate_result"].setAttribute('disabled', false);
+        elements["gtranslate_replace"].setAttribute('disabled', false);
+	}
+    
+	selection = '';
+}
+
+// Open Google Translation Page in a new tab
+function openPage() {
+	openNewTabWith( GT.fn.getGoogleUrl("page", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), null, null, true );
+}
+
+// Open Google Translation Dictionay in a new tab
+function openDict() {
+	openNewTabWith( GT.fn.getGoogleUrl("dict", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), null, null, true );
+}
+
+// Show menu
+function showMenu() {
+    elements["gtranslate_main"].hidden = false;
+    elements["gtranslate_separator"].hidden = false;
+}   
+
+// Hide menu
+function hideMenu() {
+    elements["gtranslate_main"].hidden = true;
+    elements["gtranslate_separator"].hidden = true;
+}
+
+// Generates langlist menu
+function loadLangList() {
+    
+    var fLangs = langConf.availableLangs_from.split(",");
+    var tLangs = langConf.availableLangs_to.split(",");
+    
+    for (f in fLangs) {
+        
+        var m;
+        
+        if (fLangs[f] == '|') {
+            m = document.createElement('menuseparator');
+        }
+		
+		else {
+		    
+            m = document.createElement('menu');
+            
+            elements["gtranslate_langpairs"][fLangs[f]] = {
+			    "from": m,
+			    "to": {}
+			};
+            
+            m.setAttribute("label", elements["gtranslate_strings"].getString(langConf.langDict[fLangs[f]] + ".label"));
+			
+            var mp = document.createElement('menupopup');
             m.appendChild(mp);
             
             for (t in tLangs) {
                 if (fLangs[f] != tLangs[t]) {
-                    mi = document.createElement('menuitem');
                     
-                    mi.setAttribute("label", document.getElementById("googtrans-strings").getString(langConf.langDict[tLangs[t]]+".label"));
-                    mi.setAttribute("id", fLangs[f]+"|"+tLangs[t]);
+                    var mi = document.createElement('menuitem');
+                    
+                    elements["gtranslate_langpairs"][fLangs[f]]["to"][tLangs[t]] = mi;
+                    
+                    mi.setAttribute("label", elements["gtranslate_strings"].getString( langConf.langDict[tLangs[t]]+".label") );
                     mi.setAttribute("type", "radio");
-                    mi.setAttribute("name", "lp");
-                    mi.addEventListener('command', function(event) { changeLangPair(this.id) }, false );
+                    
+                    mi.addEventListener('command', (function(){
+                        
+                        var fromLang = fLangs[f];
+                        var toLang = tLangs[t];
+                        
+                        return function() {
+                            GT.fn.setLangPair( fromLang, toLang );
+                            lastSelection = '';
+                        };
+                        
+                    })(), false );
+                    
                     mp.appendChild(mi);
                 }
             }
-        }        
-        document.getElementById('langpair_radiomenu').appendChild(m);
-    }  
+        }
+        
+        elements['gtranslate_langpair_popup'].appendChild(m);
+    }
 }
 
-function ongoogTransPopup(event) {	
-	if (event.target.id != 'contentAreaContextMenu') return;
-	
-    document.getElementById("translate_change").setAttribute('hidden', true);
-	document.getElementById("translate_menu").setAttribute('disabled', true);           						  	           
-
-    var popupnode = document.popupNode;
-	var nodeLocalName = popupnode.localName.toLowerCase();
-
-	// here is one localized alert string 
-    var translateword = document.getElementById('googtrans-strings').getString("TranslateWord");
-
-	if (aux = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0])
-	   page_lang = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0].getAttribute('lang')
-
- 	if (aux = popupnode.getAttribute('lang'))
-	   page_lang = aux;
-
-	if ((nodeLocalName == "textarea") || (nodeLocalName == "input" && popupnode.type == "text")) {
-      selection = trim(popupnode.value.substring(popupnode.selectionStart, popupnode.selectionEnd));
-			document.getElementById("translate_change").setAttribute('hidden', false);           						  	           
-			document.getElementById("translate_change").setAttribute('disabled', true);           						  	           	           
-	}else if (nodeLocalName == "img") {
-        if (popupnode.title)
-            selection = popupnode.title;
-        else if (popupnode.alt)
-            selection = popupnode.alt;
-        else
-    	   selection = '';
-	}else {
-        var focusedWindow = document.commandDispatcher.focusedWindow;
-        selection = trim(focusedWindow.getSelection().toString());
-	}
-
-	if (selection != '') {
-		document.getElementById("translate_main").hidden = false;
-		document.getElementById("translateSeparator").hidden = false;
-    if (selection.length > 23)
-		 document.getElementById("translate_main").setAttribute('label',translateword+' "'+selection.substr(0,19) + '..."');
-		else
-		  document.getElementById("translate_main").setAttribute('label',translateword+ ' "'+selection+' "');
-	}else{
-		document.getElementById("translate_main").hidden = true;
-		document.getElementById("translateSeparator").hidden = true;
-	}
-}
-
-function openURL() {
-	openNewTabWith(encodeURI(url), null, null, true);
-}
-
-function changeLangPair(new_langpair) {
-    googTransPrefs.setCharPref("langpair",new_langpair) 
-    Components.classes["@mozilla.org/preferences-service;1"].
-    	getService(Components.interfaces.nsIPrefService).savePrefFile(null); 
-    last_selection = '';
-}
-
-function checkMenuItem(langpair) {
-    var element = document.getElementById('langpair_radiomenu');
+// Visually select a lang pair
+function checkMenuItem(fromLang, toLang) {
+    
+    var element = elements["gtranslate_langpair_popup"];
+    
+	// Uncheck all...
     if (element.hasChildNodes()) {
+        
         var menupopup = element.childNodes;
+        
         for (var i = 0; i < menupopup.length; i++) {
-            dumpDebug("| "+menupopup[i].getAttribute('id'));
+            
             if (menupopup[i].hasChildNodes()) {
+                
                 var children = element.childNodes;
+                
                 for (var j = 0; j < children.length; j++) {
-                    dumpDebug("|--> "+children[j].getAttribute('id'));
                     children[j].removeAttribute("checked");
-                };
-            };
-        };
-    };   
-    document.getElementById(langpair).setAttribute("checked", "true");
-}
-
-function connect() {
-    var langpair = googTransPrefs.getCharPref("langpair");  
-    auto_langpair = ''; // The langpair obtained by using language autodetection
-    
-    var changelang = document.getElementById('googtrans-strings').getString("ChangeLanguages");
-    		   
-    langpair_v = langpair.split('|');
-    if (page_lang == null)
-        page_lang = '';
-    
-    page_lang = page_lang.toLowerCase();
-  
-    if (googTransPrefs.getBoolPref("detectpagelang")) {
-        if (document.getElementById(page_lang+'|'+langpair_v[1])) {
-            auto_langpair = page_lang+'|'+langpair_v[1];
-            var str_aux = page_lang+'*|'+langpair_v[1];
-        }
-    }
-    
-    if (googTransPrefs.getBoolPref("detectlocale")) {
-        to_lang = currentLocale.split('-');
-        if (document.getElementById(langpair_v[0]+'|'+to_lang[0])) {
-            auto_langpair = langpair_v[0]+'|'+to_lang[0];
-            var str_aux = langpair_v[0]+'|'+to_lang[0]+'*';
-        }
-    }
-
-    if ( (googTransPrefs.getBoolPref("detectpagelang")) && (googTransPrefs.getBoolPref("detectlocale")) ) {
-        if (document.getElementById(page_lang+'|'+to_lang[0])) {
-            auto_langpair = page_lang+'|'+to_lang[0];
-            var str_aux = page_lang+'*|'+to_lang[0]+'*';
-        }
-    }
-
-    if (document.getElementById(auto_langpair)) {
-        langpair = auto_langpair;
-        document.getElementById("langpair_menu").setAttribute('label',changelang+" ("+str_aux+")");
-    }else{
-        document.getElementById("langpair_menu").setAttribute('label',changelang+" ("+langpair+")");
-    }
-    
-    checkMenuItem(langpair);
-
-    if (selection != '') {
-        if (selection != last_selection) {
-            		
-            var connectgoogle = document.getElementById('googtrans-strings').getString("ConnectToGoogle");
-            document.getElementById("translate_menu").setAttribute('label',connectgoogle);    
-            url = 'http://www.google.com/translate_t?text='+selection+'&langpair='+langpair+"&ie=UTF8";
-            
-            
-            var strConnect = document.getElementById('googtrans-strings').getString("Connecting");
-            window.status = strConnect+' '+url+'...';
-            
-            xrequest.onload = parseContent;
-            xrequest.onerror = function () {      
-                var connecterror = document.getElementById('googtrans-strings').getString("ConnectionError");
-                window.status = connecterror; 
-                document.getElementById("translate_menu").setAttribute('label',connecterror);
-            };
-                       
-            xrequest.open("GET", url, true);
-            xrequest.send(null);
-     	}else{
-			if (trans == "" || trans == selection) {
-                   
-                var notrans = document.getElementById('googtrans-strings').getString("NoTranslation");
-                document.getElementById("translate_menu").setAttribute('label',notrans+' "'+selection+'"');
-			}else {
-                document.getElementById("translate_menu").setAttribute('label',trans);
-                document.getElementById("translate_menu").setAttribute('oncommand', 'openURL()');
-                document.getElementById("translate_menu").setAttribute('disabled', false);           						  	            
-                document.getElementById("translate_change").setAttribute('disabled', false);           						  	            
+                }
             }
-            window.status = '';
         }
     }
+    
+    // Check langpair
+    elements["gtranslate_langpairs"][fromLang]["from"].setAttribute("checked", "true");
+    elements["gtranslate_langpairs"][fromLang]["to"][toLang].setAttribute("checked", "true");
 }
 
-		
-function parseContent() {
-    window.status = '';
-    last_selection = selection;	
-    
-    var result = xrequest.responseText;
-    
-    //var reg = new RegExp('<textarea\\s?[^>]*>([^>]*)<\\/textarea>');
-    str = 'result_box\\s?[^>]*>([^>]*)<\\/div>';
-    var reg = new RegExp(str);
+function detectLang(popupnode) {
 	
-    var str = new String(result);
-    trans = str.match(reg)[1];
-  
-	if ((selection!="" && trans == "") || trans == selection) {  
-        var notrans = document.getElementById('googtrans-strings').getString("NoTranslation");
-        document.getElementById("translate_menu").setAttribute('label',notrans+' "'+selection+'"');
-	}else{
-        document.getElementById("translate_menu").setAttribute('label',trans);
-        document.getElementById("translate_menu").setAttribute('oncommand', 'openURL()');
-        document.getElementById("translate_menu").setAttribute('disabled', false);           						  	            
-        document.getElementById("translate_change").setAttribute('disabled', false);           						  	            
-	}
-	selection = '';
+	// Document lang
+    var htmlElt = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0];
+	
+    if (!!htmlElt) {
+        page_lang = htmlElt.getAttribute('lang');
+    }
+    
+    // Element language
+    if (!!popupnode.getAttribute('lang')) {
+        page_lang = popupnode.getAttribute('lang');
+    }
+	
+	// Google Translate auto-detection
+	if (!page_lang) page_lang = '';
+	
+	return page_lang.slice(0, 2).toLowerCase(); // slice : "fr-FR" to "fr"
 }
 
+function getSelection(popupnode) {
+    
+	var nodeLocalName = popupnode.localName.toLowerCase();
+    var selection = '';
+    
+    // Input or textarea ?
+    if ((nodeLocalName == "textarea") || (nodeLocalName == "input" && popupnode.type == "text")) {
+        
+        selection = popupnode.value.substring(popupnode.selectionStart, popupnode.selectionEnd);
+        
+    	elements["gtranslate_replace"].setAttribute('hidden', false); /* TEMP */
+    }
+    
+    // Image ?
+    else if (nodeLocalName == "img") {
+        
+        // Image title ?
+        if (popupnode.title) {
+            selection = popupnode.title;
+        }
+        
+        // Image alternative ?
+        else if (popupnode.alt) {
+            selection = popupnode.alt;
+        }
+    }
+    
+	// Link ?
+    else if (nodeLocalName == "a" && popupnode.hasAttribute("href") && ( popupnode.textContent != "" || popupnode.hasAttribute("title") ) ) {
+        
+        // Link content ?
+        if (popupnode.textContent != "") {
+            selection = popupnode.textContent;
+        }
+        
+        // Link title ?
+        else if ( popupnode.hasAttribute("title") ) {
+            selection = popupnode.getAttribute("title");
+        }
+    }
+	
+    // Text selection.
+    else {
+        selection = document.commandDispatcher.focusedWindow.getSelection().toString();
+    }
+	
+	return selection;
+}
+
+// Replace text in textarea or input[type=text]
 function replaceText() {
-    popupnode = document.popupNode;
+    
+    var popupnode = document.popupNode;
+    
     var iStart = popupnode.selectionStart;
     var iEnd = popupnode.selectionEnd;
-    popupnode.value = popupnode.value.substring(0, iStart) + trans + popupnode.value.substring(iEnd, popupnode.value.length);
-    popupnode.setSelectionRange(iStart, iStart + trans.length); 
+    
+    popupnode.value = popupnode.value.substring(0, iStart) + curTranslation + popupnode.value.substring(iEnd, popupnode.value.length);
+    popupnode.setSelectionRange(iStart, iStart + curTranslation.length);
+}
+
+// Debug
+function LOG(msg) {
+    if (!!window.dump) window.dump("[GTR] "+msg+"\n");
+	Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService).logStringMessage(msg);
 }
