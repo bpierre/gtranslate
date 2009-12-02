@@ -9,6 +9,7 @@
 <!ENTITY replace.with.translation.label "Replace with translation">
 <!ENTITY about.title "gTranslate - About">
 <!ENTITY created.by "Created By:">
+<!ENTITY developed.by "Developer:">
 <!ENTITY localized.by "English localization by:">
 <!ENTITY localized.author "Pau Tomàs">
 <!ENTITY close.button "Close">

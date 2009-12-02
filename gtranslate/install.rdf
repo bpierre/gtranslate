@@ -3,11 +3,11 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
      
     <Description about="urn:mozilla:install-manifest">
-        <em:id>gtranslate@pierrebertet.net</em:id>
+        <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
         <em:version>0.6</em:version>
         <em:name>gTranslate</em:name>
         <em:creator>Pau Tomas</em:creator>
-        <em:contributor>Pierre Bertet</em:contributor>
+        <em:developer>Pierre Bertet</em:developer>
         
         <em:targetApplication>
             <Description>

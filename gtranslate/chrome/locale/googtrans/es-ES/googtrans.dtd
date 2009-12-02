@@ -9,6 +9,7 @@
 <!ENTITY replace.with.translation.label "Reemplazar con la traducción">
 <!ENTITY about.title "gTranslate - Acerca de">
 <!ENTITY created.by "Creado Por:">
+<!ENTITY developed.by "Developer:">
 <!ENTITY localized.by "Localización al Español por:">
 <!ENTITY localized.author "Pau Tomàs">
 <!ENTITY close.button "Cerrar">

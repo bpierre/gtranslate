@@ -11,7 +11,7 @@
 	<RDF:Description RDF:about="urn:mozilla:package:googtrans"
 		chrome:displayName="gTranslate 0.6"
 		chrome:author="Pierre Bertet"
-		chrome:authorURL="mailto:bonjour@pierrebertet.net"
+		chrome:authorURL="http://www.pierrebertet.net"
 		chrome:name="googtrans"
 		chrome:extension="true"
 		chrome:description="Translates the selected text via Google Translate."

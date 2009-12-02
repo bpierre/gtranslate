@@ -16,6 +16,8 @@
         <separator class="thin"/>
         <text value="&created.by;" style="font-weight: bold;"/>
         <text value="Pau Tomàs"/>
+        <text value="&developed.by;" style="font-weight: bold;"/>
+        <text value="Pierre Bertet"/>
         <text value="&localized.by;" style="font-weight: bold;"/>
         <text value="&localized.author;"/>
         <separator class="thin"/>
