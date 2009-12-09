@@ -8,7 +8,6 @@
     </stringbundleset>
     
     <!-- This imports our javascript. -->
-    <script type="application/x-javascript" src="chrome://googtrans/content/json2.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/langConf.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/gtranslate.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/googTransOverlay.js"></script>
@@ -17,10 +16,10 @@
     <popup id="contentAreaContextMenu">
         <menuseparator id="gtranslate_separator"/>
         <menu id="gtranslate_main" label="&translate.menuitem.label;">
-            <menupopup id="gtranslate_popup" onpopupshowing="initTranslate();">
+            <menupopup id="gtranslate_popup">
                 <menuitem id="gtranslate_result" label="" disabled="" />
-				<menuitem id="gtranslate_dict" label="&open.dictionary;" oncommand="openDict();" />
-                <menuitem id="gtranslate_replace" label="&replace.with.translation.label;" oncommand="replaceText();" />
+				<menuitem id="gtranslate_dict" label="&open.dictionary;" />
+                <menuitem id="gtranslate_replace" label="&replace.with.translation.label;" />
                 <menuseparator id="gtranslate_langpair_separator"/>
                 <menu id="gtranslate_langpair_main" label="">
                     <menupopup id="gtranslate_langpair_popup">

@@ -1,6 +1,7 @@
-overlay chrome://browser/content/browser.xul    chrome://googtrans/content/googTransOverlay.xul
-content	googtrans	chrome/content/googtrans/
-skin	googtrans	classic	chrome/skin/classic/googtrans/
+overlay		chrome://browser/content/browser.xul    chrome://googtrans/content/googTransOverlay.xul
+content		googtrans	chrome/content/googtrans/
+resource	gtranslate	chrome/content/googtrans/
+skin		googtrans	classic	chrome/skin/classic/googtrans/
 
 locale	googtrans	ca-AD	chrome/locale/googtrans/ca-AD/
 locale	googtrans	en-US	chrome/locale/googtrans/en-US/
