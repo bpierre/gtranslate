@@ -1,35 +1,17 @@
 (function() {
     
     /* Main object */
-    var GT = window.net.pierrebertet.GT;
-    
-    // Get Mozilla preferences
-    var mozPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-    
-    // Get addon preferences
-    var gtransPrefs = mozPrefs.getBranch("googTrans.");
-    
-    // Get current locale
-    var currentLocale = mozPrefs.getBranch("general.").getCharPref("useragent.locale");
-    
-    // Set default preferences
-    if (!gtransPrefs.prefHasUserValue("langpair")) 
-        gtransPrefs.setCharPref("langpair", "auto|" + currentLocale);
-    if (!gtransPrefs.prefHasUserValue("detectpagelang")) 
-        gtransPrefs.setBoolPref("detectpagelang", true);
-    if (!gtransPrefs.prefHasUserValue("detectlocale")) 
-        gtransPrefs.setBoolPref("detectlocale", true);
+    var GT = net.pierrebertet.GT;
     
     // Global vars
     var selection = '';
     var lastSelection = '';
     var pageLang = '';
     
-    var curFromLang = '';
-    var curToLang = '';
+    var curDetectedLang = "";
     var curTranslation = '';
     
-    // XUL elements array
+    // XUL elements
     var elements = {};
     
     // On window load
@@ -77,11 +59,15 @@
     // On right click event
     function onGtransPopup(event) {
         
-        if (event.target.id != 'contentAreaContextMenu') 
+        if (event.target.id != 'contentAreaContextMenu')  {
             return;
+        }
         
+        elements["gtranslate_dict"].setAttribute("disabled", (GT.fn.getLangPair()[0] === "auto"));
         elements["gtranslate_replace"].setAttribute('hidden', true);
         elements["gtranslate_result"].setAttribute('disabled', true);
+        
+        curDetectedLang = "";
         
         var popupnode = document.popupNode;
         
@@ -89,7 +75,7 @@
         var translateWord = elements["gtranslate_strings"].getString("TranslateWord");
         
         // Detect lang
-        page_lang = detectLang(popupnode);
+        pageLang = detectLang(popupnode);
         
         // Get and trim current selection
         selection = GT.fn.trim(getSelection(popupnode));
@@ -109,7 +95,7 @@
     function initTranslate() {
         
         var langpair = GT.fn.getLangPair();
-        var fromLang = (langpair[0] == 'auto') ? page_lang : langpair[0];
+        var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
         var toLang = langpair[1];
         
         var changelang = elements["gtranslate_strings"].getString("ChangeLanguages");
@@ -119,17 +105,25 @@
         elements["gtranslate_langpair_main"].setAttribute('label', changelang + " ( " + langpair.join(' > ') + " )");
         
         if (selection != '') {
-        
-            if (selection != lastSelection) {
             
+            if (selection != lastSelection) {
+                
                 var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
                 var strConnect = elements["gtranslate_strings"].getString("Connecting");
                 
                 elements["gtranslate_result"].setAttribute('label', connectgoogle);
                 
                 GT.fn.translationRequest(fromLang, toLang, selection,
-                    function(data) { // on load
-                        updateTranslation(data);
+                    function(translation, detectedLang) { // on load
+                        updateTranslation(translation);
+                        
+                        if (!!detectedLang) {
+                            curDetectedLang = detectedLang;
+                        }
+                        
+                        if (curDetectedLang !== "" || pageLang !== "") {
+                            elements["gtranslate_dict"].setAttribute("disabled", false);
+                        }
                     },
                     function() { // on error
                         var connecterror = elements["gtranslate_strings"].getString("ConnectionError");
@@ -149,9 +143,10 @@
         
         curTranslation = result;
         
-        if (curTranslation == "" || curTranslation == selection) {
+        if (curTranslation == "") {
             var noTrans = elements["gtranslate_strings"].getString("NoTranslation");
             elements["gtranslate_result"].setAttribute('label', noTrans + ' "' + selection + '"');
+            
         } else {
             elements["gtranslate_result"].setAttribute('label', curTranslation);
             elements["gtranslate_result"].setAttribute('disabled', false);
@@ -168,7 +163,27 @@
     
     // Open Google Translation Dictionay in a new tab
     function openDict() {
-        openNewTabWith(GT.fn.getGoogleUrl("dict", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), null, null, true);
+        
+        var gFromLang, gToLang;
+        
+        if (curDetectedLang !== "") {
+            gFromLang = curDetectedLang;
+            
+        } else if (pageLang !== "") {
+            gFromLang = pageLang;
+            
+        } else {
+            gFromLang = GT.fn.getLangPair()[0];
+        }
+        
+        if (gFromLang !== "en") {
+            gToLang = "en";
+            
+        } else {
+            gToLang = GT.fn.getLangPair()[1];
+        }
+        
+        openNewTabWith(GT.fn.getGoogleUrl("dict", gFromLang, gToLang, lastSelection), null, null, true);
     }
     
     // Show menu
@@ -186,8 +201,8 @@
     // Generates langlist menu
     function loadLangList() {
         
-        var fLangs = langConf.availableLangs_from.split(",");
-        var tLangs = langConf.availableLangs_to.split(",");
+        var fLangs = GT.langConf.availableLangs_from.split(",");
+        var tLangs = GT.langConf.availableLangs_to.split(",");
         
         for (f in fLangs) {
         
@@ -195,8 +210,9 @@
             
             if (fLangs[f] == '|') {
                 m = document.createElement('menuseparator');
+                
             } else {
-            
+                
                 m = document.createElement('menu');
                 
                 elements["gtranslate_langpairs"][fLangs[f]] = {
@@ -204,7 +220,7 @@
                     "to": {}
                 };
                 
-                m.setAttribute("label", elements["gtranslate_strings"].getString(langConf.langDict[fLangs[f]] + ".label"));
+                m.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[fLangs[f]] + ".label"));
                 
                 var mp = document.createElement('menupopup');
                 m.appendChild(mp);
@@ -216,7 +232,7 @@
                         
                         elements["gtranslate_langpairs"][fLangs[f]]["to"][tLangs[t]] = mi;
                         
-                        mi.setAttribute("label", elements["gtranslate_strings"].getString(langConf.langDict[tLangs[t]] + ".label"));
+                        mi.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[tLangs[t]] + ".label"));
                         mi.setAttribute("type", "radio");
                         
                         mi.addEventListener('command', (function() {
@@ -274,20 +290,20 @@
         var htmlElt = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0];
         
         if (!!htmlElt) {
-            page_lang = htmlElt.getAttribute('lang');
+            pageLang = htmlElt.getAttribute('lang');
         }
         
         // Element language
         if (!!popupnode.getAttribute('lang')) {
-            page_lang = popupnode.getAttribute('lang');
+            pageLang = popupnode.getAttribute('lang');
         }
         
         // Google Translate auto-detection
-        if (!page_lang) {
-            page_lang = '';
+        if (!pageLang) {
+            pageLang = '';
         }
         
-        return page_lang.slice(0, 2).toLowerCase(); // slice : "fr-FR" to "fr"
+        return pageLang.slice(0, 2).toLowerCase(); // slice : "fr-FR" to "fr"
     }
     
     function getSelection(popupnode) {

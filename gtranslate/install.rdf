@@ -4,7 +4,7 @@
      
     <Description about="urn:mozilla:install-manifest">
         <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
-        <em:version>0.6</em:version>
+        <em:version>0.7b1</em:version>
         <em:name>gTranslate</em:name>
         <em:creator>Pau Tomas</em:creator>
         <em:developer>Pierre Bertet</em:developer>
@@ -19,7 +19,7 @@
         
         <em:description>Translates the selected text via Google Translate.</em:description>
         <em:homepageURL>https://addons.mozilla.org/fr/firefox/addon/918</em:homepageURL>
-        <em:optionsURL>chrome://googtrans/content/googTransSettings.xul</em:optionsURL>
+        <em:optionsURL>chrome://googtrans/content/preferences.xul</em:optionsURL>
         <em:aboutURL>chrome://googtrans/content/about.xul</em:aboutURL>
         <em:iconURL>chrome://googtrans/skin/googtrans.png</em:iconURL>
         
