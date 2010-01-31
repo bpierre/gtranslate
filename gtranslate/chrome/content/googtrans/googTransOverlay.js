@@ -105,34 +105,28 @@
         elements["gtranslate_langpair_main"].setAttribute('label', changelang + " ( " + langpair.join(' > ') + " )");
         
         if (selection != '') {
+        
+            var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
+            var strConnect = elements["gtranslate_strings"].getString("Connecting");
             
-            if (selection != lastSelection) {
-                
-                var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
-                var strConnect = elements["gtranslate_strings"].getString("Connecting");
-                
-                elements["gtranslate_result"].setAttribute('label', connectgoogle);
-                
-                GT.fn.translationRequest(fromLang, toLang, selection,
-                    function(translation, detectedLang) { // on load
-                        updateTranslation(translation);
-                        
-                        if (!!detectedLang) {
-                            curDetectedLang = detectedLang;
-                        }
-                        
-                        if (curDetectedLang !== "" || pageLang !== "") {
-                            elements["gtranslate_dict"].setAttribute("disabled", false);
-                        }
-                    },
-                    function() { // on error
-                        var connecterror = elements["gtranslate_strings"].getString("ConnectionError");
-                        elements["gtranslate_result"].setAttribute('label', connecterror);
-                    });
+            elements["gtranslate_result"].setAttribute('label', connectgoogle);
+            
+            GT.fn.translationRequest(fromLang, toLang, selection,
+                function(translation, detectedLang) { // on load
+                    updateTranslation(translation);
                     
-            } else {
-                updateTranslation(curTranslation);
-            }
+                    if (!!detectedLang) {
+                        curDetectedLang = detectedLang;
+                    }
+                    
+                    if (curDetectedLang !== "" || pageLang !== "") {
+                        elements["gtranslate_dict"].setAttribute("disabled", false);
+                    }
+                },
+                function(errorMsg) { // on error
+                    elements["gtranslate_result"].setAttribute('label', (errorMsg || elements["gtranslate_strings"].getString("ConnectionError")));
+                }
+            );
         }
     }
     
@@ -201,8 +195,17 @@
     // Generates langlist menu
     function loadLangList() {
         
-        var fLangs = GT.langConf.availableLangs_from.split(",");
-        var tLangs = GT.langConf.availableLangs_to.split(",");
+        function compareLangLabels(a, b) {
+            if (elements["gtranslate_strings"].getString(GT.langConf.langDict[a] + ".label") < elements["gtranslate_strings"].getString(GT.langConf.langDict[b] + ".label")) {
+                return -1;
+            }
+            return 1;
+        };
+        
+        var fLangs = GT.langConf.availableLangs_from.split(",").slice(2).sort(compareLangLabels);
+        var tLangs = GT.langConf.availableLangs_to.split(",").sort(compareLangLabels);
+        
+        fLangs.unshift("auto", "|");
         
         for (f in fLangs) {
         
@@ -285,7 +288,7 @@
     }
     
     function detectLang(popupnode) {
-        
+        /*
         // Document lang
         var htmlElt = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0];
         
@@ -304,6 +307,8 @@
         }
         
         return pageLang.slice(0, 2).toLowerCase(); // slice : "fr-FR" to "fr"
+        */
+        return "";
     }
     
     function getSelection(popupnode) {

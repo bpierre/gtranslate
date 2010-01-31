@@ -1,0 +1,15 @@
+<!ENTITY options.title "gTranslate - Opções">
+<!ENTITY translatefrom.menu.label "Traduzir texto de...">
+<!ENTITY autodetection.caption.label "Auto-detectar">
+<!ENTITY detectlocale.checkbox.label "Navegar em linguagem padrão">
+<!ENTITY detectpagelang.checkbox.label "Pagina da Linguagem">
+<!ENTITY translate.to.label "para">
+<!ENTITY open.dictionary "Abrir dicionário">
+<!ENTITY translate.menuitem.label "Traduzir">
+<!ENTITY replace.with.translation.label "Substituir com tradução">
+<!ENTITY about.title "gTranslate - Sobre">
+<!ENTITY created.by "Criado por:">
+<!ENTITY developed.by "Desenvolvedor:">
+<!ENTITY localized.by "Localização Português por:">
+<!ENTITY localized.author "Charles Pito">
+<!ENTITY close.button "Fechar">

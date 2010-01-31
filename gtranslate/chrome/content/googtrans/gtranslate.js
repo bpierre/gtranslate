@@ -3,7 +3,7 @@
     /* Main object */
     var GT = net.pierrebertet.GT;
     
-    /* JSON support for Firefox 3.0 */
+    /* Firefox 3.0 : JSON support */
     Components.utils.import("resource://gtranslate/JSON.js", GT);
     
     /* Google Translate functions */
@@ -21,15 +21,16 @@
         // Load event
         xRequest.addEventListener("load", (function() {
             
-            var response = GT.JSON.parse(xRequest.responseText).responseData;
+            var response = GT.JSON.parse(xRequest.responseText);
+            //var responseData = response.responseData;
             
-            if (!response || !response.translatedText) {
-                onErrorFn();
+            if (!response.responseData || response.responseStatus !== 200) {
+                onErrorFn(response.responseDetails);
                 return;
             }
             
-            var translatedText = decodeURIComponent(response.translatedText);
-            onLoadFn(translatedText, response.detectedSourceLanguage);
+            var translatedText = decodeURIComponent(response.responseData.translatedText);
+            onLoadFn(translatedText, response.responseData.detectedSourceLanguage);
         }), false);
         
         // Error event
