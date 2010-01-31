@@ -4,7 +4,7 @@
      
     <Description about="urn:mozilla:install-manifest">
         <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
-        <em:version>0.7b1</em:version>
+        <em:version>0.7</em:version>
         <em:name>gTranslate</em:name>
         <em:creator>Pau Tomas</em:creator>
         <em:developer>Pierre Bertet</em:developer>
