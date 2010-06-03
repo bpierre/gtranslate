@@ -20,16 +20,19 @@
         
         // Load event
         xRequest.addEventListener("load", (function() {
+            if (xRequest.status !== 200) {
+                onErrorFn(xRequest.statusText);
+                return;
+            }
             
             var response = GT.JSON.parse(xRequest.responseText);
-            //var responseData = response.responseData;
             
             if (!response.responseData || response.responseStatus !== 200) {
                 onErrorFn(response.responseDetails);
                 return;
             }
             
-            var translatedText = decodeURIComponent(response.responseData.translatedText);
+            var translatedText = response.responseData.translatedText;
             onLoadFn(translatedText, response.responseData.detectedSourceLanguage);
         }), false);
         
