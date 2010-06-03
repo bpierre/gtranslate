@@ -1,0 +1,15 @@
+<!ENTITY options.title "gTranslate - Opțiuni">
+<!ENTITY translatefrom.menu.label "Tradu textul din…">
+<!ENTITY autodetection.caption.label "Detectează automat">
+<!ENTITY detectlocale.checkbox.label "Limba implicită a navigatorului">
+<!ENTITY detectpagelang.checkbox.label "Limba paginii">
+<!ENTITY translate.to.label "în">
+<!ENTITY open.dictionary "Deschide dicționarul">
+<!ENTITY translate.menuitem.label "Tradu">
+<!ENTITY replace.with.translation.label "Înlocuiește cu traducerea">
+<!ENTITY about.title "gTranslate - Despre">
+<!ENTITY created.by "Creat de:">
+<!ENTITY developed.by "Dezvoltator:">
+<!ENTITY localized.by "Traducere în română de:">
+<!ENTITY localized.author "Marius Feraru">
+<!ENTITY close.button "Închide">
