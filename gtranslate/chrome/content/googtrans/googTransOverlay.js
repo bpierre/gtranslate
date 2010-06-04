@@ -83,7 +83,7 @@
         // Show and update (eventually with a substr) gTranslate menu
         if (selection != '') {
             showMenu();
-            elements["gtranslate_main"].setAttribute('label', translateWord + ' "' + ((selection.length > 23) ? selection.substr(0, 19) + '…' : selection) + '"');
+            elements["gtranslate_main"].setAttribute('label', translateWord + ' "' + selection.replace(/\s+/g," ") + '"');
         
         // Hide gTranslate
         } else {
@@ -110,6 +110,7 @@
             var strConnect = elements["gtranslate_strings"].getString("Connecting");
             
             elements["gtranslate_result"].setAttribute('label', connectgoogle);
+            elements["gtranslate_result"].setAttribute('tooltiptext', null);
             
             GT.fn.translationRequest(fromLang, toLang, selection,
                 function(translation, detectedLang) { // on load
@@ -124,7 +125,10 @@
                     }
                 },
                 function(errorMsg) { // on error
-                    elements["gtranslate_result"].setAttribute('label', (errorMsg || elements["gtranslate_strings"].getString("ConnectionError")));
+                    if (!errorMsg)
+                        errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                    elements["gtranslate_result"].setAttribute('label', errorMsg);
+                    elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
                 }
             );
         }
@@ -139,10 +143,12 @@
         
         if (curTranslation == "") {
             var noTrans = elements["gtranslate_strings"].getString("NoTranslation");
-            elements["gtranslate_result"].setAttribute('label', noTrans + ' "' + selection + '"');
+            elements["gtranslate_result"].setAttribute('label', noTrans + ' "' + selection.replace(/\s+/g," ") + '"');
+            elements["gtranslate_result"].setAttribute('tooltiptext', null);
             
         } else {
-            elements["gtranslate_result"].setAttribute('label', curTranslation);
+            elements["gtranslate_result"].setAttribute('label', curTranslation.replace(/\s+/g," "));
+            elements["gtranslate_result"].setAttribute('tooltiptext', curTranslation);
             elements["gtranslate_result"].setAttribute('disabled', false);
             elements["gtranslate_replace"].setAttribute('disabled', false);
         }
