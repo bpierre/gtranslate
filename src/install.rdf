@@ -4,7 +4,7 @@
      
     <Description about="urn:mozilla:install-manifest">
         <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
-        <em:version>0.7</em:version>
+        <em:version>0.8b</em:version>
         <em:name>gTranslate</em:name>
         <em:creator>Pau Tomas</em:creator>
         <em:developer>Pierre Bertet</em:developer>
@@ -33,6 +33,22 @@
         
         <em:localized>
             <Description>
+                <em:locale>de-DE</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Übersetzt den ausgewählten Text indem er den Service Google Translate verwendet.</em:description>
+            </Description>
+        </em:localized>
+        
+        <em:localized>
+            <Description>
+                <em:locale>en-US</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Translates the selected text via Google Translate.</em:description>
+            </Description>
+        </em:localized>
+        
+        <em:localized>
+            <Description>
                 <em:locale>es-ES</em:locale>
                 <em:name>gTranslate</em:name>
                 <em:description>Traduce el texto seleccionado mediante Google Translate.</em:description>
@@ -46,7 +62,15 @@
                 <em:description>Traduit le texte sélectionné en utilisant le service Google Translate.</em:description>
             </Description>
         </em:localized>
-
+        
+        <em:localized>
+            <Description>
+                <em:locale>pt-BR</em:locale>
+                <em:name>gTranslate</em:name>
+                <em:description>Traduzir texto selecionado via Google Translate.</em:description>
+            </Description>
+        </em:localized>
+        
         <em:localized>
             <Description>
                 <em:locale>ro-RO</em:locale>
