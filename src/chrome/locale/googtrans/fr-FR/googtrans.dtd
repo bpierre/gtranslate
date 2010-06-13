@@ -1,5 +1,5 @@
 <!ENTITY options.title "gTranslate - Options">
-<!ENTITY translatefrom.menu.label "Traduire ce texte de...">
+<!ENTITY translatefrom.menu.label "Traduire ce texte de…">
 <!ENTITY autodetection.caption.label "Auto-détection">
 <!ENTITY detectlocale.checkbox.label "Langue du navigateur">
 <!ENTITY detectpagelang.checkbox.label "Langue de la page">
@@ -8,8 +8,8 @@
 <!ENTITY open.dictionary "Ouvrir le dictionnaire">
 <!ENTITY replace.with.translation.label "Remplacer avec la traduction">
 <!ENTITY about.title "gTranslate - À propos">
-<!ENTITY created.by "Créé par :">
-<!ENTITY developed.by "Développeur :">
-<!ENTITY localized.by "Traduction française par :">
+<!ENTITY created.by "Créé par :">
+<!ENTITY developed.by "Développeur :">
+<!ENTITY localized.by "Traduction française par :">
 <!ENTITY localized.author "Pierre Bertet">
 <!ENTITY close.button "Fermer">
