@@ -9,7 +9,7 @@ locale	googtrans	es-ES	chrome/locale/googtrans/es-ES/
 locale	googtrans	fr-FR	chrome/locale/googtrans/fr-FR/
 locale	googtrans	pt-BR	chrome/locale/googtrans/pt-BR/
 locale	googtrans	ro-RO	chrome/locale/googtrans/ro-RO/
-#locale	googtrans	de-DE	chrome/locale/googtrans/de-DE/
+locale	googtrans	de-DE	chrome/locale/googtrans/de-DE/
 #locale	googtrans	hr-HR	chrome/locale/googtrans/hr-HR/
 #locale	googtrans	hu-HU	chrome/locale/googtrans/hu-HU/
 #locale	googtrans	it-IT	chrome/locale/googtrans/it-IT/
