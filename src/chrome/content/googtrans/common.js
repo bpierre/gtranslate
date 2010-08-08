@@ -1,21 +1,18 @@
-if(!net) var net = {};
-if(!net.pierrebertet) net.pierrebertet = {};
-if(!net.pierrebertet.GT) net.pierrebertet.GT = {};
+let EXPORTED_SYMBOLS = ["GT"];
 
-(function() {
-    
-    /* Main object */
-    var GT = net.pierrebertet.GT;
-    
-    /* Preferences */
-    GT.mozPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-    GT.prefs = GT.mozPrefs.getBranch("googTrans.");
-    
-    /* Languages */
-    GT.langConf = {
-        availableLangs_from : "auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,th,tr,uk,vi,cy,yi",
-        availableLangs_to : "af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,th,tr,uk,vi,cy,yi",
-        langDict : {
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+let GT = {
+
+    // Preferences
+    mozPrefs: Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService),
+
+    // Languages
+    langConf: {
+        availableLangs_from: "auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,th,tr,uk,vi,cy,yi",
+        availableLangs_to: "af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,th,tr,uk,vi,cy,yi",
+        langDict: {
             "auto" : "auto",
             "af" : "afrikaans",
             "sq" : "albanian",
@@ -70,41 +67,44 @@ if(!net.pierrebertet.GT) net.pierrebertet.GT = {};
             "cy" : "welsh",
             "yi" : "yiddish"
         }
-    };
+    },
     
-    /* Default "to" lang */
-    GT.getDefaultTo = function() {
+    // Default "to" lang
+    getDefaultTo: function() {
         var currentLocale = GT.mozPrefs.getBranch("general.").getCharPref("useragent.locale");
         if (GT.langConf.availableLangs_to.indexOf(currentLocale) !== -1) {
             return currentLocale;
         } else {
             return "en";
         }
-    };
+    },
     
-    /* getElementById shortcut */
-    GT.gid = function(id) {
+    // getElementById shortcut
+    gid: function(id) {
         return document.getElementById(id);
-    };
+    },
     
-    /* Debug */
-    GT.log = function(msg) {
+    // debug
+    log: function(msg) {
         if (!!window.dump) {
             window.dump("[GT] " + msg + "\n");
         }
-        Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService).logStringMessage(msg);
-    };
-    
-    /* Set default preferences */
-    if (!GT.prefs.prefHasUserValue("from")) {
-        GT.prefs.setCharPref("from", "auto");
+        Cc["@mozilla.org/consoleservice;1"].getService(Ci.nsIConsoleService).logStringMessage(msg);
     }
-    
-    if (!GT.prefs.prefHasUserValue("to")) {
-        GT.prefs.setCharPref("to", GT.getDefaultTo());
-    }
-    
-    if (!GT.prefs.prefHasUserValue("detectpagelang")) {
-        GT.prefs.setBoolPref("detectpagelang", true);
-    }
-})();
+};
+
+GT.prefs = GT.mozPrefs.getBranch("googTrans.");
+
+// set default preferences
+if (!GT.prefs.prefHasUserValue("from")) {
+    GT.prefs.setCharPref("from", "auto");
+}
+
+if (!GT.prefs.prefHasUserValue("to")) {
+    GT.prefs.setCharPref("to", GT.getDefaultTo());
+}
+
+if (!GT.prefs.prefHasUserValue("detectpagelang")) {
+    GT.prefs.setBoolPref("detectpagelang", true);
+}
+

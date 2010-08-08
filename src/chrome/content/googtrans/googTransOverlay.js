@@ -1,7 +1,7 @@
 (function() {
     
-    /* Main object */
-    var GT = net.pierrebertet.GT;
+    // Main object
+    Components.utils.import("resource://gtranslate/common.js");
     
     // Global vars
     var selection = '';
