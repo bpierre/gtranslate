@@ -15,10 +15,10 @@
     <!-- This is for the right click menu. -->
     <popup id="contentAreaContextMenu">
         <menuseparator id="gtranslate_separator"/>
-        <menu id="gtranslate_main" label="&translate.menuitem.label;">
+        <menu id="gtranslate_main" label="&translate.menuitem.label;" class="menu-iconic" image="chrome://googtrans/skin/menuitem.png">
             <menupopup id="gtranslate_popup">
                 <menuitem id="gtranslate_result" label="" disabled="" />
-				<menuitem id="gtranslate_dict" label="&open.dictionary;" />
+                <menuitem id="gtranslate_dict" label="&open.dictionary;" />
                 <menuitem id="gtranslate_replace" label="&replace.with.translation.label;" />
                 <menuseparator id="gtranslate_langpair_separator"/>
                 <menu id="gtranslate_langpair_main" label="">
