@@ -7,9 +7,3 @@
 <!ENTITY translate.menuitem.label "Übersetzen">
 <!ENTITY open.dictionary "Wörterbuch öffnen">
 <!ENTITY replace.with.translation.label "Durch die Übersetzung ersetzen">
-<!ENTITY about.title "gTranslate - Über">
-<!ENTITY created.by "Kreiert durch:">
-<!ENTITY developed.by "Entwickler:">
-<!ENTITY localized.by "Deutsche Übersetzung von:">
-<!ENTITY localized.author "Emilie Verbeke">
-<!ENTITY close.button "Schliessen">

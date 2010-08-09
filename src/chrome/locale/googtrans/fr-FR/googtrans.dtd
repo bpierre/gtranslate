@@ -7,9 +7,3 @@
 <!ENTITY translate.menuitem.label "Traduire">
 <!ENTITY open.dictionary "Ouvrir le dictionnaire">
 <!ENTITY replace.with.translation.label "Remplacer avec la traduction">
-<!ENTITY about.title "gTranslate - À propos">
-<!ENTITY created.by "Créé par :">
-<!ENTITY developed.by "Développeur :">
-<!ENTITY localized.by "Traduction française par :">
-<!ENTITY localized.author "Pierre Bertet">
-<!ENTITY close.button "Fermer">

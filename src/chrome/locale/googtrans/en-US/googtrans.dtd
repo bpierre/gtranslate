@@ -4,12 +4,6 @@
 <!ENTITY detectlocale.checkbox.label "Browser default language">
 <!ENTITY detectpagelang.checkbox.label "Page language">
 <!ENTITY translate.to.label "to">
-<!ENTITY open.dictionary "Open dictionary">
 <!ENTITY translate.menuitem.label "Translate">
+<!ENTITY open.dictionary "Open dictionary">
 <!ENTITY replace.with.translation.label "Replace with translation">
-<!ENTITY about.title "gTranslate - About">
-<!ENTITY created.by "Created By:">
-<!ENTITY developed.by "Developer:">
-<!ENTITY localized.by "English localization by:">
-<!ENTITY localized.author "Pau Tomàs">
-<!ENTITY close.button "Close">

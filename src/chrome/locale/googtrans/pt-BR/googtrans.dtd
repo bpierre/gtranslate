@@ -4,12 +4,6 @@
 <!ENTITY detectlocale.checkbox.label "Navegar em linguagem padrão">
 <!ENTITY detectpagelang.checkbox.label "Pagina da Linguagem">
 <!ENTITY translate.to.label "para">
-<!ENTITY open.dictionary "Abrir dicionário">
 <!ENTITY translate.menuitem.label "Traduzir">
+<!ENTITY open.dictionary "Abrir dicionário">
 <!ENTITY replace.with.translation.label "Substituir com tradução">
-<!ENTITY about.title "gTranslate - Sobre">
-<!ENTITY created.by "Criado por:">
-<!ENTITY developed.by "Desenvolvedor:">
-<!ENTITY localized.by "Localização Português por:">
-<!ENTITY localized.author "Charles Jr. Rech">
-<!ENTITY close.button "Fechar">
