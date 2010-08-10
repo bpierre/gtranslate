@@ -90,12 +90,29 @@ if ("undefined" === typeof(GoogleTranslate)) {
             return formattedUrl;
         },
 
+        // remove the whitespace from the beginning and end of a string (thanks jQuery ;-)
+        trim: function(str) {
+            return (str || "").replace(/^\s+|\s+$/g, "");
+        },
+
+        // set a new langpair in preferences
+        setLangPair: function(langFrom, langTo) {
+            this.prefs.setCharPref("from", langFrom);
+            this.prefs.setCharPref("to", langTo);
+            this.mozPrefs.savePrefFile(null);
+        },
+
+        // get langpair from preferences
+        getLangPair: function() {
+            return [this.prefs.getCharPref("from"), this.prefs.getCharPref("to")];
+        },
+
         // languages
         langConf: {
             availableLangs_from: availableLangs_from,
             availableLangs_to: availableLangs_to,
             langDict: langDict
-        },
+        }
     };
 
     (function() {

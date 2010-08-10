@@ -68,7 +68,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
             return;
         }
         
-        elements["gtranslate_dict"].setAttribute("disabled", (GT.fn.getLangPair()[0] === "auto"));
+        elements["gtranslate_dict"].setAttribute("disabled", (GoogleTranslate.getLangPair()[0] === "auto"));
         elements["gtranslate_replace"].setAttribute('hidden', true);
         elements["gtranslate_result"].setAttribute('disabled', true);
         
@@ -83,7 +83,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
         pageLang = detectLang(popupnode);
         
         // Get and trim current selection
-        selection = GT.fn.trim(getSelection(popupnode));
+        selection = GoogleTranslate.trim(getSelection(popupnode));
         
         // Show and update (eventually with a substr) gTranslate menu
         if (selection != '') {
@@ -99,7 +99,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     // Connect to Google Translate service
     function initTranslate() {
         
-        var langpair = GT.fn.getLangPair();
+        var langpair = GoogleTranslate.getLangPair();
         var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
         var toLang = langpair[1];
         
@@ -166,7 +166,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
         openNewTabWith(
             GoogleTranslate.getGoogleUrl(
                 "page",
-                GT.fn.getLangPair()[0], GT.fn.getLangPair()[1],
+                GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1],
                 lastSelection),
             null, null, true);
     }
@@ -183,14 +183,14 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
             gFromLang = pageLang;
             
         } else {
-            gFromLang = GT.fn.getLangPair()[0];
+            gFromLang = GoogleTranslate.getLangPair()[0];
         }
         
         if (gFromLang !== "en") {
             gToLang = "en";
             
         } else {
-            gToLang = GT.fn.getLangPair()[1];
+            gToLang = GoogleTranslate.getLangPair()[1];
         }
         
         openNewTabWith(GoogleTranslate.getGoogleUrl(
@@ -274,7 +274,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
                             var toLang = tLangs[t];
                             
                             return function() {
-                                GT.fn.setLangPair(fromLang, toLang);
+                                GoogleTranslate.setLangPair(fromLang, toLang);
                                 lastSelection = '';
                             };
                             
