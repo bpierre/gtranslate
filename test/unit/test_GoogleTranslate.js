@@ -9,8 +9,6 @@ function test_langConf() {
    do_check_neq(typeof(GoogleTranslate.langConf.availableLangs_from), "string");
    do_check_neq(typeof(GoogleTranslate.langConf.availableLangs_to), "string");
    do_check_neq(typeof(GoogleTranslate.langConf.langDict), "object");
-
-   do_check_eq(GoogleTranslate.gid("toto"), "titi");
 }
 
 function test_prefs() {
