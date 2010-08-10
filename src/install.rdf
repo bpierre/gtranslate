@@ -14,12 +14,14 @@
         
         <em:creator>Pau Tomas</em:creator>
         <em:developer>Pierre Bertet</em:developer>
+        <em:developer>Éric Lemoine</em:developer>
         <em:translator>Enrico Floriddia (it)</em:translator>
         <em:translator>Emilie Verbeke (de)</em:translator>
         <em:translator>Marius Feraru (ro)</em:translator>
         <em:translator>Charles Jr. Rech (pt-BR)</em:translator>
         <em:translator>Pau Tomàs (es, ca-AD)</em:translator>
         <em:translator>Pierre Bertet (fr)</em:translator>
+        <em:contributor>Grégoire Dierendonck (logotype)</em:contributor>
         
         <!-- Firefox -->
         <em:targetApplication>
