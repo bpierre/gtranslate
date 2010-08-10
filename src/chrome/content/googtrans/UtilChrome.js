@@ -13,7 +13,6 @@ if ("undefined" === typeof(UtilChrome)) {
             }
             Cc["@mozilla.org/consoleservice;1"].getService(
                 Ci.nsIConsoleService).logStringMessage(msg);
-        },
-
+        }
     };
 }
