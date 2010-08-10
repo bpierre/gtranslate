@@ -5,10 +5,10 @@ function test_mozPrefs() {
 }
 
 function test_langConf() {
-   do_check_neq(GoogleTranslate.langConf, undefined);
-   do_check_neq(typeof(GoogleTranslate.langConf.availableLangs_from), "string");
-   do_check_neq(typeof(GoogleTranslate.langConf.availableLangs_to), "string");
-   do_check_neq(typeof(GoogleTranslate.langConf.langDict), "object");
+   do_check_eq(typeof(GoogleTranslate.langConf), "object");
+   do_check_eq(typeof(GoogleTranslate.langConf.availableLangs_from), "string");
+   do_check_eq(typeof(GoogleTranslate.langConf.availableLangs_to), "string");
+   do_check_eq(typeof(GoogleTranslate.langConf.langDict), "object");
 }
 
 function test_prefs() {

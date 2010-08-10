@@ -5,9 +5,80 @@ let EXPORTED_SYMBOLS = ["GoogleTranslate"];
 const Cc = Components.classes;
 const Ci = Components.interfaces;
 
+let _availableLangs_from = ["auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,",
+                            "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
+                            "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
+                            "th,tr,uk,vi,cy,yi"].join("");
+let _availableLangs_to =   ["af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,",
+                            "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
+                            "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
+                            "th,tr,uk,vi,cy,yi"].join("");
+let _langDict = {
+    "auto": "auto",
+    "af": "afrikaans",
+    "sq": "albanian",
+    "ar": "arabic",
+    "be": "belarusian",
+    "bg": "bulgarian",
+    "ca": "catalan",
+    "zh-CN": "chineseS",
+    "zh-TW": "chineseT",
+    "hr": "croatian",
+    "cs": "czech",
+    "da": "danish",
+    "nl": "dutch",
+    "en": "english",
+    "et": "estonian",
+    "tl": "filipino",
+    "fi": "finnish",
+    "fr": "french",
+    "gl": "galician",
+    "de": "german",
+    "el": "greek",
+    "iw": "hebrew",
+    "hi": "hindi",
+    "hu": "hungarian",
+    "is": "icelandic",
+    "id": "indonesian",
+    "ga": "irish",
+    "it": "italian",
+    "ja": "japanese",
+    "ko": "korean",
+    "lv": "latvian",
+    "lt": "lithuanian",
+    "mk": "macedonian",
+    "ms": "malay",
+    "mt": "maltese",
+    "no": "norwegian",
+    "fa": "persian",
+    "pl": "polish",
+    "pt": "portuguese",
+    "ro": "romanian",
+    "ru": "russian",
+    "sr": "serbian",
+    "sk": "slovak",
+    "sl": "slovenian",
+    "es": "spanish",
+    "sw": "swahili",
+    "sv": "swedish",
+    "th": "thai",
+    "tr": "turkish",
+    "uk": "ukrainian",
+    "vi": "vietnamese",
+    "cy": "welsh",
+    "yi": "yiddish"
+};
+
 if ("undefined" === typeof(GoogleTranslate)) {
 
     var GoogleTranslate = {
+
+        // languages
+        langConf: {
+            availableLangs_from: _availableLangs_from,
+            availableLangs_to: _availableLangs_to,
+            langDict: _langDict
+        },
 
         init: function() {
             this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
@@ -105,13 +176,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
         // get langpair from preferences
         getLangPair: function() {
             return [this.prefs.getCharPref("from"), this.prefs.getCharPref("to")];
-        },
-
-        // languages
-        langConf: {
-            availableLangs_from: availableLangs_from,
-            availableLangs_to: availableLangs_to,
-            langDict: langDict
         }
     };
 
@@ -120,66 +184,4 @@ if ("undefined" === typeof(GoogleTranslate)) {
     }).apply(GoogleTranslate);
 }
 
-let availableLangs_from = ["auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,",
-                           "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
-                           "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                           "th,tr,uk,vi,cy,yi"].join("");
-let availableLangs_to =   ["af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,",
-                           "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
-                           "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                           "th,tr,uk,vi,cy,yi"].join("");
-let langDict = {
-    "auto": "auto",
-    "af": "afrikaans",
-    "sq": "albanian",
-    "ar": "arabic",
-    "be": "belarusian",
-    "bg": "bulgarian",
-    "ca": "catalan",
-    "zh-CN": "chineseS",
-    "zh-TW": "chineseT",
-    "hr": "croatian",
-    "cs": "czech",
-    "da": "danish",
-    "nl": "dutch",
-    "en": "english",
-    "et": "estonian",
-    "tl": "filipino",
-    "fi": "finnish",
-    "fr": "french",
-    "gl": "galician",
-    "de": "german",
-    "el": "greek",
-    "iw": "hebrew",
-    "hi": "hindi",
-    "hu": "hungarian",
-    "is": "icelandic",
-    "id": "indonesian",
-    "ga": "irish",
-    "it": "italian",
-    "ja": "japanese",
-    "ko": "korean",
-    "lv": "latvian",
-    "lt": "lithuanian",
-    "mk": "macedonian",
-    "ms": "malay",
-    "mt": "maltese",
-    "no": "norwegian",
-    "fa": "persian",
-    "pl": "polish",
-    "pt": "portuguese",
-    "ro": "romanian",
-    "ru": "russian",
-    "sr": "serbian",
-    "sk": "slovak",
-    "sl": "slovenian",
-    "es": "spanish",
-    "sw": "swahili",
-    "sv": "swedish",
-    "th": "thai",
-    "tr": "turkish",
-    "uk": "ukrainian",
-    "vi": "vietnamese",
-    "cy": "welsh",
-    "yi": "yiddish"
-};
+
