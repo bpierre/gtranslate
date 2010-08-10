@@ -8,7 +8,7 @@
     </stringbundleset>
     
     <!-- This imports our javascript. -->
-    <script type="application/x-javascript" src="chrome://googtrans/content/common.js"></script>
+    <script type="application/x-javascript" src="chrome://googtrans/content/UtilChrome.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/gtranslate.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/googTransOverlay.js"></script>
     

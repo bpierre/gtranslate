@@ -1,7 +1,12 @@
+
+/*
+ * The UtilChrome global object is defined in UtilChrome.js which is
+ * loaded from preferences.xul.
+ */
+
+Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+
 (function() {
-    
-    // Main object
-    Components.utils.import("resource://gtranslate/common.js");
     
     // Global vars
     var selection = '';
@@ -112,7 +117,7 @@
             elements["gtranslate_result"].setAttribute('label', connectgoogle);
             elements["gtranslate_result"].setAttribute('tooltiptext', null);
             
-            GT.fn.translationRequest(fromLang, toLang, selection,
+            GoogleTranslate.translationRequest(fromLang, toLang, selection,
                 function(translation, detectedLang) { // on load
                     updateTranslation(translation);
                     
@@ -158,7 +163,12 @@
     
     // Open Google Translation Page in a new tab
     function openPage() {
-        openNewTabWith(GT.fn.getGoogleUrl("page", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), null, null, true);
+        openNewTabWith(
+            GoogleTranslate.getGoogleUrl(
+                "page",
+                GT.fn.getLangPair()[0], GT.fn.getLangPair()[1],
+                lastSelection),
+            null, null, true);
     }
     
     // Open Google Translation Dictionay in a new tab
@@ -183,7 +193,8 @@
             gToLang = GT.fn.getLangPair()[1];
         }
         
-        openNewTabWith(GT.fn.getGoogleUrl("dict", gFromLang, gToLang, lastSelection), null, null, true);
+        openNewTabWith(GoogleTranslate.getGoogleUrl(
+            "dict", gFromLang, gToLang, lastSelection), null, null, true);
     }
     
     // Show menu
@@ -202,14 +213,19 @@
     function loadLangList() {
         
         function compareLangLabels(a, b) {
-            if (elements["gtranslate_strings"].getString(GT.langConf.langDict[a] + ".label") < elements["gtranslate_strings"].getString(GT.langConf.langDict[b] + ".label")) {
+            if (elements["gtranslate_strings"].getString(
+                    GoogleTranslate.langConf.langDict[a] + ".label") <
+                elements["gtranslate_strings"].getString(
+                    GoogleTranslate.langConf.langDict[b] + ".label")) {
                 return -1;
             }
             return 1;
         };
         
-        var fLangs = GT.langConf.availableLangs_from.split(",").slice(2).sort(compareLangLabels);
-        var tLangs = GT.langConf.availableLangs_to.split(",").sort(compareLangLabels);
+        var fLangs = GoogleTranslate.langConf.availableLangs_from.split(",")
+                        .slice(2).sort(compareLangLabels);
+        var tLangs = GoogleTranslate.langConf.availableLangs_to.split(",")
+                        .sort(compareLangLabels);
         
         fLangs.unshift("auto", "|");
         
@@ -229,7 +245,11 @@
                     "to": {}
                 };
                 
-                m.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[fLangs[f]] + ".label"));
+                m.setAttribute(
+                    "label",
+                    elements["gtranslate_strings"].getString(
+                        GoogleTranslate.langConf.langDict[fLangs[f]] + ".label")
+                );
                 
                 var mp = document.createElement('menupopup');
                 m.appendChild(mp);
@@ -241,7 +261,11 @@
                         
                         elements["gtranslate_langpairs"][fLangs[f]]["to"][tLangs[t]] = mi;
                         
-                        mi.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[tLangs[t]] + ".label"));
+                        mi.setAttribute(
+                            "label",
+                            elements["gtranslate_strings"].getString(
+                                GoogleTranslate.langConf.langDict[tLangs[t]] + ".label")
+                        );
                         mi.setAttribute("type", "radio");
                         
                         mi.addEventListener('command', (function() {
