@@ -30,5 +30,14 @@
             </Description>
         </em:targetApplication>
         
+        <!-- Test harness -->
+        <em:targetApplication>
+          <Description>
+            <em:id>xuth@mozilla.org</em:id>
+            <em:minVersion>0.1</em:minVersion>
+            <em:maxVersion>0.1</em:maxVersion>
+          </Description>
+        </em:targetApplication>
+        
     </Description>
 </RDF>

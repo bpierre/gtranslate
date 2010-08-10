@@ -1,0 +1,6 @@
+content harness file:content/
+
+# Register a resource: alias to the top level of the application directory
+# so tests can load modules and other resources with URLs like this example:
+#   resource://harness/modules/httpd.js
+resource harness ../

@@ -1,8 +1,8 @@
 (function() {
-    
-    /* Main object */
-    var GT = net.pierrebertet.GT;
-    
+
+    // Main object
+    Components.utils.import("resource://gtranslate/common.js");
+
     /* Firefox 3.0 : JSON support */
     Components.utils.import("resource://gtranslate/JSON.js", GT);
     
