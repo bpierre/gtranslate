@@ -32,8 +32,14 @@ Running tests
 
 * To run all tests, simply run "make test" from the top-level directory (where
   the `src` and `test` directories are).
-* To run specific tests, you can use the following command: 
+* To run all unit tests, use:
+      make -C test/unit
+* To run a specific unit test, use:
       make -C test/unit <test_name>
   i.e. to run test_resource.js, you would type
       make -C test/unit test_resource
+* To run all online tests, use:
+      make -C test/online
+* To run a specific online test, use:
+      make -C test/online <test_name>
 

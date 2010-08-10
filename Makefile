@@ -10,6 +10,7 @@ endif
 
 test:
 	$(MAKE) -k -C test/unit
+	$(MAKE) -k -C test/online
 
 clean:
 	$(MAKE) -C test/unit clean
