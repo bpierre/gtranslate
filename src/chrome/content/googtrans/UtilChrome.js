@@ -1,6 +1,3 @@
-const Cc = Components.classes;
-const Ci = Components.interfaces;
-
 if ("undefined" === typeof(UtilChrome)) {
 
     var UtilChrome = {
