@@ -1,7 +1,7 @@
 const Cc = Components.classes;
 const Ci = Components.interfaces;
 
-if ("undefined" === UtilChrome) {
+if ("undefined" === typeof(UtilChrome)) {
 
     var UtilChrome = {
         // getElementById shortcut
