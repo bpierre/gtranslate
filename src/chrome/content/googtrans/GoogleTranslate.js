@@ -90,21 +90,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
             return formattedUrl;
         },
 
-        // getElementById shortcut
-        gid: function(id) {
-            return "titi";
-            return document.getElementById(id);
-        },
-        
-        // debug
-        log: function(msg) {
-            if (!!window.dump) {
-                window.dump("[GoogleTranslate] " + msg + "\n");
-            }
-            Cc["@mozilla.org/consoleservice;1"].getService(
-                Ci.nsIConsoleService).logStringMessage(msg);
-        },
-
         // languages
         langConf: {
             availableLangs_from: availableLangs_from,
