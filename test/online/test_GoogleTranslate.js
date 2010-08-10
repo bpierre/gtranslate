@@ -4,6 +4,8 @@ function test_translationRequest_success() {
     let langFrom = "en", langTo = "fr", text = "project";
     function success(translation) {
         do_check_eq(translation, "projet");
+        // just check that we can access "document" in the callback
+        do_check_true(typeof(document.createElement) === "function");
         do_test_finished();
     }
     function error(statusText) {
