@@ -1,3 +1,5 @@
+let EXPORTED_SYMBOLS = ["GT"];
+
 (function() {
 
     // Main object
