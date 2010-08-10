@@ -81,6 +81,8 @@ if ("undefined" === typeof(GoogleTranslate)) {
         },
 
         init: function() {
+            this._console = Cc["@mozilla.org/consoleservice;1"].getService(
+                Ci.nsIConsoleService);
             this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
                 Ci.nsIPrefService);
             let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
@@ -94,6 +96,11 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (!prefs.prefHasUserValue("detectpagelang")) {
                 prefs.setBoolPref("detectpagelang", true);
             }
+        },
+
+        // log a message to the Error Console
+        log: function(msg) {
+            this._console.logStringMessage(msg);
         },
 
         // get the default "to" lang
