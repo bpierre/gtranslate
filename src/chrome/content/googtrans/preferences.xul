@@ -34,7 +34,7 @@
        <stringbundle id="googtrans-strings" src="chrome://googtrans/locale/googtrans.properties"/>
     </stringbundleset>
     
-    <script type="application/x-javascript" src="chrome://googtrans/content/common.js"></script>
+    <script type="application/x-javascript" src="chrome://googtrans/content/UtilChrome.js"></script>
     <script type="application/x-javascript" src="chrome://googtrans/content/preferences.js"></script>
     
 </prefwindow>
