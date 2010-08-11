@@ -30,32 +30,3 @@ function test_getGoogleUrl() {
                 "http://ajax.googleapis.com/ajax/services/language/translate" +
                 "?v=1.0&format=text&langpair=en%7Cfr&q=project");
 }
-
-function test_translationRequest_success() {
-    let langFrom = "en", langTo = "fr", text = "project";
-    function success(translation) {
-        do_check_eq(translation, "projet");
-        do_test_finished();
-    }
-    function error(statusText) {
-        do_check_true(false);
-        do_test_finished();
-    }
-    GoogleTranslate.translationRequest(langFrom, langTo, text, success, error);
-    do_test_pending();
-}
-
-function test_translationRequest_error() {
-    let langFrom = "foo", langTo = "bar", text = "foo";
-    function success(translation) {
-        do_check_true(false);
-        do_test_finished();
-    }
-    function error(statusText) {
-        do_check_eq(statusText, "invalid translation language pair");
-        do_test_finished();
-    }
-    GoogleTranslate.translationRequest(langFrom, langTo, text, success, error);
-    do_test_pending();
-}
-
