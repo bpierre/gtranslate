@@ -13,7 +13,6 @@ function test_langConf() {
 
 function test_prefs() {
    do_check_true(GoogleTranslate.prefs instanceof Ci.nsIPrefBranch);
-   dump(GoogleTranslate.prefs.getCharPref("from"));
    do_check_eq(GoogleTranslate.prefs.getCharPref("from"), "auto");
 
    var getDefaultTo = GoogleTranslate.getDefaultTo;
