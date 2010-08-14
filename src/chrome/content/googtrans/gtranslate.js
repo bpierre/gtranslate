@@ -55,7 +55,7 @@ let EXPORTED_SYMBOLS = ["GT"];
             
             // Google Translate API > JSON
             case "api":
-                formattedUrl = 'http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&format=text&langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
+                formattedUrl = 'https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&format=text&langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
                 break;
                 
             // Google Translate page
