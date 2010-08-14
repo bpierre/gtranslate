@@ -158,7 +158,7 @@
     
     // Open Google Translation Page in a new tab
     function openPage() {
-        openNewTabWith(GT.fn.getGoogleUrl("page", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), null, null, true);
+        gBrowser.addTab(GT.fn.getGoogleUrl("page", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), {relatedToCurrent: true});
     }
     
     // Open Google Translation Dictionay in a new tab
@@ -183,7 +183,7 @@
             gToLang = GT.fn.getLangPair()[1];
         }
         
-        openNewTabWith(GT.fn.getGoogleUrl("dict", gFromLang, gToLang, lastSelection), null, null, true);
+        gBrowser.addTab(GT.fn.getGoogleUrl("dict", gFromLang, gToLang, lastSelection), {relatedToCurrent: true});
     }
     
     // Show menu
