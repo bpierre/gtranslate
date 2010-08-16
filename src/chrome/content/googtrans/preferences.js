@@ -42,7 +42,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
         var menu = UtilChrome.gid('lp_menupopup_to');
         var langs = GoogleTranslate.langConf.availableLangs_to.split(",");
         
-        emptyElt(menu);
+        UtilChrome.emptyElt(menu);
         
         for (i in langs) {
             if (langs[i] !== elts.langpair_from.value) {
@@ -68,13 +68,6 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
             } else {
                 elts.langpair_to.value = menu.firstChild.value;
             }
-        }
-    };
-    
-    /* Empty an element */
-    function emptyElt(elt) {
-        while (elt.firstChild) {
-          elt.removeChild(elt.firstChild);
         }
     };
     

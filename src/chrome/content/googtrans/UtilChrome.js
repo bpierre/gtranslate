@@ -13,6 +13,13 @@ if ("undefined" === typeof(UtilChrome)) {
             }
             Cc["@mozilla.org/consoleservice;1"].getService(
                 Ci.nsIConsoleService).logStringMessage(msg);
+        },
+
+        // remove all the children of an element
+        emptyElt: function(elt) {
+            while (elt.firstChild) {
+              elt.removeChild(elt.firstChild);
+            }
         }
     };
 }
