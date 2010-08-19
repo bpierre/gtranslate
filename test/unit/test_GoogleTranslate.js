@@ -9,10 +9,14 @@ function test_lang() {
 
 function test_init() {
 
-    var _getDefaultTo = GoogleTranslate.getDefaultTo;
-    GoogleTranslate.getDefaultTo = function() { return "en"; };
+    let gTranslatePrefs = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("googTrans.");
 
+    // Change getDefaultTo to always get "en"
+    let _getDefaultTo = GoogleTranslate.getDefaultTo;
+    GoogleTranslate.getDefaultTo = function() { return "en"; };
+    gTranslatePrefs.deleteBranch("");
     GoogleTranslate.init();
+
     do_check_true(GoogleTranslate._console instanceof Ci.nsIConsoleService);
     do_check_true(GoogleTranslate.mozPrefs instanceof Ci.nsIPrefService);
     do_check_true(GoogleTranslate.prefs instanceof Ci.nsIPrefBranch);
@@ -20,7 +24,10 @@ function test_init() {
     do_check_eq(GoogleTranslate.prefs.getCharPref("to"), "en");
     do_check_true(GoogleTranslate.prefs.getBoolPref("detectpagelang"));
 
+    // Reinit GoogleTranslate with initial getDefaultTo
     GoogleTranslate.getDefaultTo = _getDefaultTo;
+    gTranslatePrefs.deleteBranch("");
+    GoogleTranslate.init();
 }
 
 function test_setLangPair() {
