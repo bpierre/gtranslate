@@ -1,7 +1,12 @@
+
+/*
+ * The UtilChrome global object is defined in UtilChrome.js which is
+ * loaded from preferences.xul.
+ */
+
+Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+
 (function() {
-    
-    // Main object
-    Components.utils.import("resource://gtranslate/common.js");
     
     // Global vars
     var selection = '';
@@ -63,7 +68,7 @@
             return;
         }
         
-        elements["gtranslate_dict"].setAttribute("disabled", (GT.fn.getLangPair()[0] === "auto"));
+        elements["gtranslate_dict"].setAttribute("disabled", (GoogleTranslate.getLangPair()[0] === "auto"));
         elements["gtranslate_replace"].setAttribute('hidden', true);
         elements["gtranslate_result"].setAttribute('disabled', true);
         
@@ -78,7 +83,7 @@
         pageLang = detectLang(popupnode);
         
         // Get and trim current selection
-        selection = GT.fn.trim(getSelection(popupnode));
+        selection = GoogleTranslate.trim(getSelection(popupnode));
         
         // Show and update (eventually with a substr) gTranslate menu
         if (selection != '') {
@@ -94,7 +99,7 @@
     // Connect to Google Translate service
     function initTranslate() {
         
-        var langpair = GT.fn.getLangPair();
+        var langpair = GoogleTranslate.getLangPair();
         var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
         var toLang = langpair[1];
         
@@ -112,7 +117,7 @@
             elements["gtranslate_result"].setAttribute('label', connectgoogle);
             elements["gtranslate_result"].setAttribute('tooltiptext', null);
             
-            GT.fn.translationRequest(fromLang, toLang, selection,
+            GoogleTranslate.translationRequest(fromLang, toLang, selection,
                 function(translation, detectedLang) { // on load
                     updateTranslation(translation);
                     
@@ -158,7 +163,12 @@
     
     // Open Google Translation Page in a new tab
     function openPage() {
-        gBrowser.addTab(GT.fn.getGoogleUrl("page", GT.fn.getLangPair()[0], GT.fn.getLangPair()[1], lastSelection), {relatedToCurrent: true});
+      gBrowser.addTab(
+        GoogleTranslate.getGoogleUrl(
+          "page",
+          GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1],
+          lastSelection),
+        {relatedToCurrent: true});
     }
     
     // Open Google Translation Dictionay in a new tab
@@ -173,17 +183,19 @@
             gFromLang = pageLang;
             
         } else {
-            gFromLang = GT.fn.getLangPair()[0];
+            gFromLang = GoogleTranslate.getLangPair()[0];
         }
         
         if (gFromLang !== "en") {
             gToLang = "en";
             
         } else {
-            gToLang = GT.fn.getLangPair()[1];
+            gToLang = GoogleTranslate.getLangPair()[1];
         }
         
-        gBrowser.addTab(GT.fn.getGoogleUrl("dict", gFromLang, gToLang, lastSelection), {relatedToCurrent: true});
+        gBrowser.addTab(
+          GoogleTranslate.getGoogleUrl("dict", gFromLang, gToLang, lastSelection),
+          {relatedToCurrent: true});
     }
     
     // Show menu
@@ -202,14 +214,19 @@
     function loadLangList() {
         
         function compareLangLabels(a, b) {
-            if (elements["gtranslate_strings"].getString(GT.langConf.langDict[a] + ".label") < elements["gtranslate_strings"].getString(GT.langConf.langDict[b] + ".label")) {
+            if (elements["gtranslate_strings"].getString(
+                    GoogleTranslate.langConf.langDict[a] + ".label") <
+                elements["gtranslate_strings"].getString(
+                    GoogleTranslate.langConf.langDict[b] + ".label")) {
                 return -1;
             }
             return 1;
         };
         
-        var fLangs = GT.langConf.availableLangs_from.split(",").slice(2).sort(compareLangLabels);
-        var tLangs = GT.langConf.availableLangs_to.split(",").sort(compareLangLabels);
+        var fLangs = GoogleTranslate.langConf.availableLangs_from.split(",")
+                        .slice(2).sort(compareLangLabels);
+        var tLangs = GoogleTranslate.langConf.availableLangs_to.split(",")
+                        .sort(compareLangLabels);
         
         fLangs.unshift("auto", "|");
         
@@ -229,7 +246,11 @@
                     "to": {}
                 };
                 
-                m.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[fLangs[f]] + ".label"));
+                m.setAttribute(
+                    "label",
+                    elements["gtranslate_strings"].getString(
+                        GoogleTranslate.langConf.langDict[fLangs[f]] + ".label")
+                );
                 
                 var mp = document.createElement('menupopup');
                 m.appendChild(mp);
@@ -241,7 +262,11 @@
                         
                         elements["gtranslate_langpairs"][fLangs[f]]["to"][tLangs[t]] = mi;
                         
-                        mi.setAttribute("label", elements["gtranslate_strings"].getString(GT.langConf.langDict[tLangs[t]] + ".label"));
+                        mi.setAttribute(
+                            "label",
+                            elements["gtranslate_strings"].getString(
+                                GoogleTranslate.langConf.langDict[tLangs[t]] + ".label")
+                        );
                         mi.setAttribute("type", "radio");
                         
                         mi.addEventListener('command', (function() {
@@ -250,7 +275,7 @@
                             var toLang = tLangs[t];
                             
                             return function() {
-                                GT.fn.setLangPair(fromLang, toLang);
+                                GoogleTranslate.setLangPair(fromLang, toLang);
                                 lastSelection = '';
                             };
                             

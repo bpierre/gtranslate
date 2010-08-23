@@ -1,26 +1,32 @@
+
+/*
+ * The UtilChrome global object is defined in UtilChrome.js which is
+ * loaded from preferences.xul.
+ */
+
+Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+
 (function() {
-    
-    /* Main object */
-    var GT = net.pierrebertet.GT;
-    
+
     /* Langpair */
     var elts = {
-        "langpair_from": GT.gid("langpair_from"),
-        "langpair_to": GT.gid("langpair_to"),
-        "strings": GT.gid("googtrans-strings")
+        "langpair_from": UtilChrome.gid("langpair_from"),
+        "langpair_to": UtilChrome.gid("langpair_to"),
+        "strings": UtilChrome.gid("googtrans-strings")
     };
     
     /* Fill "from" menuitem */
     function fillFromLang() {
         
-	var menu = GT.gid('lp_menupopup_from');
-        var langs = GT.langConf.availableLangs_from.split(",");
+	var menu = UtilChrome.gid('lp_menupopup_from');
+        var langs = GoogleTranslate.langConf.availableLangs_from.split(",");
         
         for (i in langs) {
             if (langs[i] !== '|') {
                 
                 var item = document.createElement('menuitem');
-                var label = elts.strings.getString(GT.langConf.langDict[ langs[i] ] + ".label");
+                var label = elts.strings.getString(
+                    GoogleTranslate.langConf.langDict[ langs[i] ] + ".label");
                 
                 item.setAttribute("label", label);
                 item.setAttribute("value", langs[i]);
@@ -33,16 +39,17 @@
     /* Fill "to" menuitem */
     function fillToLang() {
         
-        var menu = GT.gid('lp_menupopup_to');
-        var langs = GT.langConf.availableLangs_to.split(",");
+        var menu = UtilChrome.gid('lp_menupopup_to');
+        var langs = GoogleTranslate.langConf.availableLangs_to.split(",");
         
-        emptyElt(menu);
+        UtilChrome.emptyElt(menu);
         
         for (i in langs) {
             if (langs[i] !== elts.langpair_from.value) {
                 
                 var item = document.createElement('menuitem');
-                var label = elts.strings.getString(GT.langConf.langDict[ langs[i] ] + ".label");
+                var label = elts.strings.getString(
+                    GoogleTranslate.langConf.langDict[ langs[i] ] + ".label");
                 
                 item.setAttribute("label", label);
                 item.setAttribute("value", langs[i]);
@@ -53,7 +60,7 @@
         
         if (elts.langpair_to.value === elts.langpair_from.value) {
             
-            var defaultTo = GT.getDefaultTo();
+            var defaultTo = GoogleTranslate.getDefaultTo();
             
             if (defaultTo !== elts.langpair_from.value) {
                 elts.langpair_to.value = defaultTo;
@@ -64,24 +71,17 @@
         }
     };
     
-    /* Empty an element */
-    function emptyElt(elt) {
-        while (elt.firstChild) {
-          elt.removeChild(elt.firstChild);
-        }
-    };
-    
     /* Init preferences */
     function initPrefs() {
         
         fillFromLang();
-        elts.langpair_from.value = GT.prefs.getCharPref("from");
+        elts.langpair_from.value = GoogleTranslate.prefs.getCharPref("from");
         elts.langpair_from.addEventListener("command", function() {
             fillToLang();
         }, false);
         
         fillToLang();
-        elts.langpair_to.value = GT.prefs.getCharPref("to");
+        elts.langpair_to.value = GoogleTranslate.prefs.getCharPref("to");
     };
     
     
