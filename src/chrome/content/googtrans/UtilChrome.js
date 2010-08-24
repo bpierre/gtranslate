@@ -11,8 +11,7 @@ if ("undefined" === typeof(UtilChrome)) {
             if (!!window.dump) {
                 window.dump("[GoogleTranslate] " + msg + "\n");
             }
-            Cc["@mozilla.org/consoleservice;1"].getService(
-                Ci.nsIConsoleService).logStringMessage(msg);
+            Cc["@mozilla.org/consoleservice;1"].getService(Ci.nsIConsoleService).logStringMessage(msg);
         },
 
         // remove all the children of an element
