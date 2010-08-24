@@ -19,6 +19,10 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     // XUL elements
     var elements = {};
     
+    // App version check
+    var appInfo = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
+    var versionChecker = Components.classes["@mozilla.org/xpcom/version-comparator;1"].getService(Components.interfaces.nsIVersionComparator);
+    
     // On window load
     window.addEventListener("load", function() {
         
@@ -163,12 +167,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     
     // Open Google Translation Page in a new tab
     function openPage() {
-      gBrowser.addTab(
-        GoogleTranslate.getGoogleUrl(
-          "page",
-          GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1],
-          lastSelection),
-        {relatedToCurrent: true});
+      openTab(GoogleTranslate.getGoogleUrl("page", GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], lastSelection));
     }
     
     // Open Google Translation Dictionay in a new tab
@@ -193,9 +192,17 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
             gToLang = GoogleTranslate.getLangPair()[1];
         }
         
-        gBrowser.addTab(
-          GoogleTranslate.getGoogleUrl("dict", gFromLang, gToLang, lastSelection),
-          {relatedToCurrent: true});
+        openTab(GoogleTranslate.getGoogleUrl("dict", gFromLang, gToLang, lastSelection));
+    }
+    
+    function openTab(tabUrl) {
+      // Firefox 3.6+
+      if (versionChecker.compare(appInfo.platformVersion, "1.9.2") >= 0) {
+        gBrowser.addTab(tabUrl, {relatedToCurrent: true});
+      // Compatibility
+      } else {
+        gBrowser.addTab(tabUrl);
+      }
     }
     
     // Show menu
