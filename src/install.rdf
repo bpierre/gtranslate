@@ -4,7 +4,7 @@
      
     <Description about="urn:mozilla:install-manifest">
         <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
-        <em:version>0.8b</em:version>
+        <em:version>0.8</em:version>
         <em:type>2</em:type>
         <em:optionsURL>chrome://googtrans/content/preferences.xul</em:optionsURL>
         
