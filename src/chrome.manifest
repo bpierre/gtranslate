@@ -11,11 +11,11 @@ locale	googtrans	pt-BR	chrome/locale/googtrans/pt-BR/
 locale	googtrans	ro-RO	chrome/locale/googtrans/ro-RO/
 locale	googtrans	de-DE	chrome/locale/googtrans/de-DE/
 locale	googtrans	it-IT	chrome/locale/googtrans/it-IT/
+locale	googtrans	ru-RU	chrome/locale/googtrans/ru-RU/
 #locale	googtrans	hr-HR	chrome/locale/googtrans/hr-HR/
 #locale	googtrans	hu-HU	chrome/locale/googtrans/hu-HU/
 #locale	googtrans	ja-JP	chrome/locale/googtrans/ja-JP/
 #locale	googtrans	ko-KR	chrome/locale/googtrans/ko-KR/
 #locale	googtrans	nl-NL	chrome/locale/googtrans/nl-NL/
 #locale	googtrans	pt-BR	chrome/locale/googtrans/pt-BR/
-#locale	googtrans	ru-RU	chrome/locale/googtrans/ru-RU/
 #locale	googtrans	zh-CN	chrome/locale/googtrans/zh-CN/
