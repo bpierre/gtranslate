@@ -93,9 +93,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (!prefs.prefHasUserValue("to")) {
                 prefs.setCharPref("to", this.getDefaultTo());
             }
-            if (!prefs.prefHasUserValue("detectpagelang")) {
-                prefs.setBoolPref("detectpagelang", true);
-            }
         },
 
         // log a message to the Error Console
