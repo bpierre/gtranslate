@@ -23,8 +23,13 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     var appInfo = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
     var versionChecker = Components.classes["@mozilla.org/xpcom/version-comparator;1"].getService(Components.interfaces.nsIVersionComparator);
     
+    // Context menu
+    var contextMenu;
+    
     // On window load
     window.addEventListener("load", function() {
+        
+        contextMenu = UtilChrome.gid("contentAreaContextMenu") || UtilChrome.gid("mailContext");
         
         // XUL elements
         elements["gtranslate_popup"] = document.getElementById("gtranslate_popup");
@@ -50,7 +55,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     function initEvents() {
         
         // Right click
-        document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", onGtransPopup, false);
+        contextMenu.addEventListener("popupshowing", onGtransPopup, false);
         
         // Init translate
         elements["gtranslate_popup"].addEventListener("popupshowing", initTranslate, false);
@@ -68,7 +73,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     // On right click event
     function onGtransPopup(event) {
         
-        if (event.target.id != 'contentAreaContextMenu')  {
+        if (event.target !== contextMenu)  {
             return;
         }
         
@@ -134,8 +139,10 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
                     }
                 },
                 function(errorMsg) { // on error
-                    if (!errorMsg)
-                        errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                    if (!errorMsg) {
+                      errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                    }
+                    
                     elements["gtranslate_result"].setAttribute('label', errorMsg);
                     elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
                 }
@@ -196,12 +203,25 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     }
     
     function openTab(tabUrl) {
-      // Firefox 3.6+
-      if (versionChecker.compare(appInfo.platformVersion, "1.9.2") >= 0) {
-        gBrowser.addTab(tabUrl, {relatedToCurrent: true});
-      // Compatibility
+      
+      // Thunderbird, Seamonkey Mail
+      if (contextMenu.id === "mailContext") {
+        var uri = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService).newURI(tabUrl, null, null);
+        var httpHandler = Components.classes["@mozilla.org/uriloader/external-helper-app-service;1"]
+                          .createInstance(Components.interfaces.nsIExternalProtocolService);
+        httpHandler.loadUrl(uri);
+        
       } else {
-        gBrowser.addTab(tabUrl);
+        
+        // Firefox 3.6+
+        if (versionChecker.compare(appInfo.platformVersion, "1.9.2") >= 0) {
+          gBrowser.addTab(tabUrl, {relatedToCurrent: true});
+          
+        // Firefox < 3.6
+        } else {
+          gBrowser.addTab(tabUrl);
+        }
       }
     }
     

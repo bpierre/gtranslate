@@ -134,7 +134,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
                }
 
                var translatedText = response.responseData.translatedText;
-               onLoadFn(translatedText, response.responseData.detectedSourceLanguage);
+               onLoadFn(translatedText, response.responseData.detectedSourceLanguage || null);
            }), false);
 
            req.addEventListener("error", onErrorFn, false);

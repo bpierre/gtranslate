@@ -5,15 +5,17 @@ if ("undefined" === typeof(UtilChrome)) {
         gid: function(id) {
             return document.getElementById(id);
         },
-
+        
         // debug
         log: function(msg) {
             if (!!window.dump) {
                 window.dump("[GoogleTranslate] " + msg + "\n");
             }
-            Cc["@mozilla.org/consoleservice;1"].getService(Ci.nsIConsoleService).logStringMessage(msg);
+            Components.classes["@mozilla.org/consoleservice;1"]
+              .getService(Components.interfaces.nsIConsoleService)
+              .logStringMessage(msg);
         },
-
+        
         // remove all the children of an element
         emptyElt: function(elt) {
             while (elt.firstChild) {
