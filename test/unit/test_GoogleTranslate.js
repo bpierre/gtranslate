@@ -22,7 +22,6 @@ function test_init() {
     do_check_true(GoogleTranslate.prefs instanceof Ci.nsIPrefBranch);
     do_check_eq(GoogleTranslate.prefs.getCharPref("from"), "auto");
     do_check_eq(GoogleTranslate.prefs.getCharPref("to"), "en");
-    do_check_true(GoogleTranslate.prefs.getBoolPref("detectpagelang"));
 
     // Reinit GoogleTranslate with initial getDefaultTo
     GoogleTranslate.getDefaultTo = _getDefaultTo;
