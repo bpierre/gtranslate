@@ -552,7 +552,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 	var StatusBar = {
 		clear: function(){
 			document.getElementById('gestureTranslateStatusbar').label = 'Gesture Translate';
-			document.getElementById('gestureTranslateStatusbar').tooltipText = 'Select a text and move the mouse in zig and zag movements to translate it';
+			document.getElementById('gestureTranslateStatusbar').tooltipText = 'Select any text and move the mouse in zig and zag movements to translate it';
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){};			
 		},
 		update: function(tooltipText, textToTranslate){
