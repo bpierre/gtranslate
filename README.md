@@ -1,11 +1,11 @@
-Gesture Translate (fork from gTranslate http://github.com/bpierre/gtranslate)
+Gesture Translate
 ==========
 
 With Gesture Translate you can translate any text in a webpage just by zig and zag mouse movements. The translated text will be showed in the status bar
 
 The selected text is translated via Google Translate API
 
-This Add-on is a gTranslate modification to add Gesture Capabilities
+Gesture Translate is a modification of gTranslate (https://addons.mozilla.org/en-US/firefox/addon/918/) to add gesture capabilities
 
 Get it here: https://addons.mozilla.org/en-US/firefox/addon/239633/
 
