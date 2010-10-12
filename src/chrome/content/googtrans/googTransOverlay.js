@@ -570,14 +570,14 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
 				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
-				StatusBar.reset();
+				//StatusBar.reset();
 			}
 		},
 		updateError: function(tooltipText, textToTranslate){ //Only change the font-color to red
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: red');
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				StatusBar.reset();
+				//StatusBar.reset();
 			}
 		}
 	};
