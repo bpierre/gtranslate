@@ -15,6 +15,6 @@
    <statusbarpanel  image="chrome://googtrans/skin/menuitem.png"
 		class="statusbarpanel-iconic-text"
 		id="gestureTranslateStatusbar"
-     	position="1" style="border: 1px solid #CCC; background-color: #FFFFCC;"/>
+     	position="1"/>
 	</statusbar>
 </overlay>
