@@ -13,7 +13,7 @@
 	    <em:id>gesture-translate@pablocantero.com</em:id>
 	    <em:type>2</em:type>
 	    <em:name>Gesture Translate</em:name>
-	    <em:version>0.5</em:version>
+	    <em:version>0.5.1</em:version>
         
 		<!-- gTranslate
         <em:name>gTranslate</em:name>
