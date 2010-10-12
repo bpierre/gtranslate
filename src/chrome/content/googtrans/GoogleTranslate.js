@@ -147,6 +147,8 @@ if ("undefined" === typeof(GoogleTranslate)) {
 				var to = _countryCodeLanguage[code];
 				if (!("undefined" === typeof(to))){
 					GoogleTranslate.prefs.setCharPref("to", to);
+					//To check again
+					GoogleTranslate.prefs.setCharPref("userSetFromTo", true);
 				}
 			});	
 		},
