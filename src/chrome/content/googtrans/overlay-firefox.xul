@@ -10,4 +10,10 @@
 		<menu id="gtranslate_main"/>
 	</popup>
 	
+	<!-- Translate Status Bar-->
+ <statusbar id="status-bar">
+   <statusbarpanel 
+		id="gestureTranslateStatusbar"
+     	position="1" style="border: 1px solid #CCC; background-color: #FFFFCC;"/>
+	</statusbar>
 </overlay>

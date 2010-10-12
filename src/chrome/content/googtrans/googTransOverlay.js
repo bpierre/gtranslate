@@ -49,11 +49,14 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
         
         // Load langpairs list
         loadLangList();
+
+		// Gesture mod
+		GestureTranslate.init();
         
     }, false);
     
     function initEvents() {
-        
+	        
         // Right click
         contextMenu.addEventListener("popupshowing", onGtransPopup, false);
         
@@ -370,13 +373,11 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
     }
     
     function getSelection(popupnode) {
-        
         var nodeLocalName = popupnode.localName.toLowerCase();
         var selection = '';
         
         // Input or textarea ?
         if ((nodeLocalName == "textarea") || (nodeLocalName == "input" && popupnode.type == "text")) {
-            
             selection = popupnode.value.substring(popupnode.selectionStart, popupnode.selectionEnd);
             
             elements["gtranslate_replace"].setAttribute('hidden', false); /* TEMP */
@@ -422,5 +423,146 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
         popupnode.value = popupnode.value.substring(0, iStart) + curTranslation + popupnode.value.substring(iEnd, popupnode.value.length);
         popupnode.setSelectionRange(iStart, iStart + curTranslation.length);
     }
-    
+
+	// INI - Patch for Gesture Translate by @pablocantero
+	var CommonsUtils = {
+		isEmpty: function(text){
+			return (text == null || text == '');
+		},
+		isNotEmpty: function(text){
+			return !CommonsUtils.isEmpty(text);
+		}
+	}
+	var GestureTranslate = {
+		selectedText: 		'',
+		lastSelectedText: 	'',
+		left1: 				false,
+		rigth1: 			false,
+		left2: 				false,
+		right2: 			false,
+		cuu: 				null,
+		init: function(){
+			window.onmousemove = GestureTranslate.onmousemove_handler;
+			//To set default messages
+			StatusBar.clear();
+		},
+		onmousemove_handler: function(event){
+			var popupnode = event.target;
+			var selectedTextToCompare = GestureTranslate.getSelection(popupnode);
+			//If the selected text not is changed then nothing happens 
+			if(GestureTranslate.lastSelectedText == selectedTextToCompare){
+				GestureTranslate.clearVariables();
+				return;
+			}
+			//No text selected
+			if(CommonsUtils.isEmpty(selectedTextToCompare)){
+				GestureTranslate.clearVariables();
+				return;
+			}
+			//Actual selected text != last selected text
+			if(CommonsUtils.isNotEmpty(GestureTranslate.selectedText) && GestureTranslate.selectedText != selectedTextToCompare){
+				GestureTranslate.clearVariables();
+				GestureTranslate.selectedText = selectedTextToCompare;
+				return;			
+			}
+			GestureTranslate.selectedText = selectedTextToCompare;
+			if(GestureTranslate.cuu == null){
+				GestureTranslate.cuu = event.pageX;
+				return;
+			}
+			//everything's right... let's go, start the count down to zig and zag movements
+			GestureTranslate.startCountDown();
+			if(GestureTranslate.left1 || GestureTranslate.right1){ //1
+				if((GestureTranslate.left1 && GestureTranslate.right2) || (GestureTranslate.right1 && GestureTranslate.left2)){ //2
+					if((GestureTranslate.left1 && GestureTranslate.cuu > event.pageX) || (GestureTranslate.right1 && GestureTranslate.cuu < event.pageX)){ //3
+						window.setCursor('wait');
+						GestureTranslate.lastSelectedText = GestureTranslate.selectedText;
+						GestureTranslate.translateIt(GestureTranslate.selectedText);
+						GestureTranslate.clearVariables();
+						return;
+					}
+				} else { //2 WAIT
+					GestureTranslate.right2 = GestureTranslate.cuu < event.pageX;
+					GestureTranslate.left2 = GestureTranslate.cuu > event.pageX;
+				}
+			} else { //1 WAIT
+				GestureTranslate.right1 = GestureTranslate.cuu < event.pageX;
+				GestureTranslate.left1 = GestureTranslate.cuu > event.pageX;
+			}
+		},
+		startCountDown: function(){ //Run Forest, run...
+			var timerService = Components.classes["@mozilla.org/timer;1"].createInstance(Components.interfaces.nsITimer);
+			var event = {  
+			   notify: function(timer) {  
+			     GestureTranslate.clearVariables();
+				 timer.cancel();
+			  }  
+			};
+			timerService.initWithCallback(event, 2000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);			
+		},
+		clearVariables: function(){
+			GestureTranslate.selectedText 	= '';
+			GestureTranslate.left1 			= false;
+			GestureTranslate.right1 		= false;
+			GestureTranslate.left2 			= false;
+			GestureTranslate.right2 		= false;
+			GestureTranslate.cuu 			= null;
+		},
+		translateIt: function(textToTranslate){
+			var langpair	= GoogleTranslate.getLangPair();
+	        var fromLang 	= (langpair[0] == 'auto') ? pageLang : langpair[0];
+	        var toLang 		= langpair[1];
+			GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
+                function(translation, detectedLang) { // on load
+					StatusBar.update(translation, textToTranslate);
+					GestureTranslate.clearVariables();
+                    if (!!detectedLang) {
+                        curDetectedLang = detectedLang;
+                    }     
+                    if (curDetectedLang !== "" || pageLang !== "") {
+                        elements["gtranslate_dict"].setAttribute("disabled", false);
+                    }
+					window.setCursor('auto');
+                },
+                function(errorMsg) { // on error
+					StatusBar.update(translation);
+					GestureTranslate.clearVariables();
+                    if (!errorMsg) {
+                      errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                    }
+                    elements["gtranslate_result"].setAttribute('label', errorMsg);
+                    elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
+					window.setCursor('auto');
+                }
+            );
+		},
+		getSelection: function(popupnode) {
+			var nodeLocalName = popupnode.localName.toLowerCase();
+			var selection = '';
+			// Input or textarea ?
+			if ((nodeLocalName == "textarea") || (nodeLocalName == "input" && popupnode.type == "text")) {
+			    selection = popupnode.value.substring(popupnode.selectionStart, popupnode.selectionEnd);
+			    elements["gtranslate_replace"].setAttribute('hidden', false); /*TEMP*/
+			} else {
+			    selection = document.commandDispatcher.focusedWindow.getSelection().toString();
+			}
+			return selection;
+	    }
+	};
+	var StatusBar = {
+		clear: function(){
+			document.getElementById('gestureTranslateStatusbar').label = 'Gesture Translate';
+			document.getElementById('gestureTranslateStatusbar').tooltipText = 'Select a text and move the mouse in zig and zag movements to translate it';
+			document.getElementById('gestureTranslateStatusbar').onclick = function(){};			
+		},
+		update: function(tooltipText, textToTranslate){
+			document.getElementById('gestureTranslateStatusbar').label = tooltipText;
+			document.getElementById('gestureTranslateStatusbar').tooltipText = tooltipText;
+			document.getElementById('gestureTranslateStatusbar').onclick = function(){
+				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
+				StatusBar.clear();
+			}
+		}
+	};
+	// END - Patch for Gesture Translate by @pablocantero
 })();
