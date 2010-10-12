@@ -81,7 +81,8 @@ let _countryCodeLanguage = {
 	"de": "de",
 	"jp": "ja",
 	"cn": "zh-CN",
-	"tw": "zh-TW"
+	"tw": "zh-TW",
+	"fr": "fr"
 };
 
 if ("undefined" === typeof(GoogleTranslate)) {
