@@ -441,6 +441,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 		left2: 				false,
 		right2: 			false,
 		cuu: 				null,
+		lastTimerService: 	null,
 		init: function(){
 			window.onmousemove = GestureTranslate.onmousemove_handler;
 			//To set default messages
@@ -471,7 +472,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 				return;
 			}
 			//everything's right... let's go, start the count down to zig and zag movements
-			GestureTranslate.startCountDown();
+			GestureTranslate.lastTimerService = GestureTranslate.startCountDown();
 			if(GestureTranslate.left1 || GestureTranslate.right1){ //1
 				if((GestureTranslate.left1 && GestureTranslate.right2) || (GestureTranslate.right1 && GestureTranslate.left2)){ //2
 					if((GestureTranslate.left1 && GestureTranslate.cuu > event.pageX) || (GestureTranslate.right1 && GestureTranslate.cuu < event.pageX)){ //3
@@ -500,7 +501,8 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 				 timer.cancel();
 			  }  
 			};
-			timerService.initWithCallback(event, 2000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);			
+			timerService.initWithCallback(event, 1500, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
+			return timerService;		
 		},
 		reset: function(){
 			GestureTranslate.selectedText 	= '';
@@ -509,6 +511,10 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 			GestureTranslate.left2 			= false;
 			GestureTranslate.right2 		= false;
 			GestureTranslate.cuu 			= null;
+			if(GestureTranslate.lastTimerService != null){
+				GestureTranslate.lastTimerService.cancel();
+				GestureTranslate.lastTimerService = null;
+			}
 		},
 		translateIt: function(textToTranslate){
 			var langpair	= GoogleTranslate.getLangPair();
@@ -556,29 +562,25 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 			}
 			document.getElementById('gestureTranslateStatusbar').label = tooltipText;
 			document.getElementById('gestureTranslateStatusbar').tooltipText = tooltipText;		
-			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: black');	
+			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: black');
+			document.getElementById('gestureTranslateStatusbar').onclick = function(){
+				//Do nothing
+			}	
 		},
 		reset: function(){
 			var gestureTranslateStatusbarLabel = elements["gtranslate_strings"].getString("gestureTranslateStatusbar.label");
 			var gestureTranslateStatusbartooltipText = elements["gtranslate_strings"].getString("gestureTranslateStatusbar.tooltipText");
 			StatusBar._update(gestureTranslateStatusbarLabel, gestureTranslateStatusbartooltipText);
-			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				//Do nothing
-			};			
 		},
 		updateInfo: function(tooltipText, textToTranslate){
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
 				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
-				//StatusBar.reset();
 			}
 		},
 		updateError: function(tooltipText, textToTranslate){ //Only change the font-color to red
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: red');
-			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				//StatusBar.reset();
-			}
 		}
 	};
 	// END - Patch for Gesture Translate by @pablocantero
