@@ -11,10 +11,10 @@
 	</popup>
 	
 	<!-- Translate Status Bar-->
- <statusbar id="status-bar">
-   <statusbarpanel  image="chrome://googtrans/skin/menuitem.png"
-		class="statusbarpanel-iconic-text"
-		id="gestureTranslateStatusbar"
-     	position="1"/>
+ 	<statusbar id="status-bar">
+		<statusbarpanel image="chrome://googtrans/skin/menuitem.png"
+			class="statusbarpanel-iconic-text"
+			id="gestureTranslateStatusbar"
+     		position="1"/>
 	</statusbar>
 </overlay>
