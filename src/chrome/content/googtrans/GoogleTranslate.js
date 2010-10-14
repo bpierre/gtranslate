@@ -82,7 +82,9 @@ let _countryCodeLanguage = {
 	"jp": "ja",
 	"cn": "zh-CN",
 	"tw": "zh-TW",
-	"fr": "fr"
+	"fr": "fr",
+	"ru": "ru",
+	"pl": "pl"
 };
 
 if ("undefined" === typeof(GoogleTranslate)) {
