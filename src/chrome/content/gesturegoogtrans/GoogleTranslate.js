@@ -130,6 +130,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (this.langConf.availableLangs_to.indexOf(currentLocale) !== -1) {
                 return currentLocale;
             } else {
+				//tryToSetLocaleByGeoLocation is async call, the return "en" occurrs before the method end the execution
 				//Patch @pablocantero 0.5 geolocation 12/10/10
 				this.tryToSetLocaleByGeoLocation();
                 return "en";
