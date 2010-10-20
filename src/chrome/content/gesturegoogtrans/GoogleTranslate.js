@@ -116,11 +116,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (!prefs.prefHasUserValue("to")) {
                 prefs.setCharPref("to", this.getDefaultTo());
             }
-			//Patch @pablocantero 0.5 geolocation 12/10/10
-			//getGeoLocationLocale is async method
-            if (!prefs.prefHasUserValue("userSetFromTo")) {
-				this.tryToSetLocaleByGeoLocation();
-            }
         },
 
         // log a message to the Error Console
@@ -135,6 +130,8 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (this.langConf.availableLangs_to.indexOf(currentLocale) !== -1) {
                 return currentLocale;
             } else {
+				//Patch @pablocantero 0.5 geolocation 12/10/10
+				this.tryToSetLocaleByGeoLocation();
                 return "en";
             }
         },
@@ -155,8 +152,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
 				var to = _countryCodeLanguage[code];
 				if (!("undefined" === typeof(to))){
 					GoogleTranslate.prefs.setCharPref("to", to);
-					//To check again
-					GoogleTranslate.prefs.setCharPref("userSetFromTo", true);
 				}
 			});	
 		},
@@ -224,8 +219,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
         setLangPair: function(langFrom, langTo) {
             this.prefs.setCharPref("from", langFrom);
             this.prefs.setCharPref("to", langTo);
-			//Patch @pablocantero 0.5 geolocation 12/10/10
-			this.prefs.setCharPref("userSetFromTo", true);
             this.mozPrefs.savePrefFile(null);
         },
 
