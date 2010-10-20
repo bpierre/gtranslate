@@ -4,7 +4,7 @@
  * loaded from preferences.xul.
  */
 
-Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
 (function() {
     
@@ -585,7 +585,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 			}
 			document.getElementById('gestureTranslateStatusbar').label = tooltipText;
 			document.getElementById('gestureTranslateStatusbar').tooltipText = tooltipText;		
-			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: black');
+			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: black');
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
 				//Do nothing
 			};
@@ -597,9 +597,10 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 			};	
 		},
 		reset: function(){
-			var gestureTranslateStatusbarLabel = elements["gtranslate_strings"].getString("gestureTranslateStatusbar.label");
-			var gestureTranslateStatusbartooltipText = elements["gtranslate_strings"].getString("gestureTranslateStatusbar.tooltipText");
-			StatusBar._update(gestureTranslateStatusbarLabel, gestureTranslateStatusbartooltipText);
+			StatusBar._update('', '');
+			document.getElementById('gestureTranslateStatusbar').onclick = function(){
+				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], ''));
+			};
 		},
 		updateInfo: function(tooltipText, textToTranslate){
 			StatusBar._update(tooltipText, textToTranslate);
@@ -609,7 +610,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
 		},
 		updateError: function(tooltipText, textToTranslate){ //Only change the font-color to red
 			StatusBar._update(tooltipText, textToTranslate);
-			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; background-color: #FFFFCC; color: red');
+			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: red');
 		}
 	};
 	// END - Patch for Gesture Translate by @pablocantero

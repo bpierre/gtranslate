@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<?xul-overlay href="chrome://googtrans/content/googTransOverlay.xul"?>
+<?xul-overlay href="chrome://gesturegoogtrans/content/googTransOverlay.xul"?>
 
-<overlay id="gtranslate-overlay-thunderbird"
+<overlay id="gtranslate-overlay-seamonkey-mail"
 		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	
 	<!-- Right click menu -->

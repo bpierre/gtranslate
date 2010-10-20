@@ -1,4 +1,4 @@
-Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
 function test_translationRequest_success() {
     let langFrom = "en", langTo = "fr", text = "project";

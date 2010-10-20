@@ -1,1 +1,1 @@
-pref("extensions.{aff87fa2-a58e-4edd-b852-0a20203c1e17}.description", "chrome://googtrans/locale/googtrans.properties");
+pref("extensions.{aff87fa2-a58e-4edd-b852-0a20203c1e17}.description", "chrome://gesturegoogtrans/locale/gesturegoogtrans.properties");

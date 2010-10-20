@@ -1,4 +1,4 @@
-Components.utils.import("resource://gtranslate/JSON.js");
+Components.utils.import("resource://gesturegoogtrans/JSON.js");
 
 function run_test() {
   let foo = {};

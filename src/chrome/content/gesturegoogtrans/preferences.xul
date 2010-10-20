@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+<!DOCTYPE window SYSTEM "chrome://gesturegoogtrans/locale/googtrans.dtd">
 
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	
@@ -26,10 +26,10 @@
 	</prefpane>
 	
 	<stringbundleset id="stringbundleset">
-	   <stringbundle id="googtrans-strings" src="chrome://googtrans/locale/googtrans.properties"/>
+	   <stringbundle id="gesturegoogtrans-strings" src="chrome://gesturegoogtrans/locale/googtrans.properties"/>
 	</stringbundleset>
 	
-	<script type="application/x-javascript" src="chrome://googtrans/content/UtilChrome.js"></script>
-	<script type="application/x-javascript" src="chrome://googtrans/content/preferences.js"></script>
+	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/UtilChrome.js"></script>
+	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/preferences.js"></script>
 	
 </prefwindow>

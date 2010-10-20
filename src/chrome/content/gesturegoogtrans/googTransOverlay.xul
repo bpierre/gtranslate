@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://googtrans/locale/googtrans.dtd">
+<!DOCTYPE window SYSTEM "chrome://gesturegoogtrans/locale/googtrans.dtd">
 
 <overlay id="gtranslate-overlay"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	
 	<!-- Translations -->
 	<stringbundleset id="stringbundleset">
-		<stringbundle id="gtranslate_strings" src="chrome://googtrans/locale/googtrans.properties"/>
+		<stringbundle id="gtranslate_strings" src="chrome://gesturegoogtrans/locale/googtrans.properties"/>
 	</stringbundleset>
 	
 	<!-- Scripts -->
-	<script type="application/x-javascript" src="chrome://googtrans/content/UtilChrome.js"></script>
-	<script type="application/x-javascript" src="chrome://googtrans/content/googTransOverlay.js"></script>
+	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/UtilChrome.js"></script>
+	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/googTransOverlay.js"></script>
 	
 	<!-- Right click menu -->
-	<menu id="gtranslate_main" label="&translate.menuitem.label;" class="menu-iconic" image="chrome://googtrans/skin/menuitem.png">
+	<menu id="gtranslate_main" label="&translate.menuitem.label;" class="menu-iconic" image="chrome://gesturegoogtrans/skin/menuitem.png">
 		<menupopup id="gtranslate_popup">
 			<menuitem id="gtranslate_result" label="" disabled="" />
 			<menuitem id="gtranslate_dict" label="&open.dictionary;" />

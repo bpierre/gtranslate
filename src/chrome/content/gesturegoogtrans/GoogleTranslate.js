@@ -1,4 +1,4 @@
-Components.utils.import("resource://gtranslate/JSON.js");
+Components.utils.import("resource://gesturegoogtrans/JSON.js");
 
 let EXPORTED_SYMBOLS = ["GoogleTranslate"];
 
@@ -84,7 +84,12 @@ let _countryCodeLanguage = {
 	"tw": "zh-TW",
 	"fr": "fr",
 	"ru": "ru",
-	"pl": "pl"
+	"pl": "pl",
+	"kp": "ko",
+	"kr": "ko",
+	"ro": "ro",
+	"ch": "de",
+	"nl": "nl"
 };
 
 if ("undefined" === typeof(GoogleTranslate)) {

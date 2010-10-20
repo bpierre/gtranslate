@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xul-overlay href="chrome://googtrans/content/googTransOverlay.xul"?>
+<?xul-overlay href="chrome://gesturegoogtrans/content/googTransOverlay.xul"?>
 
 <overlay id="gtranslate-overlay-firefox"
 		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -12,7 +12,7 @@
 	
 	<!-- Translate Status Bar-->
  	<statusbar id="status-bar">
-		<statusbarpanel image="chrome://googtrans/skin/menuitem.png"
+		<statusbarpanel image="chrome://gesturegoogtrans/skin/menuitem.png"
 			class="statusbarpanel-iconic-text"
 			id="gestureTranslateStatusbar"
      		position="1"/>

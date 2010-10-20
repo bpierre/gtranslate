@@ -4,7 +4,7 @@
  * loaded from preferences.xul.
  */
 
-Components.utils.import("resource://gtranslate/GoogleTranslate.js");
+Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
 (function() {
 
@@ -12,7 +12,7 @@ Components.utils.import("resource://gtranslate/GoogleTranslate.js");
   var elts = {
     "langpair_from": UtilChrome.gid("langpair_from"),
     "langpair_to": UtilChrome.gid("langpair_to"),
-    "strings": UtilChrome.gid("googtrans-strings")
+    "strings": UtilChrome.gid("gesturegoogtrans-strings")
   };
   
   /* Fill "from" menuitem */
