@@ -89,7 +89,8 @@ let _countryCodeLanguage = {
 	"kr": "ko",
 	"ro": "ro",
 	"ch": "de",
-	"nl": "nl"
+	"nl": "nl",
+	"fi": "fi"
 };
 
 if ("undefined" === typeof(GoogleTranslate)) {
