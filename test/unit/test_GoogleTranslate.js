@@ -1,5 +1,6 @@
 Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
+
 function test_lang() {
     do_check_eq(typeof(GoogleTranslate.langConf), "object");
     do_check_eq(typeof(GoogleTranslate.langConf.availableLangs_from), "string");
@@ -22,7 +23,9 @@ function test_init() {
     do_check_true(GoogleTranslate.prefs instanceof Ci.nsIPrefBranch);
     do_check_eq(GoogleTranslate.prefs.getCharPref("from"), "auto");
     do_check_eq(GoogleTranslate.prefs.getCharPref("to"), "en");
-    do_check_true(GoogleTranslate.prefs.getBoolPref("detectpagelang"));
+    //@pablocantero
+	//I don't found detectpagelang in others app files, who's setting it?
+	//do_check_true(GoogleTranslate.prefs.getBoolPref("detectpagelang"));
 
     // Reinit GoogleTranslate with initial getDefaultTo
     GoogleTranslate.getDefaultTo = _getDefaultTo;

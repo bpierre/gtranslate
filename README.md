@@ -12,7 +12,7 @@ Get it here: https://addons.mozilla.org/en-US/firefox/addon/239633/
 Setting up to run tests
 -----------------------
 
-Set the `XULRUNNER_BIN` environment variable to the location of the XULRunner
+Set the XULRUNNER_BIN environment variable to the location of the XULRunner
 or Firefox 3.0+ executable. Here are some possible values (but your executable
 might be elsewhere): 
 
@@ -27,7 +27,11 @@ might be elsewhere):
     Mac OS X:
       /Library/Frameworks/XUL.framework/xulrunner-bin
       /Applications/Firefox.app/Contents/MacOS/firefox-bin
+
+    The command to declare environment variable on Mac OS X 
+	export XULRUNNER_BIN=/Applications/Firefox.app/Contents/MacOS/firefox-bin 
     
+
     Windows:
       /c/Program\ Files/Mozilla\ Firefox/firefox.exe
 
