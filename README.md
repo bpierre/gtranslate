@@ -30,6 +30,7 @@ might be elsewhere):
 
     The command to declare environment variable on Mac OS X 
 	export XULRUNNER_BIN=/Applications/Firefox.app/Contents/MacOS/firefox-bin 
+	or add this line above in your ~/.profile
     
 
     Windows:
