@@ -28,9 +28,9 @@ might be elsewhere):
       /Library/Frameworks/XUL.framework/xulrunner-bin
       /Applications/Firefox.app/Contents/MacOS/firefox-bin
 
-    The command to declare environment variable on Mac OS X 
-	export XULRUNNER_BIN=/Applications/Firefox.app/Contents/MacOS/firefox-bin 
-	or add this line above in your ~/.profile
+      The command to declare environment variable on Mac OS X 
+      export XULRUNNER_BIN=/Applications/Firefox.app/Contents/MacOS/firefox-bin 
+      or add this line above in your ~/.profile
     
 
     Windows:
