@@ -5,6 +5,7 @@
  */
 
 Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
+Components.utils.import("resource://gesturegoogtrans/GestureTranslateLib.js");
 
 (function() {
     
@@ -445,8 +446,17 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 		clearStatusBarTimer: 	null,
 		init: function(){
 			window.onmousemove = GestureTranslate.onmousemove_handler;
-			//To set default messages
-			StatusBar.reset();
+			var onmouseover = function(){
+				GestureTranslate.stopClearStatusBarTimer();
+			};
+			var onmouseout = function(){
+				GestureTranslate.startClearStatusBarTimer();
+			};
+			var resetOnclick = function(){
+				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], ''));
+			}
+			GestureTranslateLib.StatusBar.init(document, onmouseover, onmouseout, resetOnclick);
+			GestureTranslateLib.StatusBar.reset();
 		},
 		onmousemove_handler: function(event){
 			var popupnode = event.target;
@@ -479,7 +489,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 					if((GestureTranslate.left1 && GestureTranslate.cuu > event.pageX) || (GestureTranslate.right1 && GestureTranslate.cuu < event.pageX)){ //3
 						var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
 						//Shows Connecting to Google... to the user knows that the Add-on is working
-						StatusBar.updateInfo(connectgoogle);
+						GestureTranslateLib.StatusBar.updateInfo(connectgoogle);
 						GestureTranslate.lastSelectedText = GestureTranslate.selectedText;
 						GestureTranslate.translateIt(GestureTranslate.selectedText);
 						GestureTranslate.reset();
@@ -508,7 +518,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			var event = {  
 			   notify: function(timer) {  
 					GestureTranslate.lastSelectedText = '';
-			     	StatusBar.reset();
+			     	GestureTranslateLib.StatusBar.reset();
 				 	timer.cancel();
 			  }  
 			};
@@ -545,7 +555,9 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 	        var toLang 		= langpair[1];
 			GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
                 function(translation, detectedLang) { // on load
-					StatusBar.updateInfo(translation, textToTranslate);
+					GestureTranslateLib.StatusBar.updateInfo(translation, function(){
+						openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
+					});
 					GestureTranslate.reset();
                     if (!!detectedLang) {
                         curDetectedLang = detectedLang;
@@ -560,7 +572,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
                     }
                     elements["gtranslate_result"].setAttribute('label', errorMsg);
                     elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
-					StatusBar.updateError(errorMsg);
+					GestureTranslateLib.StatusBar.updateError(errorMsg);
 					GestureTranslate.reset();
                 }
             );
@@ -577,41 +589,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			}
 			return selection;
 	    }
-	};
-	var StatusBar = {
-		_update: function(tooltipText, textToTranslate){
-			if(textToTranslate == null){
-				textToTranslate = tooltipText;
-			}
-			document.getElementById('gestureTranslateStatusbar').label = tooltipText;
-			document.getElementById('gestureTranslateStatusbar').tooltipText = tooltipText;		
-			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: black');
-			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				//Do nothing
-			};
-			document.getElementById('gestureTranslateStatusbar').onmouseover = function(){
-				GestureTranslate.stopClearStatusBarTimer();
-			};
-			document.getElementById('gestureTranslateStatusbar').onmouseout = function(){
-				GestureTranslate.startClearStatusBarTimer();
-			};	
-		},
-		reset: function(){
-			StatusBar._update('', '');
-			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], ''));
-			};
-		},
-		updateInfo: function(tooltipText, textToTranslate){
-			StatusBar._update(tooltipText, textToTranslate);
-			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
-			};
-		},
-		updateError: function(tooltipText, textToTranslate){ //Only change the font-color to red
-			StatusBar._update(tooltipText, textToTranslate);
-			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: red');
-		}
 	};
 	// END - Patch for Gesture Translate by @pablocantero
 })();
