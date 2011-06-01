@@ -69,6 +69,29 @@ let _langDict = {
     "yi": "yiddish"
 };
 
+//Patch @pablocantero 0.5 geolocation 12/10/10
+let _countryCodeLanguage = {
+    "br": "pt",
+    "pt": "pt",
+	"gb": "en",
+	"us": "en",
+	"es": "es",
+	"ar": "es",
+	"it": "it",
+	"de": "de",
+	"jp": "ja",
+	"cn": "zh-CN",
+	"tw": "zh-TW",
+	"fr": "fr",
+	"ru": "ru",
+	"pl": "pl",
+	"kp": "ko",
+	"kr": "ko",
+	"ro": "ro",
+	"ch": "de",
+	"nl": "nl"
+};
+
 if ("undefined" === typeof(GoogleTranslate)) {
 
     var GoogleTranslate = {
@@ -107,10 +130,31 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (this.langConf.availableLangs_to.indexOf(currentLocale) !== -1) {
                 return currentLocale;
             } else {
+				//tryToSetLocaleByGeoLocation is async call, the return "en" occurrs before the method end the execution
+				//Patch @pablocantero 0.5 geolocation 12/10/10
+				this.tryToSetLocaleByGeoLocation();
                 return "en";
             }
         },
-
+		 tryToSetLocaleByGeoLocation: function(){ //Patch @pablocantero 0.5 geolocation 12/10/10
+			//Introduced in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)
+			if ("undefined" === typeof(Cc["@mozilla.org/geolocation;1"])) {
+				return;
+			}
+			var geolocation = Cc["@mozilla.org/geolocation;1"].getService(Ci.nsIDOMGeoGeolocation);
+			geolocation.getCurrentPosition(function(position) {
+				//https://developer.mozilla.org/en/nsIDOMGeoPositionAddress
+				//This information may or may not be available, depending on the geolocation service being used.
+				if(position == null || position.address == null || position.address.countryCode == null){
+					return;
+				}
+				var code = position.address.countryCode.toLowerCase();
+				var to = _countryCodeLanguage[code];
+				if (!("undefined" === typeof(to))){
+					GoogleTranslate.prefs.setCharPref("to", to);
+				}
+			});
+		},
         translationRequest: function(langFrom, langTo, text, onLoadFn, onErrorFn) {
             var url = this.getGoogleUrl("api", langFrom, langTo, text);
 
