@@ -227,7 +227,17 @@ if ("undefined" === typeof(GoogleTranslate)) {
         // get langpair from preferences
         getLangPair: function() {
             return [this.prefs.getCharPref("from"), this.prefs.getCharPref("to")];
-        }
+        },
+		// INI - Patch for Gesture Translate by @pablocantero
+		getFontColor: function(){
+            var fontColorSelected = this.prefs.getCharPref("fontColor");
+		  	if(fontColorSelected === 'white'){
+				return 'white';
+		  	} else {
+				return 'black';
+		  	}
+		}
+		// END - Patch for Gesture Translate by @pablocantero
     };
 
     (function() {

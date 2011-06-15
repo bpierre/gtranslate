@@ -3,74 +3,27 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
      
     <Description about="urn:mozilla:install-manifest">
-		<!-- gTranslate
-        <em:id>{aff87fa2-a58e-4edd-b852-0a20203c1e17}</em:id>
-        <em:version>0.8</em:version>
-        <em:type>2</em:type>
-        <em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
-		-->
 		
 	    <em:id>gesture-translate@pablocantero.com</em:id>
 	    <em:type>2</em:type>
 	    <em:name>Gesture Translate</em:name>
-	    <em:version>0.5.5</em:version>
+	    <em:version>0.5.6</em:version>
 		<em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
-        
-		<!-- gTranslate
-        <em:name>gTranslate</em:name>
-        <em:description>Translates the selected text via Google Translate</em:description>
-        <em:homepageURL>https://addons.mozilla.org/fr/firefox/addon/918</em:homepageURL>
-		-->
 		
         <em:name>Gesture Translate</em:name>
         <em:description>Translates the selected text via Google Translate using mouse movements</em:description>
         <em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/239633/</em:homepageURL>
         
 		<em:creator>Pablo Cantero</em:creator>
-		<!-- gTranslate
-        <em:creator>Pau Tomas</em:creator>
-        <em:developer>Pierre Bertet</em:developer>
-        <em:developer>Éric Lemoine</em:developer>
-        <em:translator>Dmitry Chirskov (ru)</em:translator>
-        <em:translator>Enrico Floriddia (it)</em:translator>
-        <em:translator>Emilie Verbeke (de)</em:translator>
-        <em:translator>Marius Feraru (ro)</em:translator>
-        <em:translator>Charles Jr. Rech (pt-BR)</em:translator>
-        <em:translator>Pau Tomàs (es, ca-AD)</em:translator>
-        <em:translator>Pierre Bertet (fr)</em:translator>
-        <em:contributor>Grégoire Dierendonck (logotype)</em:contributor>
-		-->
         
         <!-- Firefox -->
         <em:targetApplication>
             <Description>
                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
                 <em:minVersion>3.0</em:minVersion>
-                <em:maxVersion>4.0b8pre</em:maxVersion>
+                <em:maxVersion>5</em:maxVersion>
             </Description>
         </em:targetApplication>
-        
-        <!-- Thunderbird -->
-		<!-- gTranslate
-        <em:targetApplication>
-            <Description>
-                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-                <em:minVersion>3.1</em:minVersion>
-                <em:maxVersion>3.1.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-		-->
-        
-        <!-- Seamonkey -->
-		<!--
-        <em:targetApplication>
-            <Description>
-                <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
-                <em:minVersion>2.0</em:minVersion>
-                <em:maxVersion>2.1.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-		-->
         
         <!-- Test harness -->
         <em:targetApplication>

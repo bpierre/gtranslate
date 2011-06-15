@@ -7,3 +7,6 @@
 <!ENTITY translate.menuitem.label "Traduire">
 <!ENTITY open.dictionary "Ouvrir le dictionnaire">
 <!ENTITY replace.with.translation.label "Remplacer avec la traduction">
+<!ENTITY translate.fontcolor "Font color">
+<!ENTITY translate.fontcolor.black "Black">
+<!ENTITY translate.fontcolor.white "White">

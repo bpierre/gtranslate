@@ -6,13 +6,17 @@
 
 Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
 (function() {
 
   /* Langpair */
   var elts = {
     "langpair_from": UtilChrome.gid("langpair_from"),
     "langpair_to": UtilChrome.gid("langpair_to"),
-    "strings": UtilChrome.gid("gesturegoogtrans-strings")
+    "strings": UtilChrome.gid("gesturegoogtrans-strings"),
+	"font_color": UtilChrome.gid("font_color"),
   };
   
   /* Fill "from" menuitem */
@@ -68,6 +72,13 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
       }
     }
   };
+
+ function fillFontcolor(){	
+	this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
+        Ci.nsIPrefService);
+    let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+   	prefs.setCharPref("fontColor", elts.font_color.value);
+ };
   
   /* Init preferences */
   function initPrefs() {
@@ -80,8 +91,20 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
       
       fillToLang();
       elts.langpair_to.value = GoogleTranslate.prefs.getCharPref("to");
+
+      elts.font_color.addEventListener("command", function() {
+          fillFontcolor();
+      }, false);
+
+      this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
+	  let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+	  var fontColorSelected = prefs.getCharPref("fontColor");
+	  if(fontColorSelected === 'white'){
+		elts.font_color.value = 'white';
+	  } else {
+		elts.font_color.value = 'black';
+	  }
   };
-  
   
   initPrefs();
 })();

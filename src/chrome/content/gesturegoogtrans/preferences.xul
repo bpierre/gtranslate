@@ -23,6 +23,13 @@
 				</menupopup>
 			</menulist>
 		</groupbox>
+		<groupbox>
+			<caption label="&translate.fontcolor;"/>
+			<radiogroup id="font_color">
+			  <radio id="black" label="&translate.fontcolor.black;" value="black"/>
+			  <radio id="white" label="&translate.fontcolor.white;" value="white"/>
+			</radiogroup>
+		</groupbox>
 	</prefpane>
 	
 	<stringbundleset id="stringbundleset">
