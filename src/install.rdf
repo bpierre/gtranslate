@@ -7,7 +7,7 @@
 	    <em:id>gesture-translate@pablocantero.com</em:id>
 	    <em:type>2</em:type>
 	    <em:name>Gesture Translate</em:name>
-	    <em:version>0.5.6</em:version>
+	    <em:version>0.5.7</em:version>
 		<em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
 		
         <em:name>Gesture Translate</em:name>
@@ -21,7 +21,7 @@
             <Description>
                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
                 <em:minVersion>3.0</em:minVersion>
-                <em:maxVersion>5</em:maxVersion>
+                <em:maxVersion>6.*</em:maxVersion>
             </Description>
         </em:targetApplication>
         

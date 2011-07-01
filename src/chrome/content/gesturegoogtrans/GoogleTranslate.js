@@ -230,12 +230,11 @@ if ("undefined" === typeof(GoogleTranslate)) {
         },
 		// INI - Patch for Gesture Translate by @pablocantero
 		getFontColor: function(){
-            var fontColorSelected = this.prefs.getCharPref("fontColor");
-		  	if(fontColorSelected === 'white'){
-				return 'white';
-		  	} else {
-				return 'black';
-		  	}
+			var fontColorSelected = 'black';
+		   	if (this.prefs.prefHasUserValue('fontColor')) {
+				fontColorSelected = this.prefs.getCharPref('fontColor');
+			}
+			return fontColorSelected;
 		}
 		// END - Patch for Gesture Translate by @pablocantero
     };
