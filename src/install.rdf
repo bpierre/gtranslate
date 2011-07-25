@@ -10,7 +10,7 @@
         
         <em:name>gTranslate</em:name>
         <em:description>Translates the selected text via Google Translate.</em:description>
-        <em:homepageURL>https://addons.mozilla.org/fr/firefox/addon/918</em:homepageURL>
+        <em:homepageURL>https://addons.mozilla.org/firefox/addon/918</em:homepageURL>
         
         <em:creator>Pau Tomas</em:creator>
         <em:developer>Pierre Bertet</em:developer>
@@ -19,6 +19,7 @@
         <em:translator>Dmitry Chirskov (ru)</em:translator>
         <em:translator>Enrico Floriddia (it)</em:translator>
         <em:translator>Emilie Verbeke (de)</em:translator>
+        <em:translator>D. Wrobel (de)</em:translator>
         <em:translator>Marius Feraru (ro)</em:translator>
         <em:translator>Charles Jr. Rech (pt-BR)</em:translator>
         <em:translator>Pau Tomàs (es, ca-AD)</em:translator>
