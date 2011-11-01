@@ -125,13 +125,16 @@ if ("undefined" === typeof(GoogleTranslate)) {
                
                var response = JSON.parse(req.responseText);
 
-               if (!response.responseData || response.responseStatus !== 200) {
-                   onErrorFn(response.responseDetails);
+               if (!response.sentences) {
+                   onErrorFn(req.responseText);
                    return;
                }
 
-               var translatedText = response.responseData.translatedText;
-               onLoadFn(translatedText, response.responseData.detectedSourceLanguage || null);
+               var translatedText = '';
+               for(var i in response.sentences) {
+                   translatedText += response.sentences[i].trans;
+               }
+               onLoadFn(translatedText, response.src);
            }), false);
 
            req.addEventListener("error", onErrorFn, false);
@@ -148,7 +151,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
 
                 // Google Translate API > JSON
                 case "api":
-                    formattedUrl = 'https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&format=text&langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
+                    formattedUrl = 'http://translate.google.com/translate_a/t?client=gtranslate&sl=' + langFrom + '&tl=' + langTo + '&text=' + encodeURIComponent(text);
                     break;
 
                 // Google Translate page
