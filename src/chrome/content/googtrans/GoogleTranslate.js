@@ -139,8 +139,25 @@ if ("undefined" === typeof(GoogleTranslate)) {
 
            req.addEventListener("error", onErrorFn, false);
 
-           req.open("GET", url, true);
-           req.send(null);
+           var m;
+           if(url.length > 256 && (m = url.match(/^(https?:\/\/[^\?]+)\?(.+)$/))) {
+               /* If the whole URL contains too many characters, the server
+                * will return a 414 HTTP status code, so request parameters
+                * have to be put in the request body in order to avoid that.
+                */
+
+               req.open("POST", m[1], true);
+               /* XXX: request headers aren't supposed to be set once the
+                *      connection is opened, but an exception is thrown if done
+                *      before.
+                */
+               req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+               // NOTE: FF will add the correct charset to the Content-Type header.
+               req.send(m[2]);
+           } else {
+               req.open("GET", url, true);
+               req.send(null);
+           }
        },
 
        getGoogleUrl: function(urlType, langFrom, langTo, text) {
