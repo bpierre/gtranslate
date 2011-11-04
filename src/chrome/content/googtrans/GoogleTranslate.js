@@ -125,19 +125,39 @@ if ("undefined" === typeof(GoogleTranslate)) {
                
                var response = JSON.parse(req.responseText);
 
-               if (!response.responseData || response.responseStatus !== 200) {
-                   onErrorFn(response.responseDetails);
+               if (!response.sentences) {
+                   onErrorFn(req.responseText);
                    return;
                }
 
-               var translatedText = response.responseData.translatedText;
-               onLoadFn(translatedText, response.responseData.detectedSourceLanguage || null);
+               var translatedText = '';
+               for(var i in response.sentences) {
+                   translatedText += response.sentences[i].trans;
+               }
+               onLoadFn(translatedText, response.src);
            }), false);
 
            req.addEventListener("error", onErrorFn, false);
 
-           req.open("GET", url, true);
-           req.send(null);
+           var m;
+           if(url.length > 256 && (m = url.match(/^(https?:\/\/[^\?]+)\?(.+)$/))) {
+               /* If the whole URL contains too many characters, the server
+                * will return a 414 HTTP status code, so request parameters
+                * have to be put in the request body in order to avoid that.
+                */
+
+               req.open("POST", m[1], true);
+               /* XXX: request headers aren't supposed to be set once the
+                *      connection is opened, but an exception is thrown if done
+                *      before.
+                */
+               req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+               // NOTE: FF will add the correct charset to the Content-Type header.
+               req.send(m[2]);
+           } else {
+               req.open("GET", url, true);
+               req.send(null);
+           }
        },
 
        getGoogleUrl: function(urlType, langFrom, langTo, text) {
@@ -148,7 +168,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
 
                 // Google Translate API > JSON
                 case "api":
-                    formattedUrl = 'https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&format=text&langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
+                    formattedUrl = 'http://translate.google.com/translate_a/t?client=gtranslate&sl=' + langFrom + '&tl=' + langTo + '&text=' + encodeURIComponent(text);
                     break;
 
                 // Google Translate page
