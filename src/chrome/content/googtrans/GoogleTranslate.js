@@ -114,7 +114,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
         translationRequest: function(langFrom, langTo, text, onLoadFn, onErrorFn) {
             var url = this.getGoogleUrl("api", langFrom, langTo, text);
 
-            var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]  
+            var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                             .createInstance(Ci.nsIXMLHttpRequest);
 
            req.addEventListener("load", (function() {
@@ -122,7 +122,7 @@ if ("undefined" === typeof(GoogleTranslate)) {
                    onErrorFn(req.statusText);
                    return;
                }
-               
+
                var response = JSON.parse(req.responseText);
 
                if (!response.sentences) {
@@ -174,11 +174,6 @@ if ("undefined" === typeof(GoogleTranslate)) {
                 // Google Translate page
                 case "page":
                     formattedUrl = 'http://translate.google.com/#' + langFrom + '%7C' + langTo + '%7C' + encodeURIComponent(text);
-                    break;
-
-                // Google Translate Dictionary
-                case "dict":
-                    formattedUrl = 'http://www.google.com/dictionary?langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
                     break;
             }
 
