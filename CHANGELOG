@@ -1,5 +1,12 @@
 == gTranslate 0.9 ==
 
+- Google closed its API, we switched to the unofficial API for the moment
+- No dictionary anymore (Google switched off the service)
+- ru-RU locale
+- Removed the "Detect page lang" setting
+- ja-JP locale
+- lt-LT locale
+
 == gTranslate 0.8 ==
 
 - New logo! Thanks to Grégoire Dierendonck
