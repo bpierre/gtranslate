@@ -1,6 +1,0 @@
-- Change langpair position : selected langs first
-- Style selected langpairs ?
-- Move all data manipulation to gtranslate.js
-- List all languages on Google Translate
-- List all languages on Google Translate Dictionary : eventually hide "open dictionary"
-- Restore chinese support

@@ -22,3 +22,6 @@ help:
 	@echo build
 	@echo test
 	@echo clean
+
+
+# To test in the development copy src/* to /Users/<user>/Library/Application Support/Firefox/Profiles/<profile>/

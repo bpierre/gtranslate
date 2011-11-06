@@ -69,30 +69,6 @@ let _langDict = {
     "yi": "yiddish"
 };
 
-//Patch @pablocantero 0.5 geolocation 12/10/10
-let _countryCodeLanguage = { 
-    "br": "pt",
-    "pt": "pt",
-	"gb": "en",
-	"us": "en",
-	"es": "es",
-	"ar": "es",
-	"it": "it",
-	"de": "de",
-	"jp": "ja",
-	"cn": "zh-CN",
-	"tw": "zh-TW",
-	"fr": "fr",
-	"ru": "ru",
-	"pl": "pl",
-	"kp": "ko",
-	"kr": "ko",
-	"ro": "ro",
-	"ch": "de",
-	"nl": "nl",
-	"fi": "fi"
-};
-
 if ("undefined" === typeof(GoogleTranslate)) {
 
     var GoogleTranslate = {
@@ -131,60 +107,59 @@ if ("undefined" === typeof(GoogleTranslate)) {
             if (this.langConf.availableLangs_to.indexOf(currentLocale) !== -1) {
                 return currentLocale;
             } else {
-				//tryToSetLocaleByGeoLocation is async call, the return "en" occurrs before the method end the execution
-				//Patch @pablocantero 0.5 geolocation 12/10/10
-				this.tryToSetLocaleByGeoLocation();
                 return "en";
             }
         },
-		
-		tryToSetLocaleByGeoLocation: function(){ //Patch @pablocantero 0.5 geolocation 12/10/10
-			//Introduced in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)
-			if ("undefined" === typeof(Cc["@mozilla.org/geolocation;1"])) {
-				return;
-			}
-			var geolocation = Cc["@mozilla.org/geolocation;1"].getService(Ci.nsIDOMGeoGeolocation);
-			geolocation.getCurrentPosition(function(position) {
-				//https://developer.mozilla.org/en/nsIDOMGeoPositionAddress
-				//This information may or may not be available, depending on the geolocation service being used.
-				if(position == null || position.address == null || position.address.countryCode == null){
-					return;
-				}
-				var code = position.address.countryCode.toLowerCase();
-				var to = _countryCodeLanguage[code];
-				if (!("undefined" === typeof(to))){
-					GoogleTranslate.prefs.setCharPref("to", to);
-				}
-			});	
-		},
 
         translationRequest: function(langFrom, langTo, text, onLoadFn, onErrorFn) {
             var url = this.getGoogleUrl("api", langFrom, langTo, text);
 
-            var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]  
+            var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                             .createInstance(Ci.nsIXMLHttpRequest);
+						
+						this._console.logStringMessage(url);
 
            req.addEventListener("load", (function() {
                if (req.status !== 200) {
                    onErrorFn(req.statusText);
                    return;
                }
-               
+
                var response = JSON.parse(req.responseText);
 
-               if (!response.responseData || response.responseStatus !== 200) {
-                   onErrorFn(response.responseDetails);
+               if (!response.sentences) {
+                   onErrorFn(req.responseText);
                    return;
                }
 
-               var translatedText = response.responseData.translatedText;
-               onLoadFn(translatedText, response.responseData.detectedSourceLanguage || null);
+               var translatedText = '';
+               for(var i in response.sentences) {
+                   translatedText += response.sentences[i].trans;
+               }
+               onLoadFn(translatedText, response.src);
            }), false);
 
            req.addEventListener("error", onErrorFn, false);
 
-           req.open("GET", url, true);
-           req.send(null);
+           var m;
+           if(url.length > 256 && (m = url.match(/^(https?:\/\/[^\?]+)\?(.+)$/))) {
+               /* If the whole URL contains too many characters, the server
+                * will return a 414 HTTP status code, so request parameters
+                * have to be put in the request body in order to avoid that.
+                */
+
+               req.open("POST", m[1], true);
+               /* XXX: request headers aren't supposed to be set once the
+                *      connection is opened, but an exception is thrown if done
+                *      before.
+                */
+               req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+               // NOTE: FF will add the correct charset to the Content-Type header.
+               req.send(m[2]);
+           } else {
+               req.open("GET", url, true);
+               req.send(null);
+           }
        },
 
        getGoogleUrl: function(urlType, langFrom, langTo, text) {
@@ -195,17 +170,12 @@ if ("undefined" === typeof(GoogleTranslate)) {
 
                 // Google Translate API > JSON
                 case "api":
-                    formattedUrl = 'https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&format=text&langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
+                    formattedUrl = 'http://translate.google.com/translate_a/t?client=gesturetranslate&sl=' + langFrom + '&tl=' + langTo + '&text=' + encodeURIComponent(text);
                     break;
 
                 // Google Translate page
                 case "page":
                     formattedUrl = 'http://translate.google.com/#' + langFrom + '%7C' + langTo + '%7C' + encodeURIComponent(text);
-                    break;
-
-                // Google Translate Dictionary
-                case "dict":
-                    formattedUrl = 'http://www.google.com/dictionary?langpair=' + langFrom + '%7C' + langTo + '&q=' + encodeURIComponent(text);
                     break;
             }
 
@@ -228,20 +198,19 @@ if ("undefined" === typeof(GoogleTranslate)) {
         getLangPair: function() {
             return [this.prefs.getCharPref("from"), this.prefs.getCharPref("to")];
         },
-		// INI - Patch for Gesture Translate by @pablocantero
-		getFontColor: function(){
-			var fontColorSelected = 'black';
-		   	if (this.prefs.prefHasUserValue('fontColor')) {
-				fontColorSelected = this.prefs.getCharPref('fontColor');
-			}
-			return fontColorSelected;
-		}
-		// END - Patch for Gesture Translate by @pablocantero
+				// INI - Patch for Gesture Translate by @pablocantero
+				getFontColor: function(){
+					var fontColorSelected = 'black';
+				   	if (this.prefs.prefHasUserValue('fontColor')) {
+						fontColorSelected = this.prefs.getCharPref('fontColor');
+					}
+					return fontColorSelected;
+				}
+				// END - Patch for Gesture Translate by @pablocantero
     };
 
     (function() {
         this.init();
     }).apply(GoogleTranslate);
 }
-
 

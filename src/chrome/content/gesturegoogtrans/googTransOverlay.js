@@ -539,30 +539,35 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			}
 		},
 		translateIt: function(textToTranslate){
-			var langpair	= GoogleTranslate.getLangPair();
-	        var fromLang 	= (langpair[0] == 'auto') ? pageLang : langpair[0];
-	        var toLang 		= langpair[1];
-			GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
-	            function(translation, detectedLang) { // on load
-					StatusBar.updateInfo(translation, textToTranslate);
-					GestureTranslate.reset();
-	                if (!!detectedLang) {
-	                    curDetectedLang = detectedLang;
-	                }     
-	                if (curDetectedLang !== "" || pageLang !== "") {
-	                    elements["gtranslate_dict"].setAttribute("disabled", false);
-	                }
-	            },
-	            function(errorMsg) { // on error
-	                if (!errorMsg) {
-	                  errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
-	                }
-	                elements["gtranslate_result"].setAttribute('label', errorMsg);
-	                elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
-					StatusBar.updateError(errorMsg);
-					GestureTranslate.reset();
-	            }
-	        );
+					var langpair = GoogleTranslate.getLangPair();
+	        var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
+	        var toLang = langpair[1];
+	        GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
+              function(translation, detectedLang) { // on load
+								StatusBar.updateInfo(translation, textToTranslate);
+								GestureTranslate.reset();
+                  
+                  if (!!detectedLang) {
+                      curDetectedLang = detectedLang;
+                  }
+                  
+                  if (curDetectedLang !== "" || pageLang !== "") {
+                      elements["gtranslate_dict"].setAttribute("disabled", false);
+                  }
+              },
+              function(errorMsg) { // on error
+                  if (!errorMsg) {
+                    errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                  }
+                  
+                  elements["gtranslate_result"].setAttribute('label', errorMsg);
+                  elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
+									StatusBar.updateError(errorMsg);
+									GestureTranslate.reset();
+              }
+          );
+	
+	
 		},
 		getSelection: function(popupnode) {
 			var nodeLocalName = popupnode.localName.toLowerCase();
