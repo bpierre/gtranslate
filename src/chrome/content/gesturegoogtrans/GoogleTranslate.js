@@ -8,11 +8,11 @@ const Ci = Components.interfaces;
 let _availableLangs_from = ["auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,",
                             "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
                             "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                            "th,tr,uk,vi,cy,yi"].join("");
+                            "th,tr,uk,vi,cy,yi,ta"].join("");
 let _availableLangs_to =   ["af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,",
                             "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
                             "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                            "th,tr,uk,vi,cy,yi"].join("");
+                            "th,tr,uk,vi,cy,yi,ta"].join("");
 let _langDict = {
     "auto": "auto",
     "af": "afrikaans",
@@ -66,7 +66,8 @@ let _langDict = {
     "uk": "ukrainian",
     "vi": "vietnamese",
     "cy": "welsh",
-    "yi": "yiddish"
+    "yi": "yiddish",
+    "ta": "tamil"
 };
 
 if ("undefined" === typeof(GoogleTranslate)) {
