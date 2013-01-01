@@ -1,38 +1,38 @@
 <?xml version="1.0"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-     
-    <Description about="urn:mozilla:install-manifest">
-		
-	    <em:id>gesture-translate@pablocantero.com</em:id>
-	    <em:type>2</em:type>
-	    <em:name>Gesture Translate</em:name>
-	    <em:version>0.5.8</em:version>
-		<em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
-		
-        <em:name>Gesture Translate</em:name>
-        <em:description>Translates the selected text via Google Translate using mouse movements</em:description>
-        <em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/239633/</em:homepageURL>
-        
-		<em:creator>Pablo Cantero</em:creator>
-        
-        <!-- Firefox -->
-        <em:targetApplication>
-            <Description>
-                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
-                <em:minVersion>3.0</em:minVersion>
-                <em:maxVersion>8.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-        
-        <!-- Test harness -->
-        <em:targetApplication>
-          <Description>
-            <em:id>xuth@mozilla.org</em:id>
-            <em:minVersion>0.1</em:minVersion>
-            <em:maxVersion>0.1</em:maxVersion>
-          </Description>
-        </em:targetApplication>
-        
-    </Description>
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>gesture-translate@pablocantero.com</em:id>
+    <em:type>2</em:type>
+    <em:name>Gesture Translate</em:name>
+    <em:version>0.5.9</em:version>
+    <em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
+
+    <em:name>Gesture Translate</em:name>
+    <em:description>Translates the selected text via Google Translate using mouse movements</em:description>
+    <em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/239633/</em:homepageURL>
+
+    <em:creator>Pablo Cantero</em:creator>
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>8.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Test harness -->
+    <em:targetApplication>
+      <Description>
+        <em:id>xuth@mozilla.org</em:id>
+        <em:minVersion>0.1</em:minVersion>
+        <em:maxVersion>0.1</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+  </Description>
 </RDF>
