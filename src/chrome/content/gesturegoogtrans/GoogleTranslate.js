@@ -67,8 +67,7 @@ let _langDict = {
     "vi": "vietnamese",
     "cy": "welsh",
     "yi": "yiddish",
-    "ta": "tamil"
-};
+    "ta": "tamil"};
 
 if ("undefined" === typeof(GoogleTranslate)) {
 
