@@ -1,12 +1,24 @@
-<!ENTITY options.title "gTranslate - Options">
-<!ENTITY translatefrom.menu.label "Translate text from...">
+<!ENTITY options.title "Gesture Translate - Options">
+<!ENTITY translatefrom.menu.label "Translate text from Language...">
 <!ENTITY autodetection.caption.label "Auto-detect">
 <!ENTITY detectlocale.checkbox.label "Browser default language">
 <!ENTITY detectpagelang.checkbox.label "Page language">
-<!ENTITY translate.to.label "to">
+<!ENTITY translatefrom.label2 "Choose a real Language here and enable Auto-Language-Detection to obtain Reverse-Translation.">
+<!ENTITY translatefrom.label3 "(Reverse-Translation: if text-to-translate language = to language)">
+<!ENTITY translate.to.label "to Language...">
 <!ENTITY translate.menuitem.label "Translate">
 <!ENTITY open.dictionary "Open dictionary">
 <!ENTITY replace.with.translation.label "Replace with translation">
 <!ENTITY translate.fontcolor "Font color">
 <!ENTITY translate.fontcolor.black "Black">
 <!ENTITY translate.fontcolor.white "White">
+<!ENTITY dhnotify.caption.label "additional Translation-Notification">
+<!ENTITY dhnotify.checkbox.label "Door-Hanger-Notification">
+<!ENTITY detectlanguage.checkbox.label "Enabled">
+<!ENTITY detectlanguage.caption.label "Auto-Language-Detection">
+<!ENTITY detectlanguage.caption.label2 "by free detectlanguage.com Service">
+<!ENTITY detectlanguageapikey.label "detectlanguage.com - ApiKey">
+<!ENTITY timeout.caption.label "Show Translation Timeout">
+<!ENTITY detectlanguageapikey.label2 "default = 'demo', with that: number of requests limited!">
+<!ENTITY detectlanguageapikey.label3 "You can register your free ApiKey here:">
+<!ENTITY timeout.label2 "(in seconds)">

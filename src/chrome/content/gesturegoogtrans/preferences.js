@@ -17,6 +17,10 @@ const Ci = Components.interfaces;
     "langpair_to": UtilChrome.gid("langpair_to"),
     "strings": UtilChrome.gid("gesturegoogtrans-strings"),
 	"font_color": UtilChrome.gid("font_color"),
+	"detectlanguage": UtilChrome.gid("detectlanguage"),
+	"detectlanguageapikey": UtilChrome.gid("detectlanguageapikey"),
+	"dhnotify": UtilChrome.gid("dhnotify"),
+	"timeout": UtilChrome.gid("timeout")
   };
   
   /* Fill "from" menuitem */
@@ -79,6 +83,34 @@ const Ci = Components.interfaces;
     let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
    	prefs.setCharPref("fontColor", elts.font_color.value);
  };
+ 
+ function filldetectlanguage(){	
+	this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
+        Ci.nsIPrefService);
+    let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+   	prefs.setBoolPref("detectlanguage", elts.detectlanguage.value);
+ };
+ 
+ function filldetectlanguageapikey(){	
+	this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
+        Ci.nsIPrefService);
+    let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+   	prefs.setCharPref("detectlanguageapikey", elts.detectlanguageapikey.value);
+ };
+ 
+ function filldhnotify(){	
+	this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
+        Ci.nsIPrefService);
+    let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+   	prefs.setBoolPref("dhnotify", elts.dhnotify.value);
+ };
+ 
+ function filltimout(){	
+	this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
+        Ci.nsIPrefService);
+    let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+   	prefs.setIntPref("timeout", elts.timeout.value);
+ };
   
   /* Init preferences */
   function initPrefs() {
@@ -96,14 +128,44 @@ const Ci = Components.interfaces;
           fillFontcolor();
       }, false);
 
-      this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
-	  let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
-	  var fontColorSelected = prefs.getCharPref("fontColor");
+      //this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
+	  //let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
+	  var fontColorSelected = GoogleTranslate.prefs.getCharPref("fontColor");
 	  if(fontColorSelected === 'white'){
 		elts.font_color.value = 'white';
 	  } else {
 		elts.font_color.value = 'black';
 	  }
+	  
+	  elts.detectlanguage.addEventListener("command", function() {
+          filldetectlanguage();
+      }, false)
+	  
+	  var detectlanguage = GoogleTranslate.prefs.getBoolPref("detectlanguage");
+	  elts.detectlanguage=detectlanguage;
+	  
+	  elts.detectlanguageapikey.addEventListener("command", function() {
+          filldetectlanguageapikey();
+      }, false);
+	  
+	  var detectlanguageapikey = GoogleTranslate.prefs.getCharPref("detectlanguageapikey");
+	  if (detectlanguageapikey==='') detectlanguageapikey="demo";
+	  elts.detectlanguageapikey=detectlanguageapikey;
+	  
+	  elts.dhnotify.addEventListener("command", function() {
+          filldhnotify();
+      }, false)
+	  
+	  var dhnotify = GoogleTranslate.prefs.getBoolPref("dhnotify");
+	  elts.dhnotify=dhnotify;
+	  
+	  elts.timeout.addEventListener("command", function() {
+          filltimout();
+      }, false)
+	  
+	  var timeout = GoogleTranslate.prefs.getIntPref("timeout");
+	  elts.timeout=timeout;
+	  
   };
   
   initPrefs();

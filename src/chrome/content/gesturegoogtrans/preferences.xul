@@ -8,6 +8,10 @@
 		<preferences>
 			<preference id="fromlang" name="googTrans.from" type="string"/>
 			<preference id="tolang" name="googTrans.to" type="string"/>
+			<preference id="detectlanguage" name="googTrans.detectlanguage" type="bool"/>
+			<preference id="detectlanguageapikey" name="googTrans.detectlanguageapikey" type="string"/>
+			<preference id="dhnotify" name="googTrans.dhnotify" type="bool"/>
+			<preference id="timeout" name="googTrans.timeout" type="int"/>
 		</preferences>
 		
 		<groupbox>
@@ -17,12 +21,39 @@
 				</menupopup>
 			</menulist>
 			
+			<separator class="thin"/>
+			<label style="color:grey;" value="&translatefrom.label2;"/>
+			<label style="color:grey;" value="&translatefrom.label3;"/>
+			<separator class="thin"/>
+			
 			<label value="&translate.to.label;" control="langpair_to"/>
+			
 			<menulist id="langpair_to" preference="tolang">
 				<menupopup id="lp_menupopup_to">
 				</menupopup>
 			</menulist>
 		</groupbox>
+		
+		<groupbox>
+			<caption label="&detectlanguage.caption.label;"/>
+			<caption style="color:grey;" label="&detectlanguage.caption.label2;"/>
+			<checkbox label="&detectlanguage.checkbox.label;" preference="detectlanguage"/>
+			<label>&detectlanguageapikey.label;:</label> <label style="color:grey;">&detectlanguageapikey.label2;</label>
+			<textbox preference="detectlanguageapikey"/>
+			<label style="color:grey;">&detectlanguageapikey.label3;</label>
+			<label class="text-link" value="http://www.detectlanguage.com" href="http://www.detectlanguage.com"/>
+		</groupbox>
+
+		<groupbox>
+			<caption label="&dhnotify.caption.label;"/>
+			<checkbox label="&dhnotify.checkbox.label;" preference="dhnotify"/>
+		</groupbox> 
+		
+		<groupbox>
+			<caption label="&timeout.caption.label;"/>
+			<textbox preference="timeout"/> <label style="color:grey;">&timeout.label2;</label>
+		</groupbox>
+		
 		<groupbox>
 			<caption label="&translate.fontcolor;"/>
 			<radiogroup id="font_color">

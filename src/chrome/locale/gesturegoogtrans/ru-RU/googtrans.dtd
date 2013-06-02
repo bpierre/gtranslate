@@ -1,12 +1,24 @@
-<!ENTITY options.title "gTranslate - Настройки">
-<!ENTITY translatefrom.menu.label "Переводить текст с...">
+<!ENTITY options.title "Gesture Translate - Настройки">
+<!ENTITY translatefrom.menu.label "Перевести текст с языка...">
 <!ENTITY autodetection.caption.label "Автоопределение">
 <!ENTITY detectlocale.checkbox.label "Язык браузера по умолчанию">
 <!ENTITY detectpagelang.checkbox.label "Язык страницы">
-<!ENTITY translate.to.label "на">
+<!ENTITY translatefrom.label2 "Выберите реальный язык здесь и включить автоматическую Язык обнаружения для получения обратного перевода.">
+<!ENTITY translatefrom.label3 "(Обратный перевод: если текст в языке перевода = на язык)">
+<!ENTITY translate.to.label "на язык...">
 <!ENTITY translate.menuitem.label "Перевести">
 <!ENTITY open.dictionary "Открыть словарь">
 <!ENTITY replace.with.translation.label "Заменить переводом">
-<!ENTITY translate.fontcolor "Font color">
+<!ENTITY translate.fontcolor "цвет шрифта">
 <!ENTITY translate.fontcolor.black "Black">
 <!ENTITY translate.fontcolor.white "White">
+<!ENTITY dhnotify.caption.label "Перевод дополнительных уведомлений-">
+<!ENTITY dhnotify.checkbox.label "Door-Hanger-уведомление">
+<!ENTITY detectlanguage.checkbox.label "Включено">
+<!ENTITY detectlanguage.caption.label "Автоматическое определение языка">
+<!ENTITY detectlanguage.caption.label2 "на бесплатном автобусе detectlanguage.com">
+<!ENTITY detectlanguageapikey.label "detectlanguage.com - ApiKey">
+<!ENTITY timeout.caption.label "Показать перевод Тайм-аут">
+<!ENTITY detectlanguageapikey.label2 "умолчание = 'demo', с, что: количество запросов ограничено!">
+<!ENTITY detectlanguageapikey.label3 "Вы можете зарегистрироваться бесплатно ApiKey здесь:">
+<!ENTITY timeout.label2 "(в секундах)">

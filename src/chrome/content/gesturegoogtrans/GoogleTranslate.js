@@ -8,11 +8,11 @@ const Ci = Components.interfaces;
 let _availableLangs_from = ["auto,|,af,sq,ar,be,bg,ca,zh-CN,hr,cs,da,nl,en,et,",
                             "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
                             "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                            "th,tr,uk,vi,cy,yi,ta"].join("");
+                            "th,tr,uk,vi,cy,yi,hy,az,eu,bn,eo,ka,gu,ht,kn,la,ta,te"].join("");
 let _availableLangs_to =   ["af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,et,",
                             "tl,fi,fr,gl,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,",
                             "lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,",
-                            "th,tr,uk,vi,cy,yi,ta"].join("");
+                            "th,tr,uk,vi,cy,yi,hy,az,eu,bn,eo,ka,gu,ht,kn,la,ta,te"].join("");
 let _langDict = {
     "auto": "auto",
     "af": "afrikaans",
@@ -67,8 +67,19 @@ let _langDict = {
     "vi": "vietnamese",
     "cy": "welsh",
     "yi": "yiddish",
-    "ta": "tamil"};
-
+	"hy": "armenian",
+	"az": "azerbaijani",
+	"eu": "basque",
+	"bn": "bengali",
+	"eo": "esperanto",
+	"ka": "georgian",
+	"gu": "gujarati",
+	"ht": "haitianC",
+	"kn": "kannada",
+	"la": "latin",
+	"ta": "tamil",
+	"te": "telugu"};
+	
 if ("undefined" === typeof(GoogleTranslate)) {
 
     var GoogleTranslate = {
@@ -86,12 +97,31 @@ if ("undefined" === typeof(GoogleTranslate)) {
             this.mozPrefs = Cc["@mozilla.org/preferences-service;1"].getService(
                 Ci.nsIPrefService);
             let prefs = this.prefs = this.mozPrefs.getBranch("googTrans.");
-            // set default preferences
+            
+			// set default preferences
             if (!prefs.prefHasUserValue("from")) {
-                prefs.setCharPref("from", "auto");
+                prefs.setCharPref("from", "auto");  //must change to an real language to obtain reverse translation. 
             }
             if (!prefs.prefHasUserValue("to")) {
                 prefs.setCharPref("to", this.getDefaultTo());
+            }
+			if (!prefs.prefHasUserValue("fontColor")) {
+                prefs.setCharPref("fontColor", "black");
+            }
+			if (!prefs.prefHasUserValue("dhnotify")) {  //additional Notification as Door-Hanger-Notification
+			    prefs.setBoolPref("dhnotify", true);
+			}
+			if (!prefs.prefHasUserValue("timout")) {
+                prefs.setIntPref("timeout", 10);  //Timeout translation text apperance in addon-bar and Door-Hanger-Notification
+            }
+			if (!prefs.prefHasUserValue("detectlanguage")) {
+                prefs.setBoolPref("detectlanguage", true);  //detect language main switch, must be activated to obtain reverse translation too.
+            }
+			if (!prefs.prefHasUserValue("detectlanguageapikey")) {
+				prefs.setCharPref("detectlanguageapikey", "demo");  //register your own apikey from detectlanguage.com for free. (demo is limited)
+			}
+			if (!prefs.prefHasUserValue("Log2Console")) {
+                prefs.setBoolPref("Log2Console", false);  //debug-log to error-console
             }
         },
 
@@ -99,6 +129,11 @@ if ("undefined" === typeof(GoogleTranslate)) {
         log: function(msg) {
             this._console.logStringMessage(msg);
         },
+		
+		// not implemented yet, test purpose only
+		keyPressed: function() {
+			if (this.getLog2Console()) this.log('GoogleTranslate.keyPressed');
+		},
 
         // get the default "to" lang
         getDefaultTo: function() {
@@ -110,14 +145,17 @@ if ("undefined" === typeof(GoogleTranslate)) {
                 return "en";
             }
         },
-
-        translationRequest: function(langFrom, langTo, text, onLoadFn, onErrorFn) {
-            var url = this.getGoogleUrl("api", langFrom, langTo, text);
-
-            var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
+		
+        translationRequest: function(langFrom, langTo, textToTranslate, onLoadFn, onErrorFn) {
+           
+		   var url = this.getGoogleUrl("api", langFrom, langTo, textToTranslate);
+		   
+		   if (this.getLog2Console()) this.log('TextToTranslate:' + textToTranslate);
+		   
+           var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                             .createInstance(Ci.nsIXMLHttpRequest);
 						
-						this._console.logStringMessage(url);
+		   if (this.getLog2Console()) this.log(url);
 
            req.addEventListener("load", (function() {
                if (req.status !== 200) {
@@ -125,7 +163,9 @@ if ("undefined" === typeof(GoogleTranslate)) {
                    return;
                }
 
-               var response = JSON.parse(req.responseText);
+               //example-response:
+			   //{"sentences":[{"trans":"Beer and sausage that I like very much","orig":"Bier und Wurst das mag ich sehr","translit":"","src_translit":""}],"src":"de","server_time":87}
+			   var response = JSON.parse(req.responseText);
 
                if (!response.sentences) {
                    onErrorFn(req.responseText);
@@ -162,19 +202,24 @@ if ("undefined" === typeof(GoogleTranslate)) {
            }
        },
 
-       getGoogleUrl: function(urlType, langFrom, langTo, text) {
+       getGoogleUrl: function(urlType, langFrom, langTo, text, curDetectedLang) {
 
            var formattedUrl = '';
+		   if (this.getLog2Console()) this.log('getGoogleUrl: ' + urlType + ' ' + langFrom + ' -> ' + langTo + ' curDetectedLang=' + curDetectedLang);
 
            switch (urlType) {
-
                 // Google Translate API > JSON
                 case "api":
-                    formattedUrl = 'http://translate.google.com/translate_a/t?client=gesturetranslate&sl=' + langFrom + '&tl=' + langTo + '&text=' + encodeURIComponent(text);
+                    formattedUrl = 'http://translate.google.com/translate_a/t?client=gesturetranslate';
+					langFrom="auto";  //ALWAYS use "auto", trusting google doing the right translation (if detectlanguage is "active", langFrom would be very reliable too)
+					formattedUrl += '&sl=' + langFrom;
+					formattedUrl += '&tl=' + langTo;
+					formattedUrl += '&text=' + encodeURIComponent(text);
                     break;
-
                 // Google Translate page
                 case "page":
+					if (langTo==curDetectedLang) langTo=this.getLangPair()[0]; //reverse/inverse translation
+					langFrom="auto";  //ALWAYS use "auto", trusting google doing the right translation
                     formattedUrl = 'http://translate.google.com/#' + langFrom + '%7C' + langTo + '%7C' + encodeURIComponent(text);
                     break;
             }
@@ -198,15 +243,61 @@ if ("undefined" === typeof(GoogleTranslate)) {
         getLangPair: function() {
             return [this.prefs.getCharPref("from"), this.prefs.getCharPref("to")];
         },
-				// INI - Patch for Gesture Translate by @pablocantero
-				getFontColor: function(){
-					var fontColorSelected = 'black';
-				   	if (this.prefs.prefHasUserValue('fontColor')) {
-						fontColorSelected = this.prefs.getCharPref('fontColor');
-					}
-					return fontColorSelected;
-				}
-				// END - Patch for Gesture Translate by @pablocantero
+		
+		// INI - Patch for Gesture Translate by @pablocantero
+		getFontColor: function() {
+			var fontColorSelected = "black";
+			if (this.prefs.prefHasUserValue("fontColor")) {
+			  fontColorSelected = this.prefs.getCharPref("fontColor");
+			}
+			return fontColorSelected;
+		},
+		// END - Patch for Gesture Translate by @pablocantero
+		
+		getDetectLanguage: function() {
+			var detectlanguage=true;
+			if (this.prefs.prefHasUserValue("detectlanguage")) {
+			  detectlanguage = this.prefs.getBoolPref("detectlanguage");
+			}
+			return detectlanguage;
+		},
+		
+		getDetectLanguageApiKey: function() {
+			var detectlanguageapikey="demo";
+			if (this.prefs.prefHasUserValue("detectlanguageapikey")) {
+			  detectlanguageapikey = this.prefs.getCharPref("detectlanguageapikey");
+			  if (detectlanguageapikey == "") detectlanguageapikey="demo";
+			}
+			return detectlanguageapikey;
+		},
+		
+		getDHNotify: function() {
+			var dhnotify=true;
+			if (this.prefs.prefHasUserValue("dhnotify")) {
+			  dhnotify = this.prefs.getBoolPref("dhnotify");
+			}
+			return dhnotify;
+		},
+		
+		getTimeOut: function() {
+			var timeout=10;
+			if (this.prefs.prefHasUserValue("timeout")) {
+			  timeout = this.prefs.getIntPref("timeout");
+			}
+			timeout=parseInt(timeout,10);
+			if (timeout<1) timeout=1;
+			if (timeout>120) timeout=120;
+			return timeout;
+		},
+		
+		getLog2Console: function() {
+			var Log2Console=false;
+			if (this.prefs.prefHasUserValue("Log2Console")) {
+				Log2Console = this.prefs.getBoolPref("Log2Console");
+			}
+			return Log2Console;
+		}
+		
     };
 
     (function() {

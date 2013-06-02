@@ -13,11 +13,12 @@
 	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/UtilChrome.js"></script>
 	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/googTransOverlay.js"></script>
 	
+	<keyset id="mainKeyset"> <key id="key_gtranslateIt" key="Y" modifiers="control" oncommand="GoogleTranslate.keyPressed()"/> </keyset>
+	
 	<!-- Right click menu -->
 	<menu id="gtranslate_main" label="&translate.menuitem.label;" class="menu-iconic" image="chrome://gesturegoogtrans/skin/menuitem.png">
 		<menupopup id="gtranslate_popup">
 			<menuitem id="gtranslate_result" label="" disabled="" />
-			<menuitem id="gtranslate_dict" label="&open.dictionary;" />
 			<menuitem id="gtranslate_replace" label="&replace.with.translation.label;" />
 			<menuseparator id="gtranslate_langpair_separator"/>
 			<menu id="gtranslate_langpair_main" label="">

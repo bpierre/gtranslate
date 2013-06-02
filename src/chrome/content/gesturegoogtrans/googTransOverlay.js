@@ -11,12 +11,11 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
     // Global vars
     var selection = '';
     var lastSelection = '';
-    var pageLang = '';
     
     var curDetectedLang = "";
     var curTranslation = '';
     
-    // XUL elements
+	// XUL elements
     var elements = {};
     
     // App version check
@@ -41,7 +40,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         elements["gtranslate_langpair_separator"] = document.getElementById("gtranslate_langpair_separator");
         elements["gtranslate_langpair_main"] = document.getElementById("gtranslate_langpair_main");
         elements["gtranslate_langpair_popup"] = document.getElementById("gtranslate_langpair_popup");
-        elements["gtranslate_dict"] = document.getElementById("gtranslate_dict");
         elements["gtranslate_langpairs"] = {};
         
         // Events
@@ -52,6 +50,8 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
 		// Gesture mod
 		GestureTranslate.init();
+		
+		//document.getElementById("key_gtranslateIt").setAttribute("oncommand", "alert('YYYEEESSS')");
         
     }, false);
     
@@ -62,9 +62,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         
         // Init translate
         elements["gtranslate_popup"].addEventListener("popupshowing", initTranslate, false);
-        
-        // Open dictionay
-        elements["gtranslate_dict"].addEventListener("command", openDict, false);
         
         // Replace with translation
         elements["gtranslate_replace"].addEventListener("command", replaceText, false);
@@ -80,7 +77,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
             return;
         }
         
-        elements["gtranslate_dict"].setAttribute("disabled", (GoogleTranslate.getLangPair()[0] === "auto"));
         elements["gtranslate_replace"].setAttribute('hidden', true);
         elements["gtranslate_result"].setAttribute('disabled', true);
         
@@ -90,9 +86,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         
         // Localized string : "Translate..."
         var translateWord = elements["gtranslate_strings"].getString("TranslateWord");
-        
-        // Detect lang
-        pageLang = detectLang(popupnode);
         
         // Get and trim current selection
         selection = GoogleTranslate.trim(getSelection(popupnode));
@@ -112,7 +105,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
     function initTranslate() {
         
         var langpair = GoogleTranslate.getLangPair();
-        var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
+        var fromLang = (langpair[0] === "auto") ? "" : langpair[0];
         var toLang = langpair[1];
         
         var changelang = elements["gtranslate_strings"].getString("ChangeLanguages");
@@ -122,32 +115,78 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         elements["gtranslate_langpair_main"].setAttribute('label', changelang + " ( " + langpair.join(' > ') + " )");
         
         if (selection != '') {
-        
+		
+		  if (GoogleTranslate.getDetectLanguage()) {	
+			//detectLangRequest BEGIN
+			//added to use another service to always detect language from textToTranslate since this is not working in a reliable way with the free google service 
+			if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('initTranslate, detectLangRequest...');
+			curDetectedLang="";
+			GestureTranslate.detectLangRequest(selection,
+			  function(detectedLang) { // on load
+				  if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('DetectedLanguage:' + detectedLang);
+				  
+				  if (!!detectedLang) {
+                      curDetectedLang = detectedLang;
+                  }
+                  
+				  if (detectedLang !== "") {
+					if (detectedLang == toLang) {
+					  //reverse/inverse translation if textToTranslate is already in the same language. detectlanguage must be "active" for this feature!
+					  toLang=fromLang;
+					  fromLang=detectedLang;
+					}
+					else  {
+					  //translate it from detected language (so that we can give it to google that it can do a better/relible translation)
+					  fromLang=detectedLang;
+					}
+				  }
+				  
+              },
+              function(errorMsg) { // on error
+                  if (!errorMsg) {
+                    errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                  }
+                  
+                  elements["gtranslate_result"].setAttribute('label', errorMsg);
+                  elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
+									StatusBar.updateError(errorMsg);
+									GestureTranslate.reset();
+				  
+				  GestureTranslate.notifyError(errorMsg,5000);
+				  
+              }
+			);
+			//detectLangRequest END
+		  }
+		
+			
             var connectgoogle = elements["gtranslate_strings"].getString("ConnectToGoogle");
             var strConnect = elements["gtranslate_strings"].getString("Connecting");
             
             elements["gtranslate_result"].setAttribute('label', connectgoogle);
             elements["gtranslate_result"].setAttribute('tooltiptext', null);
             
+			if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('translationRequest ... fromLang=' + fromLang + ' ,toLang=' + toLang + ' ,curDetectedLang=' + curDetectedLang);
+			
             GoogleTranslate.translationRequest(fromLang, toLang, selection,
                 function(translation, detectedLang) { // on load
-                    updateTranslation(translation);
+                    if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('Translation (' + detectedLang + '):' + translation);
+					updateTranslation(translation);
                     
                     if (!!detectedLang) {
                         curDetectedLang = detectedLang;
-                    }
-                    
-                    if (curDetectedLang !== "" || pageLang !== "") {
-                        elements["gtranslate_dict"].setAttribute("disabled", false);
-                    }
+                    }                
                 },
                 function(errorMsg) { // on error
                     if (!errorMsg) {
                       errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
                     }
                     
+					if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('Error:' + errorMsg);
                     elements["gtranslate_result"].setAttribute('label', errorMsg);
                     elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
+					
+					GestureTranslate.notifyError(errorMsg,5000);
                 }
             );
         }
@@ -176,34 +215,12 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
     }
     
     // Open Google Translation Page in a new tab
-    function openPage() {
-      openTab(GoogleTranslate.getGoogleUrl("page", GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], lastSelection));
-    }
-    
-    // Open Google Translation Dictionay in a new tab
-    function openDict() {
-        
-        var gFromLang, gToLang;
-        
-        if (curDetectedLang !== "") {
-            gFromLang = curDetectedLang;
-            
-        } else if (pageLang !== "") {
-            gFromLang = pageLang;
-            
-        } else {
-            gFromLang = GoogleTranslate.getLangPair()[0];
-        }
-        
-        if (gFromLang !== "en") {
-            gToLang = "en";
-            
-        } else {
-            gToLang = GoogleTranslate.getLangPair()[1];
-        }
-        
-        openTab(GoogleTranslate.getGoogleUrl("dict", gFromLang, gToLang, lastSelection));
-    }
+    function openPage(text) {
+	  
+	  if ((typeof text)!="string") text=lastSelection;
+	  
+	  openTab(GoogleTranslate.getGoogleUrl("page", GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], text, curDetectedLang));
+	}
     
     function openTab(tabUrl) {
       
@@ -348,30 +365,6 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         elements["gtranslate_langpairs"][fromLang]["to"][toLang].setAttribute("checked", "true");
     }
     
-    function detectLang(popupnode) {
-        /*
-        // Document lang
-        var htmlElt = top.document.getElementById("content").contentDocument.getElementsByTagName('html')[0];
-        
-        if (!!htmlElt) {
-            pageLang = htmlElt.getAttribute('lang');
-        }
-        
-        // Element language
-        if (!!popupnode.getAttribute('lang')) {
-            pageLang = popupnode.getAttribute('lang');
-        }
-        
-        // Google Translate auto-detection
-        if (!pageLang) {
-            pageLang = '';
-        }
-        
-        return pageLang.slice(0, 2).toLowerCase(); // slice : "fr-FR" to "fr"
-        */
-        return "";
-    }
-    
     function getSelection(popupnode) {
         var nodeLocalName = popupnode.localName.toLowerCase();
         var selection = '';
@@ -502,7 +495,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 		},
 		startClearStatusBarTimer: function(){
 			GestureTranslate.stopClearStatusBarTimer();
-			var milis = 10000; //10 seconds
+			var milis = (GoogleTranslate.getTimeOut() * 1000); //Default = 10 Sek.
 			var timerService = Components.classes["@mozilla.org/timer;1"].createInstance(Components.interfaces.nsITimer);
 			var event = {  
 			   notify: function(timer) {  
@@ -539,20 +532,67 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			}
 		},
 		translateIt: function(textToTranslate){
-					var langpair = GoogleTranslate.getLangPair();
-	        var fromLang = (langpair[0] == 'auto') ? pageLang : langpair[0];
-	        var toLang = langpair[1];
-	        GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
-              function(translation, detectedLang) { // on load
-								StatusBar.updateInfo(translation, textToTranslate);
-								GestureTranslate.reset();
-                  
-                  if (!!detectedLang) {
+		  var langpair = GoogleTranslate.getLangPair();
+	      var fromLang = (langpair[0] === "auto") ? "" : langpair[0];
+	      var toLang = langpair[1];
+				
+		  if (GoogleTranslate.getDetectLanguage()) {	
+			//detectLangRequest BEGIN, added to use another service to always detect language from textToTranslate since this is not working in a reliable way with the free google service 
+			if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('translateIt, detectLangRequest...');
+			curDetectedLang="";
+			this.detectLangRequest(textToTranslate,
+			  function(detectedLang) { // on load
+				  if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('DetectedLanguage:' + detectedLang);
+				  StatusBar.updateInfo('DetectedLanguage:' + detectedLang);
+				  GestureTranslate.reset();
+				  
+				  if (!!detectedLang) {
                       curDetectedLang = detectedLang;
                   }
                   
-                  if (curDetectedLang !== "" || pageLang !== "") {
-                      elements["gtranslate_dict"].setAttribute("disabled", false);
+				  if (detectedLang !== "") {
+					if (detectedLang == toLang) {
+					  //reverse/inverse translation if textToTranslate is already in the same language :)
+					  toLang=fromLang;
+					  fromLang=detectedLang;
+					}
+					else  {
+					  //translate it from detected language (so that we can give it to google that it can do a better/relible tranlation)
+					  fromLang=detectedLang;
+					}
+				  }
+				  
+              },
+              function(errorMsg) { // on error
+                  if (!errorMsg) {
+                    errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
+                  }
+                  
+				  if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('Error:' + errorMsg);
+                  elements["gtranslate_result"].setAttribute('label', errorMsg);
+                  elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
+									StatusBar.updateError(errorMsg);
+									GestureTranslate.reset();
+				  
+				  GestureTranslate.notifyError(errorMsg,5000);
+              }
+			);
+			//detectLangRequest END
+		  }	
+			
+		  GoogleTranslate.translationRequest(fromLang, toLang, textToTranslate,
+              function(translation, detectedLang) { // on load
+			      if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('Translation (' + detectedLang + '):' + translation);
+				  StatusBar.updateInfo(translation, textToTranslate);
+				  
+				  //additional Notification?
+				  if (GoogleTranslate.getDHNotify()) {
+				    GestureTranslate.notifyDoorHanger("", translation, textToTranslate);
+				  }
+				  
+				  GestureTranslate.reset();
+                  if (!!detectedLang) {
+                      curDetectedLang = detectedLang;
                   }
               },
               function(errorMsg) { // on error
@@ -560,19 +600,91 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
                     errorMsg = elements["gtranslate_strings"].getString("ConnectionError");
                   }
                   
+				  if (GoogleTranslate.getLog2Console()) GoogleTranslate.log('Error:' + errorMsg);
                   elements["gtranslate_result"].setAttribute('label', errorMsg);
                   elements["gtranslate_result"].setAttribute('tooltiptext', errorMsg);
 									StatusBar.updateError(errorMsg);
 									GestureTranslate.reset();
+				  
+				  GestureTranslate.notifyError(errorMsg,5000);
+				  
               }
           );
-	
-	
 		},
+		
+		//detect Language
+		detectLangRequest: function(text, onLoadFn, onErrorFn) {
+            var url = this.getDetectLanguageUrl(text);
+			
+			var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
+                            .createInstance(Ci.nsIXMLHttpRequest);
+						
+			if (GoogleTranslate.getLog2Console()) GoogleTranslate.log(url);
+
+            req.addEventListener("load", (function() {
+               if (req.status !== 200) {
+				   if (GoogleTranslate.getLog2Console()) GoogleTranslate.log(req.statusText);
+                   onErrorFn(req.statusText);
+                   return;
+               }
+			   
+			   if (GoogleTranslate.getLog2Console()) GoogleTranslate.log(req.responseText);
+			
+			   //example response:
+			   //{"data":{"detections":[{"language":"de","isReliable":false,"confidence":0.2477291494632535},{"language":"sk","isReliable":false,"confidence":0.04965243296921549}]}}
+			   //{"error":{"code":2,"message":"You are using demo API key. Please sign up and get your free API key at http://detectlanguage.com"}}
+               var response = JSON.parse(req.responseText);
+
+               if (!response.data) {
+                   var errMsg=req.responseText;
+				   if (response.error) {
+				     errMsg=response.error.message;
+				   }
+				   errMsg = "detectlanguage.com - " + errMsg; 
+				   if (GoogleTranslate.getLog2Console()) GoogleTranslate.log(errMsg);
+				   onErrorFn(errMsg);
+                   return;
+               }
+			   
+			   var detectLang = '';
+			   try {
+			     detectLang=response.data.detections[0].language;
+               }
+			   catch(e) {
+			     //
+			   }
+               
+			   onLoadFn(detectLang);
+			   
+           }), false);
+
+           req.addEventListener("error", onErrorFn, false);
+
+           //req.open("GET", url, true);
+		   req.open("GET", url, false);  //do a sync-call here instead of async, this must be done to be ready before calling google translation service
+           req.send(null);
+           
+        },
+		//build Url to use detectlanguage service
+        getDetectLanguageUrl: function(text) {
+           
+		   //var regex = /\s+/gi;
+		   //var wordCount = text.replace(regex, ' ').split(' ').length;
+		   var totalChars = text.length;
+		   if (totalChars>70) text=text.substring(0,70);  //first 70 chars should be enough to detect language relibale, it's not necessary to send the full text
+		   
+		   var formattedUrl = 'http://ws.detectlanguage.com/0.2/detect?q=' + encodeURIComponent(text);
+		   
+		   //the API key defaults to "demo", which has only a limited number of requests, please register your API key for free! and put it in the pref
+		   formattedUrl = formattedUrl + '&key=' + GoogleTranslate.getDetectLanguageApiKey();
+           
+		   return formattedUrl;
+        },
+		
 		getSelection: function(popupnode) {
 			var nodeLocalName = popupnode.localName.toLowerCase();
 			var selection = '';
-			// Input or textarea ?
+			// Input or textarea?
 			if ((nodeLocalName == "textarea") || (nodeLocalName == "input" && popupnode.type == "text")) {
 			    selection = popupnode.value.substring(popupnode.selectionStart, popupnode.selectionEnd);
 			    elements["gtranslate_replace"].setAttribute('hidden', false); /*TEMP*/
@@ -580,13 +692,130 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			    selection = document.commandDispatcher.focusedWindow.getSelection().toString();
 			}
 			return selection;
-	    }
+	    },
+		
+		notifyError: function(nMessage, nTimeout) {
+			//this.notifyAlert('Gesture Translate Error:',nMessage,"Warning");
+			this.notifyBox('Gesture Translate Error:',nMessage,"Warning");  //use html5-NotificationBox for errors
+		},
+		
+		//Notifications via Alerts service
+		notifyAlert: function(nTitle, nMessage, nTyp, nIcon) {
+		  var nTyp = nTyp || "Note";
+  
+		  var nDefaultIcon="chrome://gesturegoogtrans/skin/icon.png";
+		  var nIcon = nIcon || nDefaultIcon;
+  
+		  if (nIcon==nDefaultIcon) {
+			if (nTyp=="Warning") nIcon="chrome://gesturegoogtrans/skin/warning_red_32.png";
+			if (nTyp=="Message") nIcon="chrome://gesturegoogtrans/skin/message_32.png";
+			if (nTyp=="Note") nIcon="chrome://gesturegoogtrans/skin/note_32.png";
+		  }
+  
+		  var alertService = Components.classes["@mozilla.org/alerts-service;1"].getService(Components.interfaces.nsIAlertsService);
+  
+		  try {
+			alertService.showAlertNotification(nIcon, nTitle, nMessage, false, "", null);
+		  }
+		  catch(e) {
+			// if notification services is not set up on this computer
+			alert("ERROR notify:" + e);
+		  }  
+		},
+		
+		//Notifications via html5-NotificationBox
+		notifyBox: function(nTitle, nMessage, nTyp, nIcon) {
+		  var nTyp = nTyp || "Note";
+		  
+		  var nDefaultIcon="chrome://gesturegoogtrans/skin/icon.png";  //"chrome://browser/skin/Info.png"
+		  var nIcon = nIcon || nDefaultIcon;
+  
+		  if (nIcon==nDefaultIcon) {
+			if (nTyp=="Warning") nIcon="chrome://gesturegoogtrans/skin/warning_red_32.png";
+			if (nTyp=="Message") nIcon="chrome://gesturegoogtrans/skin/message_32.png";
+			if (nTyp=="Note") nIcon="chrome://gesturegoogtrans/skin/note_32.png";
+		  }
+		  
+		  if (nTitle!="") nMessage=nTitle + " " + nMessage;
+		  
+		  var notificationBox = gBrowser.getNotificationBox();
+		  const priority = notificationBox.PRIORITY_WARNING_MEDIUM;  //PRIORITY_INFO_MEDIUM, PRIORITY_WARNING_MEDIUM, PRIORITY_CRITICAL_MEDIUM
+		  notificationBox.appendNotification(nMessage, "popup-blocked", nIcon, notificationBox, priority);
+		},
+		
+		//Notifications via PopupNotifications aka Dook-Hanger-PopUps
+		notifyDoorHanger: function(nTitle, nMessage, nMessage2, nTimeout) {
+		  var nTimeout = nTimeout || (GoogleTranslate.getTimeOut() * 1000);
+		  var nMessage2 = nMessage2 || "";
+		  
+		  var nIcon="chrome://gesturegoogtrans/skin/icon.png";
+		  
+		  var tMessage=nMessage;
+		  if (nTitle!="") tMessage=nTitle + " " + nMessage;
+		  
+		  //Components.utils.import('resource://gre/modules/PopupNotifications.jsm');
+		  
+		  var notification =  PopupNotifications.show(
+			// browser
+			gBrowser.selectedBrowser,
+			// popup id
+			"gestureTranslate-popup",
+			// message
+			tMessage,
+			// anchor id
+			null,
+			// main action
+			{
+				label: "Go gTranslate",
+				accessKey: "G",
+				callback: function() {
+				  openPage(nMessage2);
+				}
+			},
+			// secondary actions
+			[
+			  {
+				label: "1 - Copy Translation To Clipboard",
+				accessKey: "1",
+				callback: function() {
+					GestureTranslate.Copy2ClipBoard(nMessage);
+				}
+			  },
+			  {
+				label: "2 - Copy Both To Clipboard",
+				accessKey: "2",
+				callback: function() {
+					GestureTranslate.Copy2ClipBoard(nMessage2 + String.fromCharCode(13) + String.fromCharCode(10) + "--->" + String.fromCharCode(13) + String.fromCharCode(10) + nMessage);
+				}
+			  }
+			],
+			// options
+			{
+				popupIconURL: nIcon
+			}
+		  );
+ 
+		  setTimeout(function(){
+			notification.remove();
+		  }, nTimeout); // Time in milliseconds to disappear the door-hanger popup.  
+			
+		},
+		
+		//Copy2ClipBoard
+		Copy2ClipBoard: function(text) {
+		  const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"]
+                                   .getService(Components.interfaces.nsIClipboardHelper);
+		  gClipboardHelper.copyString(text);
+		}
+		
 	};
+	
 	var StatusBar = {
 		_update: function(tooltipText, textToTranslate){
 			if(textToTranslate == null){
 				textToTranslate = tooltipText;
 			}
+			
 			document.getElementById('gestureTranslateStatusbar').label = tooltipText;
 			document.getElementById('gestureTranslateStatusbar').tooltipText = tooltipText;		
 			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: ' + GoogleTranslate.getFontColor());
@@ -598,20 +827,24 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 			};
 			document.getElementById('gestureTranslateStatusbar').onmouseout = function(){
 				GestureTranslate.startClearStatusBarTimer();
-			};	
+			};
+			
 		},
+		
 		reset: function(){
 			StatusBar._update('', '');
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], ''));
+				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], '', curDetectedLang));
 			};
 		},
+		
 		updateInfo: function(tooltipText, textToTranslate){
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').onclick = function(){
-				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate));
+				openTab(GoogleTranslate.getGoogleUrl('page', GoogleTranslate.getLangPair()[0], GoogleTranslate.getLangPair()[1], textToTranslate, curDetectedLang));
 			};
 		},
+		
 		updateError: function(tooltipText, textToTranslate){ //Only change the font-color to red
 			StatusBar._update(tooltipText, textToTranslate);
 			document.getElementById('gestureTranslateStatusbar').setAttribute('style', 'border: 1px solid #CCC; color: ' + GoogleTranslate.getFontColor());

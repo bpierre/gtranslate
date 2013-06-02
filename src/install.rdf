@@ -7,7 +7,7 @@
     <em:id>gesture-translate@pablocantero.com</em:id>
     <em:type>2</em:type>
     <em:name>Gesture Translate</em:name>
-    <em:version>0.5.9</em:version>
+    <em:version>0.6</em:version>
     <em:optionsURL>chrome://gesturegoogtrans/content/preferences.xul</em:optionsURL>
 
     <em:name>Gesture Translate</em:name>
@@ -15,13 +15,14 @@
     <em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/239633/</em:homepageURL>
 
     <em:creator>Pablo Cantero</em:creator>
+	<em:contributor>Milagro - v0.6</em:contributor>
 
     <!-- Firefox -->
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>8.*</em:maxVersion>
+        <em:maxVersion>21.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 

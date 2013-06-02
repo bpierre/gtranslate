@@ -1,12 +1,24 @@
-<!ENTITY options.title "gTranslate - Opțiuni">
-<!ENTITY translatefrom.menu.label "Tradu textul din…">
+<!ENTITY options.title "Gesture Translate - Opțiuni">
+<!ENTITY translatefrom.menu.label "Traduce textul din limba...">
 <!ENTITY autodetection.caption.label "Detectează automat">
 <!ENTITY detectlocale.checkbox.label "Limba implicită a navigatorului">
 <!ENTITY detectpagelang.checkbox.label "Limba paginii">
-<!ENTITY translate.to.label "în">
+<!ENTITY translatefrom.label2 "Alegeți o adevărată limba aici și de a permite Auto-Limba-de detectare a obține Reverse-traducere.">
+<!ENTITY translatefrom.label3 "(Inversa Traducere: dacă text-to-traduce limba = la Limba)">
+<!ENTITY translate.to.label "la Limba...">
 <!ENTITY translate.menuitem.label "Tradu">
 <!ENTITY open.dictionary "Deschide dicționarul">
 <!ENTITY replace.with.translation.label "Înlocuiește cu traducerea">
-<!ENTITY translate.fontcolor "Font color">
+<!ENTITY translate.fontcolor "culoarea fontului">
 <!ENTITY translate.fontcolor.black "Black">
 <!ENTITY translate.fontcolor.white "White">
+<!ENTITY dhnotify.caption.label "suplimentare de traducere Notificare">
+<!ENTITY dhnotify.checkbox.label "Door-Hanger-Notificare">
+<!ENTITY detectlanguage.checkbox.label "Activat">
+<!ENTITY detectlanguage.caption.label "Detectarea automată a limbii">
+<!ENTITY detectlanguage.caption.label2 "de Serviciul detectlanguage.com gratuit">
+<!ENTITY detectlanguageapikey.label "detectlanguage.com - ApiKey">
+<!ENTITY timeout.caption.label "Arata Timeout Traducere">
+<!ENTITY detectlanguageapikey.label2 "lipsă = 'demo', cu care: numărul de cereri limitat!">
+<!ENTITY detectlanguageapikey.label3 "Puteți înregistra ApiKey gratuit aici:">
+<!ENTITY timeout.label2 "(în secunde)">

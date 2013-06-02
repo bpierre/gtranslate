@@ -1,12 +1,24 @@
-<!ENTITY options.title "gTranslate - Optionen">
-<!ENTITY translatefrom.menu.label "Diesen Text übersetzen…">
+<!ENTITY options.title "Gesture Translate - Optionen">
+<!ENTITY translatefrom.menu.label "Text übersetzen von Sprache...">
 <!ENTITY autodetection.caption.label "Automatische Erkennung">
 <!ENTITY detectlocale.checkbox.label "Sprache des Navigators">
 <!ENTITY detectpagelang.checkbox.label "Sprache der Seite">
-<!ENTITY translate.to.label "nach">
+<!ENTITY translatefrom.label2 "Um Reverse-Translation zu ermöglichen muss hier eine richtige Sprache gewählt werden und Auto-Sprach-Identifizierung aktiviert sein.">
+<!ENTITY translatefrom.label3 "(Reverse-Translation: wenn Sprache des zu übersetzenden Textes = nach Sprache)">
+<!ENTITY translate.to.label "nach Sprache...">
 <!ENTITY translate.menuitem.label "Übersetzen">
 <!ENTITY open.dictionary "Wörterbuch öffnen">
 <!ENTITY replace.with.translation.label "Durch die Übersetzung ersetzen">
 <!ENTITY translate.fontcolor "Font color">
 <!ENTITY translate.fontcolor.black "Black">
 <!ENTITY translate.fontcolor.white "White">
+<!ENTITY dhnotify.caption.label "zusätzliche Übersetzungs-Benachrichtigung">
+<!ENTITY dhnotify.checkbox.label "Door-Hanger-Benachrichtigung">
+<!ENTITY detectlanguage.checkbox.label "Aktiv">
+<!ENTITY detectlanguage.caption.label "Auto-Sprach-Identifizierung">
+<!ENTITY detectlanguage.caption.label2 "via detectlanguage.com Service (kostenlos)">
+<!ENTITY detectlanguageapikey.label "detectlanguage.com - ApiKey">
+<!ENTITY timeout.caption.label "Timeout Anzeige Übersetzung">
+<!ENTITY detectlanguageapikey.label2 "Sie können 'demo' verwenden, die Anzahl der Nutzung ist hierbei jedoch limitiert!">
+<!ENTITY detectlanguageapikey.label3 "Sie können sich Ihren kostenlosen ApiKey hier registrieren:">
+<!ENTITY timeout.label2 "(in Sekunden)">

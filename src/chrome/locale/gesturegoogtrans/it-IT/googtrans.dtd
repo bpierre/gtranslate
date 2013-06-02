@@ -1,12 +1,24 @@
-<!ENTITY options.title "gTranslate - Opzioni">
-<!ENTITY translatefrom.menu.label "Tradurre questo testo di…">
+<!ENTITY options.title "Gesture Translate - Opzioni">
+<!ENTITY translatefrom.menu.label "Tradurre il testo da Lingua...">
 <!ENTITY autodetection.caption.label "Identificazione automatica">
 <!ENTITY detectlocale.checkbox.label "Lingua del browser">
 <!ENTITY detectpagelang.checkbox.label "Lingua della pagina">
-<!ENTITY translate.to.label "verso">
+<!ENTITY translatefrom.label2 "Scegli una lingua vera e propria qui e attivare Auto-Language-Detection per ottenere Reverse-Traduzione.">
+<!ENTITY translatefrom.label3 "(Traduzione inversa: se da testo a tradurre la lingua = di Lingua)">
+<!ENTITY translate.to.label "di Lingua...">
 <!ENTITY translate.menuitem.label "Tradurre">
 <!ENTITY open.dictionary "Aprire il dizionario">
 <!ENTITY replace.with.translation.label "Sostituire con la traduzione">
-<!ENTITY translate.fontcolor "Font color">
+<!ENTITY translate.fontcolor "colore carattere">
 <!ENTITY translate.fontcolor.black "Black">
 <!ENTITY translate.fontcolor.white "White">
+<!ENTITY dhnotify.caption.label "ulteriore Traduzione-Notification">
+<!ENTITY dhnotify.checkbox.label "Door-Hanger-Notification">
+<!ENTITY detectlanguage.checkbox.label "Abilitato">
+<!ENTITY detectlanguage.caption.label "Rilevamento automatico della lingua">
+<!ENTITY detectlanguage.caption.label2 "da libero servizio detectlanguage.com">
+<!ENTITY detectlanguageapikey.label "detectlanguage.com - ApiKey">
+<!ENTITY timeout.caption.label "Mostra Timeout traduzione">
+<!ENTITY detectlanguageapikey.label2 "predefinito = 'demo', con quel: numero di richieste limitato!">
+<!ENTITY detectlanguageapikey.label3 "È possibile registrare il ApiKey gratis qui:">
+<!ENTITY timeout.label2 "(in secondi)">
