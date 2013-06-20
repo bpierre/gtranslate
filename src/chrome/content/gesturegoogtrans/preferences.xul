@@ -67,7 +67,6 @@
 	   <stringbundle id="gesturegoogtrans-strings" src="chrome://gesturegoogtrans/locale/googtrans.properties"/>
 	</stringbundleset>
 	
-	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/UtilChrome.js"></script>
 	<script type="application/x-javascript" src="chrome://gesturegoogtrans/content/preferences.js"></script>
 	
 </prefwindow>

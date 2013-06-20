@@ -1,3 +1,6 @@
+// Whole-script strict mode syntax
+"use strict";
+
 Components.utils.import("resource://gesturegoogtrans/JSON.js");
 
 let EXPORTED_SYMBOLS = ["GoogleTranslate"];

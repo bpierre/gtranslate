@@ -1,8 +1,5 @@
-
-/*
- * The UtilChrome global object is defined in UtilChrome.js which is
- * loaded from preferences.xul.
- */
+// Whole-script strict mode syntax
+"use strict";
 
 Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
@@ -28,7 +25,7 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
     // On window load
     window.addEventListener("load", function() {
         
-        contextMenu = UtilChrome.gid("contentAreaContextMenu") || UtilChrome.gid("mailContext");
+        contextMenu = document.getElementById("contentAreaContextMenu") || document.getElementById("mailContext");
         
         // XUL elements
         elements["gtranslate_popup"] = document.getElementById("gtranslate_popup");
@@ -259,7 +256,9 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
     
     // Generates langlist menu
     function loadLangList() {
-        
+        // Function-level strict mode syntax
+		"use strict";
+		
         function compareLangLabels(a, b) {
             if (elements["gtranslate_strings"].getString(
                     GoogleTranslate.langConf.langDict[a] + ".label") <
@@ -277,6 +276,9 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         
         fLangs.unshift("auto", "|");
         
+		var f;
+		var t;
+		
         for (f in fLangs) {
         
             var m;
@@ -346,12 +348,14 @@ Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
         if (element.hasChildNodes()) {
             
             var menupopup = element.childNodes;
+			var i;
             
             for (var i = 0; i < menupopup.length; i++) {
             
                 if (menupopup[i].hasChildNodes()) {
                 
                     var children = element.childNodes;
+					var j;
                     
                     for (var j = 0; j < children.length; j++) {
                         children[j].removeAttribute("checked");

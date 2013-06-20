@@ -1,8 +1,5 @@
-
-/*
- * The UtilChrome global object is defined in UtilChrome.js which is
- * loaded from preferences.xul.
- */
+// Whole-script strict mode syntax
+"use strict";
 
 Components.utils.import("resource://gesturegoogtrans/GoogleTranslate.js");
 
@@ -13,21 +10,22 @@ const Ci = Components.interfaces;
 
   /* Langpair */
   var elts = {
-    "langpair_from": UtilChrome.gid("langpair_from"),
-    "langpair_to": UtilChrome.gid("langpair_to"),
-    "strings": UtilChrome.gid("gesturegoogtrans-strings"),
-	"font_color": UtilChrome.gid("font_color"),
-	"detectlanguage": UtilChrome.gid("detectlanguage"),
-	"detectlanguageapikey": UtilChrome.gid("detectlanguageapikey"),
-	"dhnotify": UtilChrome.gid("dhnotify"),
-	"timeout": UtilChrome.gid("timeout")
+    "langpair_from": document.getElementById("langpair_from"),
+    "langpair_to": document.getElementById("langpair_to"),
+    "strings": document.getElementById("gesturegoogtrans-strings"),
+	"font_color": document.getElementById("font_color"),
+	"detectlanguage": document.getElementById("detectlanguage"),
+	"detectlanguageapikey": document.getElementById("detectlanguageapikey"),
+	"dhnotify": document.getElementById("dhnotify"),
+	"timeout": document.getElementById("timeout")
   };
   
   /* Fill "from" menuitem */
   function fillFromLang() {
     
-    var menu = UtilChrome.gid('lp_menupopup_from');
+    var menu = document.getElementById('lp_menupopup_from');
     var langs = GoogleTranslate.langConf.availableLangs_from.split(",");
+	var i;
     
     for (i in langs) {
       if (langs[i] !== '|') {
@@ -46,10 +44,13 @@ const Ci = Components.interfaces;
   /* Fill "to" menuitem */
   function fillToLang() {
       
-    var menu = UtilChrome.gid('lp_menupopup_to');
+    var menu = document.getElementById('lp_menupopup_to');
     var langs = GoogleTranslate.langConf.availableLangs_to.split(",");
-    
-    UtilChrome.emptyElt(menu);
+    var i;
+	
+    while (menu.firstChild) {
+      menu.removeChild(menu.firstChild);
+    }
     
     for (i in langs) {
       if (langs[i] !== elts.langpair_from.value) {
