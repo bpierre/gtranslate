@@ -1,0 +1,13 @@
+{
+  "title": "gtranslate",
+  "name": "gtranslate",
+  "version": "0.0.1",
+  "description": "gtranslate is a Firefox addon that translates the selected text using Google Translate.",
+  "main": "index.js",
+  "author": "Pierre Bertet <bonjour@pierrebertet.net>",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT"
+}
