@@ -13,5 +13,7 @@ Mozilla Public License 1.1
 ## Authors
 
 Original Author: Pau Tomàs
+
 Maintainer: Pierre Bertet <bonjour@pierrebertet.net>
+
 Contributors: https://github.com/bpierre/gtranslate/graphs/contributors
