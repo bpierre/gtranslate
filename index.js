@@ -36,7 +36,7 @@ const languagesMenu = cm.Menu({
 
 const menu = cm.Menu({
   label: 'Translate',
-  image: 'resource://gtranslate/menuitem.svg',
+  image: 'resource://gtranslate/assets/menuitem.svg',
   data: 'gtranslate-menu',
   items: [ translationItem, cm.Separator(), languagesMenu ],
   contentScriptFile: 'resource://gtranslate/menu-contentscript.js',
