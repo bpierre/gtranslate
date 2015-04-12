@@ -1,8 +1,10 @@
+'use strict'
+
 const cm = require('sdk/context-menu')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const { uuid } = require('sdk/util/uuid')
 
-function onMenuShowing(menu, cb) {
+function onMenuPopupshowing(menu, cb) {
   const document = getMostRecentBrowserWindow().document
   const cmNode = document.getElementById('contentAreaContextMenu')
 
@@ -30,4 +32,4 @@ function onMenuShowing(menu, cb) {
   }
 }
 
-exports.onMenuShowing = onMenuShowing
+exports.onMenuPopupshowing = onMenuPopupshowing
