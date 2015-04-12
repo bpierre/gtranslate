@@ -1,11 +1,22 @@
 'use strict'
 
 const cm = require('sdk/context-menu')
+const sp = require('sdk/simple-prefs')
 const { onMenuPopupshowing } = require('./menu-popupshowing')
 const { setTimeout } = require('sdk/timers')
 const { translate } = require('./providers/google-translate')
 const languages = require('./languages')
 
+// Settings
+sp.on('checkall', () => {
+  const keys = Object.keys(languages)
+  const check = !!keys.find(lang => !sp.prefs[`lang_${lang}`])
+  keys.forEach(lang => {
+    sp.prefs[`lang_${lang}`] = check
+  })
+})
+
+// Context Menu
 const FROM = 'auto'
 const TO = 'fr'
 const LABEL_LOADING = 'Loading…'
