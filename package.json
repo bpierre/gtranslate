@@ -11,12 +11,9 @@
   },
   "license": "MIT",
   "preferences": [
-    {
-      "type": "control",
-      "title": "Languages",
-      "name": "checkall",
-      "label": "Check / Uncheck All"
-    },
+    { "type": "control", "title": "Languages", "name": "checkall", "label": "Check / Uncheck All" },
+    { "type": "string", "title": "lang_from", "name": "lang_from", "value": "auto", "hidden": true },
+    { "type": "string", "title": "lang_to", "name": "lang_to", "value": "auto", "hidden": true },
     { "type": "bool", "value": true, "name": "lang_af", "title": "Afrikaans" },
     { "type": "bool", "value": true, "name": "lang_sq", "title": "Albanian" },
     { "type": "bool", "value": true, "name": "lang_ar", "title": "Arabic" },
