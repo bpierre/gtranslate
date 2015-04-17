@@ -98,6 +98,12 @@ const onMenuMessage = msg => {
     updateTo(msg.value)
     return
   }
+  if (msg.type === 'invert') {
+    const from = sp.prefs.lang_from
+    const to = sp.prefs.lang_to
+    updateTo(from)
+    updateFrom(to)
+  }
 }
 
 const menu = cm.Menu({
@@ -111,13 +117,7 @@ const menu = cm.Menu({
     menuTo,
     cm.Item({
       label: 'Invert',
-      contentScript: 'self.on("click", () => self.postMessage())',
-      onMessage: () => {
-        const from = sp.prefs.lang_from
-        const to = sp.prefs.lang_to
-        updateTo(from)
-        updateFrom(to)
-      }
+      data: 'invert',
     }),
   ],
   contentScriptFile: self.data.url('menu-contentscript.js'),
