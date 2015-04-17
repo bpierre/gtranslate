@@ -1,5 +1,6 @@
 'use strict'
 
+const self = require('sdk/self')
 const cm = require('sdk/context-menu')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
@@ -101,7 +102,7 @@ const onMenuMessage = msg => {
 
 const menu = cm.Menu({
   label: 'Translate',
-  image: 'resource://gtranslate/assets/menuitem.svg',
+  image: self.data.url('menuitem.svg'),
   data: 'gtranslate-menu',
   items: [
     translationItem,
@@ -119,7 +120,7 @@ const menu = cm.Menu({
       }
     }),
   ],
-  contentScriptFile: 'resource://gtranslate/menu-contentscript.js',
+  contentScriptFile: self.data.url('menu-contentscript.js'),
   onMessage: onMenuMessage,
 })
 

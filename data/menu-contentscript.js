@@ -29,4 +29,8 @@ self.on('click', (node, data) => {
     self.postMessage({ type: 'to', value: data.slice('to:'.length) })
     return
   }
+  if (data === 'invert') {
+    self.postMessage({ type: 'invert' })
+    return
+  }
 })
