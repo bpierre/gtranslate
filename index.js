@@ -51,9 +51,7 @@ const langFromItems = languages => (
     .filter(lang => !languages[lang].onlyTo)
     .map(lang => cm.Item({
       label: languages[lang].name,
-      data: lang,
-      contentScript: 'self.on("click", (node, data) => self.postMessage(data))',
-      onMessage: lang => updateFrom(lang),
+      data: `from:${lang}`,
     }))
 )
 
@@ -61,9 +59,7 @@ const langToItems = languages => (
   Object.keys(languages)
     .map(lang => cm.Item({
       label: languages[lang].name,
-      data: lang,
-      contentScript: 'self.on("click", (node, data) => self.postMessage(data))',
-      onMessage: lang => updateTo(lang),
+      data: `to:${lang}`,
     }))
 )
 
@@ -87,6 +83,22 @@ const updateTo = lang => {
   menuTo.label = LABEL_CHANGE_TO.replace(/\{0\}/, currentTo())
 }
 
+const onMenuMessage = msg => {
+  if (msg.type === 'selection') {
+    lastSelectedText = msg.value.trim()
+    menu.label = LABEL_TRANSLATE.replace(/\{0\}/, lastSelectedText)
+    return
+  }
+  if (msg.type === 'from') {
+    updateFrom(msg.value)
+    return
+  }
+  if (msg.type === 'to') {
+    updateTo(msg.value)
+    return
+  }
+}
+
 const menu = cm.Menu({
   label: 'Translate',
   image: 'resource://gtranslate/assets/menuitem.svg',
@@ -108,10 +120,7 @@ const menu = cm.Menu({
     }),
   ],
   contentScriptFile: 'resource://gtranslate/menu-contentscript.js',
-  onMessage(text) {
-    lastSelectedText = text.trim()
-    menu.label = LABEL_TRANSLATE.replace(/\{0\}/, lastSelectedText)
-  }
+  onMessage: onMenuMessage,
 })
 
 const loading = itemNode => {
