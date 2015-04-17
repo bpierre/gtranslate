@@ -9,12 +9,14 @@ function translationResult(str) {
  
    translation = "";
   for (var i = 0; i < cleanedStr.length; i++) {
-	 
+	
 	  if( i == 0) {
 		   // remove garbage, because js doesn't have positive lookback regex. Fix \ to \\ for json parse to work, but dont fix \u2323, json parse to fix \n's and \u232's
 		   translation += JSON.parse(cleanedStr[i].substr(3).replace(/\\(?=[^u])/g, "\\"));
 	  }
 	  else {
+		  if(cleanedStr[i].substr(0,4) == "[[[\"")
+			  break;
 		   translation +=  JSON.parse(cleanedStr[i].substr(4).replace(/\\(?=[^u])/g, "\\"));
 	  }		
 	}
