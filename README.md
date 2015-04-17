@@ -8,7 +8,7 @@ You can install it from the Mozilla Addons website: https://addons.mozilla.org/f
 
 ## License
 
-Mozilla Public License 1.1
+Mozilla Public License 2.0
 
 ## Authors
 

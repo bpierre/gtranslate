@@ -9,7 +9,7 @@
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
   },
-  "license": "MIT",
+  "license": "MPL 2.0",
   "preferences": [
     { "type": "control", "title": "Languages", "name": "checkall", "label": "Check / Uncheck All" },
     { "type": "string", "title": "lang_from", "name": "lang_from", "value": "auto", "hidden": true },
