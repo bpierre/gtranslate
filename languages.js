@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+  'auto': { name: 'Auto detect', onlyFrom: true },
   'af': { name: 'Afrikaans' },
   'sq': { name: 'Albanian' },
   'ar': { name: 'Arabic', rtl: true },
