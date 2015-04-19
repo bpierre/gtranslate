@@ -2,32 +2,33 @@ const Request = require('sdk/request').Request
 
 function translationResult(str) {
 
+  const source = str.match(/\[\["[a-z]{2,}"\]/g)[0].substr(3).substr(0,2)
+
   // Clean empty entries in the result
-  const cleanedStr = str.match(/(\[\[\["|"\],\[")([^"\\]|\\.)*"/gm)
-  
+  const cleanedResult = str.match(/(\[\[\["|"\],\[")([^"\\]|\\.)*"/gm)
 
- 
-   translation = "";
-  for (var i = 0; i < cleanedStr.length; i++) {
-	
-	  if( i == 0) {
-		   // remove garbage, because js doesn't have positive lookback regex. Fix \ to \\ for json parse to work, but dont fix \u2323, json parse to fix \n's and \u232's
-		   translation += JSON.parse(cleanedStr[i].substr(3).replace(/\\(?=[^u])/g, "\\"));
-	  }
-	  else {
-		  if(cleanedStr[i].substr(0,4) == "[[[\"")
-			  break;
-		   translation +=  JSON.parse(cleanedStr[i].substr(4).replace(/\\(?=[^u])/g, "\\"));
-	  }		
-	}
-	
-  const result = str.match(/\[\["[a-z]{2,}"\]/g)[0].substr(3).substr(0,2);
-  
+  let translation = ''
 
+  for (let i = 0, cleanedChunk = ''; i < cleanedResult.length; i++) {
+    if (i > 0 && cleanedResult[i].startsWith('[[["')) {
+      break
+    }
 
+    // Remove garbage, because js doesn't have positive lookback regex.
+    // Fix \ to \\ for JSON parse to work, but dont fix \u2323,
+    // JSON parse to fix \n's and \u232's
+
+    cleanedChunk = cleanedResult[i].substr(i === 0? 3 : 4).replace(/\\(?=[^u])/g, '\\')
+
+    try {
+      translation += JSON.parse(cleanedChunk)
+    } catch(e) {
+      // do nothing
+    }
+  }
 
   return {
-    detectedSource: result,
+    detectedSource: source,
     translation: translation? translation.trim() : null,
   }
 }
