@@ -1,29 +1,33 @@
 const Request = require('sdk/request').Request
 
-function translationResult(str) {
+function translationResult(str) {  
+  newstr = '[';
+  str = str.replace(/\\(?=[^u])/g, "\\");
+  q = 0;
+  insideQuote = false;
+  for (var i = 1, len = str.length; i < len; i++) { //start at 1, take into acount opening brace      
+    if(str[i] === '"'  && str[i-1] != '\\') {
+      q++;
+    }
+    if(q % 2 == 0) { //even
+      insideQuote = false;
+    } else {
+      insideQuote = true;
+    }
+    if(!insideQuote && str[i] === ',' && (str[i-1] === ',' || str[i-1] === '[' )) {
+      newstr += '""';
+    }
+    newstr += str[i];
+  }
 
-  //discard everything after first appearance of ,[[, extract translated text
-  const cleanedStr = str.substring(0, str.indexOf(",[[")).match(/(\[\[\["|"\],\[")([^"\\]|\\.)*"/gm);
+  const result  = JSON.parse(newstr);
+   //const translation = newstr.substr(15500);
   
-  translation = "";
-  for (var i = 0; i < cleanedStr.length; i++) {
-    if( i == 0) {
-       // remove garbage, because js doesn't have positive lookback regex. Fix \ to \\ for json parse to work, but dont fix \u2323, json parse to fix \n's and \u232's
-       translation += JSON.parse(cleanedStr[i].substr(3).replace(/\\(?=[^u])/g, "\\"));
-    }
-    else {
-      if(cleanedStr[i].substr(0,4) == "[[[\"")
-        break;
-       translation +=  JSON.parse(cleanedStr[i].substr(4).replace(/\\(?=[^u])/g, "\\"));
-    }
-  }
-  lang = str.match(/\[\["([a-zA-Z-]){2,}"\]/g);
-  result = "";
-  if(lang) {
-       result = lang[0].substring(3, lang[0].length-2);
-  }
-  return {
-    detectedSource: result,
+  const translation = (
+    result[0] && result[0].map(chunk => chunk[0]).join(' ')
+  ) || null
+   return {
+    detectedSource: result[2],
     translation: translation? translation.trim() : null,
   }
 }
