@@ -1,34 +1,33 @@
 const Request = require('sdk/request').Request
 
 function translationResult(str) {
-
-  const source = str.match(/\[\["[a-z]{2,}"\]/g)[0].substr(3).substr(0,2)
-
-  // Clean empty entries in the result
-  const cleanedResult = str.match(/(\[\[\["|"\],\[")([^"\\]|\\.)*"/gm)
-
-  let translation = ''
-
-  for (let i = 0, cleanedChunk = ''; i < cleanedResult.length; i++) {
-    if (i > 0 && cleanedResult[i].startsWith('[[["')) {
-      break
+  let newstr = '['
+  let q = 0
+  let insideQuote = false
+  str = str.replace(/\\(?=[^u])/g, '\\')
+  for (var i = 1, len = str.length; i < len; i++) { //start at 1, take into acount opening brace
+    if (str[i] === '"'  && str[i-1] !== '\\') {
+      q++
     }
-
-    // Remove garbage, because js doesn't have positive lookback regex.
-    // Fix \ to \\ for JSON parse to work, but dont fix \u2323,
-    // JSON parse to fix \n's and \u232's
-
-    cleanedChunk = cleanedResult[i].substr(i === 0? 3 : 4).replace(/\\(?=[^u])/g, '\\')
-
-    try {
-      translation += JSON.parse(cleanedChunk)
-    } catch(e) {
-      // do nothing
+    insideQuote = q % 2 !== 0
+    if (!insideQuote && str[i] === ',' && (str[i-1] === ',' || str[i-1] === '[' )) {
+      newstr += '""'
     }
+    newstr += str[i]
   }
 
+  try {
+    const result  = JSON.parse(newstr)
+  } catch(e) {
+    const result = [null, null, null]
+  }
+
+  const translation = (
+    result[0] && result[0].map(chunk => chunk[0]).join(' ')
+  ) || null
+
   return {
-    detectedSource: source,
+    detectedSource: result[2],
     translation: translation? translation.trim() : null,
   }
 }
@@ -45,7 +44,7 @@ function url(from, to, text) {
 exports.translate = function translate(from, to, text, cb) {
   const req = Request({
     url: url(from, to, text),
-    onComplete: res => cb(translationResult(res.text))
+    onComplete: res => cb(translationResult(res.text)),
   })
   req.get()
 }

@@ -58,6 +58,7 @@ const langFromItems = languages => (
 
 const langToItems = languages => (
   Object.keys(languages)
+   .filter(lang => !languages[lang].onlyFrom)
     .map(lang => cm.Item({
       label: languages[lang].name,
       data: `to:${lang}`,
@@ -65,23 +66,23 @@ const langToItems = languages => (
 )
 
 const menuFrom = cm.Menu({
-  label: LABEL_CHANGE_FROM.replace(/\{0\}/, currentFrom()),
+  label: LABEL_CHANGE_FROM.replace(/\{0\}/, languages[currentFrom()].name),
   items: langFromItems(languages),
 })
 
 const menuTo = cm.Menu({
-  label: LABEL_CHANGE_TO.replace(/\{0\}/, currentTo()),
+  label: LABEL_CHANGE_TO.replace(/\{0\}/, languages[currentTo()].name),
   items: langToItems(languages),
 })
 
 const updateFrom = lang => {
   sp.prefs.lang_from = lang
-  menuFrom.label = LABEL_CHANGE_FROM.replace(/\{0\}/, currentFrom())
+  menuFrom.label = LABEL_CHANGE_FROM.replace(/\{0\}/, languages[currentFrom()].name)
 }
 
 const updateTo = lang => {
   sp.prefs.lang_to = lang
-  menuTo.label = LABEL_CHANGE_TO.replace(/\{0\}/, currentTo())
+  menuTo.label = LABEL_CHANGE_TO.replace(/\{0\}/, languages[currentTo()].name)
 }
 
 const onMenuMessage = msg => {
@@ -141,5 +142,8 @@ onMenuPopupshowing(menu, menuNode => {
   loading(itemNode)
   translate(currentFrom(), currentTo(), lastSelectedText, res => {
     loaded(itemNode, res.translation)
+    if (sp.prefs.lang_from === 'auto') {
+        menuFrom.label = LABEL_CHANGE_FROM.replace(/\{0\}/, languages[res.detectedSource].name + " - detected")
+    }
   })
 })
