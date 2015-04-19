@@ -16,10 +16,11 @@ function translationResult(str) {
     newstr += str[i]
   }
 
+  let result = [null, null, null]
   try {
-    const result  = JSON.parse(newstr)
+    result = JSON.parse(newstr)
   } catch(e) {
-    const result = [null, null, null]
+    // do nothing on parse error
   }
 
   const translation = (
