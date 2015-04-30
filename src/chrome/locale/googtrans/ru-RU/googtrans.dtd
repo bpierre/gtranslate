@@ -1,9 +1,0 @@
-<!ENTITY options.title "gTranslate - Настройки">
-<!ENTITY translatefrom.menu.label "Переводить текст с...">
-<!ENTITY autodetection.caption.label "Автоопределение">
-<!ENTITY detectlocale.checkbox.label "Язык браузера по умолчанию">
-<!ENTITY detectpagelang.checkbox.label "Язык страницы">
-<!ENTITY translate.to.label "на">
-<!ENTITY translate.menuitem.label "Перевести">
-<!ENTITY open.dictionary "Открыть словарь">
-<!ENTITY replace.with.translation.label "Заменить переводом">

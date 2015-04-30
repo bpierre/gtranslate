@@ -1,9 +1,0 @@
-<!ENTITY options.title "gTranslate - Propiedades">
-<!ENTITY translatefrom.menu.label "Traducir texto de...">
-<!ENTITY autodetection.caption.label "Detectar automáticamente">
-<!ENTITY detectlocale.checkbox.label "Idioma del navegador">
-<!ENTITY detectpagelang.checkbox.label "Idioma de la página">
-<!ENTITY translate.to.label "a">
-<!ENTITY translate.menuitem.label "Traducir">
-<!ENTITY open.dictionary "Open dictionary">
-<!ENTITY replace.with.translation.label "Reemplazar con la traducción">

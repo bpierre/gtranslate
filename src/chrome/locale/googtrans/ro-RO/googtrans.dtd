@@ -1,9 +1,0 @@
-<!ENTITY options.title "gTranslate - Opțiuni">
-<!ENTITY translatefrom.menu.label "Tradu textul din…">
-<!ENTITY autodetection.caption.label "Detectează automat">
-<!ENTITY detectlocale.checkbox.label "Limba implicită a navigatorului">
-<!ENTITY detectpagelang.checkbox.label "Limba paginii">
-<!ENTITY translate.to.label "în">
-<!ENTITY translate.menuitem.label "Tradu">
-<!ENTITY open.dictionary "Deschide dicționarul">
-<!ENTITY replace.with.translation.label "Înlocuiește cu traducerea">

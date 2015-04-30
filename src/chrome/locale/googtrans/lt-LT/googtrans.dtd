@@ -1,9 +1,0 @@
-<!ENTITY options.title "gTranslate - Nustatyti">
-<!ENTITY translatefrom.menu.label "Išversti iš…">
-<!ENTITY autodetection.caption.label "Nustatyti kalbą">
-<!ENTITY detectlocale.checkbox.label "Interneto programos kalba">
-<!ENTITY detectpagelang.checkbox.label "Puslapio kalba">
-<!ENTITY translate.to.label "į">
-<!ENTITY translate.menuitem.label "Išversti">
-<!ENTITY open.dictionary "Atidaryti žodyną">
-<!ENTITY replace.with.translation.label "pakeisti vertimu">
