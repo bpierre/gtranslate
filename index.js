@@ -23,20 +23,28 @@ sp.on('checkall', () => {
 
 // Get the From language from the preferences
 const currentFrom = () => {
-  const prefFrom = sp.prefs.lang_from
-  return prefFrom
+  const langCode = sp.prefs.lang_from
+  const lang = languages[langCode]
+  return {
+    code: langCode,
+    name: (lang && lang.name) || null,
+  }
 }
 
 // Get the To language from the preferences
 const currentTo = () => {
-  let prefTo = sp.prefs.lang_to
-  if (prefTo === 'auto') {
-    prefTo = ps.get('general.useragent.locale', 'en')
-    if (!prefTo.startsWith('zh')) {
-      prefTo = prefTo.replace(/-[a-zA-Z]+$/, '')
+  let langCode = sp.prefs.lang_to
+  if (langCode === 'auto') {
+    langCode = ps.getLocalized('general.useragent.locale', 'en')
+    if (!langCode.startsWith('zh')) {
+      langCode = langCode.replace(/-[a-zA-Z]+$/, '')
     }
   }
-  return prefTo
+  const lang = languages[langCode]
+  return {
+    code: langCode,
+    name: (lang && lang.name) || null,
+  }
 }
 
 // Utility function to create elements
@@ -127,8 +135,8 @@ const start = () => {
   // sp.on('', () => updateLangItems())
 
   const updateLangMenu = detected => {
-    const from = detected? `${languages[detected].name} (detected)` : languages[currentFrom()].name
-    const to = languages[currentTo()].name
+    const from = detected? `${languages[detected].name} (detected)` : currentFrom().name
+    const to = currentTo().name
     langMenu.setAttribute('label', `${from} > ${to}`)
   }
 
@@ -141,7 +149,7 @@ const start = () => {
     translateMenu.setAttribute('label', LABEL_TRANSLATE.replace(/\{0\}/, selection))
     updateResult(null)
 
-    translate(currentFrom(), currentTo(), selection, res => {
+    translate(currentFrom().code, currentTo().code, selection, res => {
       updateResult(res.translation)
       if (sp.prefs.lang_from === 'auto') {
         updateLangMenu(res.detectedSource)
