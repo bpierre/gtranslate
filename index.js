@@ -143,10 +143,14 @@ const start = () => {
   updateLangMenu()
 
   const onContextMenuShowing = event => {
+
     if (event.currentTarget !== event.target) return
 
-    const selection = getSelection(event.target.triggerNode)
-    translateMenu.setAttribute('label', LABEL_TRANSLATE.replace(/\{0\}/, selection))
+    const popupNode = win.gContextMenuContentData.popupNode
+    const selection = getSelection(popupNode)
+    translateMenu.setAttribute(
+      'label', LABEL_TRANSLATE.replace(/\{0\}/, selection)
+    )
     updateResult(null)
 
     translate(currentFrom().code, currentTo().code, selection, res => {
@@ -172,7 +176,7 @@ const start = () => {
 
   // Addon unloaded
   addonUnload.when(() => {
-    cmNode.removeEventListener('popupshowing', onMenuPopupshowing)
+    cmNode.removeEventListener('popupshowing', onContextMenuShowing)
     cmNode.removeEventListener('command', onContextCommand)
   })
 }
