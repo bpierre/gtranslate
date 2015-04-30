@@ -4,34 +4,31 @@ const self = require('sdk/self')
 const cm = require('sdk/context-menu')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
-const { onMenuPopupshowing } = require('./menu-popupshowing')
-const { setTimeout } = require('sdk/timers')
+const { debounce } = require('sdk/lang/functional')
 const { translate } = require('./providers/google-translate')
 const languages = require('./languages')
+const { getMostRecentBrowserWindow } = require('sdk/window/utils')
+const addonUnload = require('sdk/system/unload')
+
+// Context Menu
+const LABEL_LOADING = 'Loading…'
+const LABEL_TRANSLATE = 'Translate “{0}”'
 
 // Settings
 sp.on('checkall', () => {
   const keys = Object.keys(languages)
   const check = !!keys.find(lang => !sp.prefs[`lang_${lang}`])
-  keys.forEach(lang => {
-    sp.prefs[`lang_${lang}`] = check
-  })
+  keys.forEach(lang => { sp.prefs[`lang_${lang}`] = check })
 })
 
-// Context Menu
-const LABEL_LOADING = 'Loading…'
-const LABEL_TRANSLATE = 'Translate “{0}”'
-const LABEL_CHANGE_FROM = 'Translate from {0}'
-const LABEL_CHANGE_TO = 'Translate to {0}'
-
-let lastSelectedText = ''
-
-function currentFrom() {
+// Get the From language from the preferences
+const currentFrom = () => {
   const prefFrom = sp.prefs.lang_from
   return prefFrom
 }
 
-function currentTo() {
+// Get the To language from the preferences
+const currentTo = () => {
   let prefTo = sp.prefs.lang_to
   if (prefTo === 'auto') {
     prefTo = ps.get('general.useragent.locale', 'en')
@@ -42,108 +39,134 @@ function currentTo() {
   return prefTo
 }
 
-const translationItem = cm.Item({
-  label: 'Fetching translation…',
-  data: 'translation-item',
-})
+// Utility function to create elements
+const eltCreator = doc => (name, props, attrs, parent) => {
+  const elt = doc.createElement(name)
+  if (props) Object.keys(props).forEach(p => elt[p] = props[p])
+  if (attrs) Object.keys(attrs).forEach(a => elt.setAttribute(a, attrs[a]))
+  if (parent) parent.appendChild(elt)
+  return elt
+}
 
-const langFromItems = languages => (
+const langToItems = (languages, doc) => (
   Object.keys(languages)
+    .filter(lang => !languages[lang].onlyFrom)
+    .map(lang => {
+      const item = doc.createElement('menuitem')
+      item.setAttribute('label', languages[lang].name)
+      item.setAttribute('gtranslate-to', lang)
+      return item
+    })
+)
+
+const langFromMenus = (languages, doc) => {
+  const toItemsPopup = doc.createElement('menupopup')
+  langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item))
+  return Object.keys(languages)
     .filter(lang => !languages[lang].onlyTo)
-    .map(lang => cm.Item({
-      label: languages[lang].name,
-      data: `from:${lang}`,
-    }))
-)
-
-const langToItems = languages => (
-  Object.keys(languages)
-   .filter(lang => !languages[lang].onlyFrom)
-    .map(lang => cm.Item({
-      label: languages[lang].name,
-      data: `to:${lang}`,
-    }))
-)
-
-const menuFrom = cm.Menu({
-  label: LABEL_CHANGE_FROM.replace(/\{0\}/, languages[currentFrom()].name),
-  items: langFromItems(languages),
-})
-
-const menuTo = cm.Menu({
-  label: LABEL_CHANGE_TO.replace(/\{0\}/, languages[currentTo()].name),
-  items: langToItems(languages),
-})
-
-const updateFrom = lang => {
-  sp.prefs.lang_from = lang
-  menuFrom.label = LABEL_CHANGE_FROM.replace(/\{0\}/, languages[currentFrom()].name)
+    .map(lang => {
+      const menu = doc.createElement('menu')
+      menu.setAttribute('label', languages[lang].name)
+      menu.setAttribute('gtranslate-from', lang)
+      menu.appendChild(toItemsPopup.cloneNode(true))
+      return menu
+    })
 }
 
-const updateTo = lang => {
-  sp.prefs.lang_to = lang
-  menuTo.label = LABEL_CHANGE_TO.replace(/\{0\}/, languages[currentTo()].name)
-}
-
-const onMenuMessage = msg => {
-  if (msg.type === 'selection') {
-    lastSelectedText = msg.value.trim()
-    menu.label = LABEL_TRANSLATE.replace(/\{0\}/, lastSelectedText)
-    return
+// Returns the current selection based on the active node
+const getSelection = node => {
+  const contentWin = node.ownerDocument.defaultView
+  const name = node.nodeName.toLowerCase()
+  const text = contentWin.getSelection().toString().trim()
+  if (text) {
+    return text
   }
-  if (msg.type === 'from') {
-    updateFrom(msg.value)
-    return
+  if (name === 'input' || name === 'textarea') {
+    return node.value.substr(
+      node.selectionStart,
+      node.selectionEnd-node.selectionStart
+    ) || null
   }
-  if (msg.type === 'to') {
-    updateTo(msg.value)
-    return
+  if (name === 'a') {
+    return node.textContent || node.title || null
   }
-  if (msg.type === 'invert') {
-    const from = sp.prefs.lang_from
-    const to = sp.prefs.lang_to
-    updateTo(from)
-    updateFrom(to)
+  if (name === 'img') {
+    return node.alt || node.title || null
   }
+  return null
 }
 
-const menu = cm.Menu({
-  label: 'Translate',
-  image: self.data.url('menuitem.svg'),
-  data: 'gtranslate-menu',
-  items: [
-    translationItem,
-    cm.Separator(),
-    menuFrom,
-    menuTo,
-    cm.Item({
-      label: 'Invert',
-      data: 'invert',
-    }),
-  ],
-  contentScriptFile: self.data.url('menu-contentscript.js'),
-  onMessage: onMenuMessage,
-})
+// Addon loaded
+const start = () => {
+  const win = getMostRecentBrowserWindow()
+  const doc = win.document
+  const cmNode = doc.getElementById('contentAreaContextMenu')
+  const elt = eltCreator(doc)
 
-const loading = itemNode => {
-  itemNode.disabled = true
-  itemNode.setAttribute('tooltiptext', '')
-  translationItem.label = LABEL_LOADING
-}
+  const translateMenu = elt(
+    'menu', { className: 'menu-iconic' },
+    { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') },
+    cmNode
+  )
+  const translatePopup = elt('menupopup', null, null, translateMenu)
 
-const loaded = (itemNode, result) => {
-  itemNode.disabled = false
-  itemNode.setAttribute('tooltiptext', result)
-  translationItem.label = result
-}
+  const result = elt('menuitem', null, null, translatePopup)
+  const separator = elt('menuseparator', null, null, translatePopup)
+  const langMenu = elt('menu', null, null, translatePopup)
+  const fromPopup = elt('menupopup', null, null, langMenu)
 
-onMenuPopupshowing(menu, menuNode => {
-  const itemNode = menuNode.querySelector('[value="translation-item"]')
-  loading(itemNode)
-  translate(currentFrom(), currentTo(), lastSelectedText, res => {
-    loaded(itemNode, res.translation)
-    if (sp.prefs.lang_from === 'auto') {
-        menuFrom.label = LABEL_CHANGE_FROM.replace(/\{0\}/, languages[res.detectedSource].name + " - detected")
+  langFromMenus(languages, doc).forEach(menu => fromPopup.appendChild(menu))
+
+  const updateResult = translation => {
+    result.disabled = !translation
+    result.setAttribute('tooltiptext', translation || '')
+    result.setAttribute('label', translation || LABEL_LOADING)
+  }
+
+  // TODO: update the menu when the preferences are updated
+  // sp.on('', () => updateLangItems())
+
+  const updateLangMenu = detected => {
+    const from = detected? `${languages[detected].name} (detected)` : languages[currentFrom()].name
+    const to = languages[currentTo()].name
+    langMenu.setAttribute('label', `${from} > ${to}`)
+  }
+
+  updateLangMenu()
+
+  const onContextMenuShowing = event => {
+    if (event.currentTarget !== event.target) return
+
+    const selection = getSelection(event.target.triggerNode)
+    translateMenu.setAttribute('label', LABEL_TRANSLATE.replace(/\{0\}/, selection))
+    updateResult(null)
+
+    translate(currentFrom(), currentTo(), selection, res => {
+      updateResult(res.translation)
+      if (sp.prefs.lang_from === 'auto') {
+        updateLangMenu(res.detectedSource)
+      }
+    })
+  }
+
+  const onContextCommand = event => {
+    const target = event.target
+    const parent = target.parentNode && target.parentNode.parentNode
+    if (target.hasAttribute('gtranslate-to') &&
+        parent && parent.hasAttribute('gtranslate-from')) {
+      sp.prefs.lang_to = target.getAttribute('gtranslate-to')
+      sp.prefs.lang_from = parent.getAttribute('gtranslate-from')
     }
+  }
+
+  cmNode.addEventListener('popupshowing', onContextMenuShowing)
+  cmNode.addEventListener('command', onContextCommand)
+
+  // Addon unloaded
+  addonUnload.when(() => {
+    cmNode.removeEventListener('popupshowing', onMenuPopupshowing)
+    cmNode.removeEventListener('command', onContextCommand)
   })
-})
+}
+
+start()
