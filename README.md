@@ -12,8 +12,7 @@ Mozilla Public License 2.0
 
 ## Authors
 
-Original Author: Pau Tomàs
-
-Maintainer: Pierre Bertet <bonjour@pierrebertet.net>
-
-Contributors: https://github.com/bpierre/gtranslate/graphs/contributors
+- Pau Tomàs / [@pautomas](https://github.com/pautomas) (Original Author)
+- Pierre Bertet / [@bpierre](https://github.com/bpierre)
+- Éric Lemoine / [@elemoine](https://github.com/elemoine)
+- [@Tey](https://github.com/Tey)
