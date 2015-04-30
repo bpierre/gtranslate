@@ -12,7 +12,7 @@ const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 
 // Context Menu
-const LABEL_LOADING = 'Loading…'
+const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
@@ -24,13 +24,6 @@ const strParams = str => {
   }
   return str
 }
-
-// Settings
-sp.on('checkall', () => {
-  const keys = Object.keys(languages)
-  const check = !!keys.find(lang => !sp.prefs[`lang_${lang}`])
-  keys.forEach(lang => { sp.prefs[`lang_${lang}`] = check })
-})
 
 // Get the From language from the preferences
 const currentFrom = () => {
