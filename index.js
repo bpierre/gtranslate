@@ -4,8 +4,9 @@ const self = require('sdk/self')
 const cm = require('sdk/context-menu')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
+const tabs = require('sdk/tabs')
 const { debounce } = require('sdk/lang/functional')
-const { translate } = require('./providers/google-translate')
+const { translate, translateUrl } = require('./providers/google-translate')
 const languages = require('./languages')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
@@ -37,7 +38,7 @@ const currentFrom = () => {
   const lang = languages[langCode]
   return {
     code: langCode,
-    name: (lang && lang.name) || null,
+    name: (lang && (lang.fromName || lang.name)) || null,
   }
 }
 
@@ -84,7 +85,7 @@ const langFromMenus = (languages, doc) => {
     .filter(lang => !languages[lang].onlyTo)
     .map(lang => {
       const menu = doc.createElement('menu')
-      menu.setAttribute('label', languages[lang].name)
+      menu.setAttribute('label', languages[lang].fromName || languages[lang].name)
       menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
       return menu
@@ -92,7 +93,7 @@ const langFromMenus = (languages, doc) => {
 }
 
 // Returns the current selection based on the active node
-const getSelection = node => {
+const getSelectionFromNode = node => {
   const contentWin = node.ownerDocument.defaultView
   const name = node.nodeName.toLowerCase()
   const text = contentWin.getSelection().toString().trim()
@@ -112,6 +113,12 @@ const getSelection = node => {
     return node.alt || node.title || null
   }
   return null
+}
+
+// Returns the current selection from a window
+const getSelectionFromWin = win => {
+  const popupNode = win.gContextMenuContentData.popupNode
+  return (popupNode && getSelectionFromNode(popupNode)) || ''
 }
 
 // Addon loaded
@@ -143,7 +150,7 @@ const start = () => {
   // Update the menu when the preferences are updated
   sp.on('', () => {
     updateLangMenuLabel()
-    updateLangMenuChecked()
+    updateLangMenuChecks()
   })
 
   // Update the languages menu label (“Change Languages […]”)
@@ -153,7 +160,8 @@ const start = () => {
     langMenu.setAttribute('label', strParams(LABEL_CHANGE_LANGUAGES, from, to))
   }
 
-  const updateLangMenuChecked = () => {
+  const updateLangMenuChecks = () => {
+
     // Uncheck
     const checkedElts = fromPopup.querySelectorAll('[checked]')
     for (let elt of checkedElts) elt.removeAttribute('checked')
@@ -171,8 +179,7 @@ const start = () => {
 
   // Show the context menupopup
   const showContextMenu = event => {
-    const popupNode = win.gContextMenuContentData.popupNode
-    const selection = getSelection(popupNode)
+    const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
     if (!selection) return
@@ -184,8 +191,7 @@ const start = () => {
 
   // Show the results menupopup
   const showResultsMenu = event => {
-    const popupNode = win.gContextMenuContentData.popupNode
-    const selection = getSelection(popupNode)
+    const selection = getSelectionFromWin(win)
 
     translate(currentFrom().code, currentTo().code, selection, res => {
       updateResult(res.translation)
@@ -205,9 +211,19 @@ const start = () => {
     }
   }
 
+  // Listen to command events
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
+    const selection = getSelectionFromWin(win)
+
+    // Open the translation page
+    if (target === result) {
+      tabs.open(translateUrl(currentFrom().code, currentTo().code, selection))
+      return
+    }
+
+    // Language change
     if (target.hasAttribute('data-gtranslate-to') &&
         parent && parent.hasAttribute('data-gtranslate-from')) {
       sp.prefs.lang_to = target.getAttribute('data-gtranslate-to')
@@ -219,7 +235,7 @@ const start = () => {
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
 
-  updateLangMenuChecked()
+  updateLangMenuChecks()
 
   // Addon unloaded
   addonUnload.when(() => {

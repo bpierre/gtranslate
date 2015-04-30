@@ -14,7 +14,7 @@ module.exports = {
   'bg': { name: 'Bulgarian' },
   'ca': { name: 'Catalan' },
   'ceb': { name: 'Cebuano' },
-  'zh-CN': { name: 'Chinese Simplified' },
+  'zh-CN': { name: 'Chinese Simplified', fromName: 'Chinese' },
   'zh-TW': { name: 'Chinese Traditional', onlyTo: true },
   'ny': { name: 'Chichewa' },
   'hr': { name: 'Croatian' },

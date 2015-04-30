@@ -33,7 +33,7 @@ function translationResult(str) {
   }
 }
 
-function url(from, to, text) {
+function apiUrl(from, to, text) {
   const protocol = 'http://'
   const host = 'translate.google.com'
   const path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
@@ -42,10 +42,18 @@ function url(from, to, text) {
   return `${protocol}${host}${path}`
 }
 
+function pageUrl(from, to, text) {
+  const protocol = 'https://'
+  const host = 'translate.google.com'
+  return `${protocol}${host}/#${from}/${to}/${encodeURIComponent(text)}`
+}
+
 exports.translate = function translate(from, to, text, cb) {
   const req = Request({
-    url: url(from, to, text),
+    url: apiUrl(from, to, text),
     onComplete: res => cb(translationResult(res.text)),
   })
   req.get()
 }
+
+exports.translateUrl = pageUrl
