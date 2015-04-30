@@ -13,6 +13,16 @@ const addonUnload = require('sdk/system/unload')
 // Context Menu
 const LABEL_LOADING = 'Loading…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
+const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
+
+// Replace params in a string à la Python
+const strParams = str => {
+  var params = [].slice.call(arguments, 1)
+  for (var i = 0; i < params.length; i++) {
+    str = str.replace(new RegExp(`\\{${i}\\}`, 'g'), params[i])
+  }
+  return str
+}
 
 // Settings
 sp.on('checkall', () => {
@@ -62,7 +72,7 @@ const langToItems = (languages, doc) => (
     .map(lang => {
       const item = doc.createElement('menuitem')
       item.setAttribute('label', languages[lang].name)
-      item.setAttribute('gtranslate-to', lang)
+      item.setAttribute('data-gtranslate-to', lang)
       return item
     })
 )
@@ -75,7 +85,7 @@ const langFromMenus = (languages, doc) => {
     .map(lang => {
       const menu = doc.createElement('menu')
       menu.setAttribute('label', languages[lang].name)
-      menu.setAttribute('gtranslate-from', lang)
+      menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
       return menu
     })
@@ -113,71 +123,109 @@ const start = () => {
 
   const translateMenu = elt(
     'menu', { className: 'menu-iconic' },
-    { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') },
-    cmNode
+    { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
-
   const result = elt('menuitem', null, null, translatePopup)
   const separator = elt('menuseparator', null, null, translatePopup)
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
+  const fromMenus = langFromMenus(languages, doc)
 
-  langFromMenus(languages, doc).forEach(menu => fromPopup.appendChild(menu))
+  fromMenus.forEach(menu => fromPopup.appendChild(menu))
 
   const updateResult = translation => {
-    result.disabled = !translation
     result.setAttribute('tooltiptext', translation || '')
     result.setAttribute('label', translation || LABEL_LOADING)
+    result.setAttribute('disabled', !translation)
   }
 
-  // TODO: update the menu when the preferences are updated
-  // sp.on('', () => updateLangItems())
+  // Update the menu when the preferences are updated
+  sp.on('', () => {
+    updateLangMenuLabel()
+    updateLangMenuChecked()
+  })
 
-  const updateLangMenu = detected => {
-    const from = detected? `${languages[detected].name} (detected)` : currentFrom().name
+  // Update the languages menu label (“Change Languages […]”)
+  const updateLangMenuLabel = detected => {
+    const from = detected? `${languages[detected].name} - detected` : currentFrom().name
     const to = currentTo().name
-    langMenu.setAttribute('label', `${from} > ${to}`)
+    langMenu.setAttribute('label', strParams(LABEL_CHANGE_LANGUAGES, from, to))
   }
 
-  updateLangMenu()
+  const updateLangMenuChecked = () => {
+    // Uncheck
+    const checkedElts = fromPopup.querySelectorAll('[checked]')
+    for (let elt of checkedElts) elt.removeAttribute('checked')
 
-  const onContextMenuShowing = event => {
+    // Check
+    const from = currentFrom().code
+    const to = currentTo().code
+    const fromMenu = fromPopup.querySelector(`[data-gtranslate-from="${from}"]`)
+    const toItem = fromMenu && fromMenu.querySelector(`[data-gtranslate-to="${to}"]`)
+    if (fromMenu && toItem) {
+      fromMenu.setAttribute('checked', true)
+      toItem.setAttribute('checked', true)
+    }
+  }
 
-    if (event.currentTarget !== event.target) return
-
+  // Show the context menupopup
+  const showContextMenu = event => {
     const popupNode = win.gContextMenuContentData.popupNode
     const selection = getSelection(popupNode)
-    translateMenu.setAttribute(
-      'label', LABEL_TRANSLATE.replace(/\{0\}/, selection)
-    )
+
+    translateMenu.setAttribute('hidden', !selection)
+    if (!selection) return
+
+    translateMenu.setAttribute('label', strParams(LABEL_TRANSLATE, selection))
     updateResult(null)
+    updateLangMenuLabel()
+  }
+
+  // Show the results menupopup
+  const showResultsMenu = event => {
+    const popupNode = win.gContextMenuContentData.popupNode
+    const selection = getSelection(popupNode)
 
     translate(currentFrom().code, currentTo().code, selection, res => {
       updateResult(res.translation)
       if (sp.prefs.lang_from === 'auto') {
-        updateLangMenu(res.detectedSource)
+        updateLangMenuLabel(res.detectedSource)
       }
     })
+  }
+
+  // Listen to popupshowing events
+  const onPopupshowing = event => {
+    if (event.target === cmNode) {
+      return showContextMenu(event)
+    }
+    if (event.target === translatePopup) {
+      return showResultsMenu(event)
+    }
   }
 
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    if (target.hasAttribute('gtranslate-to') &&
-        parent && parent.hasAttribute('gtranslate-from')) {
-      sp.prefs.lang_to = target.getAttribute('gtranslate-to')
-      sp.prefs.lang_from = parent.getAttribute('gtranslate-from')
+    if (target.hasAttribute('data-gtranslate-to') &&
+        parent && parent.hasAttribute('data-gtranslate-from')) {
+      sp.prefs.lang_to = target.getAttribute('data-gtranslate-to')
+      sp.prefs.lang_from = parent.getAttribute('data-gtranslate-from')
     }
   }
 
-  cmNode.addEventListener('popupshowing', onContextMenuShowing)
+  cmNode.appendChild(translateMenu)
+  cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
+
+  updateLangMenuChecked()
 
   // Addon unloaded
   addonUnload.when(() => {
-    cmNode.removeEventListener('popupshowing', onContextMenuShowing)
+    cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('command', onContextCommand)
+    cmNode.removeChild(translateMenu)
   })
 }
 
