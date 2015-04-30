@@ -1,9 +1,11 @@
+FIREFOX_BIN?=nightly
+
 all: build
 
 build:
 	jpm xpi
 
 run:
-	jpm run -b nightly --debug --prefs ./devprefs.json
+	jpm run -b $(FIREFOX_BIN) --debug --prefs ./devprefs.json
 
-.PHONY: all run
+.PHONY: all build run
