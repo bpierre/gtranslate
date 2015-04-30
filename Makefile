@@ -6,6 +6,6 @@ build:
 	jpm xpi
 
 run:
-	jpm run -b $(FIREFOX_BIN) --debug --prefs ./devprefs.json
+	jpm run -b $(FIREFOX_BIN) --debug --prefs ./dev/devprefs.json
 
 .PHONY: all build run
