@@ -14,8 +14,8 @@
   ],
   "license": "MPL 2.0",
   "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
+    "firefox": ">=37.0",
+    "fennec": ">=37.0"
   },
   "preferences": [
     { "type": "string", "title": "lang_from", "name": "lang_from", "value": "auto", "hidden": true },

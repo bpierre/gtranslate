@@ -3,7 +3,9 @@ FIREFOX_BIN?=nightly
 all: build
 
 build:
-	jpm xpi
+	# cfx is needed for Fx 37 (jpm xpi compatibility starts with Fx 38)
+	# jpm xpi
+	cfx xpi
 
 run:
 	jpm run -b $(FIREFOX_BIN) --debug --prefs ./dev/devprefs.json
