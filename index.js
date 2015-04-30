@@ -137,7 +137,6 @@ const start = () => {
   const updateResult = translation => {
     result.setAttribute('tooltiptext', translation || '')
     result.setAttribute('label', translation || LABEL_LOADING)
-    result.setAttribute('disabled', !translation)
   }
 
   // Update the menu when the preferences are updated
