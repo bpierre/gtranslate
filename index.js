@@ -175,6 +175,7 @@ const start = () => {
     const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
+    translateSeparator.setAttribute('hidden', !selection)
     if (!selection) return
 
     var selectionLabel = selection;
