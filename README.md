@@ -4,7 +4,7 @@ gtranslate is a Firefox addon that translates the selected text using Google Tra
 
 ## Installation
 
-You can install it from the Mozilla Addons website: https://addons.mozilla.org/fr/firefox/addon/918/
+You can install it from the Mozilla Addons website: https://addons.mozilla.org/firefox/addon/gtranslate/
 
 ## License
 
