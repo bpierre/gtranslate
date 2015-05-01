@@ -121,13 +121,14 @@ const start = () => {
   const cmNode = doc.getElementById('contentAreaContextMenu')
   const elt = eltCreator(doc)
 
+  const translateSeparator = elt('menuseparator')
   const translateMenu = elt(
     'menu', { className: 'menu-iconic' },
     { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
   const result = elt('menuitem', null, null, translatePopup)
-  const separator = elt('menuseparator', null, null, translatePopup)
+  const resultSeparator = elt('menuseparator', null, null, translatePopup)
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
   const fromMenus = langFromMenus(languages, doc)
@@ -223,6 +224,7 @@ const start = () => {
     }
   }
 
+  cmNode.appendChild(translateSeparator)
   cmNode.appendChild(translateMenu)
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
@@ -233,6 +235,7 @@ const start = () => {
   addonUnload.when(() => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('command', onContextCommand)
+    cmNode.removeChild(translateSeparator)
     cmNode.removeChild(translateMenu)
   })
 }
