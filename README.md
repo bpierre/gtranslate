@@ -16,4 +16,5 @@ Mozilla Public License 2.0
 - Pierre Bertet / [@bpierre](https://github.com/bpierre)
 - Éric Lemoine / [@elemoine](https://github.com/elemoine)
 - [@Tey](https://github.com/Tey)
-- [@mote0230](https://github.com/mote0230)
+- Tom Adams / [@mote0230](https://github.com/mote0230)
+- Perfect Slayer / [@PerfectSlayer](https://github.com/PerfectSlayer)
