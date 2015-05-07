@@ -177,11 +177,11 @@ const start = () => {
     translateMenu.setAttribute('hidden', !selection)
     if (!selection) return
 
-    var selectionLabel = selection;
-    if (selectionLabel.length > 15) {
-      selectionLabel = selectionLabel.substr(0, 15)+"…";
-    }
-    translateMenu.setAttribute('label', strParams(LABEL_TRANSLATE, selectionLabel))
+    translateMenu.setAttribute('label', strParams(
+      LABEL_TRANSLATE,
+      selection.length > 15? selection.substr(0, 15) + '…' : selection
+    ))
+
     updateResult(null)
     updateLangMenuLabel()
   }
@@ -228,7 +228,7 @@ const start = () => {
     }
   }
 
-  cmNode.insertBefore(translateMenu, doc.getElementById('inspect-separator'));
+  cmNode.insertBefore(translateMenu, doc.getElementById('inspect-separator'))
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
 
