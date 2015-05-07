@@ -121,7 +121,6 @@ const start = () => {
   const cmNode = doc.getElementById('contentAreaContextMenu')
   const elt = eltCreator(doc)
 
-  const translateSeparator = elt('menuseparator')
   const translateMenu = elt(
     'menu', { className: 'menu-iconic' },
     { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
@@ -175,7 +174,6 @@ const start = () => {
     const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
-    translateSeparator.setAttribute('hidden', !selection)
     if (!selection) return
 
     var selectionLabel = selection;
@@ -229,8 +227,7 @@ const start = () => {
     }
   }
 
-  cmNode.appendChild(translateSeparator)
-  cmNode.appendChild(translateMenu)
+  cmNode.insertBefore(translateMenu, doc.getElementById('inspect-separator'));
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
 
@@ -240,7 +237,6 @@ const start = () => {
   addonUnload.when(() => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('command', onContextCommand)
-    cmNode.removeChild(translateSeparator)
     cmNode.removeChild(translateMenu)
   })
 }
