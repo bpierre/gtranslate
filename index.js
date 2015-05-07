@@ -177,7 +177,11 @@ const start = () => {
     translateMenu.setAttribute('hidden', !selection)
     if (!selection) return
 
-    translateMenu.setAttribute('label', strParams(LABEL_TRANSLATE, selection))
+    var selectionLabel = selection;
+    if (selectionLabel.length > 15) {
+      selectionLabel = selectionLabel.substr(0, 15)+"…";
+    }
+    translateMenu.setAttribute('label', strParams(LABEL_TRANSLATE, selectionLabel))
     updateResult(null)
     updateLangMenuLabel()
   }
