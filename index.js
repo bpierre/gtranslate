@@ -122,7 +122,8 @@ const start = () => {
   const elt = eltCreator(doc)
 
   const translateMenu = elt(
-    'menu', { className: 'menu-iconic' },
+    'menu',
+    { className: 'menu-iconic', id: 'context-gtranslate' },
     { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
