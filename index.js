@@ -16,14 +16,10 @@ const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
-// Replace params in a string à la Python
-const strParams = str => {
-  var params = [].slice.call(arguments, 1)
-  for (var i = 0; i < params.length; i++) {
-    str = str.replace(new RegExp(`\\{${i}\\}`, 'g'), params[i])
-  }
-  return str
-}
+// Replace params in a string à la Python str.format()
+const format = str => Array.from(arguments).slice(1).reduce(
+  (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), str
+)
 
 // Get the From language from the preferences
 const currentFrom = () => {
@@ -150,7 +146,7 @@ const start = () => {
   const updateLangMenuLabel = detected => {
     const from = detected? `${languages[detected].name} - detected` : currentFrom().name
     const to = currentTo().name
-    langMenu.setAttribute('label', strParams(LABEL_CHANGE_LANGUAGES, from, to))
+    langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
   }
 
   const updateLangMenuChecks = () => {
@@ -177,8 +173,7 @@ const start = () => {
     translateMenu.setAttribute('hidden', !selection)
     if (!selection) return
 
-    translateMenu.setAttribute('label', strParams(
-      LABEL_TRANSLATE,
+    translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
       selection.length > 15? selection.substr(0, 15) + '…' : selection
     ))
 
