@@ -10,6 +10,8 @@ const { translate, translateUrl } = require('./providers/google-translate')
 const languages = require('./languages')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
+const windows = require('sdk/windows').browserWindows
+const { viewFor } = require('sdk/view/core')
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
@@ -110,9 +112,9 @@ const getSelectionFromWin = win => {
   return (popupNode && getSelectionFromNode(popupNode)) || ''
 }
 
-// Addon loaded
-const start = () => {
-  const win = getMostRecentBrowserWindow()
+// Initialize the addon on a window
+const start = win => {
+
   const doc = win.document
   const cmNode = doc.getElementById('contentAreaContextMenu')
   const elt = eltCreator(doc)
@@ -229,12 +231,24 @@ const start = () => {
 
   updateLangMenuChecks()
 
-  // Addon unloaded
-  addonUnload.when(() => {
+  return function destroy() {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('command', onContextCommand)
     cmNode.removeChild(translateMenu)
-  })
+  }
 }
 
-start()
+const destroyFns = []
+const initWin = win => {
+  const destroy = start(viewFor(win))
+  if (destroy) destroyFns.push(destroy)
+}
+
+// Init an instance when a new window is opened
+windows.on('open', initWin)
+
+// Init new instances on startup
+Array.from(windows).forEach(initWin)
+
+// When the addon is unloaded, destroy all gtranslate instances
+addonUnload.when(() => destroyFns.forEach(fn => fn()))
