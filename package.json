@@ -2,7 +2,7 @@
   "id": "{aff87fa2-a58e-4edd-b852-0a20203c1e17}",
   "title": "gtranslate",
   "name": "gtranslate",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "gtranslate is a Firefox addon that translates the selected text using Google Translate.",
   "homepage": "https://addons.mozilla.org/firefox/addon/gtranslate/",
   "main": "index.js",
