@@ -7,16 +7,26 @@ const ps = require('sdk/preferences/service')
 const tabs = require('sdk/tabs')
 const { debounce } = require('sdk/lang/functional')
 const { translate, translateUrl } = require('./providers/google-translate')
-const languages = require('./languages')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
+const Request = require('sdk/request').Request
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
+
+// Get the available languages
+const getLanguages = () => {
+  return new Promise((resolve, reject) => {
+    Request({
+      url: self.data.url('languages.json'),
+      onComplete: response => resolve(response.json),
+    }).get()
+  })
+}
 
 // Replace params in a string à la Python str.format()
 const format = str => Array.from(arguments).slice(1).reduce(
@@ -24,7 +34,7 @@ const format = str => Array.from(arguments).slice(1).reduce(
 )
 
 // Get the From language from the preferences
-const currentFrom = () => {
+const currentFrom = languages => {
   const langCode = sp.prefs.lang_from
   const lang = languages[langCode]
   return {
@@ -34,7 +44,7 @@ const currentFrom = () => {
 }
 
 // Get the To language from the preferences
-const currentTo = () => {
+const currentTo = languages => {
   let langCode = sp.prefs.lang_to
   if (langCode === 'auto') {
     langCode = ps.getLocalized('general.useragent.locale', 'en')
@@ -112,8 +122,8 @@ const getSelectionFromWin = win => {
   return (popupNode && getSelectionFromNode(popupNode)) || ''
 }
 
-// Initialize the addon on a window
-const start = win => {
+// Add a gtranslate menu on a window
+const initMenu = (win, languages) => {
 
   const doc = win.document
   const cmNode = doc.getElementById('contentAreaContextMenu')
@@ -146,8 +156,8 @@ const start = win => {
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const from = detected? `${languages[detected].name} - detected` : currentFrom().name
-    const to = currentTo().name
+    const from = detected? `${languages[detected].name} - detected` : currentFrom(languages).name
+    const to = currentTo(languages).name
     langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
   }
 
@@ -158,8 +168,8 @@ const start = win => {
     for (let elt of checkedElts) elt.removeAttribute('checked')
 
     // Check
-    const from = currentFrom().code
-    const to = currentTo().code
+    const from = currentFrom(languages).code
+    const to = currentTo(languages).code
     const fromMenu = fromPopup.querySelector(`[data-gtranslate-from="${from}"]`)
     const toItem = fromMenu && fromMenu.querySelector(`[data-gtranslate-to="${to}"]`)
     if (fromMenu && toItem) {
@@ -187,7 +197,7 @@ const start = win => {
   const showResultsMenu = event => {
     const selection = getSelectionFromWin(win)
 
-    translate(currentFrom().code, currentTo().code, selection, res => {
+    translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
       updateResult(res.translation)
       if (sp.prefs.lang_from === 'auto') {
         updateLangMenuLabel(res.detectedSource)
@@ -213,7 +223,7 @@ const start = win => {
 
     // Open the translation page
     if (target === result) {
-      tabs.open(translateUrl(currentFrom().code, currentTo().code, selection))
+      tabs.open(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
       return
     }
 
@@ -238,17 +248,21 @@ const start = win => {
   }
 }
 
-const destroyFns = []
-const initWin = win => {
-  const destroy = start(viewFor(win))
-  if (destroy) destroyFns.push(destroy)
-}
+// Init the addon
+getLanguages().then(languages => {
 
-// Init an instance when a new window is opened
-windows.on('open', initWin)
+  const destroyFns = []
+  const initWin = sdkWin => {
+    const destroy = initMenu(viewFor(sdkWin), languages)
+    if (destroy) destroyFns.push(destroy)
+  }
 
-// Init new instances on startup
-Array.from(windows).forEach(initWin)
+  // Init an instance when a new window is opened
+  windows.on('open', initWin)
 
-// When the addon is unloaded, destroy all gtranslate instances
-addonUnload.when(() => destroyFns.forEach(fn => fn()))
+  // Init new instances on startup
+  Array.from(windows).forEach(initWin)
+
+  // When the addon is unloaded, destroy all gtranslate instances
+  addonUnload.when(() => destroyFns.forEach(fn => fn()))
+})
