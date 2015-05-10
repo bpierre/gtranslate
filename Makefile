@@ -10,4 +10,7 @@ build:
 run:
 	jpm run -b $(FIREFOX_BIN) --debug --prefs ./dev/devprefs.json
 
-.PHONY: all build run
+description:
+	@node scripts/description.js
+
+.PHONY: all build run description
