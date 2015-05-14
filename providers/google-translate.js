@@ -22,18 +22,26 @@ function translationResult(str) {
   } catch(e) {
     // do nothing on parse error
   }
- const translation = (    
+  const translation = (    
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
   ) || null 
   
- const dict = (
-    result[1] && result[1].map(chunk => chunk[0] + ':\n' + chunk[2].map(chunk => chunk[0] + ': ' + Array((20 - chunk[0].length) > 0 ? 20 - chunk[0].length : 0).join(' ') + chunk[1].join(', ')).join('\n')).join('\n\n')
+  const alternatives = (
+    result[1] && result[1].map(chunk => chunk[0] + ':\n ' + chunk[2].map(chunk => chunk[0] + ': ' + Array((10 - chunk[0].length) > 0 ? 10 - chunk[0].length : 0).join(' ') + '\t' + chunk[1].join(', ')).join('\n ')).join('\n\n')
   ) || null
-
+  const dict = (
+    result[12] &&result[12].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0] + ' \n  "' +  chunky[2] + '"').join(' \n ')).join('\n\n')
+  ) || null
+  const syno = ( 
+    result[11] && result[11].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0].join(', ')).join(' \n ')).join('\n\n')
+  ) || null
+  
   return {
     detectedSource: result[2],
     translation: translation? translation.trim() : null,
-	dictionary: dict? dict.trim() : null,
+    alternatives: alternatives? alternatives.trim() : null,
+    dictionary: dict? dict.trim() : null,
+    synonyms: syno? syno.trim() : null,
   }
 }
 
