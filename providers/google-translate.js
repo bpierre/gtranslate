@@ -22,14 +22,18 @@ function translationResult(str) {
   } catch(e) {
     // do nothing on parse error
   }
-
-  const translation = (
+ const translation = (    
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
+  ) || null 
+  
+ const dict = (
+    result[1] && result[1].map(chunk => chunk[0] + ':\n' + chunk[2].map(chunk => chunk[0] + ': ' + Array((20 - chunk[0].length) > 0 ? 20 - chunk[0].length : 0).join(' ') + chunk[1].join(', ')).join('\n')).join('\n\n')
   ) || null
 
   return {
     detectedSource: result[2],
     translation: translation? translation.trim() : null,
+	dictionary: dict? dict.trim() : null,
   }
 }
 

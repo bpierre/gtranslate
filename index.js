@@ -143,8 +143,8 @@ const initMenu = (win, languages) => {
 
   fromMenus.forEach(menu => fromPopup.appendChild(menu))
 
-  const updateResult = translation => {
-    result.setAttribute('tooltiptext', translation || '')
+  const updateResult = (translation, dict) => {
+    result.setAttribute('tooltiptext', translation + '\n' + dict)
     result.setAttribute('label', translation || LABEL_LOADING)
   }
 
@@ -197,8 +197,8 @@ const initMenu = (win, languages) => {
   const showResultsMenu = event => {
     const selection = getSelectionFromWin(win)
 
-    translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
-      updateResult(res.translation)
+    translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {      
+	  updateResult(res.translation, res.dictionary)
       if (sp.prefs.lang_from === 'auto') {
         updateLangMenuLabel(res.detectedSource)
       }
