@@ -223,7 +223,10 @@ const initMenu = (win, languages) => {
 
     // Open the translation page
     if (target === result) {
-      tabs.open(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
+      const browser = getMostRecentBrowserWindow().gBrowser
+      const url = translateUrl(currentFrom(languages).code, currentTo(languages).code, selection)
+      const tab = browser.loadOneTab(url, {relatedToCurrent: true})
+      browser.selectedTab = tab;
       return
     }
 
