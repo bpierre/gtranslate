@@ -131,6 +131,13 @@ const getCurrentUrl = () => {
   return currentUrl
 }
 
+// Open a new tab near to the active tab
+const openTab = url => {
+  const browser = getMostRecentBrowserWindow().gBrowser
+  const tab = browser.loadOneTab(url, {relatedToCurrent: true})
+  browser.selectedTab = tab;
+}
+
 // Add a gtranslate menu on a window
 const initMenu = (win, languages) => {
 
@@ -239,17 +246,14 @@ const initMenu = (win, languages) => {
 
     // Open the translation page
     if (target === result) {
-      const browser = getMostRecentBrowserWindow().gBrowser
-      const url = translateUrl(currentFrom(languages).code, currentTo(languages).code, selection)
-      const tab = browser.loadOneTab(url, {relatedToCurrent: true})
-      browser.selectedTab = tab;
+      openTab(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
       return
     }
 
     // Open the visited translation page
     if (target === translatePage) {
-      tabs.open(translatePageUrl(currentFrom(languages).code, currentTo(languages).code, getCurrentUrl()))
-      return;
+      openTab(translatePageUrl(currentFrom(languages).code, currentTo(languages).code, getCurrentUrl()))
+      return
     }
 
     // Language change
