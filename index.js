@@ -16,7 +16,7 @@ const Request = require('sdk/request').Request
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
-const LABEL_TRANSLATE_PAGE = 'Translate page'
+const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
 // Get the available languages
@@ -172,6 +172,7 @@ const initMenu = (win, languages) => {
     const from = detected? `${languages[detected].name} - detected` : currentFrom(languages).name
     const to = currentTo(languages).name
     langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
+    translatePage.setAttribute('label', format(LABEL_TRANSLATE_PAGE, from, to))
   }
 
   const updateLangMenuChecks = () => {
@@ -198,13 +199,13 @@ const initMenu = (win, languages) => {
     translateMenu.setAttribute('hidden', !selection)
     translatePage.setAttribute('hidden', selection.length!=0 || !getCurrentUrl())
 
-    if (!selection) return
+    if (selection) {
+      translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
+        selection.length > 15? selection.substr(0, 15) + '…' : selection
+      ))
+      updateResult(null)
+    }
 
-    translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
-      selection.length > 15? selection.substr(0, 15) + '…' : selection
-    ))
-
-    updateResult(null)
     updateLangMenuLabel()
   }
 
