@@ -18,6 +18,8 @@ const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
+const FRAME_SCRIPT_URI = self.data.url("frame.js")
+
 // Get the available languages
 const getLanguages = () => {
   return new Promise((resolve, reject) => {
@@ -148,6 +150,17 @@ const initMenu = (win, languages) => {
     result.setAttribute('label', translation || LABEL_LOADING)
   }
 
+  let selection = ''
+  const onSelection = message => {
+    selection = message.data.selection
+  }
+  
+  let mm = win.getGroupMessageManager("browsers")
+  if (win.gMultiProcessBrowser) {
+    mm.addMessageListener("gTranslate:selection", onSelection)
+    mm.loadFrameScript(FRAME_SCRIPT_URI, true)
+  }
+  
   // Update the menu when the preferences are updated
   sp.on('', () => {
     updateLangMenuLabel()
@@ -180,13 +193,17 @@ const initMenu = (win, languages) => {
 
   // Show the context menupopup
   const showContextMenu = event => {
-    const selection = getSelectionFromWin(win)
-
-    translateMenu.setAttribute('hidden', !selection)
-    if (!selection) return
+    if (!win.gMultiProcessBrowser) {
+      selection = getSelectionFromWin(win)
+    }
+    if (!selection) {
+      translateMenu.setAttribute('hidden', 'true')
+      return
+    }
+    translateMenu.removeAttribute('hidden')
 
     translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
-      selection.length > 15? selection.substr(0, 15) + '…' : selection
+      selection.length > 15 ? selection.substr(0, 15) + '…' : selection
     ))
 
     updateResult(null)
@@ -195,8 +212,6 @@ const initMenu = (win, languages) => {
 
   // Show the results menupopup
   const showResultsMenu = event => {
-    const selection = getSelectionFromWin(win)
-
     translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
       updateResult(res.translation)
       if (sp.prefs.lang_from === 'auto') {
@@ -214,12 +229,17 @@ const initMenu = (win, languages) => {
       return showResultsMenu(event)
     }
   }
+  
+  const onPopuphiding = event => {
+    if (event.target === cmNode) {
+      selection = '' // clear old selection
+    }
+  }
 
   // Listen to command events
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const selection = getSelectionFromWin(win)
 
     // Open the translation page
     if (target === result) {
@@ -240,14 +260,21 @@ const initMenu = (win, languages) => {
 
   cmNode.insertBefore(translateMenu, doc.getElementById('inspect-separator'))
   cmNode.addEventListener('popupshowing', onPopupshowing)
+  cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
 
   updateLangMenuChecks()
 
   return function destroy() {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
+    cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
     cmNode.removeChild(translateMenu)
+    if (win.gMultiProcessBrowser) {
+      mm.removeMessageListener("gTranslate:selection", onSelection)
+      mm.removeDelayedFrameScript(FRAME_SCRIPT_URI)
+      mm.broadcastAsyncMessage("gTranslate:disable")
+    }
   }
 }
 
