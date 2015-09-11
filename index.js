@@ -23,6 +23,7 @@ const getLanguages = () => {
   return new Promise((resolve, reject) => {
     Request({
       url: self.data.url('languages.json'),
+	  overrideMimeType: "application/json",
       onComplete: response => resolve(response.json),
     }).get()
   })
