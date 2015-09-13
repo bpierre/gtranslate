@@ -208,9 +208,11 @@ const initMenu = (win, languages) => {
   // Show the context menupopup
   const showContextMenu = event => {
     const selection = getSelectionFromWin(win)
-
     translateMenu.setAttribute('hidden', !selection)
     translatePage.setAttribute('hidden', selection.length!=0 || !getCurrentUrl())
+    if(!sp.prefs.fullPage) {
+      translatePage.setAttribute('hidden', true)
+    }
 
     if (selection) {
       translateMenu.setAttribute('label', format(LABEL_TRANSLATE,

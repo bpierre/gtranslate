@@ -22,6 +22,13 @@
     "permissions": {"private-browsing": true},
   "preferences": [
     { "type": "string", "title": "lang_from", "name": "lang_from", "value": "auto", "hidden": true },
-    { "type": "string", "title": "lang_to", "name": "lang_to", "value": "auto", "hidden": true }
+    { "type": "string", "title": "lang_to", "name": "lang_to", "value": "auto", "hidden": true },
+    {
+    "description": "Show gTranslate when no text is selected to translate the full page",
+    "type": "bool",
+    "name": "fullPage",
+    "value": true,
+    "title": "Full page"
+    }
   ]
 }
