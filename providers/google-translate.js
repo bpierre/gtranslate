@@ -48,6 +48,12 @@ function pageUrl(from, to, text) {
   return `${protocol}${host}/#${from}/${to}/${encodeURIComponent(text)}`
 }
 
+function wholePageUrl(from, to, url) {
+  const protocol = 'https://'
+  const host = 'translate.google.com'
+  return `${protocol}${host}/translate?sl=${from}&hl=${to}&u=${encodeURIComponent(url)}`
+}
+
 exports.translate = function translate(from, to, text, cb) {
   const req = Request({
     url: apiUrl(from, to, text),
@@ -57,3 +63,5 @@ exports.translate = function translate(from, to, text, cb) {
 }
 
 exports.translateUrl = pageUrl
+
+exports.translatePageUrl = wholePageUrl
