@@ -48,9 +48,12 @@ function translationResult(str) {
 function apiUrl(from, to, text) {
   const protocol = 'https://'
   const host = 'translate.google.com'
-  const path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
-               `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at` +
-               `&q=${encodeURIComponent(text)}&sl=${from}&tl=${to}&hl=${to}`
+  let path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
+                 `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at` +
+                 `&sl=${from}&tl=${to}&hl=${to}`
+  if (typeof text != 'undefined') {
+    path += `&q=${encodeURIComponent(text)}`
+  }  
   return `${protocol}${host}${path}`
 }
 
@@ -67,11 +70,20 @@ function wholePageUrl(from, to, url) {
 }
 
 exports.translate = function translate(from, to, text, cb) {
-  const req = Request({
-    url: apiUrl(from, to, text),
-    onComplete: res => cb(translationResult(res.text)),
-  })
-  req.get()
+  if(text.length < 1360 ) { //google's magic value to decide wether to GET or POST
+    const req = Request({
+      url: apiUrl(from, to, text),
+      onComplete: res => cb(translationResult(res.text)),
+    })
+    req.get()
+  } else {
+    const req = Request({
+      url: apiUrl(from, to),
+      content: "q=".concat(encodeURIComponent(text)),
+      onComplete: res => cb(translationResult(res.text)),
+    })
+    req.post()
+  }
 }
 
 exports.translateUrl = pageUrl
