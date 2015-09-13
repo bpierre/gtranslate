@@ -46,7 +46,7 @@ function translationResult(str) {
 }
 
 function apiUrl(from, to, text) {
-  const protocol = 'http://'
+  const protocol = 'https://'
   const host = 'translate.google.com'
   const path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
                `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at` +
