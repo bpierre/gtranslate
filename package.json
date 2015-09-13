@@ -29,6 +29,27 @@
     "name": "fullPage",
     "value": true,
     "title": "Full page"
-    }
+    },
+    {
+    "name": "dictionaryPref",
+    "description": "When translating a single word, prefer these as extra mouseover info",
+    "type": "radio",
+    "title": "Alternatives",
+    "value": "A",
+    "options": [
+        {
+            "value": "A",
+            "label": "Prefer alternative translations"
+        },
+        {
+            "value": "D",
+            "label": "Prefer dictonary"
+        },
+        {
+            "value": "S",
+            "label": "Prefer synonyms"
+        }
+    ]
+}
   ]
 }

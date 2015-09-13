@@ -226,20 +226,41 @@ const initMenu = (win, languages) => {
 
   // Show the results menupopup
   const showResultsMenu = event => {
-    const selection = getSelectionFromWin(win)
-    translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
-      // TODO create preferences
-      if(res.alternatives) {
-        updateResult(res.translation, res.alternatives)
-      } else if(res.dictionary) {
-        updateResult(res.translation, res.dictionary)
-      } else {
-        updateResult(res.translation, res.synonyms)
-      }
-      if (sp.prefs.lang_from === 'auto') {
-        updateLangMenuLabel(res.detectedSource)
-      }
-    })
+  const selection = getSelectionFromWin(win)
+  translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
+    switch (sp.prefs.dictionaryPref) {
+      case "A":
+        if(res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else if(res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+      break;
+      case "D":
+        if(res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else if(res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+      break;
+      case "S":
+        if(res.synonyms) {
+          updateResult(res.translation, res.synonyms)
+        } else if(res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.alternatives)
+        }
+      break;
+    }
+    if (sp.prefs.lang_from === 'auto') {
+      updateLangMenuLabel(res.detectedSource)
+    }
+   })
   }
 
   // Listen to popupshowing events
