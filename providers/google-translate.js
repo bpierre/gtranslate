@@ -70,7 +70,7 @@ function wholePageUrl(from, to, url) {
 }
 
 exports.translate = function translate(from, to, text, cb) {
-  if(text.length < 1360 ) { //google's magic value to decide wether to GET or POST
+  if(text.length < 200 ) { //far below what google's cutoff is to decide to use get or post, but post works anyway
     const req = Request({
       url: apiUrl(from, to, text),
       onComplete: res => cb(translationResult(res.text)),
