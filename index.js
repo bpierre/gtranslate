@@ -204,10 +204,13 @@ const initMenu = (win, languages) => {
       toItem.setAttribute('checked', true)
     }
   }
-
+  
+  let selection = ''
   // Show the context menupopup
   const showContextMenu = event => {
-    const selection = getSelectionFromWin(win)
+  if (selection == '') {
+    selection = getSelectionFromWin(win)
+  }
     translateMenu.setAttribute('hidden', !selection)
     translatePage.setAttribute('hidden', selection.length!=0 || !getCurrentUrl())
     if(!sp.prefs.fullPage) {
@@ -226,7 +229,9 @@ const initMenu = (win, languages) => {
 
   // Show the results menupopup
   const showResultsMenu = event => {
-  const selection = getSelectionFromWin(win)
+  if (selection == '') {
+    selection = getSelectionFromWin(win)
+  }
   translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
     switch (sp.prefs.dictionaryPref) {
       case "A":
@@ -272,12 +277,20 @@ const initMenu = (win, languages) => {
       return showResultsMenu(event)
     }
   }
+  
+   // Listen to popuphiding events
+  const onPopuphiding = event => {
+    if (event.target === cmNode) {
+      selection = '' // clear old selection
+    }
+  }
+  
 
   // Listen to command events
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const selection = getSelectionFromWin(win)
+    
 
     // Open the translation page
     if (target === result) {
@@ -303,12 +316,14 @@ const initMenu = (win, languages) => {
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
   cmNode.insertBefore(translatePage, inspectorSeparatorElement)
   cmNode.addEventListener('popupshowing', onPopupshowing)
+  cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
 
   updateLangMenuChecks()
 
   return function destroy() {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
+    cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
