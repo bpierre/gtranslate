@@ -45,11 +45,18 @@ function translationResult(str) {
   }
 }
 
+//some sort of token google uses
+function generateToken() {
+    var a = Math.floor((new Date).getTime() / 36E5) ^ 123456;
+    return a + "|" + Math.floor((Math.sqrt(5) - 1) / 2 * (a ^ 654321) % 1 * 1048576)
+        
+}
+
 function apiUrl(from, to, text) {
   const protocol = 'https://'
   const host = 'translate.google.com'
   let path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
-                 `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at` +
+                 `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&tk=` + generateToken() + 
                  `&sl=${from}&tl=${to}&hl=${to}`
   if (typeof text != 'undefined') {
     path += `&q=${encodeURIComponent(text)}`
