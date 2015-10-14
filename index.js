@@ -1,13 +1,10 @@
 'use strict'
 
 const self = require('sdk/self')
-const cm = require('sdk/context-menu')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
 const tabs = require('sdk/tabs')
-const { debounce } = require('sdk/lang/functional')
 const { translate, translateUrl } = require('./providers/google-translate')
-const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
