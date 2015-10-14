@@ -1,2 +1,5 @@
 node_modules/
 /env.mk
+/bootstrap.js
+/install.rdf
+/*.xpi
