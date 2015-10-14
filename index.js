@@ -29,7 +29,7 @@ const getLanguages = () => {
 }
 
 // Replace params in a string à la Python str.format()
-const format = str => Array.from(arguments).slice(1).reduce(
+const format = (str, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), str
 )
 
