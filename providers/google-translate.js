@@ -3,7 +3,7 @@
 
 const request = require('sdk/request').Request
 
-function translationResult(str) {
+function translationResult(str, onError) {
   let newstr = '['
   let q = 0
   let insideQuote = false
@@ -24,9 +24,10 @@ function translationResult(str) {
   try {
     result = JSON.parse(newstr)
   } catch(e) {
-    // do nothing on parse error
+    if (onError) {
+      onError(newstr)
+    }
     parseError = true
-    console.log('[gtranslate] parse error')
   }
 
   const translation = parseError? 'Google Translate Service Error' : (
@@ -61,13 +62,16 @@ function wholePageUrl(from, to, url) {
 }
 
 exports.translate = function translate(from, to, text, cb) {
-  const req = request({
-    url: apiUrl(from, to, text),
-    onComplete: res => cb(translationResult(res.text)),
-  })
+  const url = apiUrl(from, to, text)
+  const onComplete = res => {
+    const translation = translationResult(res.text, errorContent => {
+      console.log(`[gtranslate] parse error with ${url}`)
+    })
+    return cb(translation)
+  }
+  const req = request({ url, onComplete })
   req.get()
 }
 
 exports.translateUrl = pageUrl
-
 exports.translatePageUrl = wholePageUrl
