@@ -8,7 +8,7 @@ const { translate, translateUrl } = require('./providers/google-translate')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
-const Request = require('sdk/request').Request
+const request = require('sdk/request').Request
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
@@ -16,14 +16,12 @@ const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
 // Get the available languages
-const getLanguages = () => {
-  return new Promise((resolve, reject) => {
-    Request({
-      url: self.data.url('languages.json'),
-      onComplete: response => resolve(response.json),
-    }).get()
-  })
-}
+const getLanguages = () => new Promise((resolve) => {
+  request({
+    url: self.data.url('languages.json'),
+    onComplete: response => resolve(response.json),
+  }).get()
+})
 
 // Replace params in a string à la Python str.format()
 const format = (str, ...args) => Array.from(args).reduce(
@@ -101,7 +99,7 @@ const getSelectionFromNode = node => {
   if (name === 'input' || name === 'textarea') {
     return node.value.substr(
       node.selectionStart,
-      node.selectionEnd-node.selectionStart
+      node.selectionEnd - node.selectionStart
     ) || null
   }
   if (name === 'a') {
@@ -162,7 +160,7 @@ const initMenu = (win, languages) => {
 
     // Uncheck
     const checkedElts = fromPopup.querySelectorAll('[checked]')
-    for (let elt of checkedElts) elt.removeAttribute('checked')
+    for (let checkedElt of checkedElts) checkedElt.removeAttribute('checked')
 
     // Check
     const from = currentFrom(languages).code
@@ -176,7 +174,7 @@ const initMenu = (win, languages) => {
   }
 
   // Show the context menupopup
-  const showContextMenu = event => {
+  const showContextMenu = () => {
     const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
@@ -191,7 +189,7 @@ const initMenu = (win, languages) => {
   }
 
   // Show the results menupopup
-  const showResultsMenu = event => {
+  const showResultsMenu = () => {
     const selection = getSelectionFromWin(win)
 
     translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
