@@ -20,13 +20,16 @@ function translationResult(str) {
   }
 
   let result = [null, null, null]
+  let parseError = false
   try {
     result = JSON.parse(newstr)
   } catch(e) {
     // do nothing on parse error
+    parseError = true
+    console.log('[gtranslate] parse error')
   }
 
-  const translation = (
+  const translation = parseError? 'Google Translate Service Error' : (
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
   ) || null
 
