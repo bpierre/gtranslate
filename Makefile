@@ -10,6 +10,9 @@ build:
 run:
 	jpm run -b $(FIREFOX_BIN) --debug --prefs ./dev/devprefs.json
 
+lint:
+	./node_modules/.bin/eslint .
+
 description:
 	@node scripts/description.js
 

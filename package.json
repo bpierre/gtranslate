@@ -22,17 +22,21 @@
   "preferences": [
     {
       "type": "string",
-      "title": "lang_from",
-      "name": "lang_from",
+      "title": "langFrom",
+      "name": "langFrom",
       "value": "auto",
       "hidden": true
     },
     {
       "type": "string",
-      "title": "lang_to",
-      "name": "lang_to",
+      "title": "langTo",
+      "name": "langTo",
       "value": "auto",
       "hidden": true
     }
-  ]
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.6.0"
+  }
 }

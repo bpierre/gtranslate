@@ -1,13 +1,17 @@
+/* eslint-env node */
+/* eslint-disable no-console */
+'use strict'
+
 const languages = require('../data/languages.json')
 
-function getLanguagesList(languages) {
-  var keys = Object.keys(languages)
+function getLanguagesList(langs) {
+  var keys = Object.keys(langs)
   var names = keys
     .filter(function(key) {
-      return !languages[key].onlyFrom
+      return !langs[key].onlyFrom
     })
     .map(function(key) {
-      return languages[key].name
+      return langs[key].name
     })
   names[names.length - 1] = 'and ' + names[names.length - 1]
   return names.join(', ')

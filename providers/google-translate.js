@@ -1,16 +1,19 @@
-const Request = require('sdk/request').Request
+/* global require,exports */
+'use strict'
+
+const request = require('sdk/request').Request
 
 function translationResult(str) {
   let newstr = '['
   let q = 0
   let insideQuote = false
   str = str.replace(/\\(?=[^u])/g, '\\')
-  for (var i = 1, len = str.length; i < len; i++) { //start at 1, take into acount opening brace
-    if (str[i] === '"'  && str[i-1] !== '\\') {
+  for (var i = 1, len = str.length; i < len; i++) { // start at 1, take into acount opening brace
+    if (str[i] === '"' && str[i - 1] !== '\\') {
       q++
     }
     insideQuote = q % 2 !== 0
-    if (!insideQuote && str[i] === ',' && (str[i-1] === ',' || str[i-1] === '[' )) {
+    if (!insideQuote && str[i] === ',' && (str[i - 1] === ',' || str[i - 1] === '[' )) {
       newstr += '""'
     }
     newstr += str[i]
@@ -29,7 +32,7 @@ function translationResult(str) {
 
   return {
     detectedSource: result[2],
-    translation: translation? translation.trim() : null,
+    translation: translation ? translation.trim() : null,
   }
 }
 
@@ -49,7 +52,7 @@ function pageUrl(from, to, text) {
 }
 
 exports.translate = function translate(from, to, text, cb) {
-  const req = Request({
+  const req = request({
     url: apiUrl(from, to, text),
     onComplete: res => cb(translationResult(res.text)),
   })

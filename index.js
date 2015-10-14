@@ -1,3 +1,4 @@
+/* global require */
 'use strict'
 
 const self = require('sdk/self')
@@ -24,13 +25,13 @@ const getLanguages = () => new Promise((resolve) => {
 })
 
 // Replace params in a string à la Python str.format()
-const format = (str, ...args) => Array.from(args).reduce(
-  (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), str
+const format = (origStr, ...args) => Array.from(args).reduce(
+  (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
 )
 
 // Get the From language from the preferences
 const currentFrom = languages => {
-  const langCode = sp.prefs.lang_from
+  const langCode = sp.prefs.langFrom
   const lang = languages[langCode]
   return {
     code: langCode,
@@ -40,7 +41,7 @@ const currentFrom = languages => {
 
 // Get the To language from the preferences
 const currentTo = languages => {
-  let langCode = sp.prefs.lang_to
+  let langCode = sp.prefs.langTo
   if (langCode === 'auto') {
     langCode = ps.getLocalized('general.useragent.locale', 'en')
     if (!langCode.startsWith('zh')) {
@@ -130,8 +131,9 @@ const initMenu = (win, languages) => {
     { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
+
   const result = elt('menuitem', null, null, translatePopup)
-  const resultSeparator = elt('menuseparator', null, null, translatePopup)
+  elt('menuseparator', null, null, translatePopup)
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
   const fromMenus = langFromMenus(languages, doc)
@@ -143,19 +145,14 @@ const initMenu = (win, languages) => {
     result.setAttribute('label', translation || LABEL_LOADING)
   }
 
-  // Update the menu when the preferences are updated
-  sp.on('', () => {
-    updateLangMenuLabel()
-    updateLangMenuChecks()
-  })
-
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const from = detected? `${languages[detected].name} - detected` : currentFrom(languages).name
+    const from = detected ? `${languages[detected].name} - detected` : currentFrom(languages).name
     const to = currentTo(languages).name
     langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
   }
 
+  // Update the languages menu selection
   const updateLangMenuChecks = () => {
 
     // Uncheck
@@ -173,6 +170,12 @@ const initMenu = (win, languages) => {
     }
   }
 
+  // Update the menu when the preferences are updated
+  sp.on('', () => {
+    updateLangMenuLabel()
+    updateLangMenuChecks()
+  })
+
   // Show the context menupopup
   const showContextMenu = () => {
     const selection = getSelectionFromWin(win)
@@ -181,7 +184,7 @@ const initMenu = (win, languages) => {
     if (!selection) return
 
     translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
-      selection.length > 15? selection.substr(0, 15) + '…' : selection
+      selection.length > 15 ? selection.substr(0, 15) + '…' : selection
     ))
 
     updateResult(null)
@@ -194,7 +197,7 @@ const initMenu = (win, languages) => {
 
     translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
       updateResult(res.translation)
-      if (sp.prefs.lang_from === 'auto') {
+      if (sp.prefs.langFrom === 'auto') {
         updateLangMenuLabel(res.detectedSource)
       }
     })
@@ -225,8 +228,8 @@ const initMenu = (win, languages) => {
     // Language change
     if (target.hasAttribute('data-gtranslate-to') &&
         parent && parent.hasAttribute('data-gtranslate-from')) {
-      sp.prefs.lang_to = target.getAttribute('data-gtranslate-to')
-      sp.prefs.lang_from = parent.getAttribute('data-gtranslate-from')
+      sp.prefs.langTo = target.getAttribute('data-gtranslate-to')
+      sp.prefs.langFrom = parent.getAttribute('data-gtranslate-from')
     }
   }
 
