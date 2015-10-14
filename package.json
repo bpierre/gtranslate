@@ -6,10 +6,10 @@
   "description": "gtranslate is a Firefox addon that translates the selected text using Google Translate.",
   "homepage": "https://addons.mozilla.org/firefox/addon/gtranslate/",
   "main": "index.js",
-  "author": "Pau Tom\u00e0s (https://github.com/pautomas)",
+  "author": "Pau Tomàs (https://github.com/pautomas)",
   "contributors": [
     "Pierre Bertet <bonjour@pierrebertet.net> (http://pierrebertet.net/)",
-    "\u00c9ric Lemoine (https://github.com/elemoine)",
+    "Éric Lemoine (https://github.com/elemoine)",
     "Tey (https://github.com/Tey)",
     "Tom Adams (https://github.com/mote0230)",
     "Perfect Slayer (https://github.com/PerfectSlayer)"
@@ -20,7 +20,19 @@
     "fennec": ">=37.0"
   },
   "preferences": [
-    { "type": "string", "title": "lang_from", "name": "lang_from", "value": "auto", "hidden": true },
-    { "type": "string", "title": "lang_to", "name": "lang_to", "value": "auto", "hidden": true }
+    {
+      "type": "string",
+      "title": "lang_from",
+      "name": "lang_from",
+      "value": "auto",
+      "hidden": true
+    },
+    {
+      "type": "string",
+      "title": "lang_to",
+      "name": "lang_to",
+      "value": "auto",
+      "hidden": true
+    }
   ]
 }
