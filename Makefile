@@ -1,3 +1,8 @@
+# Create an env.mk file to change the firefox-bin path.
+# If nothing is specified, the default is "nightly"
+ifneq ($(wildcard env.mk),)
+include env.mk
+endif
 FIREFOX_BIN?=nightly
 
 all: build
