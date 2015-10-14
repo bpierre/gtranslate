@@ -5,7 +5,8 @@ const self = require('sdk/self')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
 const tabs = require('sdk/tabs')
-const { translate, translateUrl } = require('./providers/google-translate')
+const { translate, translateUrl, translatePageUrl } = require('./providers/google-translate')
+const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
@@ -14,6 +15,7 @@ const request = require('sdk/request').Request
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
+const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 
 // Get the available languages
@@ -118,6 +120,21 @@ const getSelectionFromWin = win => {
   return (popupNode && getSelectionFromNode(popupNode)) || ''
 }
 
+// Get active tab url
+const getCurrentUrl = () => {
+  if (tabs.length == 0) return null
+  const currentUrl = tabs.activeTab.url
+  if (currentUrl.startsWith('about:')) return null
+  return currentUrl
+}
+
+// Open a new tab near to the active tab
+const openTab = url => {
+  const browser = getMostRecentBrowserWindow().gBrowser
+  const tab = browser.loadOneTab(url, {relatedToCurrent: true})
+  browser.selectedTab = tab;
+}
+
 // Add a gtranslate menu on a window
 const initMenu = (win, languages) => {
 
@@ -129,6 +146,10 @@ const initMenu = (win, languages) => {
     'menu',
     { className: 'menu-iconic', id: 'context-gtranslate' },
     { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
+  )
+  const translatePage = elt(
+    'menuitem', { className: 'menuitem-iconic'},
+    { label: LABEL_TRANSLATE_PAGE, image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
 
@@ -150,6 +171,7 @@ const initMenu = (win, languages) => {
     const from = detected ? `${languages[detected].name} - detected` : currentFrom(languages).name
     const to = currentTo(languages).name
     langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
+    translatePage.setAttribute('label', format(LABEL_TRANSLATE_PAGE, from, to))
   }
 
   // Update the languages menu selection
@@ -181,13 +203,15 @@ const initMenu = (win, languages) => {
     const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
-    if (!selection) return
+    translatePage.setAttribute('hidden', selection.length!=0 || !getCurrentUrl())
 
-    translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
-      selection.length > 15 ? selection.substr(0, 15) + '…' : selection
-    ))
+    if (selection) {
+      translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
+        selection.length > 15 ? selection.substr(0, 15) + '…' : selection
+      ))
+      updateResult(null)
+    }
 
-    updateResult(null)
     updateLangMenuLabel()
   }
 
@@ -221,7 +245,13 @@ const initMenu = (win, languages) => {
 
     // Open the translation page
     if (target === result) {
-      tabs.open(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
+      openTab(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
+      return
+    }
+
+    // Open the visited translation page
+    if (target === translatePage) {
+      openTab(translatePageUrl(currentFrom(languages).code, currentTo(languages).code, getCurrentUrl()))
       return
     }
 
@@ -233,7 +263,9 @@ const initMenu = (win, languages) => {
     }
   }
 
-  cmNode.insertBefore(translateMenu, doc.getElementById('inspect-separator'))
+  const inspectorSeparatorElement = doc.getElementById('inspect-separator')
+  cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
+  cmNode.insertBefore(translatePage, inspectorSeparatorElement)
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('command', onContextCommand)
 
@@ -243,6 +275,7 @@ const initMenu = (win, languages) => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('command', onContextCommand)
     cmNode.removeChild(translateMenu)
+    cmNode.removeChild(translatePage)
   }
 }
 
