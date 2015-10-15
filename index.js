@@ -145,6 +145,7 @@ const openTab = url => {
 // Add a gtranslate menu on a window
 const initMenu = (win, languages) => {
 
+  let selection = ''
   const doc = win.document
   const cmNode = doc.getElementById('contentAreaContextMenu')
   const elt = eltCreator(doc)
@@ -216,7 +217,6 @@ const initMenu = (win, languages) => {
   })
 
   // Show the context menupopup
-  let selection = ''
   const showContextMenu = event => {
     if (selection == '') {
       selection = getSelectionFromWin(win)
@@ -244,7 +244,6 @@ const initMenu = (win, languages) => {
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
-    const selection = getSelectionFromWin(win)
     const fromCode = currentFrom(languages).code
     const toCode = currentTo(languages).code
     translate(fromCode, toCode, selection, res => {
@@ -305,7 +304,6 @@ const initMenu = (win, languages) => {
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    // const selection = getSelectionFromWin(win)
     const from = currentFrom(languages).code
     const to = currentTo(languages).code
 

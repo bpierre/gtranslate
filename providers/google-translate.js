@@ -104,6 +104,7 @@ function wholePageUrl(from, to, url) {
 
 function translate(from, to, text, cb) {
   const url = apiUrl(from, to, text)
+
   const onComplete = res => {
     const translation = translationResult(res.text, () => {
       console.log(`[gtranslate] parse error with ${url}`)
@@ -114,18 +115,16 @@ function translate(from, to, text, cb) {
   // Far below what google's cutoff is to decide
   // to use get or post, but post works anyway.
   if (text.length < 200 ) {
-    const req = Request({
+    request({
       url: apiUrl(from, to, text),
       onComplete,
-    })
-    req.get()
+    }).get()
   } else {
-    const req = Request({
+    request({
       url: apiUrl(from, to),
       content: "q=".concat(encodeURIComponent(text)),
       onComplete,
-    })
-    req.post()
+    }).post()
   }
 }
 
