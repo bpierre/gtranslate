@@ -14,7 +14,7 @@ run:
 	jpm run -b $(FIREFOX_BIN) --debug --prefs ./dev/devprefs.json
 
 lint:
-	./node_modules/.bin/eslint .
+	./node_modules/.bin/eslint --ignore-path .gitignore .
 
 description:
 	@node scripts/description.js

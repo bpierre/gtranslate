@@ -5,15 +5,18 @@ const request = require('sdk/request').Request
 
 function translationResult(str, onError) {
   let newstr = '['
-  let q = 0
   let insideQuote = false
   str = str.replace(/\\(?=[^u])/g, '\\')
-  for (var i = 1, len = str.length; i < len; i++) { // start at 1, take into acount opening brace
-    if (str[i] === '"' && str[i - 1] !== '\\') {
+
+  // Fix the Google Translate JSON
+  // start at 1, take into acount opening brace
+  for (let i = 1, q = 0, len = str.length, prev; i < len; i++) {
+    prev = str[i - 1]
+    if (str[i] === '"' && prev !== '\\') {
       q++
     }
     insideQuote = q % 2 !== 0
-    if (!insideQuote && str[i] === ',' && (str[i - 1] === ',' || str[i - 1] === '[' )) {
+    if (!insideQuote && str[i] === ',' && (prev === ',' || prev === '[' )) {
       newstr += '""'
     }
     newstr += str[i]
@@ -35,13 +38,29 @@ function translationResult(str, onError) {
   ) || null
 
   const alternatives = (
-    result[1] && result[1].map(chunk => chunk[0] + ':\n ' + chunk[2].map(chunk => chunk[0] + ': ' + Array((10 - chunk[0].length) > 0 ? 10 - chunk[0].length : 0).join(' ') + '\t' + chunk[1].join(', ')).join('\n ')).join('\n\n')
+    result[1] && result[1].map(chunk => (
+      chunk[0] + ':\n ' + chunk[2].map(chunk => (
+        chunk[0] + ': ' + Array(
+          (10 - chunk[0].length) > 0 ? 10 - chunk[0].length : 0
+        ).join(' ') + '\t' + chunk[1].join(', ')
+      )).join('\n ')
+    )).join('\n\n')
   ) || null
+
   const dict = (
-    result[12] && result[12].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0] + ' \n  "' +  chunky[2] + '"').join(' \n ')).join('\n\n')
+    result[12] && result[12].map(chunk => (
+      chunk[0] + ' \n ' + chunk[1].map(chunky => (
+        chunky[0] + ' \n  "' +  chunky[2] + '"'
+      )).join(' \n ')
+    )).join('\n\n')
   ) || null
+
   const syno = (
-    result[11] && result[11].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0].join(', ')).join(' \n ')).join('\n\n')
+    result[11] && result[11].map(chunk => (
+      chunk[0] + ' \n ' + chunk[1].map(chunky => (
+        chunky[0].join(', ')
+      )).join(' \n ')
+    )).join('\n\n')
   ) || null
 
   return {
@@ -69,9 +88,8 @@ function pageUrl(from, to, text) {
 }
 
 function wholePageUrl(from, to, url) {
-  const protocol = 'https://'
-  const host = 'translate.google.com'
-  return `${protocol}${host}/translate?sl=${from}&hl=${to}&u=${encodeURIComponent(url)}`
+  const base = 'https://translate.google.com'
+  return `${base}/translate?sl=${from}&hl=${to}&u=${encodeURIComponent(url)}`
 }
 
 exports.translate = function translate(from, to, text, cb) {

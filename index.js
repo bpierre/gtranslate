@@ -5,7 +5,11 @@ const self = require('sdk/self')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
 const tabs = require('sdk/tabs')
-const { translate, translateUrl, translatePageUrl } = require('./providers/google-translate')
+const {
+  translate,
+  translateUrl,
+  translatePageUrl,
+} = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
@@ -84,7 +88,9 @@ const langFromMenus = (languages, doc) => {
     .filter(lang => !languages[lang].onlyTo)
     .map(lang => {
       const menu = doc.createElement('menu')
-      menu.setAttribute('label', languages[lang].fromName || languages[lang].name)
+      menu.setAttribute(
+        'label', languages[lang].fromName || languages[lang].name
+      )
       menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
       return menu
@@ -122,7 +128,7 @@ const getSelectionFromWin = win => {
 
 // Get active tab url
 const getCurrentUrl = () => {
-  if (tabs.length == 0) return null
+  if (tabs.length === 0) return null
   const currentUrl = tabs.activeTab.url
   if (currentUrl.startsWith('about:')) return null
   return currentUrl
@@ -132,7 +138,7 @@ const getCurrentUrl = () => {
 const openTab = url => {
   const browser = getMostRecentBrowserWindow().gBrowser
   const tab = browser.loadOneTab(url, {relatedToCurrent: true})
-  browser.selectedTab = tab;
+  browser.selectedTab = tab
 }
 
 // Add a gtranslate menu on a window
@@ -162,18 +168,21 @@ const initMenu = (win, languages) => {
   fromMenus.forEach(menu => fromPopup.appendChild(menu))
 
   const updateResult = (translation, dict) => {
-    if(dict) {
-        result.setAttribute('tooltiptext', translation + '\n' + dict)
+    if (dict) {
+      result.setAttribute('tooltiptext', translation + '\n' + dict)
     } else {
-        result.setAttribute('tooltiptext', translation)
+      result.setAttribute('tooltiptext', translation)
     }
-
     result.setAttribute('label', translation || LABEL_LOADING)
   }
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const from = detected ? `${languages[detected].name} - detected` : currentFrom(languages).name
+    const from = (
+      detected
+        ? `${languages[detected].name} - detected`
+        : currentFrom(languages).name
+    )
     const to = currentTo(languages).name
     langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
     translatePage.setAttribute('label', format(LABEL_TRANSLATE_PAGE, from, to))
@@ -189,8 +198,10 @@ const initMenu = (win, languages) => {
     // Check
     const from = currentFrom(languages).code
     const to = currentTo(languages).code
-    const fromMenu = fromPopup.querySelector(`[data-gtranslate-from="${from}"]`)
-    const toItem = fromMenu && fromMenu.querySelector(`[data-gtranslate-to="${to}"]`)
+    const fromSel = `[data-gtranslate-from="${from}"]`
+    const toSel = `[data-gtranslate-to="${to}"]`
+    const fromMenu = fromPopup.querySelector(fromSel)
+    const toItem = fromMenu && fromMenu.querySelector(toSel)
     if (fromMenu && toItem) {
       fromMenu.setAttribute('checked', true)
       toItem.setAttribute('checked', true)
@@ -208,7 +219,9 @@ const initMenu = (win, languages) => {
     const selection = getSelectionFromWin(win)
 
     translateMenu.setAttribute('hidden', !selection)
-    translatePage.setAttribute('hidden', selection.length!=0 || !getCurrentUrl())
+    translatePage.setAttribute(
+      'hidden', selection.length !== 0 || !getCurrentUrl()
+    )
 
     if (selection) {
       translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
@@ -223,11 +236,13 @@ const initMenu = (win, languages) => {
   // Show the results menupopup
   const showResultsMenu = () => {
     const selection = getSelectionFromWin(win)
-    translate(currentFrom(languages).code, currentTo(languages).code, selection, res => {
+    const fromCode = currentFrom(languages).code
+    const toCode = currentTo(languages).code
+    translate(fromCode, toCode, selection, res => {
       // TODO create preferences
-      if(res.alternatives) {
+      if (res.alternatives) {
         updateResult(res.translation, res.alternatives)
-      } else if(res.dictionary) {
+      } else if (res.dictionary) {
         updateResult(res.translation, res.dictionary)
       } else {
         updateResult(res.translation, res.synonyms)
@@ -253,16 +268,18 @@ const initMenu = (win, languages) => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
     const selection = getSelectionFromWin(win)
+    const from = currentFrom(languages).code
+    const to = currentTo(languages).code
 
     // Open the translation page
     if (target === result) {
-      openTab(translateUrl(currentFrom(languages).code, currentTo(languages).code, selection))
+      openTab(translateUrl(from, to, selection))
       return
     }
 
     // Open the visited translation page
     if (target === translatePage) {
-      openTab(translatePageUrl(currentFrom(languages).code, currentTo(languages).code, getCurrentUrl()))
+      openTab(translatePageUrl(from, to, getCurrentUrl()))
       return
     }
 
