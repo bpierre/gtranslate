@@ -26,6 +26,7 @@ const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 const getLanguages = () => new Promise((resolve) => {
   request({
     url: self.data.url('languages.json'),
+    overrideMimeType: 'application/json',
     onComplete: response => resolve(response.json),
   }).get()
 })
@@ -215,13 +216,18 @@ const initMenu = (win, languages) => {
   })
 
   // Show the context menupopup
-  const showContextMenu = () => {
-    const selection = getSelectionFromWin(win)
-
+  let selection = ''
+  const showContextMenu = event => {
+    if (selection == '') {
+      selection = getSelectionFromWin(win)
+    }
     translateMenu.setAttribute('hidden', !selection)
     translatePage.setAttribute(
       'hidden', selection.length !== 0 || !getCurrentUrl()
     )
+    if (!sp.prefs.fullPage) {
+      translatePage.setAttribute('hidden', true)
+    }
 
     if (selection) {
       translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
@@ -234,18 +240,42 @@ const initMenu = (win, languages) => {
   }
 
   // Show the results menupopup
-  const showResultsMenu = () => {
+  const showResultsMenu = event => {
+    if (selection === '') {
+      selection = getSelectionFromWin(win)
+    }
     const selection = getSelectionFromWin(win)
     const fromCode = currentFrom(languages).code
     const toCode = currentTo(languages).code
     translate(fromCode, toCode, selection, res => {
-      // TODO create preferences
-      if (res.alternatives) {
-        updateResult(res.translation, res.alternatives)
-      } else if (res.dictionary) {
-        updateResult(res.translation, res.dictionary)
-      } else {
-        updateResult(res.translation, res.synonyms)
+      switch (sp.prefs.dictionaryPref) {
+        case "A":
+          if(res.alternatives) {
+            updateResult(res.translation, res.alternatives)
+          } else if(res.dictionary) {
+            updateResult(res.translation, res.dictionary)
+          } else {
+            updateResult(res.translation, res.synonyms)
+          }
+        break;
+        case "D":
+          if(res.dictionary) {
+            updateResult(res.translation, res.dictionary)
+          } else if(res.alternatives) {
+            updateResult(res.translation, res.alternatives)
+          } else {
+            updateResult(res.translation, res.synonyms)
+          }
+        break;
+        case "S":
+          if(res.synonyms) {
+            updateResult(res.translation, res.synonyms)
+          } else if(res.dictionary) {
+            updateResult(res.translation, res.dictionary)
+          } else {
+            updateResult(res.translation, res.alternatives)
+          }
+        break;
       }
       if (sp.prefs.langFrom === 'auto') {
         updateLangMenuLabel(res.detectedSource)
@@ -262,12 +292,20 @@ const initMenu = (win, languages) => {
       return showResultsMenu(event)
     }
   }
+  
+   // Listen to popuphiding events
+  const onPopuphiding = event => {
+    if (event.target === cmNode) {
+      selection = '' // clear old selection
+    }
+  }
+  
 
   // Listen to command events
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const selection = getSelectionFromWin(win)
+    // const selection = getSelectionFromWin(win)
     const from = currentFrom(languages).code
     const to = currentTo(languages).code
 
@@ -295,12 +333,14 @@ const initMenu = (win, languages) => {
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
   cmNode.insertBefore(translatePage, inspectorSeparatorElement)
   cmNode.addEventListener('popupshowing', onPopupshowing)
+  cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
 
   updateLangMenuChecks()
 
   return function destroy() {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
+    cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)

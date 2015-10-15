@@ -72,12 +72,22 @@ function translationResult(str, onError) {
   }
 }
 
+//some sort of token google uses
+function generateToken() {
+    var a = Math.floor((new Date).getTime() / 36E5) ^ 123456;
+    return a + "|" + Math.floor((Math.sqrt(5) - 1) / 2 * (a ^ 654321) % 1 * 1048576)
+        
+}
+
 function apiUrl(from, to, text) {
-  const protocol = 'http://'
+  const protocol = 'https://'
   const host = 'translate.google.com'
-  const path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
-               `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at` +
-               `&q=${encodeURIComponent(text)}&sl=${from}&tl=${to}&hl=${to}`
+  let path = `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
+                 `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&tk=` + generateToken() + 
+                 `&sl=${from}&tl=${to}&hl=${to}`
+  if (typeof text != 'undefined') {
+    path += `&q=${encodeURIComponent(text)}`
+  }  
   return `${protocol}${host}${path}`
 }
 
@@ -92,7 +102,7 @@ function wholePageUrl(from, to, url) {
   return `${base}/translate?sl=${from}&hl=${to}&u=${encodeURIComponent(url)}`
 }
 
-exports.translate = function translate(from, to, text, cb) {
+function translate(from, to, text, cb) {
   const url = apiUrl(from, to, text)
   const onComplete = res => {
     const translation = translationResult(res.text, () => {
@@ -100,9 +110,25 @@ exports.translate = function translate(from, to, text, cb) {
     })
     return cb(translation)
   }
-  const req = request({ url, onComplete })
-  req.get()
+
+  // Far below what google's cutoff is to decide
+  // to use get or post, but post works anyway.
+  if (text.length < 200 ) {
+    const req = Request({
+      url: apiUrl(from, to, text),
+      onComplete,
+    })
+    req.get()
+  } else {
+    const req = Request({
+      url: apiUrl(from, to),
+      content: "q=".concat(encodeURIComponent(text)),
+      onComplete,
+    })
+    req.post()
+  }
 }
 
+exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
