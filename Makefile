@@ -7,6 +7,14 @@ FIREFOX_BIN?=nightly
 
 all: build
 
+dist:
+	rm -rf ./build
+	mkdir build
+	git archive $(VERSION) | (cd build; tar x)
+	cd build && jpm xpi
+	mv build/*.xpi .
+	rm -rf ./build
+
 build:
 	jpm xpi
 
@@ -19,4 +27,4 @@ lint:
 description:
 	@node scripts/description.js
 
-.PHONY: all build run description
+.PHONY: all build run description dist
