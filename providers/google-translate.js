@@ -1,4 +1,4 @@
-/* global require,exports */
+/* global require,exports,console */
 'use strict'
 
 const request = require('sdk/request').Request
@@ -23,20 +23,33 @@ function translationResult(str, onError) {
   let parseError = false
   try {
     result = JSON.parse(newstr)
-  } catch(e) {
+  } catch (e) {
     if (onError) {
       onError(newstr)
     }
     parseError = true
   }
 
-  const translation = parseError? 'Google Translate Service Error' : (
+  const translation = parseError ? 'Google Translate Service Error' : (
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
+  ) || null
+
+  const alternatives = (
+    result[1] && result[1].map(chunk => chunk[0] + ':\n ' + chunk[2].map(chunk => chunk[0] + ': ' + Array((10 - chunk[0].length) > 0 ? 10 - chunk[0].length : 0).join(' ') + '\t' + chunk[1].join(', ')).join('\n ')).join('\n\n')
+  ) || null
+  const dict = (
+    result[12] && result[12].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0] + ' \n  "' +  chunky[2] + '"').join(' \n ')).join('\n\n')
+  ) || null
+  const syno = (
+    result[11] && result[11].map(chunk => chunk[0] + ' \n ' + chunk[1].map(chunky => chunky[0].join(', ')).join(' \n ')).join('\n\n')
   ) || null
 
   return {
     detectedSource: result[2],
     translation: translation ? translation.trim() : null,
+    alternatives: alternatives ? alternatives.trim() : null,
+    dictionary: dict ? dict.trim() : null,
+    synonyms: syno ? syno.trim() : null,
   }
 }
 
@@ -64,7 +77,7 @@ function wholePageUrl(from, to, url) {
 exports.translate = function translate(from, to, text, cb) {
   const url = apiUrl(from, to, text)
   const onComplete = res => {
-    const translation = translationResult(res.text, errorContent => {
+    const translation = translationResult(res.text, () => {
       console.log(`[gtranslate] parse error with ${url}`)
     })
     return cb(translation)
