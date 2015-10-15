@@ -180,14 +180,16 @@ const initMenu = (win, languages) => {
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const from = (
-      detected
-        ? `${languages[detected].name} - detected`
-        : currentFrom(languages).name
-    )
-    const to = currentTo(languages).name
-    langMenu.setAttribute('label', format(LABEL_CHANGE_LANGUAGES, from, to))
-    translatePage.setAttribute('label', format(LABEL_TRANSLATE_PAGE, from, to))
+    const from = detected ? languages[detected] : currentFrom(languages)
+    const to = currentTo(languages)
+    langMenu.setAttribute('label', format(
+      LABEL_CHANGE_LANGUAGES,
+      from.name + (detected ? ' - detected' : ''),
+      to.name
+    ))
+    translatePage.setAttribute('label', format(
+      LABEL_TRANSLATE_PAGE, from.code, to.code
+    ))
   }
 
   // Update the languages menu selection
