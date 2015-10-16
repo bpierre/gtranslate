@@ -219,8 +219,8 @@ const initMenu = (win, languages) => {
   })
 
   // Show the context menupopup
-  const showContextMenu = event => {
-    if (selection == '') {
+  const showContextMenu = () => {
+    if (selection === '') {
       selection = getSelectionFromWin(win)
     }
     translateMenu.setAttribute('hidden', !selection)
@@ -242,7 +242,7 @@ const initMenu = (win, languages) => {
   }
 
   // Show the results menupopup
-  const showResultsMenu = event => {
+  const showResultsMenu = () => {
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
@@ -250,33 +250,33 @@ const initMenu = (win, languages) => {
     const toCode = currentTo(languages).code
     translate(fromCode, toCode, selection, res => {
       switch (sp.prefs.dictionaryPref) {
-        case "A":
-          if(res.alternatives) {
-            updateResult(res.translation, res.alternatives)
-          } else if(res.dictionary) {
-            updateResult(res.translation, res.dictionary)
-          } else {
-            updateResult(res.translation, res.synonyms)
-          }
-        break;
-        case "D":
-          if(res.dictionary) {
-            updateResult(res.translation, res.dictionary)
-          } else if(res.alternatives) {
-            updateResult(res.translation, res.alternatives)
-          } else {
-            updateResult(res.translation, res.synonyms)
-          }
-        break;
-        case "S":
-          if(res.synonyms) {
-            updateResult(res.translation, res.synonyms)
-          } else if(res.dictionary) {
-            updateResult(res.translation, res.dictionary)
-          } else {
-            updateResult(res.translation, res.alternatives)
-          }
-        break;
+      case 'A':
+        if (res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+        break
+      case 'D':
+        if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else if (res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+        break
+      case 'S':
+        if (res.synonyms) {
+          updateResult(res.translation, res.synonyms)
+        } else if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.alternatives)
+        }
+        break
       }
       if (sp.prefs.langFrom === 'auto') {
         updateLangMenuLabel(res.detectedSource)
@@ -293,14 +293,13 @@ const initMenu = (win, languages) => {
       return showResultsMenu(event)
     }
   }
-  
+
    // Listen to popuphiding events
   const onPopuphiding = event => {
     if (event.target === cmNode) {
       selection = '' // clear old selection
     }
   }
-  
 
   // Listen to command events
   const onContextCommand = event => {
