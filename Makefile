@@ -7,6 +7,8 @@ FIREFOX_BIN?=nightly
 
 all: build
 
+# VERSION has to be set to a git tag, e.g.:
+# VERSION=v0.12.0 make dist
 dist:
 	rm -rf ./build
 	mkdir build
