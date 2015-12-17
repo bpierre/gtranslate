@@ -73,14 +73,16 @@ function translationResult(str, onError) {
 }
 
 // Some sort of token google uses
-generateToken = function(a) {
+function generateToken(a) {
   var b;
   if (null === null) {
     var c = String.fromCharCode(84);
     b = String.fromCharCode(75);
     c = [c, c];
     c[1] = b;
-    b = Number(window[c.join(b)]) || 0
+    //at first sight seems to be a constant, but couldn't easily find how it was generated. May change.
+    //It is 0 for the official chrome extension, otherwise 402885
+    b = 402885 
   }
   var d = String.fromCharCode(116),
     c = String.fromCharCode(107),
@@ -99,7 +101,7 @@ generateToken = function(a) {
   return (a.toString() + "." + (a ^ b))
 }
 
-tokenhelper = function(a, b) {
+function tokenhelper(a, b) {
   for (var c = 0; c < b.length - 2; c += 3) {
     var d = b.charAt(c + 2),
       d = d >= "a" ? d.charCodeAt(0) - 87 : Number(d),
