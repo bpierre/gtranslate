@@ -115,7 +115,7 @@ function apiUrl(from, to, text) {
   let path = (
     `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
     `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&tk=` +
-    generateToken() + `&sl=${from}&tl=${to}&hl=${to}`
+    generateToken(text) + `&sl=${from}&tl=${to}&hl=${to}`
   )
   if (typeof text !== 'undefined') {
     path += `&q=${encodeURIComponent(text)}`
