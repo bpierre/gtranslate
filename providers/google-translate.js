@@ -74,24 +74,26 @@ function translationResult(str, onError) {
 
 // Some sort of token google uses
 function generateToken(a) {
-  var b;
-  if (null === null) {
-    var c = String.fromCharCode(84);
-    b = String.fromCharCode(75);
-    c = [c, c];
-    c[1] = b;
-    //at first sight seems to be a constant, but couldn't easily find how it was generated. May change.
-    //It is 0 for the official chrome extension, otherwise 402885
-    b = 402885 
-  }
-  var d = String.fromCharCode(116),
-    c = String.fromCharCode(107),
-    d = [d, d];
-  d[1] = c;
-  for (var c = "&" + d.join("") +
-      "=", d = [], e = 0, f = 0; f < a.length; f++) {
+  //at first sight seems to be a constant, but couldn't easily find how it was generated. May change.
+  //It is 0 for the official chrome extension, otherwise 402885
+  var b = 402885
+  //text to utf8 codepoints
+  for (var c = "&tk=", d = [], e = 0, f = 0; f < a.length; f++) {
     var g = a.charCodeAt(f);
-    128 > g ? d[e++] = g : (2048 > g ? d[e++] = g >> 6 | 192 : (55296 == (g & 64512) && f + 1 < a.length && 56320 == (a.charCodeAt(f + 1) & 64512) ? (g = 65536 + ((g & 1023) << 10) + (a.charCodeAt(++f) & 1023), d[e++] = g >> 18 | 240, d[e++] = g >> 12 & 63 | 128) : d[e++] = g >> 12 | 224, d[e++] = g >> 6 & 63 | 128), d[e++] = g & 63 | 128)
+    0x80 > g ?
+      d[e++] = g
+    :
+      (0x800 > g ? 
+         d[e++] = g >> 6 | 192
+      :
+         (55296 == (g & 64512) && f + 1 < a.length && 56320 == (a.charCodeAt(f + 1) & 64512) ?
+             (g = 65536 + ((g & 1023) << 10) + (a.charCodeAt(++f) & 1023),
+             d[e++] = g >> 18 | 240,
+             d[e++] = g >> 12 & 0x3f | 0x80)
+         :
+             d[e++] = g >> 12 | 0xe0,
+             d[e++] = g >> 6 & 0x3f | 0x80)
+         , d[e++] = g & 0x3f | 0x80)
   }
   a = b || 0;
   for (e = 0; e < d.length; e++) a += d[e], a = tokenhelper(a, "+-a^+6");
@@ -111,15 +113,16 @@ function tokenhelper(a, b) {
   return a
 }
 
-function apiUrl(from, to, text) {
+function apiUrl(from, to, text, includeText) {
   const protocol = 'https://'
   const host = 'translate.google.com'
+  const token = generateToken(text)
   let path = (
     `/translate_a/single?client=t&ie=UTF-8&oe=UTF-8` +
     `&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&tk=` +
-    generateToken(text) + `&sl=${from}&tl=${to}&hl=${to}`
+    token + `&sl=${from}&tl=${to}&hl=${to}`
   )
-  if (typeof text !== 'undefined') {
+  if (typeof text !== 'undefined' && includeText) {
     path += `&q=${encodeURIComponent(text)}`
   }
   return `${protocol}${host}${path}`
@@ -150,13 +153,14 @@ function translate(from, to, text, cb) {
   // to use get or post, but post works anyway.
   if (text.length < 200 ) {
     request({
-      url: apiUrl(from, to, text),
+      url: apiUrl(from, to, text, true),
       onComplete,
     }).get()
   } else {
     request({
-      url: apiUrl(from, to),
+      url: apiUrl(from, to, text, false),
       content: 'q='.concat(encodeURIComponent(text)),
+	  headers: { "Content-Length": 'q='.concat(encodeURIComponent(text)).length },
       onComplete,
     }).post()
   }
