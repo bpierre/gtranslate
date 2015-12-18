@@ -3,3 +3,6 @@
 dev
 graphics/screenshots
 test
+.eslintrc
+.gitignore
+.jpmignore
