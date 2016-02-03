@@ -16,7 +16,7 @@ const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
-const pageworker = require('sdk/page-worker')
+const xhr = require('sdk/net/xhr')
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
@@ -24,12 +24,6 @@ const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 const LABEL_LISTEN = 'Listen'
-
-// Create only one background page.
-const audioPage = pageworker.Page({
-  contentURL: self.data.url('audio.html'),
-  contentScriptFile: self.data.url('audio.js')
-})
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -153,6 +147,8 @@ const openTab = url => {
 
 // Add a gtranslate menu on a window
 const initMenu = (win, languages) => {
+
+  const audioContext = new win.AudioContext()
 
   let selection = ''
   // translate() updates the from code if it's set to auto.
@@ -351,7 +347,19 @@ const initMenu = (win, languages) => {
       currentFrom(languages).code
     const sel = selection === '' ? getSelectionFromWin(win) : selection
     const url = apiListenUrl(from, sel)
-    audioPage.port.emit('play', url)
+
+    const req = new xhr.XMLHttpRequest()
+    req.open('GET', url, true)
+    req.responseType = 'arraybuffer'
+    req.onload = () => {
+      audioContext.decodeAudioData(req.response, (buffer) => {
+        const source = audioContext.createBufferSource()
+        source.buffer = buffer
+        source.connect(audioContext.destination)
+        source.start(0)
+      })
+    }
+    req.send()
   }
 
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
@@ -372,6 +380,7 @@ const initMenu = (win, languages) => {
     listen.removeEventListener('click', onClickListen)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
+    audioContext.close()
   }
 }
 
