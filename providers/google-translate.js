@@ -2,8 +2,6 @@
 'use strict'
 
 const request = require('sdk/request').Request
-const self = require('sdk/self')
-const pageworker = require('sdk/page-worker')
 
 function translationResult(str, onError) {
   let newstr = '['
@@ -174,21 +172,13 @@ function apiListenUrl(from, text) {
   const token = generateToken(text)
   let path = (
     `/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${from}&total=1&` +
-    `idx=0&textlen=${text.length}&tk=${token}&client=t&prev=input&ttsspeed=0.24`
+    `idx=0&textlen=${text.length}&tk=${token}&client=t&prev=input&ttsspeed=0.48`
   )
 
   return `${protocol}${host}${path}`
 }
 
-function listenVoice(from, text) {
-  const url = apiListenUrl(from, text)
-  var soundPlayer = pageworker.Page({
-    contentURL: self.data.url('blank.html'),
-    contentScript: 'new Audio("' + url + '").play()'
-  })
-}
-
 exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
-exports.listenVoice = listenVoice
+exports.apiListenUrl = apiListenUrl

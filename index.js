@@ -9,13 +9,14 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
-  listenVoice,
+  apiListenUrl
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
+const pageworker = require('sdk/page-worker')
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
@@ -23,6 +24,12 @@ const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
 const LABEL_LISTEN = 'Listen'
+
+// Create only one background page.
+const audioPage = pageworker.Page({
+  contentURL: self.data.url('audio.html'),
+  contentScriptFile: self.data.url('audio.js')
+})
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -291,9 +298,6 @@ const initMenu = (win, languages) => {
         updateLangMenuLabel(res.detectedSource)
         detectedFromCode = res.detectedSource
       }
-
-      /*listenVoice(sp.prefs.langFrom === 'auto' ? res.detectedSource : fromCode,*/
-      /*selection, self.data.url('blank.html'))*/
     })
   }
 
@@ -342,10 +346,12 @@ const initMenu = (win, languages) => {
   }
 
   // Play speech on click.
-  const onClickListen = () => {
+  const onClickListen = event => {
     const from = sp.prefs.langFrom === 'auto' ? detectedFromCode :
       currentFrom(languages).code
-    listenVoice(from, getSelectionFromWin(win))
+    const sel = selection === '' ? getSelectionFromWin(win) : selection
+    const url = apiListenUrl(from, sel)
+    audioPage.port.emit('play', url)
   }
 
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
