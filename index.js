@@ -9,7 +9,7 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
-  apiListenUrl
+  apiListenUrl,
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
@@ -340,7 +340,7 @@ const initMenu = (win, languages) => {
   }
 
   // Play speech on click.
-  const onClickListen = event => {
+  const onClickListen = () => {
     const from = sp.prefs.langFrom === 'auto' ? detectedFromCode :
       currentFrom(languages).code
     const sel = selection === '' ? getSelectionFromWin(win) : selection

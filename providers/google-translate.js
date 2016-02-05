@@ -171,8 +171,9 @@ function apiListenUrl(from, text) {
   const host = 'translate.google.com'
   const token = generateToken(text)
   let path = (
-    `/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${from}&total=1&` +
-    `idx=0&textlen=${text.length}&tk=${token}&client=t&prev=input&ttsspeed=0.48`
+    `/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${from}&` +
+    `total=1&idx=0&textlen=${text.length}&tk=${token}&client=t&prev=input&` +
+    `ttsspeed=0.48`
   )
 
   return `${protocol}${host}${path}`
