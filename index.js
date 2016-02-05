@@ -148,8 +148,6 @@ const openTab = url => {
 // Add a gtranslate menu on a window
 const initMenu = (win, languages) => {
 
-  const audioContext = new win.AudioContext()
-
   let selection = ''
   // translate() updates the from code if it's set to auto.
   let detectedFromCode = ''
@@ -348,6 +346,7 @@ const initMenu = (win, languages) => {
     const sel = selection === '' ? getSelectionFromWin(win) : selection
     const url = apiListenUrl(from, sel)
 
+    const audioContext = new win.AudioContext()
     const req = new xhr.XMLHttpRequest()
     req.open('GET', url, true)
     req.responseType = 'arraybuffer'
@@ -356,6 +355,11 @@ const initMenu = (win, languages) => {
         const source = audioContext.createBufferSource()
         source.buffer = buffer
         source.connect(audioContext.destination)
+        source.onended = () => {
+          source.disconnect()
+          source.buffer = null
+          audioContext.close()
+        }
         source.start(0)
       })
     }
@@ -380,7 +384,6 @@ const initMenu = (win, languages) => {
     listen.removeEventListener('click', onClickListen)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
-    audioContext.close()
   }
 }
 
