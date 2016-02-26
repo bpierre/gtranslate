@@ -9,14 +9,13 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
-  apiListenUrl,
+  listen,
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
-const xhr = require('sdk/net/xhr')
 
 // Context Menu
 const LABEL_LOADING = 'Fetching translation…'
@@ -167,7 +166,7 @@ const initMenu = (win, languages) => {
   const translatePopup = elt('menupopup', null, null, translateMenu)
 
   const result = elt('menuitem', null, null, translatePopup)
-  const listen = elt(
+  const listenLabel = elt(
     'menuitem', { className: 'menuitem-iconic' },
     { label: LABEL_LISTEN, image: self.data.url('voice.svg') },
     translatePopup
@@ -344,26 +343,7 @@ const initMenu = (win, languages) => {
     const from = sp.prefs.langFrom === 'auto' ? detectedFromCode :
       currentFrom(languages).code
     const sel = selection === '' ? getSelectionFromWin(win) : selection
-    const url = apiListenUrl(from, sel)
-
-    const audioContext = new win.AudioContext()
-    const req = new xhr.XMLHttpRequest()
-    req.open('GET', url, true)
-    req.responseType = 'arraybuffer'
-    req.onload = () => {
-      audioContext.decodeAudioData(req.response, (buffer) => {
-        const source = audioContext.createBufferSource()
-        source.buffer = buffer
-        source.connect(audioContext.destination)
-        source.onended = () => {
-          source.disconnect()
-          source.buffer = null
-          audioContext.close()
-        }
-        source.start(0)
-      })
-    }
-    req.send()
+    listen(from, sel, win)
   }
 
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
@@ -373,7 +353,7 @@ const initMenu = (win, languages) => {
   cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
 
-  listen.addEventListener('click', onClickListen)
+  listenLabel.addEventListener('click', onClickListen)
 
   updateLangMenuChecks()
 
@@ -381,7 +361,7 @@ const initMenu = (win, languages) => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
-    listen.removeEventListener('click', onClickListen)
+    listenLabel.removeEventListener('click', onClickListen)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
   }

@@ -2,6 +2,7 @@
 'use strict'
 
 const request = require('sdk/request').Request
+const xhr = require('sdk/net/xhr')
 
 function translationResult(str, onError) {
   let newstr = '['
@@ -179,7 +180,24 @@ function apiListenUrl(from, text) {
   return `${protocol}${host}${path}`
 }
 
+function listen(from, text, win) {
+  const url = apiListenUrl(from, text)
+  const req = new xhr.XMLHttpRequest()
+  req.open('GET', url, true)
+  req.responseType = 'arraybuffer'
+  req.onload = () => {
+    const audioContext = new win.AudioContext()
+    audioContext.decodeAudioData(req.response, (buffer) => {
+      const source = audioContext.createBufferSource()
+      source.buffer = buffer
+      source.connect(audioContext.destination)
+      source.start()
+    })
+  }
+  req.send()
+}
+
 exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
-exports.apiListenUrl = apiListenUrl
+exports.listen = listen
