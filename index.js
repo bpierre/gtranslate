@@ -62,6 +62,25 @@ const currentTo = languages => {
   }
 }
 
+// Get the Fallback language from the preferences
+const currentFallback = languages => {
+  let langName = sp.prefs.langFallback || null  
+  for(var key in languages ){
+    if(languages[key].name == langName)
+    {
+      var langCode = key
+    }
+  }
+  if (!langCode.startsWith('zh')) {
+     langCode = langCode.replace(/-[a-zA-Z]+$/, '')
+  }  
+  const lang = languages[langCode]
+  return {
+    code: langCode,
+    name: (lang && lang.name) || null,
+  }
+}
+
 // Utility function to create elements
 const eltCreator = doc => (name, props, attrs, parent) => {
   const elt = doc.createElement(name)
@@ -179,13 +198,13 @@ const initMenu = (win, languages) => {
   }
 
   // Update the languages menu label (“Change Languages […]”)
-  const updateLangMenuLabel = detected => {
+  const updateLangMenuLabel = (detected, fallback) => {
     const from = detected ? languages[detected] : currentFrom(languages)
-    const to = currentTo(languages)
+    const to = fallback ? languages[fallback] : currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
       from.name + (detected ? ' - detected' : ''),
-      to.name
+       to.name + (fallback ? ' - fallback' : '')
     ))
     translatePage.setAttribute('label', format(
       LABEL_TRANSLATE_PAGE, from.code, to.code
@@ -248,7 +267,11 @@ const initMenu = (win, languages) => {
     }
     const fromCode = currentFrom(languages).code
     const toCode = currentTo(languages).code
+    const fallbackCode = currentFallback(languages).code
     translate(fromCode, toCode, selection, res => {
+    if (sp.prefs.langFrom === 'auto' && res.detectedSource === toCode) {
+      //i don't know how to not copy paste this inline function in a semi recursive function call
+      translate(fromCode, fallbackCode, selection, res => {
       switch (sp.prefs.dictionaryPref) {
       case 'A':
         if (res.alternatives) {
@@ -279,7 +302,41 @@ const initMenu = (win, languages) => {
         break
       }
       if (sp.prefs.langFrom === 'auto') {
-        updateLangMenuLabel(res.detectedSource)
+        updateLangMenuLabel(res.detectedSource, fallbackCode)
+      }
+    })
+    }
+      switch (sp.prefs.dictionaryPref) {
+      case 'A':
+        if (res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+        break
+      case 'D':
+        if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else if (res.alternatives) {
+          updateResult(res.translation, res.alternatives)
+        } else {
+          updateResult(res.translation, res.synonyms)
+        }
+        break
+      case 'S':
+        if (res.synonyms) {
+          updateResult(res.translation, res.synonyms)
+        } else if (res.dictionary) {
+          updateResult(res.translation, res.dictionary)
+        } else {
+          updateResult(res.translation, res.alternatives)
+        }
+        break
+      }
+      if (sp.prefs.langFrom === 'auto') {
+        updateLangMenuLabel(res.detectedSource, null)
       }
     })
   }
