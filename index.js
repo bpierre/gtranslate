@@ -64,7 +64,7 @@ const currentTo = languages => {
 
 // Get the Fallback language from the preferences
 const currentFallback = languages => {
-  let langName = sp.prefs.langFallback || null  
+  let langName = sp.prefs.langFallback || null
   for(var key in languages ){
     if(languages[key].name == langName)
     {
@@ -73,7 +73,7 @@ const currentFallback = languages => {
   }
   if (!langCode.startsWith('zh')) {
      langCode = langCode.replace(/-[a-zA-Z]+$/, '')
-  }  
+  }
   const lang = languages[langCode]
   return {
     code: langCode,
@@ -204,7 +204,7 @@ const initMenu = (win, languages) => {
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
       from.name + (detected ? ' - detected' : ''),
-       to.name + (fallback ? ' - fallback' : '')
+      to.name + (fallback ? ' - fallback' : '')
     ))
     translatePage.setAttribute('label', format(
       LABEL_TRANSLATE_PAGE, from.code, to.code
