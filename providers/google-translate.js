@@ -75,10 +75,9 @@ function translationResult(str, onError) {
 // Some sort of token google uses
 function generateToken(a) {
   //at first sight seems to be a constant, but couldn't easily find how it was generated. May change.
-  //It is 0 for the official chrome extension, otherwise 402885
-  var b = 402885
+  var b = 406394
   //text to utf8 codepoints
-  for (var c = "&tk=", d = [], e = 0, f = 0; f < a.length; f++) {
+  for (var d = [], e = 0, f = 0; f < a.length; f++) {
     var g = a.charCodeAt(f);
     0x80 > g ?
       d[e++] = g
@@ -95,9 +94,10 @@ function generateToken(a) {
              d[e++] = g >> 6 & 0x3f | 0x80)
          , d[e++] = g & 0x3f | 0x80)
   }
-  a = b || 0;
+  a = b;
   for (e = 0; e < d.length; e++) a += d[e], a = tokenhelper(a, "+-a^+6");
   a = tokenhelper(a, "+-3^+b+-f");
+  a ^= 2641390264;
   0 > a && (a = (a & 2147483647) + 2147483648);
   a %= 1E6;
   return (a.toString() + "." + (a ^ b))
