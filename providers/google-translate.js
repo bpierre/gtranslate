@@ -3,6 +3,8 @@
 
 const request = require('sdk/request').Request
 
+const LABEL_TRANSLATE_ERROR = 'Google Translate Service Error'
+
 function translationResult(str, onError) {
   let newstr = '['
   let insideQuote = false
@@ -33,7 +35,7 @@ function translationResult(str, onError) {
     parseError = true
   }
 
-  const translation = parseError ? 'Google Translate Service Error' : (
+  const translation = parseError ? LABEL_TRANSLATE_ERROR : (
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
   ) || null
 
@@ -169,3 +171,4 @@ function translate(from, to, text, cb) {
 exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
+exports.LABEL_TRANSLATE_ERROR = LABEL_TRANSLATE_ERROR
