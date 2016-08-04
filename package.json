@@ -47,5 +47,10 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^1.6.0"
+  },
+  "locales": {
+      "fi": {
+          "description": "gtranslate on lisäosa Firefoxille, joka kääntää valitun tekstin käyttäen Google Kääntäjää.\n\ngtranslate:lla voit kääntää mitä vain sivulla olevaa tekstiä valitsemalla sen ja painamalla hiiren oikeanpuoleista nappia. Lisäosa käyttää Google Kääntäjä -palvelua tekstin kääntämiseen.\n\ngtranslate ei liity Google oy.:n millään tavalla.\n\nOminaisuudet:\n\tTuetut kielet: afrikaans, albania, arabia, armenia, azeri, baski, valkovenäjä, bengali, bosnia, bulgaria, katalaani, cebuano, kiina (yksinkertaistettu), kiina (perinteinen), njandža, kroatia, tsekki, tanska, hollanti, englanti, esperanto, viro, filipino, suomi, ranska, galicia, georgia, saksa, kreikka, gujarati, haitinkreoli, hausa, heprea, hindi, hmong, unkari, islanti, igbo, indonesia, iiri, italia, japani, jaava, kannada, kazakki, khmer, korea, lao, latina, latvia, liettua, makedonia, malagassi, malaiji, malajalam, malta, maori, marathi, mongoli, burma, nepali, norja, persia, punjabi, puola, portugali, romania, venäjä, serbia, sesotho, sinhali, slovakia, somali, espanja, sundaneesi, swahili, ruotsi, tadžikki, tamili, telugu, thai, turkki, ukraina, urdu, uzbekki, vietnam, kymri, jiddiš, joruba ja zulu.\n\tTunnista kieli automaattisesti.\n\tKuvien kuvaukset ja linkit voidaan myös kääntää."
+      }
   }
 }
