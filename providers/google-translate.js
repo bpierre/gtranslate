@@ -2,6 +2,7 @@
 'use strict'
 
 const request = require('sdk/request').Request
+const _ = require('sdk/l10n').get
 
 function translationResult(str, onError) {
   let newstr = '['
@@ -33,7 +34,7 @@ function translationResult(str, onError) {
     parseError = true
   }
 
-  const translation = parseError ? 'Google Translate Service Error' : (
+  const translation = parseError ? _('google_translate_error') : (
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
   ) || null
 

@@ -15,12 +15,13 @@ const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
+const _ = require('sdk/l10n').get
 
 // Context Menu
-const LABEL_LOADING = 'Fetching translation…'
-const LABEL_TRANSLATE = 'Translate “{0}”'
-const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
-const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
+const LABEL_LOADING = _('fetch_translation')
+const LABEL_TRANSLATE = _('translate')
+const LABEL_TRANSLATE_PAGE = _('translate_page')
+const LABEL_CHANGE_LANGUAGES = _('change_languages')
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
