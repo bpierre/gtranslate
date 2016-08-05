@@ -2,6 +2,8 @@
 
 gtranslate is a Firefox addon that translates the selected text using Google Translate.
 
+IRC channel: `#gtranslate` on `irc.mozilla.org:6697` (help: https://wiki.mozilla.org/IRC).
+
 ## Installation
 
 You can install it from the Mozilla Addons website: https://addons.mozilla.org/firefox/addon/gtranslate/
