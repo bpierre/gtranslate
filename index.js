@@ -9,6 +9,7 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
+  listen,
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
@@ -21,6 +22,7 @@ const LABEL_LOADING = 'Fetching translation…'
 const LABEL_TRANSLATE = 'Translate “{0}”'
 const LABEL_TRANSLATE_PAGE = 'Translate Page ({0} > {1})'
 const LABEL_CHANGE_LANGUAGES = 'Change Languages ({0} > {1})'
+const LABEL_LISTEN = 'Listen'
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -146,6 +148,8 @@ const openTab = url => {
 const initMenu = (win, languages) => {
 
   let selection = ''
+  // translate() updates the from code if it's set to auto.
+  let detectedFromCode = ''
   const doc = win.document
   const cmNode = doc.getElementById('contentAreaContextMenu')
   const elt = eltCreator(doc)
@@ -162,6 +166,11 @@ const initMenu = (win, languages) => {
   const translatePopup = elt('menupopup', null, null, translateMenu)
 
   const result = elt('menuitem', null, null, translatePopup)
+  const listenLabel = elt(
+    'menuitem', { className: 'menuitem-iconic' },
+    { label: LABEL_LISTEN, image: self.data.url('voice.svg') },
+    translatePopup
+  )
   elt('menuseparator', null, null, translatePopup)
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
@@ -280,6 +289,7 @@ const initMenu = (win, languages) => {
       }
       if (sp.prefs.langFrom === 'auto') {
         updateLangMenuLabel(res.detectedSource)
+        detectedFromCode = res.detectedSource
       }
     })
   }
@@ -328,6 +338,14 @@ const initMenu = (win, languages) => {
     }
   }
 
+  // Play speech on click.
+  const onClickListen = () => {
+    const from = sp.prefs.langFrom === 'auto' ? detectedFromCode :
+      currentFrom(languages).code
+    const sel = selection === '' ? getSelectionFromWin(win) : selection
+    listen(from, sel, win)
+  }
+
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
   cmNode.insertBefore(translatePage, inspectorSeparatorElement)
@@ -335,12 +353,15 @@ const initMenu = (win, languages) => {
   cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
 
+  listenLabel.addEventListener('click', onClickListen)
+
   updateLangMenuChecks()
 
   return function destroy() {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
+    listenLabel.removeEventListener('click', onClickListen)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
   }

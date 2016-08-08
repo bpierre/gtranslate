@@ -2,6 +2,7 @@
 'use strict'
 
 const request = require('sdk/request').Request
+const xhr = require('sdk/net/xhr')
 
 function translationResult(str, onError) {
   let newstr = '['
@@ -166,6 +167,37 @@ function translate(from, to, text, cb) {
   }
 }
 
+function apiListenUrl(from, text) {
+  const protocol = 'https://'
+  const host = 'translate.google.com'
+  const token = generateToken(text)
+  let path = (
+    `/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${from}&` +
+    `total=1&idx=0&textlen=${text.length}&tk=${token}&client=t&prev=input&` +
+    `ttsspeed=0.48`
+  )
+
+  return `${protocol}${host}${path}`
+}
+
+function listen(from, text, win) {
+  const url = apiListenUrl(from, text)
+  const req = new xhr.XMLHttpRequest()
+  req.open('GET', url, true)
+  req.responseType = 'arraybuffer'
+  req.onload = () => {
+    const audioContext = new win.AudioContext()
+    audioContext.decodeAudioData(req.response, (buffer) => {
+      const source = audioContext.createBufferSource()
+      source.buffer = buffer
+      source.connect(audioContext.destination)
+      source.start()
+    })
+  }
+  req.send()
+}
+
 exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
+exports.listen = listen
