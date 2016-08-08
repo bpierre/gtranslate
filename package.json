@@ -42,7 +42,13 @@
         { "value": "D", "label": "Prefer dictonary" },
         { "value": "S", "label": "Prefer synonyms" }
       ]
-    }
+    },
+        {
+            "type": "string",
+            "name": "langFallback",
+            "value": "English",
+            "title": "Fallback language if auto language is same as source language. Please type as seen in the gtranslate context menu language picker."
+        }
   ],
   "dependencies": {},
   "devDependencies": {
