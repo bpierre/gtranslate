@@ -40,7 +40,8 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 // Get the From language from the preferences
 const currentFrom = languages => {
   const langCode = sp.prefs.langFrom
-  const lang = languages[langCode]
+  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  const lang = languages[langCode][locale]
   return {
     code: langCode,
     name: (lang && (lang.fromName || lang.name)) || null,
@@ -50,13 +51,13 @@ const currentFrom = languages => {
 // Get the To language from the preferences
 const currentTo = languages => {
   let langCode = sp.prefs.langTo
+  const locale = ps.getLocalized('general.useragent.locale', 'en')
   if (langCode === 'auto') {
-    langCode = ps.getLocalized('general.useragent.locale', 'en')
-    if (!langCode.startsWith('zh')) {
-      langCode = langCode.replace(/-[a-zA-Z]+$/, '')
+    if (!locale.startsWith('zh')) {
+      langCode = locale.replace(/-[a-zA-Z]+$/, '')
     }
   }
-  const lang = languages[langCode]
+  const lang = languages[langCode][locale]
   return {
     code: langCode,
     name: (lang && lang.name) || null,
@@ -72,26 +73,47 @@ const eltCreator = doc => (name, props, attrs, parent) => {
   return elt
 }
 
-const langToItems = (languages, doc) => (
-  Object.keys(languages)
+const cmpLanguages = (a, b, languages, locale) => {
+  if (languages[a][locale].name < languages[b][locale].name)
+    return -1
+  if (languages[a][locale].name > languages[b][locale].name)
+    return 1
+  return 0
+}
+
+const langToItems = (languages, doc) => {
+  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  return Object.keys(languages)
     .filter(lang => !languages[lang].onlyFrom)
+    .sort((a, b) => {
+      return cmpLanguages(a, b, languages, locale)
+    })
     .map(lang => {
       const item = doc.createElement('menuitem')
-      item.setAttribute('label', languages[lang].name)
+      item.setAttribute('label',
+        languages[lang][locale].toName || languages[lang][locale].name)
       item.setAttribute('data-gtranslate-to', lang)
       return item
     })
-)
+}
 
 const langFromMenus = (languages, doc) => {
   const toItemsPopup = doc.createElement('menupopup')
   langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item))
+  const locale = ps.getLocalized('general.useragent.locale', 'en')
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyTo)
+    .sort((a, b) => {
+      // Detect language is shown first.
+      if (a === 'auto')
+        return -1
+      return cmpLanguages(a, b, languages, locale)
+    })
     .map(lang => {
       const menu = doc.createElement('menu')
       menu.setAttribute(
-        'label', languages[lang].fromName || languages[lang].name
+        'label', languages[lang][locale].fromName ||
+          languages[lang][locale].name
       )
       menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
@@ -181,7 +203,8 @@ const initMenu = (win, languages) => {
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const from = detected ? languages[detected] : currentFrom(languages)
+    const locale = ps.getLocalized('general.useragent.locale', 'en')
+    const from = detected ? languages[detected][locale] : currentFrom(languages)
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
