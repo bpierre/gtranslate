@@ -185,7 +185,7 @@ const initMenu = (win, languages) => {
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
-      from.name + (detected ? ' - detected' : ''),
+      from.name + (detected ? _('language_detected') : ''),
       to.name
     ))
     translatePage.setAttribute('label', format(
