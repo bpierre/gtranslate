@@ -21,3 +21,4 @@ Mozilla Public License 2.0
 - Tom Adams / [@mote0230](https://github.com/mote0230)
 - Bruce Bujon / [@PerfectSlayer](https://github.com/PerfectSlayer)
 - [@tx9191](https://github.com/tx9191)
+- [@fluks](https://github.com/fluks)
