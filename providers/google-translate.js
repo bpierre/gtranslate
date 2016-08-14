@@ -2,8 +2,9 @@
 'use strict'
 
 const request = require('sdk/request').Request
+const _ = require('sdk/l10n').get
 
-const LABEL_TRANSLATE_ERROR = 'Google Translate Service Error'
+const LABEL_TRANSLATE_ERROR = _('google_translate_error')
 
 function translationResult(str, onError) {
   let newstr = '['
