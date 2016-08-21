@@ -188,14 +188,12 @@ const initMenu = (win, languages) => {
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
 
-  const result = elt('menu', null, null, translatePopup)
-  const resultPopup = elt('menupopup', null, null, result)
-  const clipboardItem = elt(
-    'menuitem', null,
-    { label: LABEL_CLIPBOARD },
-    resultPopup
-  )
+  const result = elt('menuitem', null, null, translatePopup)
   elt('menuseparator', null, null, translatePopup)
+  const clipboardItem = elt(
+    'menuitem', null, { label: LABEL_CLIPBOARD },
+    translatePopup
+  )
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
   const fromMenus = langFromMenus(languages, doc)
