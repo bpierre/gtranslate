@@ -24,8 +24,7 @@ const LABEL_LOADING = _('fetch_translation')
 const LABEL_TRANSLATE = _('translate')
 const LABEL_TRANSLATE_PAGE = _('translate_page')
 const LABEL_CHANGE_LANGUAGES = _('change_languages')
-
-const LABEL_CLIPBOARD = 'Copy'
+const LABEL_CLIPBOARD = _('copy_to_clipboard')
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
