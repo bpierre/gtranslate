@@ -4,6 +4,8 @@
 const request = require('sdk/request').Request
 const _ = require('sdk/l10n').get
 
+const LABEL_TRANSLATE_ERROR = _('google_translate_error')
+
 function translationResult(str, onError) {
   let newstr = '['
   let insideQuote = false
@@ -34,7 +36,7 @@ function translationResult(str, onError) {
     parseError = true
   }
 
-  const translation = parseError ? _('google_translate_error') : (
+  const translation = parseError ? LABEL_TRANSLATE_ERROR : (
     result[0] && result[0].map(chunk => chunk[0]).join(' ')
   ) || null
 
@@ -170,3 +172,4 @@ function translate(from, to, text, cb) {
 exports.translate = translate
 exports.translateUrl = pageUrl
 exports.translatePageUrl = wholePageUrl
+exports.LABEL_TRANSLATE_ERROR = LABEL_TRANSLATE_ERROR

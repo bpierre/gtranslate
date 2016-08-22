@@ -9,12 +9,14 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
+  LABEL_TRANSLATE_ERROR,
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
+const clipboard = require('sdk/clipboard')
 const _ = require('sdk/l10n').get
 
 // Context Menu
@@ -22,6 +24,7 @@ const LABEL_LOADING = _('fetch_translation')
 const LABEL_TRANSLATE = _('translate')
 const LABEL_TRANSLATE_PAGE = _('translate_page')
 const LABEL_CHANGE_LANGUAGES = _('change_languages')
+const LABEL_CLIPBOARD = _('copy_to_clipboard')
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -186,6 +189,10 @@ const initMenu = (win, languages) => {
 
   const result = elt('menuitem', null, null, translatePopup)
   elt('menuseparator', null, null, translatePopup)
+  const clipboardItem = elt(
+    'menuitem', null, { label: LABEL_CLIPBOARD },
+    translatePopup
+  )
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
   const fromMenus = langFromMenus(languages, doc)
@@ -199,6 +206,13 @@ const initMenu = (win, languages) => {
       result.setAttribute('tooltiptext', translation)
     }
     result.setAttribute('label', translation || LABEL_LOADING)
+
+    if (result.label === LABEL_LOADING ||
+        result.label === LABEL_TRANSLATE_ERROR) {
+      clipboardItem.setAttribute('hidden', true)
+    } else {
+      clipboardItem.setAttribute('hidden', false)
+    }
   }
 
   // Update the languages menu label (“Change Languages […]”)
@@ -352,12 +366,17 @@ const initMenu = (win, languages) => {
     }
   }
 
+  const onClickCopyToClipboard = () => {
+    clipboard.set(result.label)
+  }
+
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
   cmNode.insertBefore(translatePage, inspectorSeparatorElement)
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
+  clipboardItem.addEventListener('click', onClickCopyToClipboard)
 
   updateLangMenuChecks()
 
@@ -365,6 +384,7 @@ const initMenu = (win, languages) => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
+    clipboardItem.removeEventListener('click', onClickCopyToClipboard)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
   }
