@@ -26,15 +26,13 @@
     { "type": "string", "title": "langFrom", "name": "langFrom", "value": "auto", "hidden": true },
     { "type": "string", "title": "langTo", "name": "langTo", "value": "auto", "hidden": true },
     {
-      "description": "Show gtranslate when no text is selected to translate the full page",
-      "type": "bool",
       "name": "fullPage",
-      "value": true,
-      "title": "Full page"
+      "type": "bool",
+      "title": "Full page",
+      "value": true
     },
     {
       "name": "dictionaryPref",
-      "description": "When translating a single word, prefer the following as extra mouseover information",
       "type": "radio",
       "title": "Alternatives",
       "value": "A",
