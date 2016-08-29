@@ -40,10 +40,27 @@ const format = (origStr, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
 )
 
+// Find a supported locale for the translated language names. First try the
+// browser's locale. If it isn't supported, try without a region code if it is,
+// otherwise return 'en'. A support for a locale is determined by having a
+// translation for the 'auto' string, this means that a new locale must be
+// complete, all the language names must be translated.
+const getSupportedLocale = (languages) => {
+  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  if (languages.auto[locale]) {
+    return locale
+  }
+  const i = locale.indexOf('-')
+  if (i !== -1) {
+    return locale.substring(0, i)
+  }
+  return 'en'
+}
+
 // Get the From language from the preferences
 const currentFrom = languages => {
   const langCode = sp.prefs.langFrom
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  const locale = getSupportedLocale(languages)
   const lang = languages[langCode][locale]
   return {
     code: langCode,
@@ -54,12 +71,13 @@ const currentFrom = languages => {
 // Get the To language from the preferences
 const currentTo = languages => {
   let langCode = sp.prefs.langTo
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
   if (langCode === 'auto') {
-    if (!locale.startsWith('zh')) {
-      langCode = locale.replace(/-[a-zA-Z]+$/, '')
+    langCode = ps.getLocalized('general.useragent.locale', 'en')
+    if (!langCode.startsWith('zh')) {
+      langCode = langCode.replace(/-[a-zA-Z]+$/, '')
     }
   }
+  const locale = getSupportedLocale(languages)
   const lang = languages[langCode][locale]
   return {
     code: langCode,
@@ -85,7 +103,7 @@ const cmpLanguages = (a, b, languages, locale) => {
 }
 
 const langToItems = (languages, doc) => {
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  const locale = getSupportedLocale(languages)
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyFrom)
     .sort((a, b) => {
@@ -103,7 +121,7 @@ const langToItems = (languages, doc) => {
 const langFromMenus = (languages, doc) => {
   const toItemsPopup = doc.createElement('menupopup')
   langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item))
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
+  const locale = getSupportedLocale(languages)
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyTo)
     .sort((a, b) => {
@@ -217,7 +235,7 @@ const initMenu = (win, languages) => {
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const locale = ps.getLocalized('general.useragent.locale', 'en')
+    const locale = getSupportedLocale(languages)
     const from = detected ? languages[detected][locale] : currentFrom(languages)
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
