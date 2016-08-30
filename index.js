@@ -40,19 +40,19 @@ const format = (origStr, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
 )
 
-// Find a supported locale for the translated language names. First try the
-// browser's locale. If it isn't supported, try without a region code if it is,
-// otherwise return 'en'. A support for a locale is determined by having a
-// translation for the 'auto' string, this means that a new locale must be
-// complete, all the language names must be translated.
+// Find a supported locale for the translated language names. Test the locale
+// support with the whole locale string, then without a dialect, then without a
+// region. If none is supported, return 'en'.
+// A support for a locale is determined by having a translation for the 'auto'
+// string, this means that a new locale must be complete, all the language
+// names must be translated.
 const getSupportedLocale = (languages) => {
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
-  if (languages.auto[locale]) {
-    return locale
-  }
-  const i = locale.indexOf('-')
-  if (i !== -1) {
-    return locale.substring(0, i)
+  let locale = ps.getLocalized('general.useragent.locale', 'en')
+  while (locale.length > 0) {
+    if (languages.auto[locale]) {
+      return locale
+    }
+    locale = locale.replace(/-?[^-]+$/, '')
   }
   return 'en'
 }
