@@ -73,21 +73,19 @@ const eltCreator = doc => (name, props, attrs, parent) => {
   return elt
 }
 
-const cmpLanguages = (a, b, languages, locale) => {
-  if (_(a) < _(b))
+const cmpLanguages = (a, b) => {
+  if (a === 'auto')
     return -1
-  if (_(a) > _(b))
+  else if (b === 'auto')
     return 1
-  return 0
+  else
+    return _(a).localeCompare(_(b))
 }
 
 const langToItems = (languages, doc) => {
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyFrom)
-    .sort((a, b) => {
-      return cmpLanguages(a, b, languages, locale)
-    })
+    .sort(cmpLanguages)
     .map(lang => {
       const item = doc.createElement('menuitem')
       item.setAttribute('label', _(lang))
@@ -99,15 +97,9 @@ const langToItems = (languages, doc) => {
 const langFromMenus = (languages, doc) => {
   const toItemsPopup = doc.createElement('menupopup')
   langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item))
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyTo)
-    .sort((a, b) => {
-      // Detect language is shown first.
-      if (a === 'auto')
-        return -1
-      return cmpLanguages(a, b, languages, locale)
-    })
+    .sort(cmpLanguages)
     .map(lang => {
       const menu = doc.createElement('menu')
       menu.setAttribute('label', _(lang))
