@@ -43,11 +43,9 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 // Get the From language from the preferences
 const currentFrom = languages => {
   const langCode = sp.prefs.langFrom
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
-  const lang = languages[langCode][locale]
   return {
     code: langCode,
-    name: (lang && (lang.fromName || lang.name)) || null,
+    name: _(langCode)
   }
 }
 
@@ -60,10 +58,9 @@ const currentTo = languages => {
       langCode = locale.replace(/-[a-zA-Z]+$/, '')
     }
   }
-  const lang = languages[langCode][locale]
   return {
     code: langCode,
-    name: (lang && lang.name) || null,
+    name: _(langCode),
   }
 }
 
@@ -77,9 +74,9 @@ const eltCreator = doc => (name, props, attrs, parent) => {
 }
 
 const cmpLanguages = (a, b, languages, locale) => {
-  if (languages[a][locale].name < languages[b][locale].name)
+  if (_(a) < _(b))
     return -1
-  if (languages[a][locale].name > languages[b][locale].name)
+  if (_(a) > _(b))
     return 1
   return 0
 }
@@ -93,8 +90,7 @@ const langToItems = (languages, doc) => {
     })
     .map(lang => {
       const item = doc.createElement('menuitem')
-      item.setAttribute('label',
-        languages[lang][locale].toName || languages[lang][locale].name)
+      item.setAttribute('label', _(lang))
       item.setAttribute('data-gtranslate-to', lang)
       return item
     })
@@ -114,10 +110,7 @@ const langFromMenus = (languages, doc) => {
     })
     .map(lang => {
       const menu = doc.createElement('menu')
-      menu.setAttribute(
-        'label', languages[lang][locale].fromName ||
-          languages[lang][locale].name
-      )
+      menu.setAttribute('label', _(lang))
       menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
       return menu
@@ -218,15 +211,15 @@ const initMenu = (win, languages) => {
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
     const locale = ps.getLocalized('general.useragent.locale', 'en')
-    const from = detected ? languages[detected][locale] : currentFrom(languages)
+    const from = detected ? detected : currentFrom(languages).code
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
-      from.name + (detected ? _('language_detected') : ''),
+      _(from) + (detected ? _('language_detected') : ''),
       to.name
     ))
     translatePage.setAttribute('label', format(
-      LABEL_TRANSLATE_PAGE, from.code, to.code
+      LABEL_TRANSLATE_PAGE, from, to.code
     ))
   }
 
