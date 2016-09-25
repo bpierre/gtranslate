@@ -42,11 +42,7 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 
 // Get the From language from the preferences
 const currentFrom = languages => {
-  const langCode = sp.prefs.langFrom
-  return {
-    code: langCode,
-    name: _(langCode)
-  }
+  return sp.prefs.langFrom
 }
 
 // Get the To language from the preferences
@@ -58,10 +54,7 @@ const currentTo = languages => {
       langCode = locale.replace(/-[a-zA-Z]+$/, '')
     }
   }
-  return {
-    code: langCode,
-    name: _(langCode),
-  }
+  return langCode
 }
 
 // Utility function to create elements
@@ -203,15 +196,15 @@ const initMenu = (win, languages) => {
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
     const locale = ps.getLocalized('general.useragent.locale', 'en')
-    const from = detected ? detected : currentFrom(languages).code
+    const from = detected ? detected : currentFrom(languages)
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
       _(from) + (detected ? _('language_detected') : ''),
-      to.name
+      _(to)
     ))
     translatePage.setAttribute('label', format(
-      LABEL_TRANSLATE_PAGE, from, to.code
+      LABEL_TRANSLATE_PAGE, from, to
     ))
   }
 
@@ -223,8 +216,8 @@ const initMenu = (win, languages) => {
     for (let checkedElt of checkedElts) checkedElt.removeAttribute('checked')
 
     // Check
-    const from = currentFrom(languages).code
-    const to = currentTo(languages).code
+    const from = currentFrom(languages)
+    const to = currentTo(languages)
     const fromSel = `[data-gtranslate-from="${from}"]`
     const toSel = `[data-gtranslate-to="${to}"]`
     const fromMenu = fromPopup.querySelector(fromSel)
@@ -269,8 +262,8 @@ const initMenu = (win, languages) => {
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
-    const fromCode = currentFrom(languages).code
-    const toCode = currentTo(languages).code
+    const fromCode = currentFrom(languages)
+    const toCode = currentTo(languages)
     translate(fromCode, toCode, selection, res => {
       switch (sp.prefs.dictionaryPref) {
       case 'A':
@@ -328,8 +321,8 @@ const initMenu = (win, languages) => {
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const from = currentFrom(languages).code
-    const to = currentTo(languages).code
+    const from = currentFrom(languages)
+    const to = currentTo(languages)
 
     // Open the translation page
     if (target === result) {
