@@ -5,12 +5,6 @@ const self = require('sdk/self')
 const sp = require('sdk/simple-prefs')
 const ps = require('sdk/preferences/service')
 const tabs = require('sdk/tabs')
-const {
-  translate,
-  translateUrl,
-  translatePageUrl,
-  LABEL_TRANSLATE_ERROR,
-} = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
@@ -18,13 +12,12 @@ const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
 const clipboard = require('sdk/clipboard')
 const _ = require('sdk/l10n').get
-
-// Context Menu
-const LABEL_LOADING = _('fetch_translation')
-const LABEL_TRANSLATE = _('translate')
-const LABEL_TRANSLATE_PAGE = _('translate_page')
-const LABEL_CHANGE_LANGUAGES = _('change_languages')
-const LABEL_CLIPBOARD = _('copy_to_clipboard')
+const {
+  translate,
+  translateUrl,
+  translatePageUrl,
+  LABEL_TRANSLATE_ERROR,
+} = require('./providers/google-translate')
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -157,18 +150,18 @@ const initMenu = (win, languages) => {
   const translateMenu = elt(
     'menu',
     { className: 'menu-iconic', id: 'context-gtranslate' },
-    { label: LABEL_TRANSLATE, image: self.data.url('menuitem.svg') }
+    { label: _('translate'), image: self.data.url('menuitem.svg') }
   )
   const translatePage = elt(
     'menuitem', { className: 'menuitem-iconic'},
-    { label: LABEL_TRANSLATE_PAGE, image: self.data.url('menuitem.svg') }
+    { label: _('translate_page'), image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
 
   const result = elt('menuitem', null, null, translatePopup)
   elt('menuseparator', null, null, translatePopup)
   const clipboardItem = elt(
-    'menuitem', null, { label: LABEL_CLIPBOARD },
+    'menuitem', null, { label: _('copy_to_clipboard') },
     translatePopup
   )
   const langMenu = elt('menu', null, null, translatePopup)
@@ -183,9 +176,9 @@ const initMenu = (win, languages) => {
     } else {
       result.setAttribute('tooltiptext', translation)
     }
-    result.setAttribute('label', translation || LABEL_LOADING)
+    result.setAttribute('label', translation || _('fetch_translation'))
 
-    if (result.label === LABEL_LOADING ||
+    if (result.label === _('fetch_translation') ||
         result.label === LABEL_TRANSLATE_ERROR) {
       clipboardItem.setAttribute('hidden', true)
     } else {
@@ -199,12 +192,12 @@ const initMenu = (win, languages) => {
     const from = detected ? detected : currentFrom(languages)
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
-      LABEL_CHANGE_LANGUAGES,
+      _('change_languages'),
       _(from) + (detected ? _('language_detected') : ''),
       _(to)
     ))
     translatePage.setAttribute('label', format(
-      LABEL_TRANSLATE_PAGE, from, to
+      _('translate_page'), from, to
     ))
   }
 
@@ -248,7 +241,7 @@ const initMenu = (win, languages) => {
     }
 
     if (selection) {
-      translateMenu.setAttribute('label', format(LABEL_TRANSLATE,
+      translateMenu.setAttribute('label', format(_('translate'),
         selection.length > 15 ? selection.substr(0, 15) + '…' : selection
       ))
       updateResult(null)
