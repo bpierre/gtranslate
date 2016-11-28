@@ -34,12 +34,10 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 )
 
 // Get the From language from the preferences
-const currentFrom = languages => {
-  return sp.prefs.langFrom
-}
+const currentFrom = () => sp.prefs.langFrom
 
 // Get the To language from the preferences
-const currentTo = languages => {
+const currentTo = () => {
   let langCode = sp.prefs.langTo
   const locale = ps.getLocalized('general.useragent.locale', 'en')
   if (langCode === 'auto') {
@@ -188,16 +186,17 @@ const initMenu = (win, languages) => {
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
-    const locale = ps.getLocalized('general.useragent.locale', 'en')
-    const from = detected ? detected : currentFrom(languages)
-    const to = currentTo(languages)
+    const from = detected ? detected : currentFrom()
+    const to = currentTo()
     langMenu.setAttribute('label', format(
       _('change_languages'),
       _(from) + (detected ? _('language_detected') : ''),
       _(to)
     ))
     translatePage.setAttribute('label', format(
-      _('translate_page'), from, to
+      _('translate_page'),
+      from,
+      to
     ))
   }
 
@@ -209,8 +208,8 @@ const initMenu = (win, languages) => {
     for (let checkedElt of checkedElts) checkedElt.removeAttribute('checked')
 
     // Check
-    const from = currentFrom(languages)
-    const to = currentTo(languages)
+    const from = currentFrom()
+    const to = currentTo()
     const fromSel = `[data-gtranslate-from="${from}"]`
     const toSel = `[data-gtranslate-to="${to}"]`
     const fromMenu = fromPopup.querySelector(fromSel)
@@ -255,8 +254,8 @@ const initMenu = (win, languages) => {
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
-    const fromCode = currentFrom(languages)
-    const toCode = currentTo(languages)
+    const fromCode = currentFrom()
+    const toCode = currentTo()
     translate(fromCode, toCode, selection, res => {
       switch (sp.prefs.dictionaryPref) {
       case 'A':
@@ -314,8 +313,8 @@ const initMenu = (win, languages) => {
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const from = currentFrom(languages)
-    const to = currentTo(languages)
+    const from = currentFrom()
+    const to = currentTo()
 
     // Open the translation page
     if (target === result) {
