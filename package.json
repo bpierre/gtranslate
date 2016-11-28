@@ -21,7 +21,10 @@
     "firefox": ">=38.0",
     "fennec": ">=38.0"
   },
-  "permissions": { "private-browsing": true },
+  "permissions": {
+    "private-browsing": true,
+    "multiprocess": true
+  },
   "preferences": [
     { "type": "string", "title": "langFrom", "name": "langFrom", "value": "auto", "hidden": true },
     { "type": "string", "title": "langTo", "name": "langTo", "value": "auto", "hidden": true },
