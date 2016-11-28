@@ -51,7 +51,7 @@
       "fi": {
           "description": "gtranslate on lisäosa Firefoxille, joka kääntää valitun tekstin käyttäen Google Kääntäjää.\n\ngtranslate:lla voit kääntää mitä vain sivulla olevaa tekstiä valitsemalla sen ja painamalla hiiren oikeanpuoleista nappia. Lisäosa käyttää Google Kääntäjä -palvelua tekstin kääntämiseen.\n\ngtranslate ei liity Google oy.:n millään tavalla.\n\nOminaisuudet:\n\tTuetut kielet: afrikaans, albania, amhara, arabia, armenia, azeri, baski, bengali, bosnia, bulgaria, burma, cebu, englanti, espanja, esperanto, friisi, galicia, gruusia, gujarati, haitinkreoli, hausa, havaiji, heprea, hindi, hmong, hollanti, igbo, iiri, indonesia, islanti, italia, jaava, japani, jiddiš, joruba, kannada, katalaani, kazakki, khmer, kiina, kiina (perinteinen), kiina (yksinkert.), korea, korsika, kreikka, kroatia, kurdi, kymri, kyrgyz, lao, latina, latvia, liettua, luxemburg, makedonia, malagasy, malaiji, malayalam, malta, maori, marathi, mongolia, nepali, njandža, norja, pashto, persia, portugali, punjabi, puola, ranska, romania, ruotsi, saksa, samoa, serbia, sesotho, shona, sindhi, sinhali, skottigaeli, slovakia, slovenia, somali, sundaneesi, suomi, swahili, tadžikki, tagalog, tamili, tanska, telugu, thai, tsekki, turkki, ukraina, unkari, urdu, uzbekki, valkovenäjä, venäjä, vietnam, viro, xhosa ja zulu.\n\tTunnista kieli automaattisesti.\n\tKuvien kuvaukset ja linkit voidaan myös kääntää."
       },
-      "fr-FR": {
+      "fr": {
           "description": "gtranslate est une extension Firefox qui traduit le texte selectionné via Google Translate."
       }
   }
