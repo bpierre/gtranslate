@@ -9,12 +9,14 @@ const {
   translate,
   translateUrl,
   translatePageUrl,
+  LABEL_TRANSLATE_ERROR,
 } = require('./providers/google-translate')
 const { getMostRecentBrowserWindow } = require('sdk/window/utils')
 const addonUnload = require('sdk/system/unload')
 const windows = require('sdk/windows').browserWindows
 const { viewFor } = require('sdk/view/core')
 const request = require('sdk/request').Request
+const clipboard = require('sdk/clipboard')
 const _ = require('sdk/l10n').get
 
 // Context Menu
@@ -22,6 +24,7 @@ const LABEL_LOADING = _('fetch_translation')
 const LABEL_TRANSLATE = _('translate')
 const LABEL_TRANSLATE_PAGE = _('translate_page')
 const LABEL_CHANGE_LANGUAGES = _('change_languages')
+const LABEL_CLIPBOARD = _('copy_to_clipboard')
 
 // Get the available languages
 const getLanguages = () => new Promise((resolve) => {
@@ -39,13 +42,7 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 
 // Get the From language from the preferences
 const currentFrom = languages => {
-  const langCode = sp.prefs.langFrom
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
-  const lang = languages[langCode][locale]
-  return {
-    code: langCode,
-    name: (lang && (lang.fromName || lang.name)) || null,
-  }
+  return sp.prefs.langFrom
 }
 
 // Get the To language from the preferences
@@ -57,11 +54,7 @@ const currentTo = languages => {
       langCode = locale.replace(/-[a-zA-Z]+$/, '')
     }
   }
-  const lang = languages[langCode][locale]
-  return {
-    code: langCode,
-    name: (lang && lang.name) || null,
-  }
+  return langCode
 }
 
 // Utility function to create elements
@@ -73,25 +66,22 @@ const eltCreator = doc => (name, props, attrs, parent) => {
   return elt
 }
 
-const cmpLanguages = (a, b, languages, locale) => {
-  if (languages[a][locale].name < languages[b][locale].name)
+const cmpLanguages = (a, b) => {
+  if (a === 'auto')
     return -1
-  if (languages[a][locale].name > languages[b][locale].name)
+  else if (b === 'auto')
     return 1
-  return 0
+  else
+    return _(a).localeCompare(_(b))
 }
 
 const langToItems = (languages, doc) => {
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyFrom)
-    .sort((a, b) => {
-      return cmpLanguages(a, b, languages, locale)
-    })
+    .sort(cmpLanguages)
     .map(lang => {
       const item = doc.createElement('menuitem')
-      item.setAttribute('label',
-        languages[lang][locale].toName || languages[lang][locale].name)
+      item.setAttribute('label', _(lang))
       item.setAttribute('data-gtranslate-to', lang)
       return item
     })
@@ -100,21 +90,12 @@ const langToItems = (languages, doc) => {
 const langFromMenus = (languages, doc) => {
   const toItemsPopup = doc.createElement('menupopup')
   langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item))
-  const locale = ps.getLocalized('general.useragent.locale', 'en')
   return Object.keys(languages)
     .filter(lang => !languages[lang].onlyTo)
-    .sort((a, b) => {
-      // Detect language is shown first.
-      if (a === 'auto')
-        return -1
-      return cmpLanguages(a, b, languages, locale)
-    })
+    .sort(cmpLanguages)
     .map(lang => {
       const menu = doc.createElement('menu')
-      menu.setAttribute(
-        'label', languages[lang][locale].fromName ||
-          languages[lang][locale].name
-      )
+      menu.setAttribute('label', _(lang))
       menu.setAttribute('data-gtranslate-from', lang)
       menu.appendChild(toItemsPopup.cloneNode(true))
       return menu
@@ -186,6 +167,10 @@ const initMenu = (win, languages) => {
 
   const result = elt('menuitem', null, null, translatePopup)
   elt('menuseparator', null, null, translatePopup)
+  const clipboardItem = elt(
+    'menuitem', null, { label: LABEL_CLIPBOARD },
+    translatePopup
+  )
   const langMenu = elt('menu', null, null, translatePopup)
   const fromPopup = elt('menupopup', null, null, langMenu)
   const fromMenus = langFromMenus(languages, doc)
@@ -199,20 +184,27 @@ const initMenu = (win, languages) => {
       result.setAttribute('tooltiptext', translation)
     }
     result.setAttribute('label', translation || LABEL_LOADING)
+
+    if (result.label === LABEL_LOADING ||
+        result.label === LABEL_TRANSLATE_ERROR) {
+      clipboardItem.setAttribute('hidden', true)
+    } else {
+      clipboardItem.setAttribute('hidden', false)
+    }
   }
 
   // Update the languages menu label (“Change Languages […]”)
   const updateLangMenuLabel = detected => {
     const locale = ps.getLocalized('general.useragent.locale', 'en')
-    const from = detected ? languages[detected][locale] : currentFrom(languages)
+    const from = detected ? detected : currentFrom(languages)
     const to = currentTo(languages)
     langMenu.setAttribute('label', format(
       LABEL_CHANGE_LANGUAGES,
-      from.name + (detected ? _('language_detected') : ''),
-      to.name
+      _(from) + (detected ? _('language_detected') : ''),
+      _(to)
     ))
     translatePage.setAttribute('label', format(
-      LABEL_TRANSLATE_PAGE, from.code, to.code
+      LABEL_TRANSLATE_PAGE, from, to
     ))
   }
 
@@ -224,8 +216,8 @@ const initMenu = (win, languages) => {
     for (let checkedElt of checkedElts) checkedElt.removeAttribute('checked')
 
     // Check
-    const from = currentFrom(languages).code
-    const to = currentTo(languages).code
+    const from = currentFrom(languages)
+    const to = currentTo(languages)
     const fromSel = `[data-gtranslate-from="${from}"]`
     const toSel = `[data-gtranslate-to="${to}"]`
     const fromMenu = fromPopup.querySelector(fromSel)
@@ -270,8 +262,8 @@ const initMenu = (win, languages) => {
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
-    const fromCode = currentFrom(languages).code
-    const toCode = currentTo(languages).code
+    const fromCode = currentFrom(languages)
+    const toCode = currentTo(languages)
     translate(fromCode, toCode, selection, res => {
       switch (sp.prefs.dictionaryPref) {
       case 'A':
@@ -329,8 +321,8 @@ const initMenu = (win, languages) => {
   const onContextCommand = event => {
     const target = event.target
     const parent = target.parentNode && target.parentNode.parentNode
-    const from = currentFrom(languages).code
-    const to = currentTo(languages).code
+    const from = currentFrom(languages)
+    const to = currentTo(languages)
 
     // Open the translation page
     if (target === result) {
@@ -352,12 +344,17 @@ const initMenu = (win, languages) => {
     }
   }
 
+  const onClickCopyToClipboard = () => {
+    clipboard.set(result.label)
+  }
+
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
   cmNode.insertBefore(translatePage, inspectorSeparatorElement)
   cmNode.addEventListener('popupshowing', onPopupshowing)
   cmNode.addEventListener('popuphiding', onPopuphiding)
   cmNode.addEventListener('command', onContextCommand)
+  clipboardItem.addEventListener('click', onClickCopyToClipboard)
 
   updateLangMenuChecks()
 
@@ -365,6 +362,7 @@ const initMenu = (win, languages) => {
     cmNode.removeEventListener('popupshowing', onPopupshowing)
     cmNode.removeEventListener('popuphiding', onPopuphiding)
     cmNode.removeEventListener('command', onContextCommand)
+    clipboardItem.removeEventListener('click', onClickCopyToClipboard)
     cmNode.removeChild(translateMenu)
     cmNode.removeChild(translatePage)
   }
