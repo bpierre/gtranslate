@@ -2,8 +2,10 @@
 *.xpi
 dev
 graphics/screenshots
+graphics/logo-original.ai
 test
 .eslintrc
 .gitignore
 .jpmignore
 README.md
+Makefile
