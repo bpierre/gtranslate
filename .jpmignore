@@ -9,3 +9,7 @@ test
 .jpmignore
 README.md
 Makefile
+env.mk
+/node_modules
+/scripts
+.DS_Store
