@@ -124,7 +124,7 @@ const getPopupNode = (win) => (
 // Returns the current selection from a window
 const getSelectionFromWin = (win) => {
   const popupNode = getPopupNode(win)
-  return popupNode? getSelectionFromNode(popupNode) : ''
+  return popupNode ? getSelectionFromNode(popupNode) : ''
 }
 
 // Get active tab url
@@ -192,7 +192,7 @@ const initMenu = (win, languages) => {
   fromMenus.forEach(menu => fromPopup.appendChild(menu))
 
   const updateResult = (translation, dict) => {
-    result.setAttribute('tooltiptext', translation + (dict? '\n' + dict : ''))
+    result.setAttribute('tooltiptext', translation + (dict ? '\n' + dict : ''))
     result.setAttribute('label', translation || _('fetch_translation'))
     clipboardItem.setAttribute('hidden', (
       result.label === _('fetch_translation') ||

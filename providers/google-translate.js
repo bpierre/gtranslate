@@ -90,14 +90,15 @@ function generateToken(a) {
       (0x800 > g ?
          d[e++] = g >> 6 | 192
       :
-         (55296 === (g & 64512) && f + 1 < a.length && 56320 === (a.charCodeAt(f + 1) & 64512) ?
-             (g = 65536 + ((g & 1023) << 10) + (a.charCodeAt(++f) & 1023),
-             d[e++] = g >> 18 | 240,
-             d[e++] = g >> 12 & 0x3f | 0x80)
-         :
-             d[e++] = g >> 12 | 0xe0,
-             d[e++] = g >> 6 & 0x3f | 0x80)
-         , d[e++] = g & 0x3f | 0x80)
+        (55296 === (g & 64512) && f + 1 < a.length && 56320 === (
+          a.charCodeAt(f + 1) & 64512) ?
+            (g = 65536 + ((g & 1023) << 10) + (a.charCodeAt(++f) & 1023),
+            d[e++] = g >> 18 | 240,
+            d[e++] = g >> 12 & 0x3f | 0x80)
+        :
+            d[e++] = g >> 12 | 0xe0,
+            d[e++] = g >> 6 & 0x3f | 0x80)
+        , d[e++] = g & 0x3f | 0x80)
   }
   a = b
   for (let e = 0; e < d.length; e++) {
@@ -166,8 +167,8 @@ function translate(from, to, text, cb) {
   } else {
     request({
       url: apiUrl(from, to, text, false),
-      content: 'q='.concat(encodeURIComponent(text)),
-      headers: { 'Content-Length': 'q='.concat(encodeURIComponent(text)).length },
+      content: 'q=' + encodeURIComponent(text),
+      headers: { 'Content-Length': ('q=' + encodeURIComponent(text)).length },
       onComplete,
     }).post()
   }
