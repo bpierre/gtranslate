@@ -94,7 +94,7 @@ const langFromMenus = (languages, doc) => {
 }
 
 // Returns the current selection based on the active node
-const getSelectionFromNode = node => {
+const getSelectionFromNode = (node) => {
   const contentWin = node.ownerDocument.defaultView
   const name = node.nodeName.toLowerCase()
   const text = contentWin.getSelection().toString().trim()
@@ -173,7 +173,8 @@ const initMenu = (win, languages) => {
     { label: _('translate'), image: self.data.url('menuitem.svg') }
   )
   const translatePage = elt(
-    'menuitem', { className: 'menuitem-iconic'},
+    'menuitem',
+    { className: 'menuitem-iconic'},
     { label: _('translate_page'), image: self.data.url('menuitem.svg') }
   )
   const translatePopup = elt('menupopup', null, null, translateMenu)
@@ -191,19 +192,12 @@ const initMenu = (win, languages) => {
   fromMenus.forEach(menu => fromPopup.appendChild(menu))
 
   const updateResult = (translation, dict) => {
-    if (dict) {
-      result.setAttribute('tooltiptext', translation + '\n' + dict)
-    } else {
-      result.setAttribute('tooltiptext', translation)
-    }
+    result.setAttribute('tooltiptext', translation + (dict? '\n' + dict : ''))
     result.setAttribute('label', translation || _('fetch_translation'))
-
-    if (result.label === _('fetch_translation') ||
-        result.label === LABEL_TRANSLATE_ERROR) {
-      clipboardItem.setAttribute('hidden', true)
-    } else {
-      clipboardItem.setAttribute('hidden', false)
-    }
+    clipboardItem.setAttribute('hidden', (
+      result.label === _('fetch_translation') ||
+      result.label === LABEL_TRANSLATE_ERROR
+    ))
   }
 
   // Update the languages menu label (“Change Languages […]”)
@@ -241,12 +235,6 @@ const initMenu = (win, languages) => {
       toItem.setAttribute('checked', true)
     }
   }
-
-  // Update the menu when the preferences are updated
-  sp.on('', () => {
-    updateLangMenuLabel()
-    updateLangMenuChecks()
-  })
 
   // Show the context menupopup
   const showContextMenu = () => {
@@ -363,6 +351,12 @@ const initMenu = (win, languages) => {
   const onClickCopyToClipboard = () => {
     clipboard.set(result.label)
   }
+
+  // Update the menu when the preferences are updated
+  sp.on('', () => {
+    updateLangMenuLabel()
+    updateLangMenuChecks()
+  })
 
   const inspectorSeparatorElement = doc.getElementById('inspect-separator')
   cmNode.insertBefore(translateMenu, inspectorSeparatorElement)
