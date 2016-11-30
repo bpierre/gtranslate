@@ -111,7 +111,7 @@ const getSelectionFromNode = node => {
     return node.textContent || node.title || null
   }
   if (name === 'img') {
-    return node.alt || node.title || null
+    return (node.alt !== node.src && node.alt) || node.title || null
   }
   return null
 }
