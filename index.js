@@ -116,10 +116,15 @@ const getSelectionFromNode = node => {
   return null
 }
 
+// Returns the popupNode of a window or null
+const getPopupNode = (win) => (
+  win.gContextMenuContentData.popupNode || null
+)
+
 // Returns the current selection from a window
-const getSelectionFromWin = win => {
-  const popupNode = win.gContextMenuContentData.popupNode
-  return (popupNode && getSelectionFromNode(popupNode)) || ''
+const getSelectionFromWin = (win) => {
+  const popupNode = getPopupNode(win)
+  return popupNode? getSelectionFromNode(popupNode) : ''
 }
 
 // Get active tab url
@@ -135,6 +140,23 @@ const openTab = url => {
   const browser = getMostRecentBrowserWindow().gBrowser
   const tab = browser.loadOneTab(url, {relatedToCurrent: true})
   browser.selectedTab = tab
+}
+
+// Determines if the page can be translated, by checking if a node is displayed
+// in a special viewer or not (image, video, etc.), and its mime type.
+// For images, the document should be an instance of window.ImageDocument.
+// For other types, we have to check type as the document is an HtmlDocument.
+// node: the node from which the contextual menu has been opened
+// window: the current browser window
+const translatablePage = (node, window) => {
+  const doc = node.ownerDocument
+  const contentType = doc.contentType
+  if (!/^https?:/.test(doc.location.protocol)) return false
+  if (doc instanceof window.ImageDocument) return false
+  if (contentType.startsWith('video')) return false
+  if (contentType.startsWith('audio')) return false
+  if (contentType === 'application/ogg') return false
+  return true
 }
 
 // Add a gtranslate menu on a window
@@ -228,16 +250,18 @@ const initMenu = (win, languages) => {
 
   // Show the context menupopup
   const showContextMenu = () => {
+
     if (selection === '') {
       selection = getSelectionFromWin(win)
     }
+
     translateMenu.setAttribute('hidden', !selection)
-    translatePage.setAttribute(
-      'hidden', selection.length !== 0 || !getCurrentUrl()
-    )
-    if (!sp.prefs.fullPage) {
-      translatePage.setAttribute('hidden', true)
-    }
+    translatePage.setAttribute('hidden', (
+      !!selection ||
+      !getCurrentUrl() ||
+      !translatablePage(getPopupNode(win), win) ||
+      !sp.prefs.fullPage
+    ))
 
     if (selection) {
       translateMenu.setAttribute('label', format(_('translate'),
