@@ -9,6 +9,8 @@
     "icons": {
       "48": "icons/border-48.png"
     },
+    "web_accessible_resources": ["data/languages.json", "data/menuitem.svg"],
+    "default_locale": "en",
 
     "applications": {
 	"gecko": {

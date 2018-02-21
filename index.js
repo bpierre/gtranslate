@@ -5,7 +5,8 @@ const sp = browser.storage.sync;
 
 // Get the available languages
 async function getLanguages () {
-    const response = await fetch(browser.extension.getURL('languages.json'));
+    const url = browser.extension.getURL('data/languages.json');
+    const response = await fetch(url);
     return response.json();
 };
 
@@ -398,7 +399,4 @@ getLanguages().then(languages => {
 
     // Init new instances on startup
     browser.windows.getAll().then(windows => windows.forEach(initWin));
-
-    // When the addon is unloaded, destroy all gtranslate instances
-    //  addonUnload.when(() => destroyFns.forEach(fn => fn()));
 });
