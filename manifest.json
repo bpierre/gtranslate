@@ -1,15 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "gtranslate",
-  "version": "0.15.0",
-  "homepage_url": "https://addons.mozilla.org/firefox/addon/gtranslate/",
-  "author": "Pau Tomàs (https://github.com/pautomas)",
-  "description": "Translates the selected text using Google Translate.",
-    "permissions": ["menus", "storage"],
-  "icons": {
-    "48": "icons/border-48.png"
-  },
-
+    "manifest_version": 2,
+    "name": "gtranslate",
+    "version": "0.15.0",
+    "homepage_url": "https://addons.mozilla.org/firefox/addon/gtranslate/",
+    "author": "Pau Tomàs (https://github.com/pautomas)",
+    "description": "Translates the selected text using Google Translate.",
+    "description": "__MSG_extensionDescription__",
+    "permissions": ["menus", "storage", "tabs"],
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+    "default_locale": "en-US",
     "applications": {
 	"gecko": {
 	    "id": "{aff87fa2-a58e-4edd-b852-0a20203c1e17}"

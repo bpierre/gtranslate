@@ -1,16 +1,9 @@
-/* global require,browser */
+/* global require,browser,fetch */
 'use strict';
 
 const sp = browser.storage.sync;
-const ps = require('sdk/preferences/service');
-const tabs = require('sdk/tabs');
-const { getMostRecentBrowserWindow } = require('sdk/window/utils');
 const addonUnload = require('sdk/system/unload');
-const windows = require('sdk/windows').browserWindows;
-const { viewFor } = require('sdk/view/core');
-const request = require('sdk/request').Request;
-const clipboard = require('sdk/clipboard');
-const _ = require('sdk/l10n').get;
+const _ = browser.i18n.getMessage;
 const {
   translate,
   translateUrl,
@@ -19,12 +12,9 @@ const {
 } = require('./providers/google-translate');
 
 // Get the available languages
-const getLanguages = () => new Promise((resolve) => {
-  request({
-    url: browser.extension.getURL('languages.json'),
-    overrideMimeType: 'application/json',
-    onComplete: response => resolve(response.json),
-  }).get();
+async function getLanguages () {
+    const response = await fetch(browser.extension.getURL('languages.json'));
+    return response.json();
 });
 
 // Replace params in a string à la Python str.format()
@@ -36,7 +26,7 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 // Get the To language from the preferences
 async function currentTo() => {
     let langCode = await sp.get("langTo");
-    const locale = ps.getLocalized('general.useragent.locale', 'en');
+    const locale = browser.i18n.getUILanguage();
   if (langCode === 'auto') {
     if (!locale.startsWith('zh')) {
 	langCode = locale.replace(/-[a-zA-Z]+$/, '');
@@ -54,6 +44,36 @@ const eltCreator = doc => (name, props, attrs, parent) => {
     return elt;
 };
 
+// Copy text to clipboard. Creates an invisible element because the API only allows for selected text
+function copyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.style.position = 'fixed';
+  textArea.style.top = 0;
+  textArea.style.left = 0;
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+  textArea.style.padding = 0;
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+  textArea.style.background = 'transparent';
+
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+
+  document.body.removeChild(textArea);
+}
+
+
 const cmpLanguages = (a, b) => {
   if (a === 'auto')
       return -1;
@@ -61,7 +81,7 @@ const cmpLanguages = (a, b) => {
       return 1;
   else
       return _(a).localeCompare(_(b));
-}
+};
 
 const langToItems = (languages, doc) => {
   return Object.keys(languages)
@@ -73,7 +93,7 @@ const langToItems = (languages, doc) => {
 	item.setAttribute('data-gtranslate-to', lang);
 	return item;
     });
-}
+};
 
 const langFromMenus = (languages, doc) => {
     const toItemsPopup = doc.createElement('menupopup');
@@ -126,18 +146,19 @@ const getSelectionFromWin = (win) => {
 
 // Get active tab url
 const getCurrentUrl = () => {
-    if (tabs.length === 0) return null;
-    const currentUrl = tabs.activeTab.url;
+    const currentUrl = browser.tabs.getCurrent().url;
     if (currentUrl.startsWith('about:')) return null;
     return currentUrl;
-}
+};
 
 // Open a new tab near to the active tab
 const openTab = url => {
-    const browser = getMostRecentBrowserWindow().gBrowser;
-    const tab = browser.loadOneTab(url, {relatedToCurrent: true});
-    browser.selectedTab = tab;
-}
+    const currentTab = browser.tabs.getCurrent();
+    browser.tabs.create({url: url,
+			 active: true,
+			 openerTabId: currentTab.id,
+			 index: currentTab.index + 1});
+};
 
 // Determines if the page can be translated, by checking if a node is displayed
 // in a special viewer or not (image, video, etc.), and its mime type.
@@ -343,7 +364,7 @@ const initMenu = (win, languages) => {
   };
 
   const onClickCopyToClipboard = () => {
-      clipboard.set(result.label);
+      copyTextToClipboard(result.label);
   };
 
     // Update the menu when the preferences are updated
@@ -376,15 +397,15 @@ const initMenu = (win, languages) => {
 getLanguages().then(languages => {
     const destroyFns = [];
   const initWin = sdkWin => {
-      const destroy = initMenu(viewFor(sdkWin), languages);
+      const destroy = initMenu(sdkWin, languages);
       if (destroy) destroyFns.push(destroy);
   };
 
   // Init an instance when a new window is opened
-    windows.on('open', initWin);
+    browser.windows.onCreated.addListener(initWin);
 
-  // Init new instances on startup
-    Array.from(windows).forEach(initWin);
+    // Init new instances on startup
+    browser.windows.getAll().then(windows => windows.forEach(initWin));
 
   // When the addon is unloaded, destroy all gtranslate instances
     addonUnload.when(() => destroyFns.forEach(fn => fn()));
