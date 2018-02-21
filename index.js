@@ -2,7 +2,6 @@
 'use strict';
 
 const sp = browser.storage.sync;
-const addonUnload = require('sdk/system/unload');
 const _ = browser.i18n.getMessage;
 const {
   translate,
@@ -396,17 +395,17 @@ const initMenu = (win, languages) => {
 // Init the addon
 getLanguages().then(languages => {
     const destroyFns = [];
-  const initWin = sdkWin => {
+    const initWin = sdkWin => {
       const destroy = initMenu(sdkWin, languages);
       if (destroy) destroyFns.push(destroy);
-  };
-
-  // Init an instance when a new window is opened
+    };
+    
+    // Init an instance when a new window is opened
     browser.windows.onCreated.addListener(initWin);
 
     // Init new instances on startup
     browser.windows.getAll().then(windows => windows.forEach(initWin));
 
-  // When the addon is unloaded, destroy all gtranslate instances
-    addonUnload.when(() => destroyFns.forEach(fn => fn()));
+    // When the addon is unloaded, destroy all gtranslate instances
+    //  addonUnload.when(() => destroyFns.forEach(fn => fn()));
 });
