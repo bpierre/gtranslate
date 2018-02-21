@@ -22,3 +22,4 @@ Mozilla Public License 2.0
 - Bruce Bujon / [@PerfectSlayer](https://github.com/PerfectSlayer)
 - [@tx9191](https://github.com/tx9191)
 - [@fluks](https://github.com/fluks)
+- Márton Marczell (https://github.com/marczellm)
