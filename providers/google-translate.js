@@ -1,8 +1,7 @@
-/* global require,exports,console */
+/* global exports, console, fetch, browser */
 'use strict';
 
-const request = require('sdk/request').Request;
-const _ = require('sdk/l10n').get;
+const _ = browser.i18n.getMessage;
 
 const LABEL_TRANSLATE_ERROR = _('google_translate_error');
 
@@ -159,22 +158,14 @@ function translate(from, to, text, cb) {
 
   // Far below what google's cutoff is to decide
   // to use get or post, but post works anyway.
-  if (text.length < 200 ) {
-    request({
-      url: apiUrl(from, to, text, true),
-      onComplete,
-    }).get();
-  } else {
-    request({
-      url: apiUrl(from, to, text, false),
-      content: 'q=' + encodeURIComponent(text),
-      headers: { 'Content-Length': ('q=' + encodeURIComponent(text)).length },
-      onComplete,
-    }).post();
+    if (text.length < 200 ) {
+	fetch(apiUrl(from, to, text, true)).then(onComplete);
+    } else {
+	const queryString = 'q=' + encodeURIComponent(text);
+	fetch(apiUrl(from, to, text, false), {
+	    body: queryString,
+	    method: "POST",
+	    headers: { 'Content-Length': ('q=' + encodeURIComponent(text)).length }
+	}).then(onComplete);
   }
 }
-
-exports.translate = translate;
-exports.translateUrl = pageUrl;
-exports.translatePageUrl = wholePageUrl;
-exports.LABEL_TRANSLATE_ERROR = LABEL_TRANSLATE_ERROR;

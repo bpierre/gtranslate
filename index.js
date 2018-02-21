@@ -1,20 +1,13 @@
-/* global require,browser,fetch */
+/* global browser, fetch, translate, translateUrl, translatePageUrl, LABEL_TRANSLATE_ERROR, _ */
 'use strict';
 
 const sp = browser.storage.sync;
-const _ = browser.i18n.getMessage;
-const {
-  translate,
-  translateUrl,
-  translatePageUrl,
-  LABEL_TRANSLATE_ERROR,
-} = require('./providers/google-translate');
 
 // Get the available languages
 async function getLanguages () {
     const response = await fetch(browser.extension.getURL('languages.json'));
     return response.json();
-});
+};
 
 // Replace params in a string à la Python str.format()
 const format = (origStr, ...args) => Array.from(args).reduce(
@@ -23,7 +16,7 @@ const format = (origStr, ...args) => Array.from(args).reduce(
 
 
 // Get the To language from the preferences
-async function currentTo() => {
+async function currentTo() {
     let langCode = await sp.get("langTo");
     const locale = browser.i18n.getUILanguage();
   if (langCode === 'auto') {
