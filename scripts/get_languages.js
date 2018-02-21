@@ -1,10 +1,9 @@
-#!/usr/bin/env node
 /* eslint-env node */
-'use strict'
+'use strict';
 
-const https = require('https')
-const cheerio = require('cheerio')
-const fs = require('fs')
+const https = require('https');
+const cheerio = require('cheerio');
+const fs = require('fs');
 
 /** Find longest alias for an option.
  * @param {Object} opts Option aliases.
@@ -13,9 +12,9 @@ const fs = require('fs')
  */
 const findLong = (opts, x) => {
   return opts[x].reduce((prev, curr) => {
-    return prev.length > curr.length ? prev : curr
-  }, x)
-}
+      return prev.length > curr.length ? prev : curr;
+  }, x);
+};
 
 /** Find mutually exclusive arguments.
  * @param {Object} argv Arguments.
@@ -31,11 +30,11 @@ const mutex = (argv, opts, a, b) => {
       .forEach(y => {
         if (argv[x] && argv[y]) {
           throw 'Mutually exclusive arguments ' +
-            `'${findLong(opts, x)}' and '${findLong(opts, y)}'`
+		`'${findLong(opts, x)}' and '${findLong(opts, y)}'`;
         }
-      })
-  })
-}
+      });
+  });
+};
 
 /** Validate command line arguments.
  * @param {Object} argv Arguments.
@@ -44,15 +43,15 @@ const mutex = (argv, opts, a, b) => {
  * @throws If there are invalid arguments.
  */
 const validateArgs = (argv, opts) => {
-  const pMutex = mutex.bind(null, argv, opts)
-  pMutex(['file'], ['list-languages', 'names'])
-  pMutex(['language'], ['list-languages'])
-  const args = ['list-languages', 'names', 'update']
-  pMutex(args, args)
+    const pMutex = mutex.bind(null, argv, opts);
+    pMutex(['file'], ['list-languages', 'names']);
+    pMutex(['language'], ['list-languages']);
+    const args = ['list-languages', 'names', 'update'];
+    pMutex(args, args);
   if (!argv.names && !argv['list-languages'] && !argv.update)
-    throw "'names', 'list-languages' or 'update' option must be given"
+      throw "'names', 'list-languages' or 'update' option must be given";
 
-  return true
+    return true;
 }
 
 const argv = require('yargs')
@@ -89,7 +88,7 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help')
   .strict()
-  .argv
+      .argv;
 
 /** Get language codes mapped to language names.
  * @param {Cheerio} elems Select tag and its children as Cheerio object. From
@@ -98,54 +97,52 @@ const argv = require('yargs')
  * @return {Object}
  */
 const getLanguages = (elems, i) => {
-  const langs = {}
+    const langs = {};
   elems
     .children()
     .slice(i)
     .each((_, e) => {
-      langs[e.attribs.value] = e.children[0].data
-    })
+	langs[e.attribs.value] = e.children[0].data;
+    });
 
-  return langs
-}
+    return langs;
+};
 
 const getFromLanguages = (che) => {
   // First two options are auto and separator, drop them.
-  return getLanguages(che('select#gt-sl'), 2)
-}
+    return getLanguages(che('select#gt-sl'), 2);
+};
 
 const getToLanguages = (che) => {
-  return getLanguages(che('select#gt-tl'), 0)
-}
+    return getLanguages(che('select#gt-tl'), 0);
+};
 
 /** Print supported language ISO codes.
  * @param {Cheerio} che GT page's HTML.
  */
 const listLanguages = (che) => {
-  const from = new Set(Object.keys(getFromLanguages(che)))
-  const to = new Set(Object.keys(getToLanguages(che)))
-  const all = new Set(Array.from(from).concat(Array.from(to)))
+    const from = new Set(Object.keys(getFromLanguages(che)));
+    const to = new Set(Object.keys(getToLanguages(che)));
+    const all = new Set(Array.from(from).concat(Array.from(to)));
   console.log(Array.from(all)
     .sort()
-    .join('\n'))
-}
+	      .join('\n'));
+};
 
 /** Print supported language names in a wanted language.
  * @param {Cheerio} che GT page's HTML.
  */
 const listNames = (che) => {
-  const from = getFromLanguages(che)
-  const all = new Set()
-  Object.keys(from)
-    .forEach(k => all.add(from[k]))
-  const to = getToLanguages(che)
-  Object.keys(to)
-    .forEach(k => all.add(to[k]))
+    const from = getFromLanguages(che);
+    const all = new Set();
+    Object.keys(from).forEach(k => all.add(from[k]));
+    const to = getToLanguages(che);
+    Object.keys(to).forEach(k => all.add(to[k]));
 
   console.log(Array.from(all)
     .sort()
-    .join('\n'))
-}
+	      .join('\n'));
+};
 
 /** Add language names to the languages JSON file or create it. JSON is printed
  * to stdout.
@@ -170,51 +167,51 @@ const listNames = (che) => {
  * @param {String} [file] Languages JSON file.
  */
 const updateLanguages = (che, language, file) => {
-  const langs = file ? JSON.parse(fs.readFileSync(file, 'utf-8')) : {}
+    const langs = file ? JSON.parse(fs.readFileSync(file, 'utf-8')) : {};
 
   // Keep auto.
-  const from = getLanguages(che('select#gt-sl'), 0)
-  delete from.separator
-  const to = getToLanguages(che)
+    const from = getLanguages(che('select#gt-sl'), 0);
+    delete from.separator;
+    const to = getToLanguages(che);
 
   Object.keys(from)
     .forEach(kFrom => {
       // New language supported or creating languages from scratch.
       if (!(kFrom in langs)) {
-        langs[kFrom] = { }
-        langs[kFrom][language] = { name: from[kFrom] }
+          langs[kFrom] = { };
+          langs[kFrom][language] = { name: from[kFrom] };
       } else {
         // New language translation.
         if (!(language in langs[kFrom]))
-          langs[kFrom][language] = { name: from[kFrom] }
+            langs[kFrom][language] = { name: from[kFrom] };
       }
       if (!(kFrom in to))
-        langs[kFrom].onlyFrom = true
+          langs[kFrom].onlyFrom = true;
       else {
         if (from[kFrom] !== to[kFrom])
-          langs[kFrom][language].fromName = from[kFrom]
+            langs[kFrom][language].fromName = from[kFrom];
       }
-    })
+    });
 
   Object.keys(to)
     .forEach(kTo => {
       if (!(kTo in langs)) {
-        langs[kTo] = { }
-        langs[kTo][language] = { name: to[kTo] }
+          langs[kTo] = { };
+          langs[kTo][language] = { name: to[kTo] };
       } else {
         if (!(language in langs[kTo]))
-          langs[kTo][language] = { name: to[kTo] }
+            langs[kTo][language] = { name: to[kTo] };
       }
       if (!(kTo in from))
-        langs[kTo].onlyTo = true
+          langs[kTo].onlyTo = true;
       else {
         if (to[kTo] !== from[kTo])
-          langs[kTo][language].toName = to[kTo]
+            langs[kTo][language].toName = to[kTo];
       }
-    })
+    });
 
-  console.log(JSON.stringify(langs, null, 4))
-}
+    console.log(JSON.stringify(langs, null, 4));
+};
 
 const options = {
   hostname: 'translate.google.com',
@@ -222,29 +219,29 @@ const options = {
     // Without a proper User-Agent, Google doesn't return valid UTF-8?
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0)' +
       'Gecko/20100101 Firefox/47.0',
-    'Accept-Language': argv.language || 'en',
+      'Accept-Language': argv.language || 'en',;
   },
-}
+};
 
 https.get(options, res => {
-  res.setEncoding('UTF-8')
+    res.setEncoding('UTF-8');
 
-  let html = ''
+    let html = '';
   res.on('data', d => {
-    html += d
-  })
+      html += d;
+  });
 
   res.on('end', () => {
-    const che = cheerio.load(html)
+      const che = cheerio.load(html);
 
     if (argv['list-languages']) {
-      listLanguages(che)
+	listLanguages(che);
     } else if (argv.names) {
-      listNames(che)
+	listNames(che);
     } else if (argv.update) {
-      updateLanguages(che, argv.language, argv.file)
+	updateLanguages(che, argv.language, argv.file);
     }
-  })
+  });
 }).on('error', e => {
-  console.error(e)
-})
+    console.error(e);
+});
