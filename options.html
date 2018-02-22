@@ -3,17 +3,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="chrome://browser/content/extension.css">
   </head>
 
   <body>
 
     <form>
-      <div data-l10n-id="fullpage_title"></div>
+      <div class="browser-style">
+	<h4 data-l10n-id="fullpage_title"></h4>
+	<input type="checkbox" id="fullpage_checkbox"></input>
+	<label for="fullpage_checkbox"
+	       data-l10n-id="fullpage_description"></label>
+      </div>
+      
+      <div class="browser-style">
+	<h4 data-l10n-id="dictionarypref_title"></h4>
+	<p data-l10n-id="dictionarypref_description"></p>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio1"></input>
+	<label for="radio1" data-l10n-id="dictionarypref_options.prefer alternative translations"></label>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio2"></input>
+	<label for="radio2" data-l10n-id="dictionarypref_options.prefer dictionary"></label>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio3"></input>
+	<label for="radio3" data-l10n-id="dictionarypref_options.prefer synonyms"></label>
+      </div>
     </form>
-
+    
     <script src="options-l10n.js"></script>
-    <script src="options.js"></script>
+    <script src="options.js"/>
   </body>
-
+  
 </html>
