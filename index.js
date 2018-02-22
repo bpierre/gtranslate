@@ -29,13 +29,15 @@ async function currentTo() {
 };
 
 // Utility function to create elements
-const eltCreator = doc => (name, props, attrs, parent) => {
-    const elt = doc.createElement(name);
-    if (props) Object.keys(props).forEach(p => elt[p] = props[p]);
-    if (attrs) Object.keys(attrs).forEach(a => elt.setAttribute(a, attrs[a]));
-    if (parent) parent.appendChild(elt);
-    return elt;
-};
+function eltCreator(doc) {
+    return (name, props, attrs, parent) => {
+	const elt = doc.createElement(name);
+	if (props) Object.keys(props).forEach(p => elt[p] = props[p]);
+	if (attrs) Object.keys(attrs).forEach(a => elt.setAttribute(a, attrs[a]));
+	if (parent) parent.appendChild(elt);
+	return elt;
+    };
+}
 
 // Copy text to clipboard. Creates an invisible element because the API only allows for selected text
 function copyTextToClipboard(text) {
@@ -65,43 +67,6 @@ function copyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
-
-
-const cmpLanguages = (a, b) => {
-  if (a === 'auto')
-      return -1;
-  else if (b === 'auto')
-      return 1;
-  else
-      return _(a).localeCompare(_(b));
-};
-
-const langToItems = (languages, doc) => {
-  return Object.keys(languages)
-    .filter(lang => !languages[lang].onlyFrom)
-    .sort(cmpLanguages)
-    .map(lang => {
-	const item = doc.createElement('menuitem');
-	item.setAttribute('label', _(lang));
-	item.setAttribute('data-gtranslate-to', lang);
-	return item;
-    });
-};
-
-const langFromMenus = (languages, doc) => {
-    const toItemsPopup = doc.createElement('menupopup');
-    langToItems(languages, doc).forEach(item => toItemsPopup.appendChild(item));
-  return Object.keys(languages)
-    .filter(lang => !languages[lang].onlyTo)
-    .sort(cmpLanguages)
-    .map(lang => {
-	const menu = doc.createElement('menu');
-	menu.setAttribute('label', _(lang));
-	menu.setAttribute('data-gtranslate-from', lang);
-	menu.appendChild(toItemsPopup.cloneNode(true));
-	return menu;
-    });
-};
 
 // Returns the current selection based on the active node
 const getSelectionFromNode = (node) => {
@@ -195,11 +160,7 @@ const initMenu = (win, languages) => {
     'menuitem', null, { label: _('copy_to_clipboard') },
     translatePopup
   );
-    const langMenu = elt('menu', null, null, translatePopup);
-    const fromPopup = elt('menupopup', null, null, langMenu);
-    const fromMenus = langFromMenus(languages, doc);
 
-    fromMenus.forEach(menu => fromPopup.appendChild(menu));
 
   const updateResult = (translation, dict) => {
       result.setAttribute('tooltiptext', translation + (dict ? '\n' + dict : ''));
@@ -210,40 +171,16 @@ const initMenu = (win, languages) => {
     ));
   };
 
-  // Update the languages menu label (“Change Languages […]”)
+  // Update the languages menu label (“Translate from {} to {}”)
     async function updateLangMenuLabel(detected) {
 	const from = detected ? detected : await sp.get("langFrom");
 	const to = await currentTo();
-    langMenu.setAttribute('label', format(
-      _('change_languages'),
-      _(from) + (detected ? _('language_detected') : ''),
-      _(to)
-    ));
-    translatePage.setAttribute('label', format(
-      _('translate_page'),
-      from,
-      to
-    ));
-  };
-
-  // Update the languages menu selection
-  async function updateLangMenuChecks() {
-    // Uncheck
-      const checkedElts = fromPopup.querySelectorAll('[checked]');
-      for (let checkedElt of checkedElts) checkedElt.removeAttribute('checked');
-
-    // Check
-      const from = await sp.get("langFrom");
-      const to = await currentTo();
-      const fromSel = `[data-gtranslate-from="${from}"]`;
-      const toSel = `[data-gtranslate-to="${to}"]`;
-      const fromMenu = fromPopup.querySelector(fromSel);
-      const toItem = fromMenu && fromMenu.querySelector(toSel);
-    if (fromMenu && toItem) {
-	fromMenu.setAttribute('checked', true);
-	toItem.setAttribute('checked', true);
-    }
-  };
+	translatePage.setAttribute('label', format(
+	    _('translate_page'),
+	    from,
+	    to
+	));
+    };
 
   // Show the context menupopup
   async function showContextMenu() {
@@ -363,7 +300,6 @@ const initMenu = (win, languages) => {
     // Update the menu when the preferences are updated
     browser.storage.onChanged.addListener((changes, areaName) => {
       updateLangMenuLabel();
-      updateLangMenuChecks();
   });
 
     const inspectorSeparatorElement = doc.getElementById('inspect-separator');
@@ -373,8 +309,6 @@ const initMenu = (win, languages) => {
     cmNode.addEventListener('popuphiding', onPopuphiding);
     cmNode.addEventListener('command', onContextCommand);
     clipboardItem.addEventListener('click', onClickCopyToClipboard);
-
-    updateLangMenuChecks();
 
   return function destroy() {
       cmNode.removeEventListener('popupshowing', onPopupshowing);

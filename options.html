@@ -18,17 +18,25 @@
       <div class="browser-style">
 	<h4 data-l10n-id="dictionarypref_title"></h4>
 	<p data-l10n-id="dictionarypref_description"></p>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio1"></input>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio1" value="A"></input>
 	<label for="radio1" data-l10n-id="dictionarypref_options.prefer alternative translations"></label>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio2"></input>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio2" value="D"></input>
 	<label for="radio2" data-l10n-id="dictionarypref_options.prefer dictionary"></label>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio3"></input>
+	<input type="radio" name="dictionarypref_radiogroup" id="radio3" value="S"></input>
 	<label for="radio3" data-l10n-id="dictionarypref_options.prefer synonyms"></label>
       </div>
+
+      <div class="browser-style">
+	<h4 data-l10n-id="change_languages"></h4>
+	<select class="browser-style" id="fromlang_dropdown"></select>
+	&gt;
+	<select class="browser-style" id="tolang_dropdown"></select>
+      </div>
+      <button type="submit" class="browser-style">Save</button>
     </form>
     
     <script src="options-l10n.js"></script>
-    <script src="options.js"/>
+    <script src="options.js"></script>
   </body>
   
 </html>
