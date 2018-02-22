@@ -7,7 +7,8 @@
     "description": "__MSG_extensionDescription__",
     "permissions": ["menus", "storage", "tabs"],
     "icons": {
-      "48": "icons/border-48.png"
+	"48": "graphics/logo-no-text.svg",
+	"96": "graphics/logo-no-text.svg"
     },
     "web_accessible_resources": ["data/languages.json", "data/menuitem.svg"],
     "default_locale": "en",
@@ -18,5 +19,6 @@
 	}
     },
 
-    "background": {"scripts": ["providers/google-translate.js", "index.js"]}
+    "background": {"scripts": ["providers/google-translate.js", "index.js"]},
+    "options_ui": {"page": "options.html", "browser_style": true}
 }

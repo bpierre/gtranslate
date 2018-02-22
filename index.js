@@ -180,12 +180,12 @@ const initMenu = (win, languages) => {
   const translateMenu = elt(
     'menu',
     { className: 'menu-iconic', id: 'context-gtranslate' },
-    { label: _('translate'), image: browser.extension.getURL('menuitem.svg') }
+    { label: _('translate'), image: browser.extension.getURL('data/menuitem.svg') }
   );
   const translatePage = elt(
     'menuitem',
     { className: 'menuitem-iconic'},
-      { label: _('translate_page'), image: browser.extension.getURL('menuitem.svg') }
+      { label: _('translate_page'), image: browser.extension.getURL('data/menuitem.svg') }
   );
     const translatePopup = elt('menupopup', null, null, translateMenu);
 
