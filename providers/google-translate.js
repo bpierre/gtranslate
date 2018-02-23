@@ -135,13 +135,13 @@ function apiUrl(from, to, text, includeText) {
     return `${protocol}${host}${path}`;
 }
 
-function pageUrl(from, to, text) {
+function translateUrl(from, to, text) {
     const protocol = 'https://';
     const host = 'translate.google.com';
     return `${protocol}${host}/#${from}/${to}/${encodeURIComponent(text)}`;
 }
 
-function wholePageUrl(from, to, url) {
+function translatePageUrl(from, to, url) {
     const base = 'https://translate.google.com';
     return `${base}/translate?sl=${from}&hl=${to}&u=${encodeURIComponent(url)}`;
 }

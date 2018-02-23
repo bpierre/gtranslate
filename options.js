@@ -1,8 +1,21 @@
-/* global browser */
+/* global browser, fetch */
 
 const $ = document.querySelector.bind(document);
-const main = browser.extension.getBackgroundPage();
-const elt = main.eltCreator(document);
+
+// Utility function to create elements
+function elt(name, props, attrs, parent) {
+    const elt = document.createElement(name);
+    if (props) Object.keys(props).forEach(p => elt[p] = props[p]);
+    if (attrs) Object.keys(attrs).forEach(a => elt.setAttribute(a, attrs[a]));
+    if (parent) parent.appendChild(elt);
+    return elt;
+}
+
+async function getLanguages () {
+    const url = browser.extension.getURL('data/languages.json');
+    const response = await fetch(url);
+    return response.json();
+};
 
 function cmpLanguages(a, b) {
   if (a === 'auto')
@@ -24,7 +37,7 @@ function saveOptions(e) {
 }
 
 async function restoreOptions() {
-    const langs = await main.getLanguages();
+    const langs = await getLanguages();
     const prefs = await browser.storage.sync.get();
     
     Object.keys(langs)

@@ -3,18 +3,20 @@
 
 const sp = browser.storage.sync;
 
-// Get the available languages
-async function getLanguages () {
-    const url = browser.extension.getURL('data/languages.json');
-    const response = await fetch(url);
-    return response.json();
-};
-
 // Replace params in a string à la Python str.format()
 const format = (origStr, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
 );
 
+
+// Open a new tab near to the active tab
+function openTab(url, currentTab) {
+    currentTab = currentTab || browser.tabs.getCurrent();
+    browser.tabs.create({url: url,
+			 active: true,
+			 openerTabId: currentTab.id,
+			 index: currentTab.index + 1});
+};
 
 // Get the To language from the preferences
 async function currentTo() {
@@ -39,33 +41,17 @@ function eltCreator(doc) {
     };
 }
 
-// Copy text to clipboard. Creates an invisible element because the API only allows for selected text
-function copyTextToClipboard(text) {
-  var textArea = document.createElement("textarea");
-  textArea.style.position = 'fixed';
-  textArea.style.top = 0;
-  textArea.style.left = 0;
-  textArea.style.width = '2em';
-  textArea.style.height = '2em';
-  textArea.style.padding = 0;
-  textArea.style.border = 'none';
-  textArea.style.outline = 'none';
-  textArea.style.boxShadow = 'none';
-  textArea.style.background = 'transparent';
-
-  textArea.value = text;
-  document.body.appendChild(textArea);
-  textArea.select();
-
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-
-  document.body.removeChild(textArea);
+// Copy text to clipboard.
+function copyToClipboard(text, html) {
+    function oncopy(event) {
+        document.removeEventListener("copy", oncopy, true);
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        event.clipboardData.setData("text/plain", text);
+        event.clipboardData.setData("text/html", html);
+    }
+    document.addEventListener("copy", oncopy, true);
+    document.execCommand("copy");
 }
 
 // Returns the current selection based on the active node
@@ -109,15 +95,6 @@ const getCurrentUrl = () => {
     return currentUrl;
 };
 
-// Open a new tab near to the active tab
-const openTab = url => {
-    const currentTab = browser.tabs.getCurrent();
-    browser.tabs.create({url: url,
-			 active: true,
-			 openerTabId: currentTab.id,
-			 index: currentTab.index + 1});
-};
-
 // Determines if the page can be translated, by checking if a node is displayed
 // in a special viewer or not (image, video, etc.), and its mime type.
 // For images, the document should be an instance of window.ImageDocument.
@@ -136,7 +113,7 @@ const translatablePage = (node, window) => {
 };
 
 // Add a gtranslate menu on a window
-const initMenu = (win, languages) => {
+const initMenu = (win) => {
     let selection = '';
     const doc = win.document;
     const cmNode = doc.getElementById('contentAreaContextMenu');
@@ -294,7 +271,7 @@ const initMenu = (win, languages) => {
   };
 
   const onClickCopyToClipboard = () => {
-      copyTextToClipboard(result.label);
+      copyToClipboard(result.label);
   };
 
     // Update the menu when the preferences are updated
@@ -321,10 +298,10 @@ const initMenu = (win, languages) => {
 };
 
 // Init the addon
-getLanguages().then(languages => {
+(function() {
     const destroyFns = [];
     const initWin = sdkWin => {
-      const destroy = initMenu(sdkWin, languages);
+      const destroy = initMenu(sdkWin);
       if (destroy) destroyFns.push(destroy);
     };
     
@@ -333,4 +310,4 @@ getLanguages().then(languages => {
 
     // Init new instances on startup
     browser.windows.getAll().then(windows => windows.forEach(initWin));
-});
+})();

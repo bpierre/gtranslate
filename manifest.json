@@ -19,6 +19,6 @@
 	}
     },
 
-    "background": {"scripts": ["providers/google-translate.js", "index.js"]},
+    "background": {"scripts": ["providers/google-translate.js", "background.js"]},
     "options_ui": {"page": "options.html", "browser_style": true}
 }
