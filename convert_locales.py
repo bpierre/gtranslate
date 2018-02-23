@@ -24,7 +24,7 @@ class FakeSecHead:
 
 for x in old.iterdir():
     messages = {}
-    config = ConfigParser()
+    config = ConfigParser(interpolation=None)
     config.read_file(FakeSecHead(open(x, encoding='utf-8')))
     for key, value in config['dummy'].items():
         messages[key] = {'message': value, 'description': ""}

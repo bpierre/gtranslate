@@ -1,13 +1,17 @@
+/* coding: utf-8 */
 /* global browser, translate, translateUrl, translatePageUrl, LABEL_TRANSLATE_ERROR, _ */
 
 const sp = browser.storage.sync;
 
 const translatePageId = 'gtranslate_page';
 const translateMenuId = 'gtranslate_selection';
+const translateLinkId = 'gtranslate_link';
 const resultId = 'gtranslate_result';
+const linkResultId = 'gtranslate_link_result';
 const copyToClipboardId = 'gtranslate_clipboard';
+const copyLinkToClipboardId = 'gtranslate_link_clipboard';
 
-// Replace params in a string a la Python str.format()
+// Replace params in a string à la Python str.format()
 const format = (origStr, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
 );
@@ -24,11 +28,11 @@ function openTab(url, currentTab) {
 async function currentTo(langToPref) {
     let langCode = langToPref || (await sp.get("langTo")).langTo;
     const locale = browser.i18n.getUILanguage();
-  if (langCode === 'auto') {
-    if (!locale.startsWith('zh')) {
-	langCode = locale.replace(/-[a-zA-Z]+$/, '');
+    if (langCode === 'auto') {
+	if (!locale.startsWith('zh')) {
+	    langCode = locale.replace(/-[a-zA-Z]+$/, '');
+	}
     }
-  }
     return langCode;
 };
 
@@ -41,7 +45,7 @@ async function translatePage(info, tab) {
 async function translateSelectionNewTab(info, tab) {
     const from = (await sp.get("langFrom")).langFrom;
     const to = await currentTo();
-    openTab(translateUrl(from, to, info.selectionText || info.linkText));
+    openTab(translateUrl(from, to, info.selectionText || info.linkText), tab);
 }
 
 async function getLangMenuLabel() {
@@ -61,14 +65,95 @@ async function addTranslatePageItem() {
     });
 }
 
+// These functions will be run as injected content scripts
+function copyToClipboard(text, html) {
+    function oncopy(event) {
+        document.removeEventListener("copy", oncopy, true);
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        event.clipboardData.setData("text/plain", text);
+        event.clipboardData.setData("text/html", html);
+    }
+    document.addEventListener("copy", oncopy, true);
+    document.execCommand("copy");
+}
+
+function getSelection() {
+    return document.getSelection().toString().trim();
+}
+
 async function init() {
     if ((await sp.get("fullPage")).fullPage)
 	addTranslatePageItem();
+
+    browser.menus.create({
+	id: translateMenuId,
+	title: _('translate'),
+	icons: {'16': 'data/menuitem.svg'},
+	contexts: ['selection']
+    });
+
+    browser.menus.create({
+	id: resultId,
+	title: _('fetch_translation'),
+	parentId: translateMenuId,
+	onclick: translateSelectionNewTab
+    });
+
+    browser.menus.create({
+	type: 'separator',
+	parentId: translateMenuId
+    });
+    
+    browser.menus.create({
+	id: copyToClipboardId,
+	title: _('copy_to_clipboard'),
+	parentId: translateMenuId
+    });
+
+    browser.menus.create({
+	id: translateLinkId,
+	title: _('translate').replace('“%s”', 'link text'),
+	icons: {'16': 'data/menuitem.svg'},
+	contexts: ['link']
+    });
+
+    browser.menus.create({
+	id: linkResultId,
+	title: _('fetch_translation'),
+	parentId: translateLinkId
+    });
+
+    browser.menus.create({
+	type: 'separator',
+	parentId: translateLinkId
+    });
+    
+    browser.menus.create({
+	id: copyLinkToClipboardId,
+	title: _('copy_to_clipboard'),
+	parentId: translateLinkId
+    });
 }
 
 init();
 
-browser.menus.onShown.addListener((info, tab) => {
+browser.menus.onShown.addListener(async (info, tab) => {
+    if (info.menuIds.includes(resultId)) {
+	const selection = await browser.tabs.executeScript({
+	    code: getSelection.toString() + '\ngetSelection();'
+	});
+	
+	const fromCode = (await sp.get("langFrom")).langFrom;
+	const toCode = await currentTo();
+	const response = await translate(fromCode, toCode, selection[0]);
+	browser.menus.update(resultId, {title: response.translation});
+	browser.menus.refresh();	
+    }
+});
+
+browser.menus.onHidden.addListener(() => {
+    browser.menus.update(resultId, {title: _('fetch_translation')});
 });
 
 browser.storage.onChanged.addListener(async (changes, areaName) => {

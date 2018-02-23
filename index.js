@@ -20,7 +20,7 @@ function openTab(url, currentTab) {
 
 // Get the To language from the preferences
 async function currentTo() {
-    let langCode = await sp.get("langTo");
+    let langCode = (await sp.get("langTo")).langTo;
     const locale = browser.i18n.getUILanguage();
   if (langCode === 'auto') {
     if (!locale.startsWith('zh')) {
@@ -150,7 +150,7 @@ const initMenu = (win) => {
 
   // Update the languages menu label (“Translate from {} to {}”)
     async function updateLangMenuLabel(detected) {
-	const from = detected ? detected : await sp.get("langFrom");
+	const from = detected ? detected : (await sp.get("langFrom")).langFrom;
 	const to = await currentTo();
 	translatePage.setAttribute('label', format(
 	    _('translate_page'),
@@ -170,7 +170,7 @@ const initMenu = (win) => {
       !!selection ||
       !getCurrentUrl() ||
       !translatablePage(getPopupNode(win), win) ||
-	    !await sp.get("fullPage")
+	    !(await sp.get("fullPage")).fullPage
     ));
 
     if (selection) {
@@ -187,9 +187,9 @@ const initMenu = (win) => {
     if (selection === '') {
 	selection = getSelectionFromWin(win);
     }
-      const fromCode = await sp.get("langFrom");
+      const fromCode = (await sp.get("langFrom")).langFrom;
       const toCode = await currentTo();
-      const dictionaryPref = await sp.get("dictionaryPref");
+      const dictionaryPref = (await sp.get("dictionaryPref")).dictionaryPref;
     translate(fromCode, toCode, selection, res => {
 	switch (dictionaryPref) {
       case 'A':
@@ -247,7 +247,7 @@ const initMenu = (win) => {
     async function onContextCommand(event) {
 	const target = event.target;
 	const parent = target.parentNode && target.parentNode.parentNode;
-	const from = await sp.get("langFrom");
+	const from = (await sp.get("langFrom")).langFrom;
 	const to = await currentTo();
 
     // Open the translation page
