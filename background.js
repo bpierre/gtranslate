@@ -11,6 +11,8 @@ const linkResultId = 'gtranslate_link_result';
 const copyToClipboardId = 'gtranslate_clipboard';
 const copyLinkToClipboardId = 'gtranslate_link_clipboard';
 
+var translation = ''; // holds the translation currently visible in context menu
+
 // Replace params in a string à la Python str.format()
 const format = (origStr, ...args) => Array.from(args).reduce(
   (str, arg, i) => str.replace(new RegExp(`\\{${i}\\}`, 'g'), arg), origStr
@@ -65,21 +67,10 @@ async function addTranslatePageItem() {
     });
 }
 
-// These functions will be run as injected content scripts
-function copyToClipboard(text, html) {
-    function oncopy(event) {
-        document.removeEventListener("copy", oncopy, true);
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        event.clipboardData.setData("text/plain", text);
-        event.clipboardData.setData("text/html", html);
-    }
-    document.addEventListener("copy", oncopy, true);
-    document.execCommand("copy");
-}
-
-function getSelection() {
-    return document.getSelection().toString().trim();
+function copyTranslationToClipboard(info) {
+    browser.tabs.executeScript({
+	code: 'copyToClipboard("' + translation + '");'
+    });
 }
 
 async function init() {
@@ -108,31 +99,16 @@ async function init() {
     browser.menus.create({
 	id: copyToClipboardId,
 	title: _('copy_to_clipboard'),
-	parentId: translateMenuId
+	parentId: translateMenuId,
+	onclick: copyTranslationToClipboard
     });
 
     browser.menus.create({
 	id: translateLinkId,
 	title: _('translate').replace('“%s”', 'link text'),
 	icons: {'16': 'data/menuitem.svg'},
-	contexts: ['link']
-    });
-
-    browser.menus.create({
-	id: linkResultId,
-	title: _('fetch_translation'),
-	parentId: translateLinkId
-    });
-
-    browser.menus.create({
-	type: 'separator',
-	parentId: translateLinkId
-    });
-    
-    browser.menus.create({
-	id: copyLinkToClipboardId,
-	title: _('copy_to_clipboard'),
-	parentId: translateLinkId
+	contexts: ['link'],
+	onclick: translateSelectionNewTab
     });
 }
 
@@ -141,19 +117,21 @@ init();
 browser.menus.onShown.addListener(async (info, tab) => {
     if (info.menuIds.includes(resultId)) {
 	const selection = await browser.tabs.executeScript({
-	    code: getSelection.toString() + '\ngetSelection();'
+	    code: 'getSelection();'
 	});
 	
 	const fromCode = (await sp.get("langFrom")).langFrom;
 	const toCode = await currentTo();
 	const response = await translate(fromCode, toCode, selection[0]);
-	browser.menus.update(resultId, {title: response.translation});
+	translation = response.translation;
+	browser.menus.update(resultId, {title: translation});
 	browser.menus.refresh();	
     }
 });
 
 browser.menus.onHidden.addListener(() => {
     browser.menus.update(resultId, {title: _('fetch_translation')});
+    translation = '';
 });
 
 browser.storage.onChanged.addListener(async (changes, areaName) => {
