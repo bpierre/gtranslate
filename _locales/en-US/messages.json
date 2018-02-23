@@ -1,1 +1,62 @@
-{"fullpage_title": {"message": "Full page translation", "description": ""}, "fullpage_description": {"message": "Show gtranslate when no text is selected to translate the full page.", "description": ""}, "dictionarypref_title": {"message": "Extra information", "description": ""}, "dictionarypref_description": {"message": "When translating a single word, prefer the following as extra mouseover information", "description": ""}, "dictionarypref_options.prefer alternative translations": {"message": "Prefer alternative translations", "description": ""}, "dictionarypref_options.prefer dictionary": {"message": "Prefer dictionary", "description": ""}, "dictionarypref_options.prefer synonyms": {"message": "Prefer synonyms", "description": ""}, "fetch_translation": {"message": "Fetching translation…", "description": ""}, "translate": {"message": "Translate “%s”", "description": ""}, "translate_page": {"message": "Translate Page ({0} > {1})", "description": ""}, "change_languages": {"message": "Change Languages", "description": ""}, "language_detected": {"message": "\\ - detected", "description": ""}, "copy_to_clipboard": {"message": "Copy Translation", "description": ""}, "google_translate_error": {"message": "Google Translate Service Error", "description": ""}, "extensiondescription": {"message": "Translates the selected text using Google Translate.", "description": ""}}
+{
+    "fullpage_title": {
+        "message": "Full page translation",
+        "description": ""
+    },
+    "fullpage_description": {
+        "message": "Show gtranslate when no text is selected to translate the full page.",
+        "description": ""
+    },
+    "dictionarypref_title": {
+        "message": "Extra information",
+        "description": ""
+    },
+    "dictionarypref_description": {
+        "message": "When translating a single word, prefer the following as extra mouseover information",
+        "description": ""
+    },
+    "dictionarypref_options.prefer alternative translations": {
+        "message": "Prefer alternative translations",
+        "description": ""
+    },
+    "dictionarypref_options.prefer dictionary": {
+        "message": "Prefer dictionary",
+        "description": ""
+    },
+    "dictionarypref_options.prefer synonyms": {
+        "message": "Prefer synonyms",
+        "description": ""
+    },
+    "fetch_translation": {
+        "message": "Fetching translation…",
+        "description": ""
+    },
+    "translate": {
+        "message": "Translate “%s”",
+        "description": ""
+    },
+    "translate_page": {
+        "message": "Translate Page ({0} > {1})",
+        "description": ""
+    },
+    "change_languages": {
+        "message": "Change Languages",
+        "description": ""
+    },
+    "language_detected": {
+        "message": "\\ - detected",
+        "description": ""
+    },
+    "copy_to_clipboard": {
+        "message": "Copy Translation",
+        "description": ""
+    },
+    "google_translate_error": {
+        "message": "Google Translate Service Error",
+        "description": ""
+    },
+    "extensiondescription": {
+        "message": "Translates the selected text using Google Translate.",
+        "description": ""
+    }
+}
