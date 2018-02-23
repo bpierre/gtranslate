@@ -50,21 +50,26 @@ async function translateSelectionNewTab(info, tab) {
     openTab(translateUrl(from, to, info.selectionText || info.linkText), tab);
 }
 
-async function getLangMenuLabel() {
+async function translatePageItem() {
     const from = (await sp.get("langFrom")).langFrom;
     const to = await currentTo();
-    return format(_('translate_page'), from, to);
-}
-
-async function addTranslatePageItem() {
-    const langMenuLabel = await getLangMenuLabel();
-    browser.menus.create({
+    const label = format(_('translate_page'), from, to);
+    return {
 	id: translatePageId,
-	title: langMenuLabel,
-	icons: {'16': 'data/menuitem.svg'},
+	title: label,
+	icons: {'16': 'graphics/menuitem.svg'},
 	contexts: ['page'],
 	onclick: translatePage
-    });
+    };
+}
+
+function copyToClipboardItem() {     
+    return {
+	id: copyToClipboardId,
+	title: _('copy_to_clipboard'),
+	parentId: translateMenuId,
+	onclick: copyTranslationToClipboard
+    };
 }
 
 function copyTranslationToClipboard(info) {
@@ -75,12 +80,12 @@ function copyTranslationToClipboard(info) {
 
 async function init() {
     if ((await sp.get("fullPage")).fullPage)
-	addTranslatePageItem();
+	browser.menus.create(await translatePageItem());
 
     browser.menus.create({
 	id: translateMenuId,
 	title: _('translate'),
-	icons: {'16': 'data/menuitem.svg'},
+	icons: {'16': 'graphics/menuitem.svg'},
 	contexts: ['selection']
     });
 
@@ -96,17 +101,12 @@ async function init() {
 	parentId: translateMenuId
     });
     
-    browser.menus.create({
-	id: copyToClipboardId,
-	title: _('copy_to_clipboard'),
-	parentId: translateMenuId,
-	onclick: copyTranslationToClipboard
-    });
+    browser.menus.create(copyToClipboardItem());
 
     browser.menus.create({
 	id: translateLinkId,
 	title: _('translate').replace('“%s”', 'link text'),
-	icons: {'16': 'data/menuitem.svg'},
+	icons: {'16': 'graphics/menuitem.svg'},
 	contexts: ['link'],
 	onclick: translateSelectionNewTab
     });
@@ -125,12 +125,16 @@ browser.menus.onShown.addListener(async (info, tab) => {
 	const response = await translate(fromCode, toCode, selection[0]);
 	translation = response.translation;
 	browser.menus.update(resultId, {title: translation});
+	if (translation === LABEL_TRANSLATE_ERROR)
+	    browser.menus.remove(copyToClipboardId);
 	browser.menus.refresh();	
     }
 });
 
 browser.menus.onHidden.addListener(() => {
     browser.menus.update(resultId, {title: _('fetch_translation')});
+    if (translation === LABEL_TRANSLATE_ERROR)	 
+	browser.menus.create(copyToClipboardItem());
     translation = '';
 });
 
@@ -138,7 +142,7 @@ browser.storage.onChanged.addListener(async (changes, areaName) => {
     if (areaName === 'sync') {
 	const fullPage = changes.fullPage;
 	if (!fullPage.oldValue && fullPage.newValue)
-	    addTranslatePageItem();
+	    browser.menus.create(await translatePageItem());
 	else if (fullPage.oldValue && !fullPage.newValue)
 	    browser.menus.remove(translatePageId);
 	else if (fullPage.oldValue && fullPage.newValue) {
