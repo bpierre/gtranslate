@@ -152,7 +152,7 @@ async function translate(from, to, text) {
     
     // Far below what google's cutoff is to decide
     // to use get or post, but post works anyway.
-    if (text.length < 200 ) {
+    if (text.length < 99999999 ) {
 	response = await fetch(apiUrl(from, to, text, true));
     } else {
 	const queryString = 'q=' + encodeURIComponent(text);

@@ -9,6 +9,7 @@ const resultId = 'gtranslate_result';
 const copyToClipboardId = 'gtranslate_clipboard';
 
 var translation = ''; // holds the translation currently visible in context menu
+var translationLines = 0; //holds the number of lines of the translation, equals the number of content menu subitems.
 
 // Replace params in a string à la Python str.format()
 const format = (origStr, ...args) => Array.from(args).reduce(
@@ -103,6 +104,48 @@ async function init() {
 
 init();
 
+async function writeMenus(translatedText) {
+	var chunks = await splita(translatedText, 81);
+	translationLines = chunks.length;
+	for (var i = 0; i < chunks.length; i++) {
+		if(i == 0) {
+			browser.menus.update(resultId, {title: chunks[i]});
+		} else {
+		browser.menus.create({
+			id: resultId + i,
+			parentId: translateMenuId,
+			title: chunks[i],
+			contexts: ["selection"]
+			});
+		}
+	}
+    browser.menus.remove(copyToClipboardId);
+    browser.menus.create(copyToClipboardItem());
+}
+async function splitter(str, l){
+    var strs = [];
+    while(str.length > l){
+        var pos = str.substring(0, l).lastIndexOf(' ');
+        pos = pos <= 0 ? l : pos;
+        strs.push(str.substring(0, pos));
+        var i = str.indexOf(' ', pos)+1;
+        if(i < pos || i > pos+l)
+            i = pos;
+        str = str.substring(i);
+    }
+    strs.push(str);
+    return strs;
+}
+async function splita(str, l) {
+	lines = str.split("\n");
+	var strs = [];
+	for(var i = 0; i < lines.length; i++) {
+		arr = await splitter(lines[i], l);
+		strs.push(...arr);
+	}
+	return strs;
+}
+
 browser.menus.onShown.addListener(async (info, tab) => {
     if (info.menuIds.includes(resultId)) {
 	if (info.contexts.includes('link') && !info.contexts.includes('selection')) {
@@ -112,11 +155,15 @@ browser.menus.onShown.addListener(async (info, tab) => {
 	const fromCode = (await sp.get("langFrom")).langFrom;
 	const toCode = await currentTo();
 	const response = await translate(fromCode, toCode, info.selectionText || info.linkText);
-	translation = response.translation;
-	browser.menus.update(resultId, {title: translation});
+	if(response.alternatives) {
+		translation = response.translation + '\n' + response.alternatives;
+	} else {
+		translation = response.translation;
+	}
+	await writeMenus(translation);
 	if (translation === LABEL_TRANSLATE_ERROR)
 	    browser.menus.remove(copyToClipboardId);
-	browser.menus.refresh();	
+	browser.menus.refresh();
     }
 });
 
@@ -126,6 +173,9 @@ browser.menus.onHidden.addListener(() => {
     if (translation === LABEL_TRANSLATE_ERROR)	 
 	browser.menus.create(copyToClipboardItem());
     translation = '';
+	for (var i = 1; i < translationLines; i++) { //start at 1, don't delete first line.
+		browser.menus.remove(resultId + i);
+	}
 });
 
 browser.storage.onChanged.addListener(async (changes, areaName) => {
