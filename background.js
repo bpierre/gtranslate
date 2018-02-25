@@ -1,15 +1,12 @@
-/* coding: utf-8 */
+/* -*- coding: utf-8 -*- */
 /* global browser, translate, translateUrl, translatePageUrl, LABEL_TRANSLATE_ERROR, _ */
 
 const sp = browser.storage.sync;
 
 const translatePageId = 'gtranslate_page';
 const translateMenuId = 'gtranslate_selection';
-const translateLinkId = 'gtranslate_link';
 const resultId = 'gtranslate_result';
-const linkResultId = 'gtranslate_link_result';
 const copyToClipboardId = 'gtranslate_clipboard';
-const copyLinkToClipboardId = 'gtranslate_link_clipboard';
 
 var translation = ''; // holds the translation currently visible in context menu
 
@@ -86,7 +83,7 @@ async function init() {
 	id: translateMenuId,
 	title: _('translate'),
 	icons: {'16': 'graphics/menuitem.svg'},
-	contexts: ['selection']
+	contexts: ['selection', 'link']
     });
 
     browser.menus.create({
@@ -102,27 +99,19 @@ async function init() {
     });
     
     browser.menus.create(copyToClipboardItem());
-
-    browser.menus.create({
-	id: translateLinkId,
-	title: _('translate').replace('“%s”', 'link text'),
-	icons: {'16': 'graphics/menuitem.svg'},
-	contexts: ['link'],
-	onclick: translateSelectionNewTab
-    });
 }
 
 init();
 
 browser.menus.onShown.addListener(async (info, tab) => {
     if (info.menuIds.includes(resultId)) {
-	const selection = await browser.tabs.executeScript({
-	    code: 'getSelection();'
-	});
-	
+	if (info.contexts.includes('link') && !info.contexts.includes('selection')) {
+	    browser.menus.update(translateMenuId, {title: _('translate').replace('%s', info.linkText)});
+	    browser.menus.refresh();
+	}
 	const fromCode = (await sp.get("langFrom")).langFrom;
 	const toCode = await currentTo();
-	const response = await translate(fromCode, toCode, selection[0]);
+	const response = await translate(fromCode, toCode, info.selectionText || info.linkText);
 	translation = response.translation;
 	browser.menus.update(resultId, {title: translation});
 	if (translation === LABEL_TRANSLATE_ERROR)
@@ -132,6 +121,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
 });
 
 browser.menus.onHidden.addListener(() => {
+    browser.menus.update(translateMenuId, {title: _('translate')});
     browser.menus.update(resultId, {title: _('fetch_translation')});
     if (translation === LABEL_TRANSLATE_ERROR)	 
 	browser.menus.create(copyToClipboardItem());
