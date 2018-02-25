@@ -157,7 +157,12 @@ browser.menus.onShown.addListener(async (info, tab) => {
 	const response = await translate(fromCode, toCode, info.selectionText || info.linkText);
 	if(response.alternatives) {
 		translation = response.translation + '\n' + response.alternatives;
-	} else {
+	}  else if (response.dictionary) {
+          translation = response.translation + '\n' + response.dictionary;
+    } else if (response.synonyms) {
+          translation = response.translation + '\n' + response.synonyms;
+    } 
+	else {
 		translation = response.translation;
 	}
 	await writeMenus(translation);
