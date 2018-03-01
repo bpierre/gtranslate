@@ -159,9 +159,11 @@ async function translate(from, to, text) {
 	response = await fetch(apiUrl(from, to, text, false), {
 	    body: queryString,
 	    method: "POST",
-	    headers: { 'Content-Length': ('q=' + encodeURIComponent(text)).length }
+	    headers: {'Content-Length': queryString.length,
+		      'Content-Type': 'application/x-www-form-urlencoded'}
 	});
     }
+    
     const translation = translationResult(await response.text(), () => {
 	console.log(`[gtranslate] parse error with ${url}`);
     });
