@@ -103,7 +103,12 @@ async function init() {
 
 init();
 
+var lastMenuInstanceId = 0;
+var nextMenuInstanceId = 1;
+
 browser.menus.onShown.addListener(async (info, tab) => {
+    const menuInstanceId = lastMenuInstanceId = nextMenuInstanceId++;
+    
     if (info.menuIds.includes(resultId)) {
 	if (info.contexts.includes('link') && !info.contexts.includes('selection')) {
 	    browser.menus.update(translateMenuId, {title: _('translate').replace('%s', info.linkText)});
@@ -112,6 +117,10 @@ browser.menus.onShown.addListener(async (info, tab) => {
 	const fromCode = (await sp.get("langFrom")).langFrom;
 	const toCode = await currentTo();
 	const response = await translate(fromCode, toCode, info.selectionText || info.linkText);
+	
+	if (menuInstanceId !== lastMenuInstanceId)
+	    return; // Menu was closed in the meantime
+	
 	translation = response.translation;
 	browser.menus.update(resultId, {title: translation});
 	if (translation === LABEL_TRANSLATE_ERROR)
@@ -121,6 +130,8 @@ browser.menus.onShown.addListener(async (info, tab) => {
 });
 
 browser.menus.onHidden.addListener(() => {
+    lastMenuInstanceId = 0;
+    
     browser.menus.update(translateMenuId, {title: _('translate')});
     browser.menus.update(resultId, {title: _('fetch_translation')});
     if (translation === LABEL_TRANSLATE_ERROR)	 

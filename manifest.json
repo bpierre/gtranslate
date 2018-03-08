@@ -5,7 +5,7 @@
     "homepage_url": "https://addons.mozilla.org/firefox/addon/gtranslate/",
     "author": "Pau Tomàs (https://github.com/pautomas)",
     "description": "__MSG_extensionDescription__",
-    "permissions": ["menus", "storage", "activeTab", "tabs", "clipboardWrite", "<all_urls>"],
+    "permissions": ["menus", "storage", "activeTab", "clipboardWrite", "<all_urls>"],
     "icons": {
 	"48": "graphics/logo-no-text.svg",
 	"96": "graphics/logo-no-text.svg"
