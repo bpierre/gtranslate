@@ -31,7 +31,8 @@ function saveOptions(e) {
 	fullPage: $('#fullpage_checkbox').checked,
 	dictionaryPref: $('form').elements['dictionarypref_radiogroup'].value,
 	langFrom: $('#fromlang_dropdown').value,
-	langTo: $('#tolang_dropdown').value
+	langTo: $('#tolang_dropdown').value,
+	extraInfo: $('#extrainfo_checkbox').checked
     });
     e.preventDefault();
 }
@@ -57,6 +58,7 @@ async function restoreOptions() {
     $('form').elements['dictionarypref_radiogroup'].value = prefs.dictionaryPref || "A";
     $('#fromlang_dropdown').value = prefs.langFrom || "auto";
     $('#tolang_dropdown').value = prefs.langTo || "auto";
+    $('#extrainfo_checkbox').checked = prefs.extraInfo || false;
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);

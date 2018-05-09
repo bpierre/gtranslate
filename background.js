@@ -26,32 +26,29 @@ function openTab(url, currentTab) {
 
 // Get the To language from the preferences
 async function currentTo(langToPref) {
-    let langCode = langToPref || (await sp.get("langTo")).langTo;
+    let {langTo=langToPref} = await sp.get("langTo");
     const locale = browser.i18n.getUILanguage();
-    if (langCode === 'auto') {
-	if (!locale.startsWith('zh')) {
-	    langCode = locale.replace(/-[a-zA-Z]+$/, '');
-	}
-    }
-    return langCode;
+    if (langTo === 'auto' && !locale.startsWith('zh'))
+	langTo = locale.replace(/-[a-zA-Z]+$/, '');
+    return langTo;
 };
 
 async function translatePage(info, tab) {
-    const from = (await sp.get("langFrom")).langFrom;
-    const to = await currentTo();
-    openTab(translatePageUrl(from, to, tab.url), tab);
+    const {langFrom} = await sp.get("langFrom");
+    const langTo = await currentTo();
+    openTab(translatePageUrl(langFrom, langTo, tab.url), tab);
 }
 
 async function translateSelectionNewTab(info, tab) {
-    const from = (await sp.get("langFrom")).langFrom;
-    const to = await currentTo();
-    openTab(translateUrl(from, to, info.selectionText || info.linkText), tab);
+    const {langFrom} = await sp.get("langFrom");
+    const langTo = await currentTo();
+    openTab(translateUrl(langFrom, langTo, info.selectionText || info.linkText), tab);
 }
 
 async function translatePageItem() {
-    const from = (await sp.get("langFrom")).langFrom;
-    const to = await currentTo();
-    const label = format(_('translate_page'), from, to);
+    const {langFrom} = await sp.get("langFrom");
+    const langTo = await currentTo();
+    const label = format(_('translate_page'), langFrom, langTo);
     return {
 	id: translatePageId,
 	title: label,
@@ -108,21 +105,25 @@ var lastMenuInstanceId = 0;
 var nextMenuInstanceId = 1;
 
 function writeMenus(translatedText) {
-	var chunks = splita(translatedText, 81);
-	translationLines = chunks.length;
-	for (var i = 0; i < chunks.length; i++) {
-		if(i == 0) {
-			browser.menus.update(resultId, {title: chunks[i]});
-		} else {
-		browser.menus.create({
-			id: resultId + i,
-			parentId: translateMenuId,
-			title: chunks[i],
-			contexts: ["selection"]
-			});
-		}
+    var chunks = splita(translatedText, 81);
+    translationLines = chunks.length;
+    for (var i = 0; i < chunks.length; i++) {
+	if(i == 0) {
+	    browser.menus.update(resultId, {title: chunks[i]});
+	} else {
+	    browser.menus.create({
+		id: resultId + i,
+		parentId: translateMenuId,
+		title: chunks[i],
+		contexts: ["selection"]
+	    });
 	}
+    }
     browser.menus.remove(copyToClipboardId);
+    browser.menus.create({
+	type: 'separator',
+	parentId: translateMenuId
+    });
     browser.menus.create(copyToClipboardItem());
 }
 
@@ -142,13 +143,13 @@ function splitter(str, l){
 }
 
 function splita(str, l) {
-	var lines = str.split("\n");
-	var strs = [];
-	for(var i = 0; i < lines.length; i++) {
-		var arr = splitter(lines[i], l);
-		strs.push(...arr);
-	}
-	return strs;
+    var lines = str.split("\n");
+    var strs = [];
+    for(var i = 0; i < lines.length; i++) {
+	var arr = splitter(lines[i], l);
+	strs.push(...arr);
+    }
+    return strs;
 }
 
 browser.menus.onShown.addListener(async (info, tab) => {
@@ -159,28 +160,50 @@ browser.menus.onShown.addListener(async (info, tab) => {
 	    browser.menus.update(translateMenuId, {title: _('translate').replace('%s', info.linkText)});
 	    browser.menus.refresh();
 	}
-	const fromCode = (await sp.get("langFrom")).langFrom;
-	const toCode = await currentTo();
-	const response = await translate(fromCode, toCode, info.selectionText || info.linkText);
+	const {langFrom, extraInfo, dictionaryPref} = await sp.get(["langFrom", "extraInfo", "dictionaryPref"]);
+	const langTo = await currentTo();
+	const res = await translate(langFrom, langTo, info.selectionText || info.linkText);
 	
 	if (menuInstanceId !== lastMenuInstanceId)
 	    return; // Menu was closed in the meantime
 	
-	translation = response.translation;
-	browser.menus.update(resultId, {title: translation});
-
-	if(response.alternatives) {
-		translation = response.translation + '\n' + response.alternatives;
-	}  else if (response.dictionary) {
-          translation = response.translation + '\n' + response.dictionary;
-	} else if (response.synonyms) {
-          translation = response.translation + '\n' + response.synonyms;
-	} 
-	else {
-		translation = response.translation;
+	if (extraInfo && (res.translation || res.alternatives || res.synonyms)) {
+	    switch (dictionaryPref) {
+	    case 'A':
+		if(res.alternatives) {
+		    translation = res.translation + '\n' + res.alternatives;
+		} else if (res.dictionary) {
+		    translation = res.translation + '\n' + res.dictionary;
+		} else if (res.synonyms) {
+		    translation = res.translation + '\n' + res.synonyms;
+		}
+		break;
+	    case 'D':
+		if(res.dictionary) {
+		    translation = res.translation + '\n' + res.dictionary;
+		} else if (res.alternatives) {
+		    translation = res.translation + '\n' + res.alternatives;
+		} else if (res.synonyms) {
+		    translation = res.translation + '\n' + res.synonyms;
+		}
+		break;
+	    case 'S':
+		if(res.synonyms) {
+		    translation = res.translation + '\n' + res.synonyms;
+		} else if (res.dictionary) {
+		    translation = res.translation + '\n' + res.dictionary;
+		} else if (res.alternatives) {
+		    translation = res.translation + '\n' + res.alternatives;
+		}
+		break;
+	    }
+	    writeMenus(translation);	
 	}
-	await writeMenus(translation);
-
+	else {
+	    translation = res.translation;
+	    browser.menus.update(resultId, {title: translation});	    
+	}
+	
 	if (translation === LABEL_TRANSLATE_ERROR)
 	    browser.menus.remove(copyToClipboardId);
 	browser.menus.refresh();
@@ -195,7 +218,8 @@ browser.menus.onHidden.addListener(() => {
     if (translation === LABEL_TRANSLATE_ERROR)	 
 	browser.menus.create(copyToClipboardItem());
     translation = '';
-    for (var i = 1; i < translationLines; i++) { //start at 1, don't delete first line.
+    
+    for (var i = 1; i < translationLines; i++) {
 	browser.menus.remove(resultId + i);
     }
 });

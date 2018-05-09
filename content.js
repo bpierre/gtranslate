@@ -9,7 +9,3 @@ function copyToClipboard(text, html) {
     document.addEventListener("copy", oncopy, true);
     document.execCommand("copy");
 }
-
-function getSelection() {
-    return document.getSelection().toString().trim();
-}

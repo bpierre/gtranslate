@@ -9,21 +9,24 @@
 
     <form>
       <div class="browser-style">
-	<h4 data-l10n-id="fullpage_title"></h4>
-	<input type="checkbox" id="fullpage_checkbox"></input>
-	<label for="fullpage_checkbox"
-	       data-l10n-id="fullpage_description"></label>
+	<h4 class="browser-style">
+	  <input id="fullpage_checkbox" type="checkbox"></input>
+	  <label for="fullpage_checkbox" data-l10n-id="fullpage_title"></label>
+	</h4>
+	<span data-l10n-id="fullpage_description"></span>
       </div>
       
-      <div class="browser-style" >
-	<!-- This option does not make sense while there is no tooltip functionality -->
-	<h4 data-l10n-id="dictionarypref_title"></h4>
+      <div class="browser-style">
+	<h4 class="browser-style">
+	  <input id="extrainfo_checkbox" type="checkbox"></input>
+	  <label for="extrainfo_checkbox" data-l10n-id="dictionarypref_title"></label>
+	</h4>
 	<p data-l10n-id="dictionarypref_description"></p>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio1" value="A"></input>
+	<input id="radio1" type="radio" name="dictionarypref_radiogroup" value="A"></input>
 	<label for="radio1" data-l10n-id="dictionarypref_options.prefer alternative translations"></label>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio2" value="D"></input>
+	<input id="radio2" type="radio" name="dictionarypref_radiogroup" value="D"></input>
 	<label for="radio2" data-l10n-id="dictionarypref_options.prefer dictionary"></label>
-	<input type="radio" name="dictionarypref_radiogroup" id="radio3" value="S"></input>
+	<input id="radio3" type="radio" name="dictionarypref_radiogroup" value="S"></input>
 	<label for="radio3" data-l10n-id="dictionarypref_options.prefer synonyms"></label>
       </div>
 
