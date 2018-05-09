@@ -1,9 +1,13 @@
 {
     "manifest_version": 2,
-    "name": "gtranslate",
-    "version": "0.15.0",
-    "homepage_url": "https://addons.mozilla.org/firefox/addon/gtranslate/",
-    "author": "Pau Tomàs (https://github.com/pautomas)",
+    "name": "gtranslate-WE",
+    "version": "0.1",
+    "author": "M\u00E1rton Marczell",
+    "homepage_url": "https://github.com/marczellm/gtranslate",
+    "developer": {
+	"name": "M\u00E1rton Marczell",
+	"url": "https://github.com/marczellm/gtranslate"
+    },
     "description": "__MSG_extensionDescription__",
     "permissions": ["menus", "storage", "activeTab", "clipboardWrite", "<all_urls>"],
     "icons": {
@@ -15,7 +19,8 @@
 
     "applications": {
 	"gecko": {
-	    "id": "{aff87fa2-a58e-4edd-b852-0a20203c1e17}"
+	    "id": "{aff87fa2-a58e-4edd-b852-0a20203c1e17}",
+	    "strict_min_version": "60.0"
 	}
     },
 

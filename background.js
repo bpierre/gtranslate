@@ -5,6 +5,7 @@ const sp = browser.storage.sync;
 
 const translatePageId = 'gtranslate_page';
 const translateMenuId = 'gtranslate_selection';
+const separator2Id = 'gtranslate_separator2';
 const resultId = 'gtranslate_result';
 const copyToClipboardId = 'gtranslate_clipboard';
 
@@ -122,7 +123,8 @@ function writeMenus(translatedText) {
     browser.menus.remove(copyToClipboardId);
     browser.menus.create({
 	type: 'separator',
-	parentId: translateMenuId
+	parentId: translateMenuId,
+	id: separator2Id
     });
     browser.menus.create(copyToClipboardItem());
 }
@@ -222,6 +224,7 @@ browser.menus.onHidden.addListener(() => {
     for (var i = 1; i < translationLines; i++) {
 	browser.menus.remove(resultId + i);
     }
+    browser.menus.remove(separator2Id);
 });
 
 browser.storage.onChanged.addListener(async (changes, areaName) => {
