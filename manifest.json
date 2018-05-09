@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "gtranslate-WE",
-    "version": "0.1",
-    "author": "M\u00E1rton Marczell",
-    "homepage_url": "https://github.com/marczellm/gtranslate",
+    "name": "gtranslate",
+    "version": "0.15.0",
+    "author": "Pau Tomàs",
+    "homepage_url": "https://github.com/pautomas",
     "developer": {
-	"name": "M\u00E1rton Marczell",
-	"url": "https://github.com/marczellm/gtranslate"
+	"name": "Pau Tomàs",
+	"url": "https://github.com/pautomas"
     },
     "description": "__MSG_extensionDescription__",
     "permissions": ["menus", "storage", "activeTab", "clipboardWrite", "<all_urls>"],
