@@ -1,3 +1,10 @@
+
+<hr />
+
+gtranslate is no longer an active project, please use [one of the alternatives](https://addons.mozilla.org/en-GB/firefox/search/?q=translation).
+
+<hr />
+
 # gtranslate
 
 gtranslate is a Firefox addon that translates the selected text using Google Translate.
