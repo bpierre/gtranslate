@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Αφρικάανς",
+        "description": ""
+    },
+    "am": {
+        "message": "Αμχαρικά",
+        "description": ""
+    },
+    "ar": {
+        "message": "Αραβικά",
+        "description": ""
+    },
+    "auto": {
+        "message": "Αναγνώριση γλώσσας",
+        "description": ""
+    },
+    "az": {
+        "message": "Αζερμπαϊτζανικά",
+        "description": ""
+    },
+    "be": {
+        "message": "Λευκορωσικά",
+        "description": ""
+    },
+    "bg": {
+        "message": "Βουλγαρικά",
+        "description": ""
+    },
+    "bn": {
+        "message": "Βεγγαλική",
+        "description": ""
+    },
+    "bs": {
+        "message": "Βοσνιακά",
+        "description": ""
+    },
+    "ca": {
+        "message": "Καταλανικά",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Σεμπουάνο",
+        "description": ""
+    },
+    "co": {
+        "message": "Κορσικανικά",
+        "description": ""
+    },
+    "cs": {
+        "message": "Τσεχικά",
+        "description": ""
+    },
+    "cy": {
+        "message": "Ουαλικά",
+        "description": ""
+    },
+    "da": {
+        "message": "Δανικά",
+        "description": ""
+    },
+    "de": {
+        "message": "Γερμανικά",
+        "description": ""
+    },
+    "el": {
+        "message": "Ελληνικά",
+        "description": ""
+    },
+    "en": {
+        "message": "Αγγλικά",
+        "description": ""
+    },
+    "eo": {
+        "message": "Εσπεράντο",
+        "description": ""
+    },
+    "es": {
+        "message": "Ισπανικά",
+        "description": ""
+    },
+    "et": {
+        "message": "Εσθονικά",
+        "description": ""
+    },
+    "eu": {
+        "message": "Βασκικά",
+        "description": ""
+    },
+    "fa": {
+        "message": "Περσικά",
+        "description": ""
+    },
+    "fi": {
+        "message": "Φινλανδικά",
+        "description": ""
+    },
+    "fr": {
+        "message": "Γαλλικά",
+        "description": ""
+    },
+    "fy": {
+        "message": "Φριζιανά",
+        "description": ""
+    },
+    "ga": {
+        "message": "Ιρλανδικά",
+        "description": ""
+    },
+    "gd": {
+        "message": "Γαελικά Σκοτίας",
+        "description": ""
+    },
+    "gl": {
+        "message": "Γαλικιακά",
+        "description": ""
+    },
+    "gu": {
+        "message": "Γκουτζαρατικά",
+        "description": ""
+    },
+    "ha": {
+        "message": "Χάουσα",
+        "description": ""
+    },
+    "haw": {
+        "message": "Χαβαϊκά",
+        "description": ""
+    },
+    "hi": {
+        "message": "Χίντι",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Χμονγκ",
+        "description": ""
+    },
+    "hr": {
+        "message": "Κροατικά",
+        "description": ""
+    },
+    "ht": {
+        "message": "Κρεόλ Αϊτής",
+        "description": ""
+    },
+    "hu": {
+        "message": "Ουγγρικά",
+        "description": ""
+    },
+    "hy": {
+        "message": "Αρμενικά",
+        "description": ""
+    },
+    "id": {
+        "message": "Ινδονησιακά",
+        "description": ""
+    },
+    "ig": {
+        "message": "Ίγκμπο",
+        "description": ""
+    },
+    "is": {
+        "message": "Ισλανδικά",
+        "description": ""
+    },
+    "it": {
+        "message": "Ιταλικά",
+        "description": ""
+    },
+    "iw": {
+        "message": "Εβραϊκά",
+        "description": ""
+    },
+    "ja": {
+        "message": "Ιαπωνικά",
+        "description": ""
+    },
+    "jw": {
+        "message": "Τζαβανεζικά",
+        "description": ""
+    },
+    "ka": {
+        "message": "Γεωργιανά",
+        "description": ""
+    },
+    "kk": {
+        "message": "Καζακστανικά",
+        "description": ""
+    },
+    "km": {
+        "message": "Χμερ",
+        "description": ""
+    },
+    "kn": {
+        "message": "Κανάντα",
+        "description": ""
+    },
+    "ko": {
+        "message": "Κορεατικά",
+        "description": ""
+    },
+    "ku": {
+        "message": "Κουρδικά",
+        "description": ""
+    },
+    "ky": {
+        "message": "Κιργιζιανά",
+        "description": ""
+    },
+    "la": {
+        "message": "Λατινικά",
+        "description": ""
+    },
+    "lb": {
+        "message": "Λουξεμβουργιανά",
+        "description": ""
+    },
+    "lo": {
+        "message": "Λάο",
+        "description": ""
+    },
+    "lt": {
+        "message": "Λιθουανικά",
+        "description": ""
+    },
+    "lv": {
+        "message": "Λετονικά",
+        "description": ""
+    },
+    "mg": {
+        "message": "Μαλαγάσι",
+        "description": ""
+    },
+    "mi": {
+        "message": "Μαορί",
+        "description": ""
+    },
+    "mk": {
+        "message": "Σλαβομακεδονικά",
+        "description": ""
+    },
+    "ml": {
+        "message": "Μαλαγιάλαμ",
+        "description": ""
+    },
+    "mn": {
+        "message": "Μογγολικά",
+        "description": ""
+    },
+    "mr": {
+        "message": "Μαραθικά",
+        "description": ""
+    },
+    "ms": {
+        "message": "Μαλέι",
+        "description": ""
+    },
+    "mt": {
+        "message": "Μαλτεζικά",
+        "description": ""
+    },
+    "my": {
+        "message": "Βιρμανικά",
+        "description": ""
+    },
+    "ne": {
+        "message": "Νεπαλικά",
+        "description": ""
+    },
+    "nl": {
+        "message": "Ολλανδικά",
+        "description": ""
+    },
+    "no": {
+        "message": "Νορβηγικά",
+        "description": ""
+    },
+    "ny": {
+        "message": "Τσιτσέουα",
+        "description": ""
+    },
+    "pa": {
+        "message": "Παντζάμπι",
+        "description": ""
+    },
+    "pl": {
+        "message": "Πολωνικά",
+        "description": ""
+    },
+    "ps": {
+        "message": "Πάστο",
+        "description": ""
+    },
+    "pt": {
+        "message": "Πορτογαλικά",
+        "description": ""
+    },
+    "ro": {
+        "message": "Ρουμανικά",
+        "description": ""
+    },
+    "ru": {
+        "message": "Ρωσικά",
+        "description": ""
+    },
+    "sd": {
+        "message": "Σίντι",
+        "description": ""
+    },
+    "si": {
+        "message": "Σινχάλα",
+        "description": ""
+    },
+    "sk": {
+        "message": "Σλοβακικά",
+        "description": ""
+    },
+    "sl": {
+        "message": "Σλοβενικά",
+        "description": ""
+    },
+    "sm": {
+        "message": "Σαμοανικά",
+        "description": ""
+    },
+    "sn": {
+        "message": "Σόνα",
+        "description": ""
+    },
+    "so": {
+        "message": "Σομαλικά",
+        "description": ""
+    },
+    "sq": {
+        "message": "Αλβανικά",
+        "description": ""
+    },
+    "sr": {
+        "message": "Σερβικά",
+        "description": ""
+    },
+    "st": {
+        "message": "Σεσότο",
+        "description": ""
+    },
+    "su": {
+        "message": "Σούντα",
+        "description": ""
+    },
+    "sv": {
+        "message": "Σουηδικά",
+        "description": ""
+    },
+    "sw": {
+        "message": "Σουαχίλι",
+        "description": ""
+    },
+    "ta": {
+        "message": "Ταμίλ",
+        "description": ""
+    },
+    "te": {
+        "message": "Τελούγκου",
+        "description": ""
+    },
+    "tg": {
+        "message": "Ταζικιστανικά",
+        "description": ""
+    },
+    "th": {
+        "message": "Ταϊλανδεζικά",
+        "description": ""
+    },
+    "tl": {
+        "message": "Φιλιπινεζικά",
+        "description": ""
+    },
+    "tr": {
+        "message": "Τούρκικα",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ουκρανικά",
+        "description": ""
+    },
+    "ur": {
+        "message": "Ουρντού",
+        "description": ""
+    },
+    "uz": {
+        "message": "Ουζμπεκικά",
+        "description": ""
+    },
+    "vi": {
+        "message": "Βιετναμεζικά",
+        "description": ""
+    },
+    "xh": {
+        "message": "Ζόσα",
+        "description": ""
+    },
+    "yi": {
+        "message": "Γίντις",
+        "description": ""
+    },
+    "yo": {
+        "message": "Γιορούμπα",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Κινέζικα",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Κινέζικα (Παραδοσιακά)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Ζουλού",
+        "description": ""
+    }
+}

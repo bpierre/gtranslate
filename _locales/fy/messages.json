@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaansk",
+        "description": ""
+    },
+    "am": {
+        "message": "Amhaarsk",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabysk",
+        "description": ""
+    },
+    "auto": {
+        "message": "Taal werkenne",
+        "description": ""
+    },
+    "az": {
+        "message": "Azerbeidzjaansk",
+        "description": ""
+    },
+    "be": {
+        "message": "Wytrussysk",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgaarsk",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengaalsk",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnysk",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalaansk",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuanoosk",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsikaansk",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tsjechysk",
+        "description": ""
+    },
+    "cy": {
+        "message": "Welsk",
+        "description": ""
+    },
+    "da": {
+        "message": "Deensk",
+        "description": ""
+    },
+    "de": {
+        "message": "Dútsk",
+        "description": ""
+    },
+    "el": {
+        "message": "Gryksk",
+        "description": ""
+    },
+    "en": {
+        "message": "Ingelsk",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spaansk",
+        "description": ""
+    },
+    "et": {
+        "message": "Estsk",
+        "description": ""
+    },
+    "eu": {
+        "message": "Baskysk",
+        "description": ""
+    },
+    "fa": {
+        "message": "Perzysk",
+        "description": ""
+    },
+    "fi": {
+        "message": "Finsk",
+        "description": ""
+    },
+    "fr": {
+        "message": "Frânsk",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frysk",
+        "description": ""
+    },
+    "ga": {
+        "message": "Iersk",
+        "description": ""
+    },
+    "gd": {
+        "message": "Skotsk Gaelic",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galisysk",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gujaraty",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaïaansk",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindy",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmongsk",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kroatysk",
+        "description": ""
+    },
+    "ht": {
+        "message": "Haïtiaansk-Kreoalsk",
+        "description": ""
+    },
+    "hu": {
+        "message": "Hongaarsk",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armeensk",
+        "description": ""
+    },
+    "id": {
+        "message": "Yndonesysk",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Iislânsk",
+        "description": ""
+    },
+    "it": {
+        "message": "Italjaansk",
+        "description": ""
+    },
+    "iw": {
+        "message": "Hebrieusk",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japansk",
+        "description": ""
+    },
+    "jw": {
+        "message": "Javaansk",
+        "description": ""
+    },
+    "ka": {
+        "message": "Georgysk",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazachsk",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmersk",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koreaansk",
+        "description": ""
+    },
+    "ku": {
+        "message": "Koerdysk (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirgizysk",
+        "description": ""
+    },
+    "la": {
+        "message": "Latyn",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lúksemboarchsk",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laosk",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litousk",
+        "description": ""
+    },
+    "lv": {
+        "message": "Letsk",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Masedoanysk",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongoalysk",
+        "description": ""
+    },
+    "mr": {
+        "message": "Maraty",
+        "description": ""
+    },
+    "ms": {
+        "message": "Maleisysk",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malteesk",
+        "description": ""
+    },
+    "my": {
+        "message": "Myanmar (Birmeesk)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepaleesk",
+        "description": ""
+    },
+    "nl": {
+        "message": "Nederlânsk",
+        "description": ""
+    },
+    "no": {
+        "message": "Noarsk",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewaansk",
+        "description": ""
+    },
+    "pa": {
+        "message": "Pûnjaby",
+        "description": ""
+    },
+    "pl": {
+        "message": "Poalsk",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pasjto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugeesk",
+        "description": ""
+    },
+    "ro": {
+        "message": "Roemeensk",
+        "description": ""
+    },
+    "ru": {
+        "message": "Russysk",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindysk",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slowaaksk",
+        "description": ""
+    },
+    "sl": {
+        "message": "Sloweensk",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoaansk",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somalysk",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albaneesk",
+        "description": ""
+    },
+    "sr": {
+        "message": "Servysk",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Soendaneesk",
+        "description": ""
+    },
+    "sv": {
+        "message": "Sweedsk",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahily",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamyl",
+        "description": ""
+    },
+    "te": {
+        "message": "Telûgû",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Siameesk",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filippynsk",
+        "description": ""
+    },
+    "tr": {
+        "message": "Turksk",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukraynsk",
+        "description": ""
+    },
+    "ur": {
+        "message": "Oerdû",
+        "description": ""
+    },
+    "uz": {
+        "message": "Oesbeeksk",
+        "description": ""
+    },
+    "vi": {
+        "message": "Fjetnameesk",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Jiddysk",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yorubaalsk",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Sineesk",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Sineesk (tradisjoneel)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Sûlû",
+        "description": ""
+    }
+}

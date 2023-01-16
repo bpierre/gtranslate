@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ਅਫ਼ਰੀਕੀ",
+        "description": ""
+    },
+    "am": {
+        "message": "ਅਮਹਾਰਿਕ",
+        "description": ""
+    },
+    "ar": {
+        "message": "ਅਰਬੀ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ਭਾਸ਼ਾ ਖੋਜੋ",
+        "description": ""
+    },
+    "az": {
+        "message": "ਅਜ਼ੇਰਬੈਜਨੀ",
+        "description": ""
+    },
+    "be": {
+        "message": "ਬੇਲਾਰੂਸੀ",
+        "description": ""
+    },
+    "bg": {
+        "message": "ਬੁਲਗੇਰੀਅਨ",
+        "description": ""
+    },
+    "bn": {
+        "message": "ਬੰਗਾਲੀ",
+        "description": ""
+    },
+    "bs": {
+        "message": "ਬੋਸਨੀਅਨ",
+        "description": ""
+    },
+    "ca": {
+        "message": "ਕੈਟਾਲਨ",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ਸੇਬੂਆਨੋ",
+        "description": ""
+    },
+    "co": {
+        "message": "ਕੋਰਸੀਕਨ",
+        "description": ""
+    },
+    "cs": {
+        "message": "ਚੈੱਕ",
+        "description": ""
+    },
+    "cy": {
+        "message": "ਵੈਲਸ਼",
+        "description": ""
+    },
+    "da": {
+        "message": "ਡੈਨਿਸ਼",
+        "description": ""
+    },
+    "de": {
+        "message": "ਜਰਮਨ",
+        "description": ""
+    },
+    "el": {
+        "message": "ਯੂਨਾਨੀ",
+        "description": ""
+    },
+    "en": {
+        "message": "ਅੰਗਰੇਜ਼ੀ",
+        "description": ""
+    },
+    "eo": {
+        "message": "ਐਸਪਰੇਂਟੋ",
+        "description": ""
+    },
+    "es": {
+        "message": "ਸਪੇਨੀ",
+        "description": ""
+    },
+    "et": {
+        "message": "ਇਸਟੌਨੀਅਨ",
+        "description": ""
+    },
+    "eu": {
+        "message": "ਬਾਸਕ",
+        "description": ""
+    },
+    "fa": {
+        "message": "ਫਾਰਸੀ",
+        "description": ""
+    },
+    "fi": {
+        "message": "ਫਿਨਿਸ਼",
+        "description": ""
+    },
+    "fr": {
+        "message": "ਫਰਾਂਸੀਸੀ",
+        "description": ""
+    },
+    "fy": {
+        "message": "ਫ੍ਰੀਸ਼ੀਅਨ",
+        "description": ""
+    },
+    "ga": {
+        "message": "ਆਇਰਸ਼",
+        "description": ""
+    },
+    "gd": {
+        "message": "ਸਕੌਟਸ ਗੈਲਿਕ",
+        "description": ""
+    },
+    "gl": {
+        "message": "ਗੈਲੀਸ਼ੀਅਨ",
+        "description": ""
+    },
+    "gu": {
+        "message": "ਗੁਜਰਾਤੀ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ਹੌਸਾ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ਹਵਾਈਅਨ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ਹਿੰਦੀ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ਹਮੋਂਗ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ਕ੍ਰੋਸ਼ੀਅਨ",
+        "description": ""
+    },
+    "ht": {
+        "message": "ਹੈਤੀਆਈ ਕਰਯੋਲ",
+        "description": ""
+    },
+    "hu": {
+        "message": "ਹੰਗੇਰੀਅਨ",
+        "description": ""
+    },
+    "hy": {
+        "message": "ਅਰਮੇਨੀਅਨ",
+        "description": ""
+    },
+    "id": {
+        "message": "ਇੰਡੋਨੇਸ਼ੀਆਈ",
+        "description": ""
+    },
+    "ig": {
+        "message": "ਇਗਬੋ",
+        "description": ""
+    },
+    "is": {
+        "message": "ਆਈਸਲੈਂਡੀ",
+        "description": ""
+    },
+    "it": {
+        "message": "ਇਤਾਲਵੀ",
+        "description": ""
+    },
+    "iw": {
+        "message": "ਹਿਬਰੀ",
+        "description": ""
+    },
+    "ja": {
+        "message": "ਜਾਪਾਨੀ",
+        "description": ""
+    },
+    "jw": {
+        "message": "ਜਵਾਨੀਜ਼",
+        "description": ""
+    },
+    "ka": {
+        "message": "ਜਾਰਜੀਆਈ",
+        "description": ""
+    },
+    "kk": {
+        "message": "ਕਜ਼ਾਖ",
+        "description": ""
+    },
+    "km": {
+        "message": "ਖਮੇਰ",
+        "description": ""
+    },
+    "kn": {
+        "message": "ਕੰਨੜ",
+        "description": ""
+    },
+    "ko": {
+        "message": "ਕੋਰੀਆਈ",
+        "description": ""
+    },
+    "ku": {
+        "message": "ਕੁਰਦੀ (ਕੁਰਮਾਂਜੀ)",
+        "description": ""
+    },
+    "ky": {
+        "message": "ਕਿਰਗਿਜ",
+        "description": ""
+    },
+    "la": {
+        "message": "ਲਾਤੀਨੀ",
+        "description": ""
+    },
+    "lb": {
+        "message": "ਲਕਸਮਬਰਗੀ",
+        "description": ""
+    },
+    "lo": {
+        "message": "ਲਾਓ",
+        "description": ""
+    },
+    "lt": {
+        "message": "ਲਿਥੁਆਨੀਅਨ",
+        "description": ""
+    },
+    "lv": {
+        "message": "ਲਾਤਵੀਅਨ",
+        "description": ""
+    },
+    "mg": {
+        "message": "ਮਾਲਾਗਾਸੀ",
+        "description": ""
+    },
+    "mi": {
+        "message": "ਮਾਓਰੀ",
+        "description": ""
+    },
+    "mk": {
+        "message": "ਮੈਸੇਡੋਨੀਅਨ",
+        "description": ""
+    },
+    "ml": {
+        "message": "ਮਲਿਆਲਮ",
+        "description": ""
+    },
+    "mn": {
+        "message": "ਮੰਗੋਲੀਅਨ",
+        "description": ""
+    },
+    "mr": {
+        "message": "ਮਰਾਠੀ",
+        "description": ""
+    },
+    "ms": {
+        "message": "ਮਲਯ",
+        "description": ""
+    },
+    "mt": {
+        "message": "ਮਾਲਟੀਜ਼",
+        "description": ""
+    },
+    "my": {
+        "message": "ਮਿਆਂਮਾਰ (ਬਰਮੀ)",
+        "description": ""
+    },
+    "ne": {
+        "message": "ਨੇਪਾਲੀ",
+        "description": ""
+    },
+    "nl": {
+        "message": "ਡੱਚ",
+        "description": ""
+    },
+    "no": {
+        "message": "ਨਾਰਵੇਜੀਅਨ",
+        "description": ""
+    },
+    "ny": {
+        "message": "ਚਿਚੇਵਾ",
+        "description": ""
+    },
+    "pa": {
+        "message": "ਪੰਜਾਬੀ",
+        "description": ""
+    },
+    "pl": {
+        "message": "ਪੋਲੈਂਡੀ",
+        "description": ""
+    },
+    "ps": {
+        "message": "ਪਸ਼ਤੋ",
+        "description": ""
+    },
+    "pt": {
+        "message": "ਪੁਰਤਗਾਲੀ",
+        "description": ""
+    },
+    "ro": {
+        "message": "ਰੋਮਾਨੀਅਨ",
+        "description": ""
+    },
+    "ru": {
+        "message": "ਰੂਸੀ",
+        "description": ""
+    },
+    "sd": {
+        "message": "ਸਿੰਧੀ",
+        "description": ""
+    },
+    "si": {
+        "message": "ਸਿਨਹਾਲਾ",
+        "description": ""
+    },
+    "sk": {
+        "message": "ਸਲੋਵਾਕ",
+        "description": ""
+    },
+    "sl": {
+        "message": "ਸਲੋਵੀਨੀਅਨ",
+        "description": ""
+    },
+    "sm": {
+        "message": "ਸਮੋਈ",
+        "description": ""
+    },
+    "sn": {
+        "message": "ਸ਼ੋਨਾ",
+        "description": ""
+    },
+    "so": {
+        "message": "ਸੋਮਾਲੀ",
+        "description": ""
+    },
+    "sq": {
+        "message": "ਅਲਬੇਨੀਅਨ",
+        "description": ""
+    },
+    "sr": {
+        "message": "ਸਰਬੀਆਈ",
+        "description": ""
+    },
+    "st": {
+        "message": "ਸੈਸੋਥੋ",
+        "description": ""
+    },
+    "su": {
+        "message": "ਸੰਡਨੀਜ",
+        "description": ""
+    },
+    "sv": {
+        "message": "ਸਵੀਡਿਸ਼",
+        "description": ""
+    },
+    "sw": {
+        "message": "ਸਵਾਹਿਲੀ",
+        "description": ""
+    },
+    "ta": {
+        "message": "ਤਮਿਲ",
+        "description": ""
+    },
+    "te": {
+        "message": "ਤੇਲਗੂ",
+        "description": ""
+    },
+    "tg": {
+        "message": "ਤਾਜਿਕ",
+        "description": ""
+    },
+    "th": {
+        "message": "ਥਾਈ",
+        "description": ""
+    },
+    "tl": {
+        "message": "ਫਿਲੀਪੀਨੋ",
+        "description": ""
+    },
+    "tr": {
+        "message": "ਤੁਰਕੀ",
+        "description": ""
+    },
+    "uk": {
+        "message": "ਯੂਕਰੇਨੀਅਨ",
+        "description": ""
+    },
+    "ur": {
+        "message": "ਉਰਦੂ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ਉਜ਼ਬੇਕ",
+        "description": ""
+    },
+    "vi": {
+        "message": "ਵੀਅਤਨਾਮੀ",
+        "description": ""
+    },
+    "xh": {
+        "message": "ਖੋਸਾ",
+        "description": ""
+    },
+    "yi": {
+        "message": "ਯਿਦੀਸ਼",
+        "description": ""
+    },
+    "yo": {
+        "message": "ਯੋਰੂਬਾ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ਚੀਨੀ",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ਚੀਨੀ (ਪਰੰਪਰਾਗਤ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ਜ਼ੁਲੂ",
+        "description": ""
+    }
+}

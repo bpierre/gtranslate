@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ఆఫ్రికాన్స్",
+        "description": ""
+    },
+    "am": {
+        "message": "ఆమ్హారిక్",
+        "description": ""
+    },
+    "ar": {
+        "message": "ఆరబిక్",
+        "description": ""
+    },
+    "auto": {
+        "message": "భాషను కనుగొను",
+        "description": ""
+    },
+    "az": {
+        "message": "అజర్‌బైజాని",
+        "description": ""
+    },
+    "be": {
+        "message": "బెలారుషియన్",
+        "description": ""
+    },
+    "bg": {
+        "message": "బల్గేరియన్",
+        "description": ""
+    },
+    "bn": {
+        "message": "బెంగాలీ",
+        "description": ""
+    },
+    "bs": {
+        "message": "బోస్నియన్",
+        "description": ""
+    },
+    "ca": {
+        "message": "క్యాటలాన్",
+        "description": ""
+    },
+    "ceb": {
+        "message": "సెబువానో",
+        "description": ""
+    },
+    "co": {
+        "message": "కోర్సికన్",
+        "description": ""
+    },
+    "cs": {
+        "message": "చెక్",
+        "description": ""
+    },
+    "cy": {
+        "message": "వెల్ష్",
+        "description": ""
+    },
+    "da": {
+        "message": "డానిష్",
+        "description": ""
+    },
+    "de": {
+        "message": "జర్మన్",
+        "description": ""
+    },
+    "el": {
+        "message": "గ్రీక్",
+        "description": ""
+    },
+    "en": {
+        "message": "ఆంగ్లము",
+        "description": ""
+    },
+    "eo": {
+        "message": "ఎస్పెరాంటో",
+        "description": ""
+    },
+    "es": {
+        "message": "స్పానిష్",
+        "description": ""
+    },
+    "et": {
+        "message": "ఏస్టోనియన్",
+        "description": ""
+    },
+    "eu": {
+        "message": "బాస్క్",
+        "description": ""
+    },
+    "fa": {
+        "message": "పర్షియన్",
+        "description": ""
+    },
+    "fi": {
+        "message": "ఫిన్నిష్",
+        "description": ""
+    },
+    "fr": {
+        "message": "ఫ్రెంచ్",
+        "description": ""
+    },
+    "fy": {
+        "message": "ఫ్రీసియన్",
+        "description": ""
+    },
+    "ga": {
+        "message": "ఐరిష్",
+        "description": ""
+    },
+    "gd": {
+        "message": "స్కాట్స్ గేలిక్",
+        "description": ""
+    },
+    "gl": {
+        "message": "గాలిసియన్",
+        "description": ""
+    },
+    "gu": {
+        "message": "గుజరాతి",
+        "description": ""
+    },
+    "ha": {
+        "message": "హౌస",
+        "description": ""
+    },
+    "haw": {
+        "message": "హవాయియన్",
+        "description": ""
+    },
+    "hi": {
+        "message": "హిందీ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "మాంగ్",
+        "description": ""
+    },
+    "hr": {
+        "message": "క్రొయేషియన్",
+        "description": ""
+    },
+    "ht": {
+        "message": "హైయేటియన్ క్రియోల్",
+        "description": ""
+    },
+    "hu": {
+        "message": "హంగేరియన్",
+        "description": ""
+    },
+    "hy": {
+        "message": "అర్మేనియన్",
+        "description": ""
+    },
+    "id": {
+        "message": "ఇండొనేసియన్",
+        "description": ""
+    },
+    "ig": {
+        "message": "ఇగ్బో",
+        "description": ""
+    },
+    "is": {
+        "message": "ఐస్ లాండిక్",
+        "description": ""
+    },
+    "it": {
+        "message": "ఇటాలియన్",
+        "description": ""
+    },
+    "iw": {
+        "message": "హీబ్రూ",
+        "description": ""
+    },
+    "ja": {
+        "message": "జపనీస్",
+        "description": ""
+    },
+    "jw": {
+        "message": "జావానీస్",
+        "description": ""
+    },
+    "ka": {
+        "message": "జార్జియన్",
+        "description": ""
+    },
+    "kk": {
+        "message": "కజాఖ్",
+        "description": ""
+    },
+    "km": {
+        "message": "ఖ్మేర్",
+        "description": ""
+    },
+    "kn": {
+        "message": "కన్నడ",
+        "description": ""
+    },
+    "ko": {
+        "message": "కొరియన్",
+        "description": ""
+    },
+    "ku": {
+        "message": "కర్డిష్",
+        "description": ""
+    },
+    "ky": {
+        "message": "కిర్గ్స్",
+        "description": ""
+    },
+    "la": {
+        "message": "లాటిన్",
+        "description": ""
+    },
+    "lb": {
+        "message": "లక్సెంబర్గిష్",
+        "description": ""
+    },
+    "lo": {
+        "message": "లావో",
+        "description": ""
+    },
+    "lt": {
+        "message": "లిథువేనియన్",
+        "description": ""
+    },
+    "lv": {
+        "message": "లాట్వియన్",
+        "description": ""
+    },
+    "mg": {
+        "message": "మలాగాసి",
+        "description": ""
+    },
+    "mi": {
+        "message": "మయోరి",
+        "description": ""
+    },
+    "mk": {
+        "message": "మాసిడోనియన్",
+        "description": ""
+    },
+    "ml": {
+        "message": "మలయాళం",
+        "description": ""
+    },
+    "mn": {
+        "message": "మంగోలియన్",
+        "description": ""
+    },
+    "mr": {
+        "message": "మరాఠీ",
+        "description": ""
+    },
+    "ms": {
+        "message": "మాలై",
+        "description": ""
+    },
+    "mt": {
+        "message": "మాల్టీస్",
+        "description": ""
+    },
+    "my": {
+        "message": "బర్మీస్",
+        "description": ""
+    },
+    "ne": {
+        "message": "నేపాలీ",
+        "description": ""
+    },
+    "nl": {
+        "message": "డచ్",
+        "description": ""
+    },
+    "no": {
+        "message": "నార్విజియన్",
+        "description": ""
+    },
+    "ny": {
+        "message": "చిచేవా",
+        "description": ""
+    },
+    "pa": {
+        "message": "పంజాబీ",
+        "description": ""
+    },
+    "pl": {
+        "message": "పోలిష్",
+        "description": ""
+    },
+    "ps": {
+        "message": "పాష్టో",
+        "description": ""
+    },
+    "pt": {
+        "message": "పోర్చుగీస్",
+        "description": ""
+    },
+    "ro": {
+        "message": "రొమేనియన్",
+        "description": ""
+    },
+    "ru": {
+        "message": "రష్యన్",
+        "description": ""
+    },
+    "sd": {
+        "message": "సింధీ",
+        "description": ""
+    },
+    "si": {
+        "message": "సింహళం",
+        "description": ""
+    },
+    "sk": {
+        "message": "స్లోవక్",
+        "description": ""
+    },
+    "sl": {
+        "message": "స్లోవేనియన్",
+        "description": ""
+    },
+    "sm": {
+        "message": "సమోవాన్",
+        "description": ""
+    },
+    "sn": {
+        "message": "షోనా",
+        "description": ""
+    },
+    "so": {
+        "message": "సోమాలి",
+        "description": ""
+    },
+    "sq": {
+        "message": "అల్బేనియన్",
+        "description": ""
+    },
+    "sr": {
+        "message": "సెర్బియన్",
+        "description": ""
+    },
+    "st": {
+        "message": "సెసోథో",
+        "description": ""
+    },
+    "su": {
+        "message": "సుండనీస్",
+        "description": ""
+    },
+    "sv": {
+        "message": "స్వీడిష్",
+        "description": ""
+    },
+    "sw": {
+        "message": "స్వాహిలి",
+        "description": ""
+    },
+    "ta": {
+        "message": "తమిళం",
+        "description": ""
+    },
+    "te": {
+        "message": "తెలుగు",
+        "description": ""
+    },
+    "tg": {
+        "message": "తజిక్",
+        "description": ""
+    },
+    "th": {
+        "message": "థాయ్",
+        "description": ""
+    },
+    "tl": {
+        "message": "ఫిలిపినో",
+        "description": ""
+    },
+    "tr": {
+        "message": "టర్కిష్",
+        "description": ""
+    },
+    "uk": {
+        "message": "యుక్రేనియన్",
+        "description": ""
+    },
+    "ur": {
+        "message": "ఉర్దూ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ఉజ్బెక్",
+        "description": ""
+    },
+    "vi": {
+        "message": "వియత్నామీస్",
+        "description": ""
+    },
+    "xh": {
+        "message": "ఖోస",
+        "description": ""
+    },
+    "yi": {
+        "message": "యిడ్డిష్",
+        "description": ""
+    },
+    "yo": {
+        "message": "యొరుబా",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "చైనీసు",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "చైనీస్ (సామ్ప్రదాయమైన)",
+        "description": ""
+    },
+    "zu": {
+        "message": "జులు",
+        "description": ""
+    }
+}

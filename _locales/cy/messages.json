@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Affricaneg",
+        "description": ""
+    },
+    "am": {
+        "message": "Amharic",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabeg",
+        "description": ""
+    },
+    "auto": {
+        "message": "Synhwyro iaith",
+        "description": ""
+    },
+    "az": {
+        "message": "Aserbaijaneg",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarwseg",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bwlgaraidd",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengaleg",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnieg",
+        "description": ""
+    },
+    "ca": {
+        "message": "Catalaneg",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Corsiceg",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tsieceg",
+        "description": ""
+    },
+    "cy": {
+        "message": "Cymraeg",
+        "description": ""
+    },
+    "da": {
+        "message": "Daneg",
+        "description": ""
+    },
+    "de": {
+        "message": "Almaeneg",
+        "description": ""
+    },
+    "el": {
+        "message": "Groeg",
+        "description": ""
+    },
+    "en": {
+        "message": "Saesneg",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Sbaeneg",
+        "description": ""
+    },
+    "et": {
+        "message": "Estoneg",
+        "description": ""
+    },
+    "eu": {
+        "message": "Basgeg",
+        "description": ""
+    },
+    "fa": {
+        "message": "Perseg",
+        "description": ""
+    },
+    "fi": {
+        "message": "Ffineg",
+        "description": ""
+    },
+    "fr": {
+        "message": "Ffrangeg",
+        "description": ""
+    },
+    "fy": {
+        "message": "Ffrisieg",
+        "description": ""
+    },
+    "ga": {
+        "message": "Gwyddeleg",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gaeleg yr Alban",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galisaidd",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gwjarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hawseg",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawäieg",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Croateg",
+        "description": ""
+    },
+    "ht": {
+        "message": "Creol Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Hwngareg",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armeneg",
+        "description": ""
+    },
+    "id": {
+        "message": "Indonesieg",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Islandeg",
+        "description": ""
+    },
+    "it": {
+        "message": "Eidaleg",
+        "description": ""
+    },
+    "iw": {
+        "message": "Hebraeg",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japaneg",
+        "description": ""
+    },
+    "jw": {
+        "message": "Jafanaeg",
+        "description": ""
+    },
+    "ka": {
+        "message": "Georgeg",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazaceg",
+        "description": ""
+    },
+    "km": {
+        "message": "Chmereg",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Iaith Corea",
+        "description": ""
+    },
+    "ku": {
+        "message": "Cyrdeg (Kurmandji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Cyrgis",
+        "description": ""
+    },
+    "la": {
+        "message": "Lladin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lwcsembwrgeg",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laoteg",
+        "description": ""
+    },
+    "lt": {
+        "message": "Lithwaneg",
+        "description": ""
+    },
+    "lv": {
+        "message": "Latfieg",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagaseg",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Macedoneg",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongoleg",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malai",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malteseg",
+        "description": ""
+    },
+    "my": {
+        "message": "Myanmar (Byrma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Fflemeg",
+        "description": ""
+    },
+    "no": {
+        "message": "Norwyeg",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Pwnjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Pwyleg",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portiwgaleg",
+        "description": ""
+    },
+    "ro": {
+        "message": "Rwmaneg",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rwsieg",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindieg",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhaleg",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slofac",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slofenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samöeg",
+        "description": ""
+    },
+    "sn": {
+        "message": "Siona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somaleg",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albaneg",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serbeg",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundanes",
+        "description": ""
+    },
+    "sv": {
+        "message": "Swedeg",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tajiceg",
+        "description": ""
+    },
+    "th": {
+        "message": "Tai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Tagalog",
+        "description": ""
+    },
+    "tr": {
+        "message": "Twrceg",
+        "description": ""
+    },
+    "uk": {
+        "message": "Iwcraineg",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Usbec",
+        "description": ""
+    },
+    "vi": {
+        "message": "Fietnameg",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Iddeweg",
+        "description": ""
+    },
+    "yo": {
+        "message": "Iorwba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Tsieineeg",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Tsieineeg (Traddodiadol)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Swlw",
+        "description": ""
+    }
+}

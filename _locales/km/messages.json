@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "អាហ្វ្រិក",
+        "description": ""
+    },
+    "am": {
+        "message": "អាមហារីច",
+        "description": ""
+    },
+    "ar": {
+        "message": "អារ៉ាប់",
+        "description": ""
+    },
+    "auto": {
+        "message": "កំណត់​ភាសា​ដោយ​ស្វ័យ​ប្រវត្តិ",
+        "description": ""
+    },
+    "az": {
+        "message": "អាហ៊្សែរបែហ្សង់",
+        "description": ""
+    },
+    "be": {
+        "message": "បេឡារុស្ស",
+        "description": ""
+    },
+    "bg": {
+        "message": "ប៊ុលហ្ការី",
+        "description": ""
+    },
+    "bn": {
+        "message": "បង់ក្លាដែស",
+        "description": ""
+    },
+    "bs": {
+        "message": "បូស្នី",
+        "description": ""
+    },
+    "ca": {
+        "message": "កាតាឡង់",
+        "description": ""
+    },
+    "ceb": {
+        "message": "សឺប៊ូអាណូ",
+        "description": ""
+    },
+    "co": {
+        "message": "កូសីកា",
+        "description": ""
+    },
+    "cs": {
+        "message": "ឆេក",
+        "description": ""
+    },
+    "cy": {
+        "message": "វេល",
+        "description": ""
+    },
+    "da": {
+        "message": "ដាណឺម៉ាក",
+        "description": ""
+    },
+    "de": {
+        "message": "អាល្លឺម៉ង់",
+        "description": ""
+    },
+    "el": {
+        "message": "ក្រិក",
+        "description": ""
+    },
+    "en": {
+        "message": "អង់គ្លេស",
+        "description": ""
+    },
+    "eo": {
+        "message": "អេស្ពេរ៉ាន់តូ",
+        "description": ""
+    },
+    "es": {
+        "message": "អេស្ប៉ាញ",
+        "description": ""
+    },
+    "et": {
+        "message": "អេស្តូនី",
+        "description": ""
+    },
+    "eu": {
+        "message": "បាស្កេ",
+        "description": ""
+    },
+    "fa": {
+        "message": "ភឺសៀន",
+        "description": ""
+    },
+    "fi": {
+        "message": "ហ្វាំងឡង់",
+        "description": ""
+    },
+    "fr": {
+        "message": "បារាំង",
+        "description": ""
+    },
+    "fy": {
+        "message": "ហ្រីសង់",
+        "description": ""
+    },
+    "ga": {
+        "message": "អៀរឡង់",
+        "description": ""
+    },
+    "gd": {
+        "message": "ស្កុតហ្គាលីក",
+        "description": ""
+    },
+    "gl": {
+        "message": "ហ្គាលីស្យាន",
+        "description": ""
+    },
+    "gu": {
+        "message": "ហ្កុយ៉ារាទី",
+        "description": ""
+    },
+    "ha": {
+        "message": "ហូសា",
+        "description": ""
+    },
+    "haw": {
+        "message": "ហាវ៉ៃ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ហិណ្ឌី",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ម៉ុង",
+        "description": ""
+    },
+    "hr": {
+        "message": "ក្រូអាត",
+        "description": ""
+    },
+    "ht": {
+        "message": "ក្រេអូលី​ហៃទី",
+        "description": ""
+    },
+    "hu": {
+        "message": "ហុងគ្រី",
+        "description": ""
+    },
+    "hy": {
+        "message": "អារមេនី",
+        "description": ""
+    },
+    "id": {
+        "message": "ឥណ្ឌូណេស៊ី",
+        "description": ""
+    },
+    "ig": {
+        "message": "អ៊ីកបូ",
+        "description": ""
+    },
+    "is": {
+        "message": "អ៊ីស្លង់",
+        "description": ""
+    },
+    "it": {
+        "message": "អ៊ីតាលី",
+        "description": ""
+    },
+    "iw": {
+        "message": "អ៊ីស្រាអែល",
+        "description": ""
+    },
+    "ja": {
+        "message": "ជប៉ុន",
+        "description": ""
+    },
+    "jw": {
+        "message": "ជ្វា",
+        "description": ""
+    },
+    "ka": {
+        "message": "ហ្សក​ហ្ស៊ី",
+        "description": ""
+    },
+    "kk": {
+        "message": "កាហ្សាក់ស្តង់",
+        "description": ""
+    },
+    "km": {
+        "message": "ខ្មែរ",
+        "description": ""
+    },
+    "kn": {
+        "message": "កាន់ណាដា",
+        "description": ""
+    },
+    "ko": {
+        "message": "កូរ៉េ",
+        "description": ""
+    },
+    "ku": {
+        "message": "ឃឺដ (គូម៉ាន់ជី)",
+        "description": ""
+    },
+    "ky": {
+        "message": "គីស៊ី",
+        "description": ""
+    },
+    "la": {
+        "message": "ឡាតាំង",
+        "description": ""
+    },
+    "lb": {
+        "message": "លុចហ្សំបួរ",
+        "description": ""
+    },
+    "lo": {
+        "message": "ឡាវ",
+        "description": ""
+    },
+    "lt": {
+        "message": "លីទុយអានី",
+        "description": ""
+    },
+    "lv": {
+        "message": "ឡាតវីយ៉ា",
+        "description": ""
+    },
+    "mg": {
+        "message": "ម៉ាដាហ្កាសការ",
+        "description": ""
+    },
+    "mi": {
+        "message": "ម៉ោរី",
+        "description": ""
+    },
+    "mk": {
+        "message": "ម៉ាសេដូនី",
+        "description": ""
+    },
+    "ml": {
+        "message": "ម៉ាឡាយ៉ាឡាម",
+        "description": ""
+    },
+    "mn": {
+        "message": "ម៉ុងហ្គោលី",
+        "description": ""
+    },
+    "mr": {
+        "message": "ម៉ារាទី",
+        "description": ""
+    },
+    "ms": {
+        "message": "ម៉ាឡេស៊ី",
+        "description": ""
+    },
+    "mt": {
+        "message": "ម៉ាល់តា",
+        "description": ""
+    },
+    "my": {
+        "message": "មីយ៉ាន់ម៉ា (ភូមា)",
+        "description": ""
+    },
+    "ne": {
+        "message": "នេប៉ាល់",
+        "description": ""
+    },
+    "nl": {
+        "message": "ហូឡង់",
+        "description": ""
+    },
+    "no": {
+        "message": "ន័រវែស",
+        "description": ""
+    },
+    "ny": {
+        "message": "ឈិចិវា",
+        "description": ""
+    },
+    "pa": {
+        "message": "បឹនជាពិ",
+        "description": ""
+    },
+    "pl": {
+        "message": "ប៉ូឡូញ",
+        "description": ""
+    },
+    "ps": {
+        "message": "បាស្តូ",
+        "description": ""
+    },
+    "pt": {
+        "message": "ព័រទុយហ្គាល់",
+        "description": ""
+    },
+    "ro": {
+        "message": "រូម៉ានី",
+        "description": ""
+    },
+    "ru": {
+        "message": "រុស្ស៊ី",
+        "description": ""
+    },
+    "sd": {
+        "message": "ស៊ីន្តី",
+        "description": ""
+    },
+    "si": {
+        "message": "ស៊ី​ន​ហា​ឡា",
+        "description": ""
+    },
+    "sk": {
+        "message": "ស្លូវ៉ាគី",
+        "description": ""
+    },
+    "sl": {
+        "message": "ស្លូវ៉ានី",
+        "description": ""
+    },
+    "sm": {
+        "message": "សាមូអា",
+        "description": ""
+    },
+    "sn": {
+        "message": "សូណា",
+        "description": ""
+    },
+    "so": {
+        "message": "សូម៉ាលី",
+        "description": ""
+    },
+    "sq": {
+        "message": "អាល់បានី",
+        "description": ""
+    },
+    "sr": {
+        "message": "ស៊ែប៊ី",
+        "description": ""
+    },
+    "st": {
+        "message": "សេសូធូ",
+        "description": ""
+    },
+    "su": {
+        "message": "ស៊ូដង់",
+        "description": ""
+    },
+    "sv": {
+        "message": "ស៊ុយអែត",
+        "description": ""
+    },
+    "sw": {
+        "message": "ស្វាហ៊ីលី",
+        "description": ""
+    },
+    "ta": {
+        "message": "តាមីល",
+        "description": ""
+    },
+    "te": {
+        "message": "តេលុគុ",
+        "description": ""
+    },
+    "tg": {
+        "message": "តាដហ្ស៊ីគីស្តង់",
+        "description": ""
+    },
+    "th": {
+        "message": "ថៃ",
+        "description": ""
+    },
+    "tl": {
+        "message": "ហ្វីលីពីន",
+        "description": ""
+    },
+    "tr": {
+        "message": "ទួកគី",
+        "description": ""
+    },
+    "uk": {
+        "message": "អ៊ុយក្រែន",
+        "description": ""
+    },
+    "ur": {
+        "message": "អ៊ូរឌូ",
+        "description": ""
+    },
+    "uz": {
+        "message": "អ៊ូហ្សបេគីស្តង់",
+        "description": ""
+    },
+    "vi": {
+        "message": "វៀតណាម",
+        "description": ""
+    },
+    "xh": {
+        "message": "ហូ​ស្សា",
+        "description": ""
+    },
+    "yi": {
+        "message": "យីឌីស",
+        "description": ""
+    },
+    "yo": {
+        "message": "យូរុយបា",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ចិន",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ចិន (បុរាណ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "សូលូ",
+        "description": ""
+    }
+}

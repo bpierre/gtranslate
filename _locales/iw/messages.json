@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "אפריקאנס",
+        "description": ""
+    },
+    "am": {
+        "message": "אמהרית",
+        "description": ""
+    },
+    "ar": {
+        "message": "ערבית",
+        "description": ""
+    },
+    "auto": {
+        "message": "אתר שפה",
+        "description": ""
+    },
+    "az": {
+        "message": "אזרבייג'אנית",
+        "description": ""
+    },
+    "be": {
+        "message": "בלארוסית",
+        "description": ""
+    },
+    "bg": {
+        "message": "בולגרית",
+        "description": ""
+    },
+    "bn": {
+        "message": "בנגאלית",
+        "description": ""
+    },
+    "bs": {
+        "message": "בוסנית",
+        "description": ""
+    },
+    "ca": {
+        "message": "קטלאנית",
+        "description": ""
+    },
+    "ceb": {
+        "message": "סבואנו",
+        "description": ""
+    },
+    "co": {
+        "message": "קורסיקאית",
+        "description": ""
+    },
+    "cs": {
+        "message": "צ'כית",
+        "description": ""
+    },
+    "cy": {
+        "message": "וולשית",
+        "description": ""
+    },
+    "da": {
+        "message": "דנית",
+        "description": ""
+    },
+    "de": {
+        "message": "גרמנית",
+        "description": ""
+    },
+    "el": {
+        "message": "יוונית",
+        "description": ""
+    },
+    "en": {
+        "message": "אנגלית",
+        "description": ""
+    },
+    "eo": {
+        "message": "אספרנטו",
+        "description": ""
+    },
+    "es": {
+        "message": "ספרדית",
+        "description": ""
+    },
+    "et": {
+        "message": "אסטונית",
+        "description": ""
+    },
+    "eu": {
+        "message": "באסקית",
+        "description": ""
+    },
+    "fa": {
+        "message": "פרסית",
+        "description": ""
+    },
+    "fi": {
+        "message": "פינית",
+        "description": ""
+    },
+    "fr": {
+        "message": "צרפתית",
+        "description": ""
+    },
+    "fy": {
+        "message": "פריזית",
+        "description": ""
+    },
+    "ga": {
+        "message": "אירית",
+        "description": ""
+    },
+    "gd": {
+        "message": "סקוטית גאלית",
+        "description": ""
+    },
+    "gl": {
+        "message": "גליציאנית",
+        "description": ""
+    },
+    "gu": {
+        "message": "גוג'אראטי",
+        "description": ""
+    },
+    "ha": {
+        "message": "האוסה",
+        "description": ""
+    },
+    "haw": {
+        "message": "הוואית",
+        "description": ""
+    },
+    "hi": {
+        "message": "הינדי",
+        "description": ""
+    },
+    "hmn": {
+        "message": "המונג",
+        "description": ""
+    },
+    "hr": {
+        "message": "קרואטית",
+        "description": ""
+    },
+    "ht": {
+        "message": "קריאולית האיטית",
+        "description": ""
+    },
+    "hu": {
+        "message": "הונגרית",
+        "description": ""
+    },
+    "hy": {
+        "message": "ארמנית",
+        "description": ""
+    },
+    "id": {
+        "message": "אינדונזית",
+        "description": ""
+    },
+    "ig": {
+        "message": "איגדו",
+        "description": ""
+    },
+    "is": {
+        "message": "איסלנדית",
+        "description": ""
+    },
+    "it": {
+        "message": "איטלקית",
+        "description": ""
+    },
+    "iw": {
+        "message": "עברית",
+        "description": ""
+    },
+    "ja": {
+        "message": "יפנית",
+        "description": ""
+    },
+    "jw": {
+        "message": "ג'אווה",
+        "description": ""
+    },
+    "ka": {
+        "message": "גאורגית",
+        "description": ""
+    },
+    "kk": {
+        "message": "קזאחית",
+        "description": ""
+    },
+    "km": {
+        "message": "חמר",
+        "description": ""
+    },
+    "kn": {
+        "message": "קאנאדה",
+        "description": ""
+    },
+    "ko": {
+        "message": "קוריאנית",
+        "description": ""
+    },
+    "ku": {
+        "message": "כורדית",
+        "description": ""
+    },
+    "ky": {
+        "message": "קירגיזית",
+        "description": ""
+    },
+    "la": {
+        "message": "לטינית",
+        "description": ""
+    },
+    "lb": {
+        "message": "לוקסמבורגית",
+        "description": ""
+    },
+    "lo": {
+        "message": "לאו",
+        "description": ""
+    },
+    "lt": {
+        "message": "ליטאית",
+        "description": ""
+    },
+    "lv": {
+        "message": "לטווית",
+        "description": ""
+    },
+    "mg": {
+        "message": "מלגשית",
+        "description": ""
+    },
+    "mi": {
+        "message": "מאורית",
+        "description": ""
+    },
+    "mk": {
+        "message": "מקדונית",
+        "description": ""
+    },
+    "ml": {
+        "message": "מאלאיאלם",
+        "description": ""
+    },
+    "mn": {
+        "message": "מונגולית",
+        "description": ""
+    },
+    "mr": {
+        "message": "מאראתי",
+        "description": ""
+    },
+    "ms": {
+        "message": "מאלזית",
+        "description": ""
+    },
+    "mt": {
+        "message": "מלטית",
+        "description": ""
+    },
+    "my": {
+        "message": "בורמזית",
+        "description": ""
+    },
+    "ne": {
+        "message": "נפאלית",
+        "description": ""
+    },
+    "nl": {
+        "message": "הולנדית",
+        "description": ""
+    },
+    "no": {
+        "message": "נורווגית",
+        "description": ""
+    },
+    "ny": {
+        "message": "צ'יצ'ווה",
+        "description": ""
+    },
+    "pa": {
+        "message": "פונג'אבית",
+        "description": ""
+    },
+    "pl": {
+        "message": "פולנית",
+        "description": ""
+    },
+    "ps": {
+        "message": "פשטו",
+        "description": ""
+    },
+    "pt": {
+        "message": "פורטוגזית",
+        "description": ""
+    },
+    "ro": {
+        "message": "רומנית",
+        "description": ""
+    },
+    "ru": {
+        "message": "רוסית",
+        "description": ""
+    },
+    "sd": {
+        "message": "סינדהי",
+        "description": ""
+    },
+    "si": {
+        "message": "סינהלית",
+        "description": ""
+    },
+    "sk": {
+        "message": "סלובקית",
+        "description": ""
+    },
+    "sl": {
+        "message": "סלובנית",
+        "description": ""
+    },
+    "sm": {
+        "message": "סמואית",
+        "description": ""
+    },
+    "sn": {
+        "message": "שונה",
+        "description": ""
+    },
+    "so": {
+        "message": "סומלית",
+        "description": ""
+    },
+    "sq": {
+        "message": "אלבנית",
+        "description": ""
+    },
+    "sr": {
+        "message": "סרבית",
+        "description": ""
+    },
+    "st": {
+        "message": "ססות'ו",
+        "description": ""
+    },
+    "su": {
+        "message": "סונדית",
+        "description": ""
+    },
+    "sv": {
+        "message": "שוודית",
+        "description": ""
+    },
+    "sw": {
+        "message": "סוואהילית",
+        "description": ""
+    },
+    "ta": {
+        "message": "טאמילית",
+        "description": ""
+    },
+    "te": {
+        "message": "טלוגו",
+        "description": ""
+    },
+    "tg": {
+        "message": "טג'יקית",
+        "description": ""
+    },
+    "th": {
+        "message": "תאילנדית",
+        "description": ""
+    },
+    "tl": {
+        "message": "פיליפינית",
+        "description": ""
+    },
+    "tr": {
+        "message": "טורקית",
+        "description": ""
+    },
+    "uk": {
+        "message": "אוקראינית",
+        "description": ""
+    },
+    "ur": {
+        "message": "אורדו",
+        "description": ""
+    },
+    "uz": {
+        "message": "אוזבקית",
+        "description": ""
+    },
+    "vi": {
+        "message": "וייטנאמית",
+        "description": ""
+    },
+    "xh": {
+        "message": "קוהסה",
+        "description": ""
+    },
+    "yi": {
+        "message": "יידיש",
+        "description": ""
+    },
+    "yo": {
+        "message": "יורובה",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "סינית",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "סינית (מסורתית)",
+        "description": ""
+    },
+    "zu": {
+        "message": "זולו",
+        "description": ""
+    }
+}

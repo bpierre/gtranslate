@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "אַפֿריקאַנס",
+        "description": ""
+    },
+    "am": {
+        "message": "אַמהאַריש",
+        "description": ""
+    },
+    "ar": {
+        "message": "אַראַביש",
+        "description": ""
+    },
+    "auto": {
+        "message": "ארפינד שפראך",
+        "description": ""
+    },
+    "az": {
+        "message": "אַזערבײַדזשאַניש",
+        "description": ""
+    },
+    "be": {
+        "message": "בעלאָרוּסיש",
+        "description": ""
+    },
+    "bg": {
+        "message": "בוּלגאַריש",
+        "description": ""
+    },
+    "bn": {
+        "message": "בענגאַלי",
+        "description": ""
+    },
+    "bs": {
+        "message": "באָזניש",
+        "description": ""
+    },
+    "ca": {
+        "message": "קאַטאַלאַניש",
+        "description": ""
+    },
+    "ceb": {
+        "message": "סעבוּאַנאָ",
+        "description": ""
+    },
+    "co": {
+        "message": "קאָרסיקאַניש",
+        "description": ""
+    },
+    "cs": {
+        "message": "טשעכיש",
+        "description": ""
+    },
+    "cy": {
+        "message": "וועלש",
+        "description": ""
+    },
+    "da": {
+        "message": "דאַניש",
+        "description": ""
+    },
+    "de": {
+        "message": "דײַטש",
+        "description": ""
+    },
+    "el": {
+        "message": "גריכיש",
+        "description": ""
+    },
+    "en": {
+        "message": "ענגליש",
+        "description": ""
+    },
+    "eo": {
+        "message": "עספּעראַנטאָ",
+        "description": ""
+    },
+    "es": {
+        "message": "שפּאַניש",
+        "description": ""
+    },
+    "et": {
+        "message": "עסטיש",
+        "description": ""
+    },
+    "eu": {
+        "message": "באַסקיש",
+        "description": ""
+    },
+    "fa": {
+        "message": "פּערסיש",
+        "description": ""
+    },
+    "fi": {
+        "message": "פֿיניש",
+        "description": ""
+    },
+    "fr": {
+        "message": "פֿראַנצױזיש",
+        "description": ""
+    },
+    "fy": {
+        "message": "פֿריזיש",
+        "description": ""
+    },
+    "ga": {
+        "message": "אײַריש",
+        "description": ""
+    },
+    "gd": {
+        "message": "סקאָטס געליש",
+        "description": ""
+    },
+    "gl": {
+        "message": "גאַליציאַניש",
+        "description": ""
+    },
+    "gu": {
+        "message": "גוּדזשאַראַטי",
+        "description": ""
+    },
+    "ha": {
+        "message": "האַוּסאַ",
+        "description": ""
+    },
+    "haw": {
+        "message": "האַװײַאַן",
+        "description": ""
+    },
+    "hi": {
+        "message": "הינדיש",
+        "description": ""
+    },
+    "hmn": {
+        "message": "המאָנג",
+        "description": ""
+    },
+    "hr": {
+        "message": "קראָאַטיש",
+        "description": ""
+    },
+    "ht": {
+        "message": "הײַטיאַן קרעאָלע",
+        "description": ""
+    },
+    "hu": {
+        "message": "הוּנגעריש",
+        "description": ""
+    },
+    "hy": {
+        "message": "אַרמעניש",
+        "description": ""
+    },
+    "id": {
+        "message": "אינדאָנעזיש",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "איסלענדיש",
+        "description": ""
+    },
+    "it": {
+        "message": "איטאַליעניש",
+        "description": ""
+    },
+    "iw": {
+        "message": "העברעיִש",
+        "description": ""
+    },
+    "ja": {
+        "message": "יאַפּאַניש",
+        "description": ""
+    },
+    "jw": {
+        "message": "יאַוואַנעזיש",
+        "description": ""
+    },
+    "ka": {
+        "message": "גרוזיניש",
+        "description": ""
+    },
+    "kk": {
+        "message": "קאַזאַק",
+        "description": ""
+    },
+    "km": {
+        "message": "כמער",
+        "description": ""
+    },
+    "kn": {
+        "message": "קאַנאַדאַ",
+        "description": ""
+    },
+    "ko": {
+        "message": "קאָרעיִש",
+        "description": ""
+    },
+    "ku": {
+        "message": "קוּרדיש (קוּרמאַנדזשי)",
+        "description": ""
+    },
+    "ky": {
+        "message": "קירגיז",
+        "description": ""
+    },
+    "la": {
+        "message": "לאַטין",
+        "description": ""
+    },
+    "lb": {
+        "message": "לוּקסעמבוּרגיש",
+        "description": ""
+    },
+    "lo": {
+        "message": "לאַאָטיש",
+        "description": ""
+    },
+    "lt": {
+        "message": "ליטוויש",
+        "description": ""
+    },
+    "lv": {
+        "message": "לעטיש",
+        "description": ""
+    },
+    "mg": {
+        "message": "מאַלאַגאַסיש",
+        "description": ""
+    },
+    "mi": {
+        "message": "מאַאָרי",
+        "description": ""
+    },
+    "mk": {
+        "message": "מאַקעדאָניש",
+        "description": ""
+    },
+    "ml": {
+        "message": "מאַלייאַלאַם",
+        "description": ""
+    },
+    "mn": {
+        "message": "מאָנגאָליש",
+        "description": ""
+    },
+    "mr": {
+        "message": "מאַראַטי",
+        "description": ""
+    },
+    "ms": {
+        "message": "מאַלײַאיש",
+        "description": ""
+    },
+    "mt": {
+        "message": "מאַלטעזיש",
+        "description": ""
+    },
+    "my": {
+        "message": "מיאַנמאַר (בוּרמעזיש)",
+        "description": ""
+    },
+    "ne": {
+        "message": "נעפּאַליש",
+        "description": ""
+    },
+    "nl": {
+        "message": "האָלאַנדיש",
+        "description": ""
+    },
+    "no": {
+        "message": "נאָרוועגיש",
+        "description": ""
+    },
+    "ny": {
+        "message": "טשיטשעהוּאַ",
+        "description": ""
+    },
+    "pa": {
+        "message": "פּוּנזשאַבי",
+        "description": ""
+    },
+    "pl": {
+        "message": "פּױליש",
+        "description": ""
+    },
+    "ps": {
+        "message": "פּאַשטאָ",
+        "description": ""
+    },
+    "pt": {
+        "message": "פּאָרטוּגעײש",
+        "description": ""
+    },
+    "ro": {
+        "message": "רוּמעניש",
+        "description": ""
+    },
+    "ru": {
+        "message": "רוּסיש",
+        "description": ""
+    },
+    "sd": {
+        "message": "סינדהי",
+        "description": ""
+    },
+    "si": {
+        "message": "סינהאַלאַ",
+        "description": ""
+    },
+    "sk": {
+        "message": "סלאָװאַקיש",
+        "description": ""
+    },
+    "sl": {
+        "message": "סלאָוועניש",
+        "description": ""
+    },
+    "sm": {
+        "message": "סאַמאָאַן",
+        "description": ""
+    },
+    "sn": {
+        "message": "שאָנאַ",
+        "description": ""
+    },
+    "so": {
+        "message": "סאָמאַלי",
+        "description": ""
+    },
+    "sq": {
+        "message": "אַלבאַניש",
+        "description": ""
+    },
+    "sr": {
+        "message": "סערביש",
+        "description": ""
+    },
+    "st": {
+        "message": "סעסאָטאָ",
+        "description": ""
+    },
+    "su": {
+        "message": "סוּנדאַנעזיש",
+        "description": ""
+    },
+    "sv": {
+        "message": "שװעדיש",
+        "description": ""
+    },
+    "sw": {
+        "message": "סוואַהילי",
+        "description": ""
+    },
+    "ta": {
+        "message": "טאַמיל",
+        "description": ""
+    },
+    "te": {
+        "message": "טעלוּגוּ",
+        "description": ""
+    },
+    "tg": {
+        "message": "טאַדזשיק",
+        "description": ""
+    },
+    "th": {
+        "message": "טײַלענדיש",
+        "description": ""
+    },
+    "tl": {
+        "message": "פֿיליפּינאאָ",
+        "description": ""
+    },
+    "tr": {
+        "message": "טוּרקיש",
+        "description": ""
+    },
+    "uk": {
+        "message": "אוּקרײניש",
+        "description": ""
+    },
+    "ur": {
+        "message": "אוּרדוּ",
+        "description": ""
+    },
+    "uz": {
+        "message": "אוּזבעקיש",
+        "description": ""
+    },
+    "vi": {
+        "message": "װיעטנאַמעזיש",
+        "description": ""
+    },
+    "xh": {
+        "message": "קהאָסע",
+        "description": ""
+    },
+    "yi": {
+        "message": "יידיש",
+        "description": ""
+    },
+    "yo": {
+        "message": "יאָרוּבאַ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "כינעזיש",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "כינעזיש (טראַדיציאָנעל)",
+        "description": ""
+    },
+    "zu": {
+        "message": "זוּלוּ",
+        "description": ""
+    }
+}

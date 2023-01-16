@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "бур",
+        "description": ""
+    },
+    "am": {
+        "message": "амхар",
+        "description": ""
+    },
+    "ar": {
+        "message": "араб",
+        "description": ""
+    },
+    "auto": {
+        "message": "Тілді анықтау",
+        "description": ""
+    },
+    "az": {
+        "message": "әзiрбайжан",
+        "description": ""
+    },
+    "be": {
+        "message": "беларусь",
+        "description": ""
+    },
+    "bg": {
+        "message": "болгар",
+        "description": ""
+    },
+    "bn": {
+        "message": "бенгал",
+        "description": ""
+    },
+    "bs": {
+        "message": "босния",
+        "description": ""
+    },
+    "ca": {
+        "message": "каталан",
+        "description": ""
+    },
+    "ceb": {
+        "message": "себуано",
+        "description": ""
+    },
+    "co": {
+        "message": "корсика",
+        "description": ""
+    },
+    "cs": {
+        "message": "чех",
+        "description": ""
+    },
+    "cy": {
+        "message": "валлий",
+        "description": ""
+    },
+    "da": {
+        "message": "дат",
+        "description": ""
+    },
+    "de": {
+        "message": "неміс",
+        "description": ""
+    },
+    "el": {
+        "message": "грек",
+        "description": ""
+    },
+    "en": {
+        "message": "ағылшын",
+        "description": ""
+    },
+    "eo": {
+        "message": "эсперанто",
+        "description": ""
+    },
+    "es": {
+        "message": "испан",
+        "description": ""
+    },
+    "et": {
+        "message": "эстон",
+        "description": ""
+    },
+    "eu": {
+        "message": "баск",
+        "description": ""
+    },
+    "fa": {
+        "message": "парсы",
+        "description": ""
+    },
+    "fi": {
+        "message": "фин",
+        "description": ""
+    },
+    "fr": {
+        "message": "француз",
+        "description": ""
+    },
+    "fy": {
+        "message": "фрис",
+        "description": ""
+    },
+    "ga": {
+        "message": "ирланд",
+        "description": ""
+    },
+    "gd": {
+        "message": "шотланд (гaэль)",
+        "description": ""
+    },
+    "gl": {
+        "message": "галисия",
+        "description": ""
+    },
+    "gu": {
+        "message": "гуджарати",
+        "description": ""
+    },
+    "ha": {
+        "message": "хауса",
+        "description": ""
+    },
+    "haw": {
+        "message": "гавай",
+        "description": ""
+    },
+    "hi": {
+        "message": "хинди",
+        "description": ""
+    },
+    "hmn": {
+        "message": "хмонг",
+        "description": ""
+    },
+    "hr": {
+        "message": "хорват",
+        "description": ""
+    },
+    "ht": {
+        "message": "креоль (Гаити)",
+        "description": ""
+    },
+    "hu": {
+        "message": "венгр",
+        "description": ""
+    },
+    "hy": {
+        "message": "армян",
+        "description": ""
+    },
+    "id": {
+        "message": "индонезия",
+        "description": ""
+    },
+    "ig": {
+        "message": "игбо",
+        "description": ""
+    },
+    "is": {
+        "message": "исланд",
+        "description": ""
+    },
+    "it": {
+        "message": "итальян",
+        "description": ""
+    },
+    "iw": {
+        "message": "иврит",
+        "description": ""
+    },
+    "ja": {
+        "message": "жапон",
+        "description": ""
+    },
+    "jw": {
+        "message": "ява",
+        "description": ""
+    },
+    "ka": {
+        "message": "грузин",
+        "description": ""
+    },
+    "kk": {
+        "message": "қазақ",
+        "description": ""
+    },
+    "km": {
+        "message": "кхмер",
+        "description": ""
+    },
+    "kn": {
+        "message": "каннада",
+        "description": ""
+    },
+    "ko": {
+        "message": "корей",
+        "description": ""
+    },
+    "ku": {
+        "message": "күрд (курманжи)",
+        "description": ""
+    },
+    "ky": {
+        "message": "қырғыз",
+        "description": ""
+    },
+    "la": {
+        "message": "латын",
+        "description": ""
+    },
+    "lb": {
+        "message": "люксембург",
+        "description": ""
+    },
+    "lo": {
+        "message": "лаос",
+        "description": ""
+    },
+    "lt": {
+        "message": "литва",
+        "description": ""
+    },
+    "lv": {
+        "message": "латыш",
+        "description": ""
+    },
+    "mg": {
+        "message": "малагаси",
+        "description": ""
+    },
+    "mi": {
+        "message": "маори",
+        "description": ""
+    },
+    "mk": {
+        "message": "македон",
+        "description": ""
+    },
+    "ml": {
+        "message": "малайялам",
+        "description": ""
+    },
+    "mn": {
+        "message": "моңғол",
+        "description": ""
+    },
+    "mr": {
+        "message": "маратхи",
+        "description": ""
+    },
+    "ms": {
+        "message": "малай",
+        "description": ""
+    },
+    "mt": {
+        "message": "мальта",
+        "description": ""
+    },
+    "my": {
+        "message": "бирма (Мьянма)",
+        "description": ""
+    },
+    "ne": {
+        "message": "непал",
+        "description": ""
+    },
+    "nl": {
+        "message": "голланд",
+        "description": ""
+    },
+    "no": {
+        "message": "норвег",
+        "description": ""
+    },
+    "ny": {
+        "message": "чичева",
+        "description": ""
+    },
+    "pa": {
+        "message": "панджаб",
+        "description": ""
+    },
+    "pl": {
+        "message": "поляк",
+        "description": ""
+    },
+    "ps": {
+        "message": "пашто",
+        "description": ""
+    },
+    "pt": {
+        "message": "португал",
+        "description": ""
+    },
+    "ro": {
+        "message": "румын",
+        "description": ""
+    },
+    "ru": {
+        "message": "орыс",
+        "description": ""
+    },
+    "sd": {
+        "message": "синдхи",
+        "description": ""
+    },
+    "si": {
+        "message": "сингал",
+        "description": ""
+    },
+    "sk": {
+        "message": "словак",
+        "description": ""
+    },
+    "sl": {
+        "message": "словен",
+        "description": ""
+    },
+    "sm": {
+        "message": "самоа",
+        "description": ""
+    },
+    "sn": {
+        "message": "шона",
+        "description": ""
+    },
+    "so": {
+        "message": "сомали",
+        "description": ""
+    },
+    "sq": {
+        "message": "албан",
+        "description": ""
+    },
+    "sr": {
+        "message": "серб",
+        "description": ""
+    },
+    "st": {
+        "message": "сесото",
+        "description": ""
+    },
+    "su": {
+        "message": "судан",
+        "description": ""
+    },
+    "sv": {
+        "message": "швед",
+        "description": ""
+    },
+    "sw": {
+        "message": "суахили",
+        "description": ""
+    },
+    "ta": {
+        "message": "тамил",
+        "description": ""
+    },
+    "te": {
+        "message": "телугу",
+        "description": ""
+    },
+    "tg": {
+        "message": "тәжік",
+        "description": ""
+    },
+    "th": {
+        "message": "тай",
+        "description": ""
+    },
+    "tl": {
+        "message": "филиппин",
+        "description": ""
+    },
+    "tr": {
+        "message": "түрік",
+        "description": ""
+    },
+    "uk": {
+        "message": "украин",
+        "description": ""
+    },
+    "ur": {
+        "message": "урду",
+        "description": ""
+    },
+    "uz": {
+        "message": "өзбек",
+        "description": ""
+    },
+    "vi": {
+        "message": "вьетнам",
+        "description": ""
+    },
+    "xh": {
+        "message": "хоса",
+        "description": ""
+    },
+    "yi": {
+        "message": "идиш",
+        "description": ""
+    },
+    "yo": {
+        "message": "йоруба",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "қытай",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "қытай (дәстүрлі)",
+        "description": ""
+    },
+    "zu": {
+        "message": "зулу",
+        "description": ""
+    }
+}

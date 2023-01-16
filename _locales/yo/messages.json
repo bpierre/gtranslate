@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Èdè Afrikani",
+        "description": ""
+    },
+    "am": {
+        "message": "Èdè Amharic",
+        "description": ""
+    },
+    "ar": {
+        "message": "Èdè Larubawa",
+        "description": ""
+    },
+    "auto": {
+        "message": "Ṣawari ede",
+        "description": ""
+    },
+    "az": {
+        "message": "Èdè Azerbaijani",
+        "description": ""
+    },
+    "be": {
+        "message": "Èdè Belarusi",
+        "description": ""
+    },
+    "bg": {
+        "message": "Èdè Bulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Èdè Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Èdè Bosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Èdè Catala",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Èdè Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Èdè Kosikaani",
+        "description": ""
+    },
+    "cs": {
+        "message": "Èdè Tseki",
+        "description": ""
+    },
+    "cy": {
+        "message": "Èdè Welshi",
+        "description": ""
+    },
+    "da": {
+        "message": "Èdè Danish",
+        "description": ""
+    },
+    "de": {
+        "message": "Èdè Jamani",
+        "description": ""
+    },
+    "el": {
+        "message": "Èdè Giriki",
+        "description": ""
+    },
+    "en": {
+        "message": "Èdè Gẹẹsi",
+        "description": ""
+    },
+    "eo": {
+        "message": "Èdè Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Èdè Spanish",
+        "description": ""
+    },
+    "et": {
+        "message": "Èdè Estonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Èdè Baski",
+        "description": ""
+    },
+    "fa": {
+        "message": "Èdè Persia",
+        "description": ""
+    },
+    "fi": {
+        "message": "Èdè Finland",
+        "description": ""
+    },
+    "fr": {
+        "message": "Èdè Faranse",
+        "description": ""
+    },
+    "fy": {
+        "message": "Èdè Frisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Èdè Airiṣi",
+        "description": ""
+    },
+    "gd": {
+        "message": "Èdè Gaelik ti Ilu Scotland",
+        "description": ""
+    },
+    "gl": {
+        "message": "Èdè Galicia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Èdè Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Ede Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Èdè Hawaiian",
+        "description": ""
+    },
+    "hi": {
+        "message": "Èdè Hindu",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Èdè Hmongi",
+        "description": ""
+    },
+    "hr": {
+        "message": "Èdè Kroatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Èdè Haitian Creole",
+        "description": ""
+    },
+    "hu": {
+        "message": "Èdè Hungaria",
+        "description": ""
+    },
+    "hy": {
+        "message": "Èdè Amẹnia",
+        "description": ""
+    },
+    "id": {
+        "message": "Èdè Indonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Èdè igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Èdè Icelandic",
+        "description": ""
+    },
+    "it": {
+        "message": "Èdè Italiani",
+        "description": ""
+    },
+    "iw": {
+        "message": "Ede Heberu",
+        "description": ""
+    },
+    "ja": {
+        "message": "Èdè Japanisi",
+        "description": ""
+    },
+    "jw": {
+        "message": "Èdè Javana",
+        "description": ""
+    },
+    "ka": {
+        "message": "Èdè Georgia",
+        "description": ""
+    },
+    "kk": {
+        "message": "Èdè Kasaki",
+        "description": ""
+    },
+    "km": {
+        "message": "Èdè Khima",
+        "description": ""
+    },
+    "kn": {
+        "message": "Èdè Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Ede Koriani",
+        "description": ""
+    },
+    "ku": {
+        "message": "Èdè Kurdish (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Èdè Kyrgyz",
+        "description": ""
+    },
+    "la": {
+        "message": "Èdè Latini",
+        "description": ""
+    },
+    "lb": {
+        "message": "Èdè Luxembourgish",
+        "description": ""
+    },
+    "lo": {
+        "message": "Èdè Laos",
+        "description": ""
+    },
+    "lt": {
+        "message": "Èdè Lithuania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Èdè Latvianu",
+        "description": ""
+    },
+    "mg": {
+        "message": "Ede Malagasi",
+        "description": ""
+    },
+    "mi": {
+        "message": "Èdè Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Èdè makedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Èdè Malayalami",
+        "description": ""
+    },
+    "mn": {
+        "message": "Èdè Mangoli",
+        "description": ""
+    },
+    "mr": {
+        "message": "Èdè Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Èdè Malaya",
+        "description": ""
+    },
+    "mt": {
+        "message": "Èdè Malta",
+        "description": ""
+    },
+    "my": {
+        "message": "Èdè Mianma (Bumiisi)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Èdè Nepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Èdè Dutch",
+        "description": ""
+    },
+    "no": {
+        "message": "Èdè Norway",
+        "description": ""
+    },
+    "ny": {
+        "message": "Èdè Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Èdè Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Ede Polandi",
+        "description": ""
+    },
+    "ps": {
+        "message": "Èdè Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Èdè Portugi",
+        "description": ""
+    },
+    "ro": {
+        "message": "Èdè Romania",
+        "description": ""
+    },
+    "ru": {
+        "message": "Èdè Roosia",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Èdè Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Èdè Slovaki",
+        "description": ""
+    },
+    "sl": {
+        "message": "Èdè Slovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Èdè Samoan",
+        "description": ""
+    },
+    "sn": {
+        "message": "Èdè Sona",
+        "description": ""
+    },
+    "so": {
+        "message": "Èdè Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Èdè Albania",
+        "description": ""
+    },
+    "sr": {
+        "message": "Èdè Serbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Èdè Sesoto",
+        "description": ""
+    },
+    "su": {
+        "message": "Èdè Sudani",
+        "description": ""
+    },
+    "sv": {
+        "message": "Èdè Suwidiisi",
+        "description": ""
+    },
+    "sw": {
+        "message": "Èdè Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Èdè Tamili",
+        "description": ""
+    },
+    "te": {
+        "message": "Èdè Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Èdè Tajiki",
+        "description": ""
+    },
+    "th": {
+        "message": "Èdè Thai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Èdè Filipini",
+        "description": ""
+    },
+    "tr": {
+        "message": "Èdè Tọkii",
+        "description": ""
+    },
+    "uk": {
+        "message": "Èdè Ukrani",
+        "description": ""
+    },
+    "ur": {
+        "message": "Èdè Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Èdè Uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Èdè Vietnamu",
+        "description": ""
+    },
+    "xh": {
+        "message": "Èdè Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Èdè Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Èdè Yorùbá",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Èdè Chinesi",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Èdè Chine (àtôwödöwö)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Èdè Sulu",
+        "description": ""
+    }
+}

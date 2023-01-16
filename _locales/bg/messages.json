@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "африкаанс (бурски)",
+        "description": ""
+    },
+    "am": {
+        "message": "амхарски",
+        "description": ""
+    },
+    "ar": {
+        "message": "арабски",
+        "description": ""
+    },
+    "auto": {
+        "message": "Разпознаване на езика",
+        "description": ""
+    },
+    "az": {
+        "message": "азербайджански",
+        "description": ""
+    },
+    "be": {
+        "message": "беларуски",
+        "description": ""
+    },
+    "bg": {
+        "message": "български",
+        "description": ""
+    },
+    "bn": {
+        "message": "бенгалски",
+        "description": ""
+    },
+    "bs": {
+        "message": "босненски",
+        "description": ""
+    },
+    "ca": {
+        "message": "каталонски",
+        "description": ""
+    },
+    "ceb": {
+        "message": "себуански",
+        "description": ""
+    },
+    "co": {
+        "message": "корсикански",
+        "description": ""
+    },
+    "cs": {
+        "message": "чешки",
+        "description": ""
+    },
+    "cy": {
+        "message": "уелски",
+        "description": ""
+    },
+    "da": {
+        "message": "датски",
+        "description": ""
+    },
+    "de": {
+        "message": "немски",
+        "description": ""
+    },
+    "el": {
+        "message": "гръцки",
+        "description": ""
+    },
+    "en": {
+        "message": "английски",
+        "description": ""
+    },
+    "eo": {
+        "message": "есперанто",
+        "description": ""
+    },
+    "es": {
+        "message": "испански",
+        "description": ""
+    },
+    "et": {
+        "message": "естонски",
+        "description": ""
+    },
+    "eu": {
+        "message": "баски",
+        "description": ""
+    },
+    "fa": {
+        "message": "персийски",
+        "description": ""
+    },
+    "fi": {
+        "message": "финландски",
+        "description": ""
+    },
+    "fr": {
+        "message": "френски",
+        "description": ""
+    },
+    "fy": {
+        "message": "фризийски",
+        "description": ""
+    },
+    "ga": {
+        "message": "ирландски",
+        "description": ""
+    },
+    "gd": {
+        "message": "шотландски келтски",
+        "description": ""
+    },
+    "gl": {
+        "message": "галисийски",
+        "description": ""
+    },
+    "gu": {
+        "message": "гуджарати",
+        "description": ""
+    },
+    "ha": {
+        "message": "хауса",
+        "description": ""
+    },
+    "haw": {
+        "message": "хавайски",
+        "description": ""
+    },
+    "hi": {
+        "message": "хинди",
+        "description": ""
+    },
+    "hmn": {
+        "message": "хмонг",
+        "description": ""
+    },
+    "hr": {
+        "message": "хърватски",
+        "description": ""
+    },
+    "ht": {
+        "message": "хаитянски креолски",
+        "description": ""
+    },
+    "hu": {
+        "message": "унгарски",
+        "description": ""
+    },
+    "hy": {
+        "message": "арменски",
+        "description": ""
+    },
+    "id": {
+        "message": "индонезийски",
+        "description": ""
+    },
+    "ig": {
+        "message": "игбо",
+        "description": ""
+    },
+    "is": {
+        "message": "исландски",
+        "description": ""
+    },
+    "it": {
+        "message": "италиански",
+        "description": ""
+    },
+    "iw": {
+        "message": "иврит",
+        "description": ""
+    },
+    "ja": {
+        "message": "японски",
+        "description": ""
+    },
+    "jw": {
+        "message": "явански",
+        "description": ""
+    },
+    "ka": {
+        "message": "грузински",
+        "description": ""
+    },
+    "kk": {
+        "message": "казахски",
+        "description": ""
+    },
+    "km": {
+        "message": "кхмерски",
+        "description": ""
+    },
+    "kn": {
+        "message": "каннада",
+        "description": ""
+    },
+    "ko": {
+        "message": "корейски",
+        "description": ""
+    },
+    "ku": {
+        "message": "кюрдски",
+        "description": ""
+    },
+    "ky": {
+        "message": "киргизки",
+        "description": ""
+    },
+    "la": {
+        "message": "латински",
+        "description": ""
+    },
+    "lb": {
+        "message": "люксембургски",
+        "description": ""
+    },
+    "lo": {
+        "message": "лаоски",
+        "description": ""
+    },
+    "lt": {
+        "message": "литовски",
+        "description": ""
+    },
+    "lv": {
+        "message": "латвийски",
+        "description": ""
+    },
+    "mg": {
+        "message": "малгашки",
+        "description": ""
+    },
+    "mi": {
+        "message": "маорски",
+        "description": ""
+    },
+    "mk": {
+        "message": "македонски",
+        "description": ""
+    },
+    "ml": {
+        "message": "малаялам",
+        "description": ""
+    },
+    "mn": {
+        "message": "монголски",
+        "description": ""
+    },
+    "mr": {
+        "message": "маратхи",
+        "description": ""
+    },
+    "ms": {
+        "message": "малайски",
+        "description": ""
+    },
+    "mt": {
+        "message": "малтийски",
+        "description": ""
+    },
+    "my": {
+        "message": "бирмански",
+        "description": ""
+    },
+    "ne": {
+        "message": "непалски",
+        "description": ""
+    },
+    "nl": {
+        "message": "нидерландски",
+        "description": ""
+    },
+    "no": {
+        "message": "норвежки",
+        "description": ""
+    },
+    "ny": {
+        "message": "чичеуа",
+        "description": ""
+    },
+    "pa": {
+        "message": "панджаби",
+        "description": ""
+    },
+    "pl": {
+        "message": "полски",
+        "description": ""
+    },
+    "ps": {
+        "message": "пущу",
+        "description": ""
+    },
+    "pt": {
+        "message": "португалски",
+        "description": ""
+    },
+    "ro": {
+        "message": "румънски",
+        "description": ""
+    },
+    "ru": {
+        "message": "руски",
+        "description": ""
+    },
+    "sd": {
+        "message": "синдхи",
+        "description": ""
+    },
+    "si": {
+        "message": "синхалски",
+        "description": ""
+    },
+    "sk": {
+        "message": "словашки",
+        "description": ""
+    },
+    "sl": {
+        "message": "словенски",
+        "description": ""
+    },
+    "sm": {
+        "message": "самоански",
+        "description": ""
+    },
+    "sn": {
+        "message": "шона",
+        "description": ""
+    },
+    "so": {
+        "message": "сомалийски",
+        "description": ""
+    },
+    "sq": {
+        "message": "албански",
+        "description": ""
+    },
+    "sr": {
+        "message": "сръбски",
+        "description": ""
+    },
+    "st": {
+        "message": "сесото",
+        "description": ""
+    },
+    "su": {
+        "message": "сундански",
+        "description": ""
+    },
+    "sv": {
+        "message": "шведски",
+        "description": ""
+    },
+    "sw": {
+        "message": "суахили",
+        "description": ""
+    },
+    "ta": {
+        "message": "тамилски",
+        "description": ""
+    },
+    "te": {
+        "message": "телугу",
+        "description": ""
+    },
+    "tg": {
+        "message": "таджикски",
+        "description": ""
+    },
+    "th": {
+        "message": "тайландски",
+        "description": ""
+    },
+    "tl": {
+        "message": "филипински",
+        "description": ""
+    },
+    "tr": {
+        "message": "турски",
+        "description": ""
+    },
+    "uk": {
+        "message": "украински",
+        "description": ""
+    },
+    "ur": {
+        "message": "урду",
+        "description": ""
+    },
+    "uz": {
+        "message": "узбекски",
+        "description": ""
+    },
+    "vi": {
+        "message": "виетнамски",
+        "description": ""
+    },
+    "xh": {
+        "message": "ксоса",
+        "description": ""
+    },
+    "yi": {
+        "message": "идиш",
+        "description": ""
+    },
+    "yo": {
+        "message": "йоруба",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "китайски",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "китайски (традиционен)",
+        "description": ""
+    },
+    "zu": {
+        "message": "зулу",
+        "description": ""
+    }
+}

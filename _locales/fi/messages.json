@@ -1,0 +1,62 @@
+{
+    "fullpage_title": {
+        "message": "Koko sivu",
+        "description": ""
+    },
+    "fullpage_description": {
+        "message": "Käännä koko sivu, kun tekstiä ei ole valittu lainkaan",
+        "description": ""
+    },
+    "dictionarypref_title": {
+        "message": "Vaihtoehdot",
+        "description": ""
+    },
+    "dictionarypref_description": {
+        "message": "Käännettäessä yhtä sanaa, millaista lisäinformaatiota näytetään, kun hiirtä pidetään käännöksen yllä",
+        "description": ""
+    },
+    "dictionarypref_options.prefer alternative translations": {
+        "message": "Muut käännökset",
+        "description": ""
+    },
+    "dictionarypref_options.prefer dictionary": {
+        "message": "Sanakirja",
+        "description": ""
+    },
+    "dictionarypref_options.prefer synonyms": {
+        "message": "Synonyymi",
+        "description": ""
+    },
+    "fetch_translation": {
+        "message": "Haetaan käännöstä…",
+        "description": ""
+    },
+    "translate": {
+        "message": "Käännä “%s”",
+        "description": ""
+    },
+    "translate_page": {
+        "message": "Käännä sivu ({0} > {1})",
+        "description": ""
+    },
+    "change_languages": {
+        "message": "Vaihda kieliä",
+        "description": ""
+    },
+    "language_detected": {
+        "message": "\\ - tunnistettu",
+        "description": ""
+    },
+    "copy_to_clipboard": {
+        "message": "Kopioi käännös",
+        "description": ""
+    },
+    "google_translate_error": {
+        "message": "Google Kääntäjän palveluvirhe",
+        "description": ""
+    },
+    "extensiondescription": {
+        "message": "gtranslate on lisäosa Firefoxille, joka kääntää valitun tekstin käyttäen Google Kääntäjää.\\n\\ngtranslate:lla voit kääntää mitä vain sivulla olevaa tekstiä valitsemalla sen ja painamalla hiiren oikeanpuoleista nappia. Lisäosa käyttää Google Kääntäjä -palvelua tekstin kääntämiseen.\\n\\ngtranslate ei liity Google oy.:n millään tavalla.\\n\\nOminaisuudet:\\n\\tTuetut kielet: afrikaans, albania, amhara, arabia, armenia, azeri, baski, bengali, bosnia, bulgaria, burma, cebu, englanti, espanja, esperanto, friisi, galicia, gruusia, gujarati, haitinkreoli, hausa, havaiji, heprea, hindi, hmong, hollanti, igbo, iiri, indonesia, islanti, italia, jaava, japani, jiddiš, joruba, kannada, katalaani, kazakki, khmer, kiina, kiina (perinteinen), kiina (yksinkert.), korea, korsika, kreikka, kroatia, kurdi, kymri, kyrgyz, lao, latina, latvia, liettua, luxemburg, makedonia, malagasy, malaiji, malayalam, malta, maori, marathi, mongolia, nepali, njandža, norja, pashto, persia, portugali, punjabi, puola, ranska, romania, ruotsi, saksa, samoa, serbia, sesotho, shona, sindhi, sinhali, skottigaeli, slovakia, slovenia, somali, sundaneesi, suomi, swahili, tadžikki, tagalog, tamili, tanska, telugu, thai, tsekki, turkki, ukraina, unkari, urdu, uzbekki, valkovenäjä, venäjä, vietnam, viro, xhosa ja zulu.\\n\\tTunnista kieli automaattisesti.\\n\\tKuvien kuvaukset ja linkit voidaan myös kääntää.",
+        "description": ""
+    }
+}

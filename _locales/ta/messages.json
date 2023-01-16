@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ஆஃப்ரிக்கான்ஸ்",
+        "description": ""
+    },
+    "am": {
+        "message": "அம்ஹாரிக்",
+        "description": ""
+    },
+    "ar": {
+        "message": "அரபிக்",
+        "description": ""
+    },
+    "auto": {
+        "message": "மொழியைக் கண்டறி",
+        "description": ""
+    },
+    "az": {
+        "message": "அஜர்பைஜானி",
+        "description": ""
+    },
+    "be": {
+        "message": "பெலாருஷ்யன்",
+        "description": ""
+    },
+    "bg": {
+        "message": "பல்கேரியன்",
+        "description": ""
+    },
+    "bn": {
+        "message": "வங்காளம்",
+        "description": ""
+    },
+    "bs": {
+        "message": "போஸ்னியன்",
+        "description": ""
+    },
+    "ca": {
+        "message": "கேட்டலன்",
+        "description": ""
+    },
+    "ceb": {
+        "message": "செபுவானோ",
+        "description": ""
+    },
+    "co": {
+        "message": "கார்சிகன்",
+        "description": ""
+    },
+    "cs": {
+        "message": "செக்",
+        "description": ""
+    },
+    "cy": {
+        "message": "வெல்ஷ்",
+        "description": ""
+    },
+    "da": {
+        "message": "டேனிஷ்",
+        "description": ""
+    },
+    "de": {
+        "message": "ஜெர்மன்",
+        "description": ""
+    },
+    "el": {
+        "message": "கிரேக்கம்",
+        "description": ""
+    },
+    "en": {
+        "message": "ஆங்கிலம்",
+        "description": ""
+    },
+    "eo": {
+        "message": "எஸ்பரேன்டோ",
+        "description": ""
+    },
+    "es": {
+        "message": "ஸ்பானிஷ்",
+        "description": ""
+    },
+    "et": {
+        "message": "எஸ்டோனியன்",
+        "description": ""
+    },
+    "eu": {
+        "message": "பாஸ்க்",
+        "description": ""
+    },
+    "fa": {
+        "message": "பாரசீகம்",
+        "description": ""
+    },
+    "fi": {
+        "message": "ஃபின்னிஷ்",
+        "description": ""
+    },
+    "fr": {
+        "message": "ஃபிரெஞ்சு",
+        "description": ""
+    },
+    "fy": {
+        "message": "ஃப்ரிஷன்",
+        "description": ""
+    },
+    "ga": {
+        "message": "ஐரிஷ்",
+        "description": ""
+    },
+    "gd": {
+        "message": "ஸ்காட்ஸ் கேலிக்",
+        "description": ""
+    },
+    "gl": {
+        "message": "கலீசியன்",
+        "description": ""
+    },
+    "gu": {
+        "message": "குஜராத்தி",
+        "description": ""
+    },
+    "ha": {
+        "message": "ஹௌசா",
+        "description": ""
+    },
+    "haw": {
+        "message": "ஹவாயன்",
+        "description": ""
+    },
+    "hi": {
+        "message": "இந்தி",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ஹ்மொங்",
+        "description": ""
+    },
+    "hr": {
+        "message": "குரோஷியன்",
+        "description": ""
+    },
+    "ht": {
+        "message": "ஹைத்தியன் கிரியோல்",
+        "description": ""
+    },
+    "hu": {
+        "message": "ஹங்கேரியன்",
+        "description": ""
+    },
+    "hy": {
+        "message": "ஆர்மீனியன்",
+        "description": ""
+    },
+    "id": {
+        "message": "இந்தோனேஷியன்",
+        "description": ""
+    },
+    "ig": {
+        "message": "இக்போ",
+        "description": ""
+    },
+    "is": {
+        "message": "ஐஸ்லாந்தியன்",
+        "description": ""
+    },
+    "it": {
+        "message": "இத்தாலியன்",
+        "description": ""
+    },
+    "iw": {
+        "message": "ஹீப்ரு",
+        "description": ""
+    },
+    "ja": {
+        "message": "ஜாப்பனிஸ்",
+        "description": ""
+    },
+    "jw": {
+        "message": "ஜாவனீஸ்",
+        "description": ""
+    },
+    "ka": {
+        "message": "ஜார்ஜியன்",
+        "description": ""
+    },
+    "kk": {
+        "message": "கஸாக்",
+        "description": ""
+    },
+    "km": {
+        "message": "கிமேர்",
+        "description": ""
+    },
+    "kn": {
+        "message": "கன்னடம்",
+        "description": ""
+    },
+    "ko": {
+        "message": "கொரியன்",
+        "description": ""
+    },
+    "ku": {
+        "message": "குர்திஷ் (குர்மாஞ்சி)",
+        "description": ""
+    },
+    "ky": {
+        "message": "கிர்கீஸ்",
+        "description": ""
+    },
+    "la": {
+        "message": "லத்தீன்",
+        "description": ""
+    },
+    "lb": {
+        "message": "லக்ஸெம்பர்கிஷ்",
+        "description": ""
+    },
+    "lo": {
+        "message": "லாவோ",
+        "description": ""
+    },
+    "lt": {
+        "message": "லிதுவேனியன்",
+        "description": ""
+    },
+    "lv": {
+        "message": "லாத்வியன்",
+        "description": ""
+    },
+    "mg": {
+        "message": "மலகாஸி",
+        "description": ""
+    },
+    "mi": {
+        "message": "மாவோரி",
+        "description": ""
+    },
+    "mk": {
+        "message": "மாஸிடோனியன்",
+        "description": ""
+    },
+    "ml": {
+        "message": "மலையாளம்",
+        "description": ""
+    },
+    "mn": {
+        "message": "மங்கோலியன்",
+        "description": ""
+    },
+    "mr": {
+        "message": "மராத்தி",
+        "description": ""
+    },
+    "ms": {
+        "message": "மலாய்",
+        "description": ""
+    },
+    "mt": {
+        "message": "மால்ட்டீஸ்",
+        "description": ""
+    },
+    "my": {
+        "message": "மியான்மர் (பர்மீஸ்)",
+        "description": ""
+    },
+    "ne": {
+        "message": "நேபாளம்",
+        "description": ""
+    },
+    "nl": {
+        "message": "டச்சு",
+        "description": ""
+    },
+    "no": {
+        "message": "நார்வீஜியன்",
+        "description": ""
+    },
+    "ny": {
+        "message": "சிசேவா",
+        "description": ""
+    },
+    "pa": {
+        "message": "பஞ்சாபி",
+        "description": ""
+    },
+    "pl": {
+        "message": "போலிஷ்",
+        "description": ""
+    },
+    "ps": {
+        "message": "பாஷ்டோ",
+        "description": ""
+    },
+    "pt": {
+        "message": "போர்ச்சுகீஸ்",
+        "description": ""
+    },
+    "ro": {
+        "message": "ருமேனியன்",
+        "description": ""
+    },
+    "ru": {
+        "message": "ரஷ்யன்",
+        "description": ""
+    },
+    "sd": {
+        "message": "சிந்தி",
+        "description": ""
+    },
+    "si": {
+        "message": "சிங்களம்",
+        "description": ""
+    },
+    "sk": {
+        "message": "ஸ்லோவாக்",
+        "description": ""
+    },
+    "sl": {
+        "message": "ஸ்லோவேனியன்",
+        "description": ""
+    },
+    "sm": {
+        "message": "சாமோவான்",
+        "description": ""
+    },
+    "sn": {
+        "message": "ஷோனா",
+        "description": ""
+    },
+    "so": {
+        "message": "சோமாலி",
+        "description": ""
+    },
+    "sq": {
+        "message": "அல்பேனியன்",
+        "description": ""
+    },
+    "sr": {
+        "message": "செர்பியன்",
+        "description": ""
+    },
+    "st": {
+        "message": "சேசோத்தோ",
+        "description": ""
+    },
+    "su": {
+        "message": "சுந்தனீஸ்",
+        "description": ""
+    },
+    "sv": {
+        "message": "ஸ்வீடிஷ்",
+        "description": ""
+    },
+    "sw": {
+        "message": "ஸ்வாஹிலி",
+        "description": ""
+    },
+    "ta": {
+        "message": "தமிழ்",
+        "description": ""
+    },
+    "te": {
+        "message": "தெலுங்கு",
+        "description": ""
+    },
+    "tg": {
+        "message": "தாஜிக்",
+        "description": ""
+    },
+    "th": {
+        "message": "தாய்",
+        "description": ""
+    },
+    "tl": {
+        "message": "ஃபிலிப்பினோ",
+        "description": ""
+    },
+    "tr": {
+        "message": "துருக்கியம்",
+        "description": ""
+    },
+    "uk": {
+        "message": "உக்ரைனியன்",
+        "description": ""
+    },
+    "ur": {
+        "message": "உருது",
+        "description": ""
+    },
+    "uz": {
+        "message": "உஸ்பெக்",
+        "description": ""
+    },
+    "vi": {
+        "message": "வியட்னாமீஸ்",
+        "description": ""
+    },
+    "xh": {
+        "message": "க்ஸ்ஹோசா",
+        "description": ""
+    },
+    "yi": {
+        "message": "யித்திஷ்",
+        "description": ""
+    },
+    "yo": {
+        "message": "யோருபா",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "சீனம்",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "சீனம் (பாரம்பரிய வரிவடிவம்)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ஜூலூ",
+        "description": ""
+    }
+}

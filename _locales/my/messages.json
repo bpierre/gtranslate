@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "အယ်ဖရိကန်းစ်",
+        "description": ""
+    },
+    "am": {
+        "message": "အမ်ဟဲရစ်ခ်",
+        "description": ""
+    },
+    "ar": {
+        "message": "အာရေဗျ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ဘာသာစကားကိုဖော်ထုတ်ရန်",
+        "description": ""
+    },
+    "az": {
+        "message": "အဇာဘိုင်ဂျန်",
+        "description": ""
+    },
+    "be": {
+        "message": "ဘယ်လာရုစ်",
+        "description": ""
+    },
+    "bg": {
+        "message": "ဘူဂေးရီးယား",
+        "description": ""
+    },
+    "bn": {
+        "message": "ဘင်္ဂါလီ",
+        "description": ""
+    },
+    "bs": {
+        "message": "ဘော့စနီးယား",
+        "description": ""
+    },
+    "ca": {
+        "message": "ကက်တလန်",
+        "description": ""
+    },
+    "ceb": {
+        "message": "စီဘူအာနို",
+        "description": ""
+    },
+    "co": {
+        "message": "ကော်ဆီကန်",
+        "description": ""
+    },
+    "cs": {
+        "message": "ချက်",
+        "description": ""
+    },
+    "cy": {
+        "message": "ဝေလ",
+        "description": ""
+    },
+    "da": {
+        "message": "ဒိန်းမတ်",
+        "description": ""
+    },
+    "de": {
+        "message": "ဂျာမန်",
+        "description": ""
+    },
+    "el": {
+        "message": "ဂရိ",
+        "description": ""
+    },
+    "en": {
+        "message": "အင်္ဂလိပ်",
+        "description": ""
+    },
+    "eo": {
+        "message": "အက်စ်ပဲရန်တို",
+        "description": ""
+    },
+    "es": {
+        "message": "စပိန်",
+        "description": ""
+    },
+    "et": {
+        "message": "အက်စတိုးနီးယား",
+        "description": ""
+    },
+    "eu": {
+        "message": "ဘာ့စ်",
+        "description": ""
+    },
+    "fa": {
+        "message": "ပါရှန်",
+        "description": ""
+    },
+    "fi": {
+        "message": "ဖင်လန်",
+        "description": ""
+    },
+    "fr": {
+        "message": "ပြင်သစ်",
+        "description": ""
+    },
+    "fy": {
+        "message": "ဖရစ်ရှန်",
+        "description": ""
+    },
+    "ga": {
+        "message": "အိုင်းရစ်ရှ်",
+        "description": ""
+    },
+    "gd": {
+        "message": "စကော့ ဂေးလစ်",
+        "description": ""
+    },
+    "gl": {
+        "message": "ဂယ်လိရှ",
+        "description": ""
+    },
+    "gu": {
+        "message": "ဂူဂျရာတီ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ဟောင်စာ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ဟာဝေယံ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ဟင်ဒီ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "မုံ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ခရိုအေးရှား",
+        "description": ""
+    },
+    "ht": {
+        "message": "ဟေတီ ခရီအိုး",
+        "description": ""
+    },
+    "hu": {
+        "message": "ဟန်ဂေရီ",
+        "description": ""
+    },
+    "hy": {
+        "message": "အာမေးနီးယား",
+        "description": ""
+    },
+    "id": {
+        "message": "အင်ဒိုနီးရှား",
+        "description": ""
+    },
+    "ig": {
+        "message": "အစ်ဘို",
+        "description": ""
+    },
+    "is": {
+        "message": "အိုက်စလန်",
+        "description": ""
+    },
+    "it": {
+        "message": "အီတလီ",
+        "description": ""
+    },
+    "iw": {
+        "message": "ဟီဘရူး",
+        "description": ""
+    },
+    "ja": {
+        "message": "ဂျပန်",
+        "description": ""
+    },
+    "jw": {
+        "message": "ဂျာ​ဗား​",
+        "description": ""
+    },
+    "ka": {
+        "message": "ဂျော်ဂျီယား",
+        "description": ""
+    },
+    "kk": {
+        "message": "ကာဇတ်",
+        "description": ""
+    },
+    "km": {
+        "message": "ခမာ",
+        "description": ""
+    },
+    "kn": {
+        "message": "ကနာဒါ",
+        "description": ""
+    },
+    "ko": {
+        "message": "ကိုရီးယား",
+        "description": ""
+    },
+    "ku": {
+        "message": "ကာ့ဒ် (ကာမန်ဂျီ)",
+        "description": ""
+    },
+    "ky": {
+        "message": "ကာဂျစ်",
+        "description": ""
+    },
+    "la": {
+        "message": "လက်တင်",
+        "description": ""
+    },
+    "lb": {
+        "message": "လူဇင်ဘတ်",
+        "description": ""
+    },
+    "lo": {
+        "message": "လာအို",
+        "description": ""
+    },
+    "lt": {
+        "message": "လစ်သူယေးနီးယား",
+        "description": ""
+    },
+    "lv": {
+        "message": "လတ်ဗီယာ",
+        "description": ""
+    },
+    "mg": {
+        "message": "မာလာဂါစီ",
+        "description": ""
+    },
+    "mi": {
+        "message": "မော်ရီ",
+        "description": ""
+    },
+    "mk": {
+        "message": "မက်ဆီဒိုးနီးယား",
+        "description": ""
+    },
+    "ml": {
+        "message": "မလေယာလမ်",
+        "description": ""
+    },
+    "mn": {
+        "message": "မွန်ဂိုလီးယား",
+        "description": ""
+    },
+    "mr": {
+        "message": "မာရာသီ",
+        "description": ""
+    },
+    "ms": {
+        "message": "မလေး",
+        "description": ""
+    },
+    "mt": {
+        "message": "မော်လတာ",
+        "description": ""
+    },
+    "my": {
+        "message": "မြန်မာ (မြန်မာ)",
+        "description": ""
+    },
+    "ne": {
+        "message": "နီပေါ",
+        "description": ""
+    },
+    "nl": {
+        "message": "ဒတ်ချ်",
+        "description": ""
+    },
+    "no": {
+        "message": "နော်ဝေ",
+        "description": ""
+    },
+    "ny": {
+        "message": "ချီချယ်ဝါ",
+        "description": ""
+    },
+    "pa": {
+        "message": "ပန်​ဂျာ​ဘီ​",
+        "description": ""
+    },
+    "pl": {
+        "message": "ပိုလန်",
+        "description": ""
+    },
+    "ps": {
+        "message": "ပတ်ရှ်တို",
+        "description": ""
+    },
+    "pt": {
+        "message": "ပေါ်တူဂီ",
+        "description": ""
+    },
+    "ro": {
+        "message": "ရိုမေးနီးယား",
+        "description": ""
+    },
+    "ru": {
+        "message": "ရုရှား",
+        "description": ""
+    },
+    "sd": {
+        "message": "ဆင်ဒီ",
+        "description": ""
+    },
+    "si": {
+        "message": "ဆင်ဟာလာ",
+        "description": ""
+    },
+    "sk": {
+        "message": "ဆလိုဗက်",
+        "description": ""
+    },
+    "sl": {
+        "message": "ဆလိုဗေးနီးယား",
+        "description": ""
+    },
+    "sm": {
+        "message": "ဆာမိုအန်",
+        "description": ""
+    },
+    "sn": {
+        "message": "ရှိုနာ",
+        "description": ""
+    },
+    "so": {
+        "message": "ဆိုမာလီ",
+        "description": ""
+    },
+    "sq": {
+        "message": "အယ်လ်ဘေးနီးယား",
+        "description": ""
+    },
+    "sr": {
+        "message": "ဆားဘီးယား",
+        "description": ""
+    },
+    "st": {
+        "message": "ဆက်ဆိုတို",
+        "description": ""
+    },
+    "su": {
+        "message": "ဆူဒန်",
+        "description": ""
+    },
+    "sv": {
+        "message": "ဆွီဒင်",
+        "description": ""
+    },
+    "sw": {
+        "message": "ဆွာဟီလီ",
+        "description": ""
+    },
+    "ta": {
+        "message": "တ​မီးလ်​",
+        "description": ""
+    },
+    "te": {
+        "message": "တယ်လူဂူ",
+        "description": ""
+    },
+    "tg": {
+        "message": "တာဂျစ်",
+        "description": ""
+    },
+    "th": {
+        "message": "ထိုင်း",
+        "description": ""
+    },
+    "tl": {
+        "message": "ဖိ​လစ်​ပိုင်​",
+        "description": ""
+    },
+    "tr": {
+        "message": "တူ​ရ​ကီ",
+        "description": ""
+    },
+    "uk": {
+        "message": "ယူ​က​ရိန်း​",
+        "description": ""
+    },
+    "ur": {
+        "message": "အူရဒူ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ဥဇဘက်",
+        "description": ""
+    },
+    "vi": {
+        "message": "ဗီယက်နမ်",
+        "description": ""
+    },
+    "xh": {
+        "message": "ဟိုးဆာ",
+        "description": ""
+    },
+    "yi": {
+        "message": "ယီဒစ်ရှ်",
+        "description": ""
+    },
+    "yo": {
+        "message": "ယောရူးဘာ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "တရုတ်",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "တရုတ် (ရိုးရာ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ဇူးလူး",
+        "description": ""
+    }
+}

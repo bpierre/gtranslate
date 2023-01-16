@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "آفريڪي",
+        "description": ""
+    },
+    "am": {
+        "message": "ايمھارڪ",
+        "description": ""
+    },
+    "ar": {
+        "message": "عربي",
+        "description": ""
+    },
+    "auto": {
+        "message": "ٻولي کوجيو",
+        "description": ""
+    },
+    "az": {
+        "message": "آزربائجاني",
+        "description": ""
+    },
+    "be": {
+        "message": "بلارشين",
+        "description": ""
+    },
+    "bg": {
+        "message": "بُلگارين",
+        "description": ""
+    },
+    "bn": {
+        "message": "بنگالي",
+        "description": ""
+    },
+    "bs": {
+        "message": "بوسنين",
+        "description": ""
+    },
+    "ca": {
+        "message": "ڪيٽيلين",
+        "description": ""
+    },
+    "ceb": {
+        "message": "سيبوآني",
+        "description": ""
+    },
+    "co": {
+        "message": "ڪارسيڪن",
+        "description": ""
+    },
+    "cs": {
+        "message": "چيڪ",
+        "description": ""
+    },
+    "cy": {
+        "message": "ويلش",
+        "description": ""
+    },
+    "da": {
+        "message": "ڊينش",
+        "description": ""
+    },
+    "de": {
+        "message": "جرمن",
+        "description": ""
+    },
+    "el": {
+        "message": "يوناني",
+        "description": ""
+    },
+    "en": {
+        "message": "انگريزي",
+        "description": ""
+    },
+    "eo": {
+        "message": "ايسپرينٽو",
+        "description": ""
+    },
+    "es": {
+        "message": "اسپينش",
+        "description": ""
+    },
+    "et": {
+        "message": "اِسٽونين",
+        "description": ""
+    },
+    "eu": {
+        "message": "باسڪ",
+        "description": ""
+    },
+    "fa": {
+        "message": "فارسي",
+        "description": ""
+    },
+    "fi": {
+        "message": "فنش",
+        "description": ""
+    },
+    "fr": {
+        "message": "فرانسيسي",
+        "description": ""
+    },
+    "fy": {
+        "message": "فريشن",
+        "description": ""
+    },
+    "ga": {
+        "message": "آئرش",
+        "description": ""
+    },
+    "gd": {
+        "message": "اسڪاٽس گئلِڪ",
+        "description": ""
+    },
+    "gl": {
+        "message": "گئلشين",
+        "description": ""
+    },
+    "gu": {
+        "message": "گجراتي",
+        "description": ""
+    },
+    "ha": {
+        "message": "هائوسا Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "ھوائين",
+        "description": ""
+    },
+    "hi": {
+        "message": "ھندي",
+        "description": ""
+    },
+    "hmn": {
+        "message": "همنگ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ڪروئيشين",
+        "description": ""
+    },
+    "ht": {
+        "message": "هيٽي ڪريول",
+        "description": ""
+    },
+    "hu": {
+        "message": "ھنگيرين",
+        "description": ""
+    },
+    "hy": {
+        "message": "آرمينين",
+        "description": ""
+    },
+    "id": {
+        "message": "انڊونيشين",
+        "description": ""
+    },
+    "ig": {
+        "message": "اگبو",
+        "description": ""
+    },
+    "is": {
+        "message": "آئس لينڊي",
+        "description": ""
+    },
+    "it": {
+        "message": "اٽيلين",
+        "description": ""
+    },
+    "iw": {
+        "message": "عبراني",
+        "description": ""
+    },
+    "ja": {
+        "message": "جاپاني",
+        "description": ""
+    },
+    "jw": {
+        "message": "جيوّينيز",
+        "description": ""
+    },
+    "ka": {
+        "message": "جيارجين",
+        "description": ""
+    },
+    "kk": {
+        "message": "قزاک",
+        "description": ""
+    },
+    "km": {
+        "message": "خمير",
+        "description": ""
+    },
+    "kn": {
+        "message": "ڪناڊا",
+        "description": ""
+    },
+    "ko": {
+        "message": "ڪورين",
+        "description": ""
+    },
+    "ku": {
+        "message": "ڪُردش (ڪورمانجي)",
+        "description": ""
+    },
+    "ky": {
+        "message": "ڪِرگيِز",
+        "description": ""
+    },
+    "la": {
+        "message": "لاطيني",
+        "description": ""
+    },
+    "lb": {
+        "message": "لگزمبرگي",
+        "description": ""
+    },
+    "lo": {
+        "message": "لائوٿيئن",
+        "description": ""
+    },
+    "lt": {
+        "message": "لِٿُئَنين",
+        "description": ""
+    },
+    "lv": {
+        "message": "ليٽوينيائي",
+        "description": ""
+    },
+    "mg": {
+        "message": "مالاگاسي Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "مائوري",
+        "description": ""
+    },
+    "mk": {
+        "message": "ميسيڊونين",
+        "description": ""
+    },
+    "ml": {
+        "message": "مليالم",
+        "description": ""
+    },
+    "mn": {
+        "message": "منگولي",
+        "description": ""
+    },
+    "mr": {
+        "message": "مراٺي",
+        "description": ""
+    },
+    "ms": {
+        "message": "مئلئي",
+        "description": ""
+    },
+    "mt": {
+        "message": "مالٽي",
+        "description": ""
+    },
+    "my": {
+        "message": "ميانمار (برمي)",
+        "description": ""
+    },
+    "ne": {
+        "message": "نيپالي",
+        "description": ""
+    },
+    "nl": {
+        "message": "ڊچ",
+        "description": ""
+    },
+    "no": {
+        "message": "نورويئن",
+        "description": ""
+    },
+    "ny": {
+        "message": "چیچیوا",
+        "description": ""
+    },
+    "pa": {
+        "message": "پنجابي",
+        "description": ""
+    },
+    "pl": {
+        "message": "پولش",
+        "description": ""
+    },
+    "ps": {
+        "message": "پشتو",
+        "description": ""
+    },
+    "pt": {
+        "message": "پرتگيزي",
+        "description": ""
+    },
+    "ro": {
+        "message": "رومانين",
+        "description": ""
+    },
+    "ru": {
+        "message": "رشين",
+        "description": ""
+    },
+    "sd": {
+        "message": "سنڌي",
+        "description": ""
+    },
+    "si": {
+        "message": "سنهالا",
+        "description": ""
+    },
+    "sk": {
+        "message": "سلووَّڪ",
+        "description": ""
+    },
+    "sl": {
+        "message": "سلووينين",
+        "description": ""
+    },
+    "sm": {
+        "message": "ساموآن",
+        "description": ""
+    },
+    "sn": {
+        "message": "سھونا",
+        "description": ""
+    },
+    "so": {
+        "message": "سومالي",
+        "description": ""
+    },
+    "sq": {
+        "message": "الباني",
+        "description": ""
+    },
+    "sr": {
+        "message": "سائبيرين",
+        "description": ""
+    },
+    "st": {
+        "message": "سِسوٿو",
+        "description": ""
+    },
+    "su": {
+        "message": "سوڊاني",
+        "description": ""
+    },
+    "sv": {
+        "message": "سوئيڊش",
+        "description": ""
+    },
+    "sw": {
+        "message": "سواھِليِ",
+        "description": ""
+    },
+    "ta": {
+        "message": "تامل",
+        "description": ""
+    },
+    "te": {
+        "message": "تيلگوُ",
+        "description": ""
+    },
+    "tg": {
+        "message": "تاجڪ",
+        "description": ""
+    },
+    "th": {
+        "message": "ٿائي",
+        "description": ""
+    },
+    "tl": {
+        "message": "فلپائني",
+        "description": ""
+    },
+    "tr": {
+        "message": "ترڪ",
+        "description": ""
+    },
+    "uk": {
+        "message": "يوڪرينين",
+        "description": ""
+    },
+    "ur": {
+        "message": "اردو",
+        "description": ""
+    },
+    "uz": {
+        "message": "اَزبيڪ",
+        "description": ""
+    },
+    "vi": {
+        "message": "ويٽناميز",
+        "description": ""
+    },
+    "xh": {
+        "message": "زھوسا",
+        "description": ""
+    },
+    "yi": {
+        "message": "يِدِش",
+        "description": ""
+    },
+    "yo": {
+        "message": "يوروبا",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "چيني",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "چيني (روايتي)",
+        "description": ""
+    },
+    "zu": {
+        "message": "زولو",
+        "description": ""
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "afrikaansa",
+        "description": ""
+    },
+    "am": {
+        "message": "amharera",
+        "description": ""
+    },
+    "ar": {
+        "message": "arabiera",
+        "description": ""
+    },
+    "auto": {
+        "message": "Hauteman hizkuntza",
+        "description": ""
+    },
+    "az": {
+        "message": "azerbaijanera",
+        "description": ""
+    },
+    "be": {
+        "message": "bielorrusiera",
+        "description": ""
+    },
+    "bg": {
+        "message": "bulgariera",
+        "description": ""
+    },
+    "bn": {
+        "message": "bengalera",
+        "description": ""
+    },
+    "bs": {
+        "message": "bosniera",
+        "description": ""
+    },
+    "ca": {
+        "message": "katalana",
+        "description": ""
+    },
+    "ceb": {
+        "message": "cebuera",
+        "description": ""
+    },
+    "co": {
+        "message": "korsikera",
+        "description": ""
+    },
+    "cs": {
+        "message": "txekiera",
+        "description": ""
+    },
+    "cy": {
+        "message": "gaelera",
+        "description": ""
+    },
+    "da": {
+        "message": "daniera",
+        "description": ""
+    },
+    "de": {
+        "message": "alemana",
+        "description": ""
+    },
+    "el": {
+        "message": "greziera",
+        "description": ""
+    },
+    "en": {
+        "message": "ingelesa",
+        "description": ""
+    },
+    "eo": {
+        "message": "esperantoa",
+        "description": ""
+    },
+    "es": {
+        "message": "gaztelania",
+        "description": ""
+    },
+    "et": {
+        "message": "estoniera",
+        "description": ""
+    },
+    "eu": {
+        "message": "euskara",
+        "description": ""
+    },
+    "fa": {
+        "message": "persiera",
+        "description": ""
+    },
+    "fi": {
+        "message": "suomiera",
+        "description": ""
+    },
+    "fr": {
+        "message": "frantsesa",
+        "description": ""
+    },
+    "fy": {
+        "message": "frisiera",
+        "description": ""
+    },
+    "ga": {
+        "message": "irlandera",
+        "description": ""
+    },
+    "gd": {
+        "message": "Eskoziako gaelera",
+        "description": ""
+    },
+    "gl": {
+        "message": "galiziera",
+        "description": ""
+    },
+    "gu": {
+        "message": "gujaratera",
+        "description": ""
+    },
+    "ha": {
+        "message": "hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "hawaiiera",
+        "description": ""
+    },
+    "hi": {
+        "message": "hindia",
+        "description": ""
+    },
+    "hmn": {
+        "message": "hmonga",
+        "description": ""
+    },
+    "hr": {
+        "message": "kroaziera",
+        "description": ""
+    },
+    "ht": {
+        "message": "kreolera (Haiti)",
+        "description": ""
+    },
+    "hu": {
+        "message": "hungariera",
+        "description": ""
+    },
+    "hy": {
+        "message": "armeniera",
+        "description": ""
+    },
+    "id": {
+        "message": "indonesiera",
+        "description": ""
+    },
+    "ig": {
+        "message": "igboera",
+        "description": ""
+    },
+    "is": {
+        "message": "islandiera",
+        "description": ""
+    },
+    "it": {
+        "message": "italiera",
+        "description": ""
+    },
+    "iw": {
+        "message": "hebreera",
+        "description": ""
+    },
+    "ja": {
+        "message": "japoniera",
+        "description": ""
+    },
+    "jw": {
+        "message": "javera",
+        "description": ""
+    },
+    "ka": {
+        "message": "georgiera",
+        "description": ""
+    },
+    "kk": {
+        "message": "kazakhera",
+        "description": ""
+    },
+    "km": {
+        "message": "khmerera",
+        "description": ""
+    },
+    "kn": {
+        "message": "kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "koreera",
+        "description": ""
+    },
+    "ku": {
+        "message": "kurduera",
+        "description": ""
+    },
+    "ky": {
+        "message": "kirgizera",
+        "description": ""
+    },
+    "la": {
+        "message": "latina",
+        "description": ""
+    },
+    "lb": {
+        "message": "luxenburgera",
+        "description": ""
+    },
+    "lo": {
+        "message": "laosera",
+        "description": ""
+    },
+    "lt": {
+        "message": "lituaniera",
+        "description": ""
+    },
+    "lv": {
+        "message": "letoniera",
+        "description": ""
+    },
+    "mg": {
+        "message": "malgaxea",
+        "description": ""
+    },
+    "mi": {
+        "message": "maoriera",
+        "description": ""
+    },
+    "mk": {
+        "message": "mazedoniera",
+        "description": ""
+    },
+    "ml": {
+        "message": "malabarera",
+        "description": ""
+    },
+    "mn": {
+        "message": "mongoliera",
+        "description": ""
+    },
+    "mr": {
+        "message": "marathera",
+        "description": ""
+    },
+    "ms": {
+        "message": "malaysiera",
+        "description": ""
+    },
+    "mt": {
+        "message": "maltera",
+        "description": ""
+    },
+    "my": {
+        "message": "birmaniera",
+        "description": ""
+    },
+    "ne": {
+        "message": "nepalera",
+        "description": ""
+    },
+    "nl": {
+        "message": "nederlandera",
+        "description": ""
+    },
+    "no": {
+        "message": "norvegiera",
+        "description": ""
+    },
+    "ny": {
+        "message": "chewera",
+        "description": ""
+    },
+    "pa": {
+        "message": "punjabera",
+        "description": ""
+    },
+    "pl": {
+        "message": "poloniera",
+        "description": ""
+    },
+    "ps": {
+        "message": "paxtuera",
+        "description": ""
+    },
+    "pt": {
+        "message": "portugesa",
+        "description": ""
+    },
+    "ro": {
+        "message": "errumaniera",
+        "description": ""
+    },
+    "ru": {
+        "message": "errusiera",
+        "description": ""
+    },
+    "sd": {
+        "message": "sindhia",
+        "description": ""
+    },
+    "si": {
+        "message": "sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "eslovakiera",
+        "description": ""
+    },
+    "sl": {
+        "message": "esloveniera",
+        "description": ""
+    },
+    "sm": {
+        "message": "samoera",
+        "description": ""
+    },
+    "sn": {
+        "message": "shona",
+        "description": ""
+    },
+    "so": {
+        "message": "somaliera",
+        "description": ""
+    },
+    "sq": {
+        "message": "albaniera",
+        "description": ""
+    },
+    "sr": {
+        "message": "serbiera",
+        "description": ""
+    },
+    "st": {
+        "message": "sothoera",
+        "description": ""
+    },
+    "su": {
+        "message": "sundanera",
+        "description": ""
+    },
+    "sv": {
+        "message": "suediera",
+        "description": ""
+    },
+    "sw": {
+        "message": "swahilia",
+        "description": ""
+    },
+    "ta": {
+        "message": "tamilera",
+        "description": ""
+    },
+    "te": {
+        "message": "telugua",
+        "description": ""
+    },
+    "tg": {
+        "message": "tajikera",
+        "description": ""
+    },
+    "th": {
+        "message": "thaiera",
+        "description": ""
+    },
+    "tl": {
+        "message": "filipinera",
+        "description": ""
+    },
+    "tr": {
+        "message": "turkiera",
+        "description": ""
+    },
+    "uk": {
+        "message": "ukrainera",
+        "description": ""
+    },
+    "ur": {
+        "message": "urdua",
+        "description": ""
+    },
+    "uz": {
+        "message": "uzbekera",
+        "description": ""
+    },
+    "vi": {
+        "message": "vietnamera",
+        "description": ""
+    },
+    "xh": {
+        "message": "xhosera",
+        "description": ""
+    },
+    "yi": {
+        "message": "yiddisha",
+        "description": ""
+    },
+    "yo": {
+        "message": "jorubera",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "txinera",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "txinera (tradizionala)",
+        "description": ""
+    },
+    "zu": {
+        "message": "zuluera",
+        "description": ""
+    }
+}

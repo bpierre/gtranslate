@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "აფრიკაანსი",
+        "description": ""
+    },
+    "am": {
+        "message": "ამჰარული",
+        "description": ""
+    },
+    "ar": {
+        "message": "არაბული",
+        "description": ""
+    },
+    "auto": {
+        "message": "ენის განსაზღვრა",
+        "description": ""
+    },
+    "az": {
+        "message": "აზერბაიჯანული",
+        "description": ""
+    },
+    "be": {
+        "message": "ბელორუსული",
+        "description": ""
+    },
+    "bg": {
+        "message": "ბულგარული",
+        "description": ""
+    },
+    "bn": {
+        "message": "ბენგალური",
+        "description": ""
+    },
+    "bs": {
+        "message": "ბოსნიური",
+        "description": ""
+    },
+    "ca": {
+        "message": "კატალანური",
+        "description": ""
+    },
+    "ceb": {
+        "message": "სებუანური",
+        "description": ""
+    },
+    "co": {
+        "message": "კორსიკული",
+        "description": ""
+    },
+    "cs": {
+        "message": "ჩეხური",
+        "description": ""
+    },
+    "cy": {
+        "message": "უელსური",
+        "description": ""
+    },
+    "da": {
+        "message": "დანიური",
+        "description": ""
+    },
+    "de": {
+        "message": "გერმანული",
+        "description": ""
+    },
+    "el": {
+        "message": "ბერძნული",
+        "description": ""
+    },
+    "en": {
+        "message": "ინგლისური",
+        "description": ""
+    },
+    "eo": {
+        "message": "ესპერანტო",
+        "description": ""
+    },
+    "es": {
+        "message": "ესპანური",
+        "description": ""
+    },
+    "et": {
+        "message": "ესტონური",
+        "description": ""
+    },
+    "eu": {
+        "message": "ბასკური",
+        "description": ""
+    },
+    "fa": {
+        "message": "სპარსული",
+        "description": ""
+    },
+    "fi": {
+        "message": "ფინური",
+        "description": ""
+    },
+    "fr": {
+        "message": "ფრანგული",
+        "description": ""
+    },
+    "fy": {
+        "message": "ფრიზიული",
+        "description": ""
+    },
+    "ga": {
+        "message": "ირლანდიური",
+        "description": ""
+    },
+    "gd": {
+        "message": "შოტლანდიური",
+        "description": ""
+    },
+    "gl": {
+        "message": "გალური",
+        "description": ""
+    },
+    "gu": {
+        "message": "გუჯარათი",
+        "description": ""
+    },
+    "ha": {
+        "message": "ჰაუსა",
+        "description": ""
+    },
+    "haw": {
+        "message": "ჰავაური",
+        "description": ""
+    },
+    "hi": {
+        "message": "ჰინდი",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ჰმონგი",
+        "description": ""
+    },
+    "hr": {
+        "message": "ხორვატიული",
+        "description": ""
+    },
+    "ht": {
+        "message": "ჰაიტიური კრეოლი",
+        "description": ""
+    },
+    "hu": {
+        "message": "უნგრული",
+        "description": ""
+    },
+    "hy": {
+        "message": "სომხური",
+        "description": ""
+    },
+    "id": {
+        "message": "ინდონეზიური",
+        "description": ""
+    },
+    "ig": {
+        "message": "იგბო",
+        "description": ""
+    },
+    "is": {
+        "message": "ისლანდიური",
+        "description": ""
+    },
+    "it": {
+        "message": "იტალიური",
+        "description": ""
+    },
+    "iw": {
+        "message": "ებრაული",
+        "description": ""
+    },
+    "ja": {
+        "message": "იაპონური",
+        "description": ""
+    },
+    "jw": {
+        "message": "იავური",
+        "description": ""
+    },
+    "ka": {
+        "message": "ქართული",
+        "description": ""
+    },
+    "kk": {
+        "message": "ყაზახური",
+        "description": ""
+    },
+    "km": {
+        "message": "ქმერული",
+        "description": ""
+    },
+    "kn": {
+        "message": "კანადა",
+        "description": ""
+    },
+    "ko": {
+        "message": "კორეული",
+        "description": ""
+    },
+    "ku": {
+        "message": "ქურთული",
+        "description": ""
+    },
+    "ky": {
+        "message": "ყირგიზული",
+        "description": ""
+    },
+    "la": {
+        "message": "ლათინური",
+        "description": ""
+    },
+    "lb": {
+        "message": "ლუქსემბურგული",
+        "description": ""
+    },
+    "lo": {
+        "message": "ლაოსური",
+        "description": ""
+    },
+    "lt": {
+        "message": "ლიტვური",
+        "description": ""
+    },
+    "lv": {
+        "message": "ლატვიური",
+        "description": ""
+    },
+    "mg": {
+        "message": "მალაგასიური",
+        "description": ""
+    },
+    "mi": {
+        "message": "მაორი",
+        "description": ""
+    },
+    "mk": {
+        "message": "მაკედონიური",
+        "description": ""
+    },
+    "ml": {
+        "message": "მალაიალამი",
+        "description": ""
+    },
+    "mn": {
+        "message": "მონღოლური",
+        "description": ""
+    },
+    "mr": {
+        "message": "მარათჰი",
+        "description": ""
+    },
+    "ms": {
+        "message": "მალაიური",
+        "description": ""
+    },
+    "mt": {
+        "message": "მალტური",
+        "description": ""
+    },
+    "my": {
+        "message": "ბირმული",
+        "description": ""
+    },
+    "ne": {
+        "message": "ნეპალური",
+        "description": ""
+    },
+    "nl": {
+        "message": "ჰოლანდიური",
+        "description": ""
+    },
+    "no": {
+        "message": "ნორვეგიული",
+        "description": ""
+    },
+    "ny": {
+        "message": "ჩევა",
+        "description": ""
+    },
+    "pa": {
+        "message": "პენჯაბური",
+        "description": ""
+    },
+    "pl": {
+        "message": "პოლონური",
+        "description": ""
+    },
+    "ps": {
+        "message": "პუშტუ",
+        "description": ""
+    },
+    "pt": {
+        "message": "პორტუგალიური",
+        "description": ""
+    },
+    "ro": {
+        "message": "რუმინული",
+        "description": ""
+    },
+    "ru": {
+        "message": "რუსული",
+        "description": ""
+    },
+    "sd": {
+        "message": "სინდური",
+        "description": ""
+    },
+    "si": {
+        "message": "სინჰალური",
+        "description": ""
+    },
+    "sk": {
+        "message": "სლოვაკური",
+        "description": ""
+    },
+    "sl": {
+        "message": "სლოვენური",
+        "description": ""
+    },
+    "sm": {
+        "message": "სამოა",
+        "description": ""
+    },
+    "sn": {
+        "message": "შონა",
+        "description": ""
+    },
+    "so": {
+        "message": "სომალი",
+        "description": ""
+    },
+    "sq": {
+        "message": "ალბანური",
+        "description": ""
+    },
+    "sr": {
+        "message": "სერბული",
+        "description": ""
+    },
+    "st": {
+        "message": "სესოთო",
+        "description": ""
+    },
+    "su": {
+        "message": "სუნდური",
+        "description": ""
+    },
+    "sv": {
+        "message": "შვედური",
+        "description": ""
+    },
+    "sw": {
+        "message": "სუაჰილი",
+        "description": ""
+    },
+    "ta": {
+        "message": "ტამილური",
+        "description": ""
+    },
+    "te": {
+        "message": "ტელუგუ",
+        "description": ""
+    },
+    "tg": {
+        "message": "ტაჯიკური",
+        "description": ""
+    },
+    "th": {
+        "message": "ტაილანდური",
+        "description": ""
+    },
+    "tl": {
+        "message": "ტაგალოგური",
+        "description": ""
+    },
+    "tr": {
+        "message": "თურქული",
+        "description": ""
+    },
+    "uk": {
+        "message": "უკრაინული",
+        "description": ""
+    },
+    "ur": {
+        "message": "ურდუ",
+        "description": ""
+    },
+    "uz": {
+        "message": "უზბეკური",
+        "description": ""
+    },
+    "vi": {
+        "message": "ვიეტნამური",
+        "description": ""
+    },
+    "xh": {
+        "message": "ქსოზა",
+        "description": ""
+    },
+    "yi": {
+        "message": "იდიში",
+        "description": ""
+    },
+    "yo": {
+        "message": "იორუბა",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ჩინური",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ჩინური (ტრადიციული)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ზულუ",
+        "description": ""
+    }
+}

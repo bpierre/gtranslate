@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Amhara",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arab",
+        "description": ""
+    },
+    "auto": {
+        "message": "Kesan bahasa",
+        "description": ""
+    },
+    "az": {
+        "message": "Azerbaijan",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarus",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Catalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebu",
+        "description": ""
+    },
+    "co": {
+        "message": "Corsica",
+        "description": ""
+    },
+    "cs": {
+        "message": "Czech",
+        "description": ""
+    },
+    "cy": {
+        "message": "Wales",
+        "description": ""
+    },
+    "da": {
+        "message": "Denmark",
+        "description": ""
+    },
+    "de": {
+        "message": "Jerman",
+        "description": ""
+    },
+    "el": {
+        "message": "Greek",
+        "description": ""
+    },
+    "en": {
+        "message": "Inggeris",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Sepanyol",
+        "description": ""
+    },
+    "et": {
+        "message": "Estonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "Parsi",
+        "description": ""
+    },
+    "fi": {
+        "message": "Finland",
+        "description": ""
+    },
+    "fr": {
+        "message": "Perancis",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Ireland",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gaelic Scotland",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galicia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gujerat",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Croatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Kreol Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Hungary",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armenia",
+        "description": ""
+    },
+    "id": {
+        "message": "Indonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Iceland",
+        "description": ""
+    },
+    "it": {
+        "message": "Itali",
+        "description": ""
+    },
+    "iw": {
+        "message": "Ibrani",
+        "description": ""
+    },
+    "ja": {
+        "message": "Jepun",
+        "description": ""
+    },
+    "jw": {
+        "message": "Jawa",
+        "description": ""
+    },
+    "ka": {
+        "message": "Georgia",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Korea",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurdistan",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kyrgyz",
+        "description": ""
+    },
+    "la": {
+        "message": "Latin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Luxembourg",
+        "description": ""
+    },
+    "lo": {
+        "message": "Lao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Lithuania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Latvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Macedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongolia",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Melayu",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malta",
+        "description": ""
+    },
+    "my": {
+        "message": "Myanmar",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepal",
+        "description": ""
+    },
+    "nl": {
+        "message": "Belanda",
+        "description": ""
+    },
+    "no": {
+        "message": "Norway",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Poland",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugis",
+        "description": ""
+    },
+    "ro": {
+        "message": "Romania",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rusia",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albania",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sunda",
+        "description": ""
+    },
+    "sv": {
+        "message": "Sweden",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Thai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Tagalog",
+        "description": ""
+    },
+    "tr": {
+        "message": "Turki",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukraine",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vietnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Cina",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Cina (Tradisional)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu",
+        "description": ""
+    }
+}

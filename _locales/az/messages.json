@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikan",
+        "description": ""
+    },
+    "am": {
+        "message": "Amarikcə",
+        "description": ""
+    },
+    "ar": {
+        "message": "Ərəb",
+        "description": ""
+    },
+    "auto": {
+        "message": "Dili seç",
+        "description": ""
+    },
+    "az": {
+        "message": "Azərbaycan dili",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarusca",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bolqar",
+        "description": ""
+    },
+    "bn": {
+        "message": "Benqal",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosniya dili",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Kebuano dili",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsikaca",
+        "description": ""
+    },
+    "cs": {
+        "message": "Çex",
+        "description": ""
+    },
+    "cy": {
+        "message": "Uels",
+        "description": ""
+    },
+    "da": {
+        "message": "Danimarka",
+        "description": ""
+    },
+    "de": {
+        "message": "Alman",
+        "description": ""
+    },
+    "el": {
+        "message": "Yunan",
+        "description": ""
+    },
+    "en": {
+        "message": "Ingilis",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Ispan",
+        "description": ""
+    },
+    "et": {
+        "message": "Eston",
+        "description": ""
+    },
+    "eu": {
+        "message": "Bask",
+        "description": ""
+    },
+    "fa": {
+        "message": "Fars Dili",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fin",
+        "description": ""
+    },
+    "fr": {
+        "message": "Fransız",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frisk",
+        "description": ""
+    },
+    "ga": {
+        "message": "İrland",
+        "description": ""
+    },
+    "gd": {
+        "message": "Şotland (Kelt)",
+        "description": ""
+    },
+    "gl": {
+        "message": "Qalisian",
+        "description": ""
+    },
+    "gu": {
+        "message": "Qucarat",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Havay",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hind",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmonq dili",
+        "description": ""
+    },
+    "hr": {
+        "message": "Xorvat",
+        "description": ""
+    },
+    "ht": {
+        "message": "Haiti Kreol dili",
+        "description": ""
+    },
+    "hu": {
+        "message": "Macar",
+        "description": ""
+    },
+    "hy": {
+        "message": "Erməni",
+        "description": ""
+    },
+    "id": {
+        "message": "İndoneziya",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "İsland",
+        "description": ""
+    },
+    "it": {
+        "message": "İtalyan",
+        "description": ""
+    },
+    "iw": {
+        "message": "İvrit",
+        "description": ""
+    },
+    "ja": {
+        "message": "Yapon",
+        "description": ""
+    },
+    "jw": {
+        "message": "Yavaca",
+        "description": ""
+    },
+    "ka": {
+        "message": "Gürcü Dili",
+        "description": ""
+    },
+    "kk": {
+        "message": "Qazax",
+        "description": ""
+    },
+    "km": {
+        "message": "Xmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koreya",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kürd dili (Kurmanci)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Qırğızca",
+        "description": ""
+    },
+    "la": {
+        "message": "Latın",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lüksemburq dili",
+        "description": ""
+    },
+    "lo": {
+        "message": "Loasca",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litva",
+        "description": ""
+    },
+    "lv": {
+        "message": "Latış",
+        "description": ""
+    },
+    "mg": {
+        "message": "Madaqaskarca",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maoricə",
+        "description": ""
+    },
+    "mk": {
+        "message": "Makedoniya",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Monqolca",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malay",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malta",
+        "description": ""
+    },
+    "my": {
+        "message": "Myanma (Birma) dili",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepal",
+        "description": ""
+    },
+    "nl": {
+        "message": "Holland",
+        "description": ""
+    },
+    "no": {
+        "message": "Norveç",
+        "description": ""
+    },
+    "ny": {
+        "message": "Çiçeva dili",
+        "description": ""
+    },
+    "pa": {
+        "message": "Pəncab",
+        "description": ""
+    },
+    "pl": {
+        "message": "Polyak",
+        "description": ""
+    },
+    "ps": {
+        "message": "Puştu dili(Əfqanıstan)",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portuqal",
+        "description": ""
+    },
+    "ro": {
+        "message": "Rumın",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rus",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala dili",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "Sloven",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoa dili",
+        "description": ""
+    },
+    "sn": {
+        "message": "Sonaca",
+        "description": ""
+    },
+    "so": {
+        "message": "Somali dili",
+        "description": ""
+    },
+    "sq": {
+        "message": "Alban",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serb",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesetoca(Lesoto dili)",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundan",
+        "description": ""
+    },
+    "sv": {
+        "message": "İsveç",
+        "description": ""
+    },
+    "sw": {
+        "message": "Suahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Teluqu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tacik",
+        "description": ""
+    },
+    "th": {
+        "message": "Tayca",
+        "description": ""
+    },
+    "tl": {
+        "message": "Taqaloq",
+        "description": ""
+    },
+    "tr": {
+        "message": "Türk",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukrayna",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urduca",
+        "description": ""
+    },
+    "uz": {
+        "message": "Özbək",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vyetnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xosa dili",
+        "description": ""
+    },
+    "yi": {
+        "message": "İvrit(Yahudi dili)",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yorubaca",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Çin dilində",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Çin (Ən'ənəvi)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu dili",
+        "description": ""
+    }
+}

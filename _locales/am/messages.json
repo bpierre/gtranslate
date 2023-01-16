@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "አፍሪካንስኛ",
+        "description": ""
+    },
+    "am": {
+        "message": "አማርኛ",
+        "description": ""
+    },
+    "ar": {
+        "message": "ዐረብኛ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ቋንቋ  አግኝ",
+        "description": ""
+    },
+    "az": {
+        "message": "አዜርባይጃንኛ",
+        "description": ""
+    },
+    "be": {
+        "message": "ቤላሩስኛ",
+        "description": ""
+    },
+    "bg": {
+        "message": "ቡልጋሪያኛ",
+        "description": ""
+    },
+    "bn": {
+        "message": "ቤንጋሊኛ",
+        "description": ""
+    },
+    "bs": {
+        "message": "ቦስኒያኛ",
+        "description": ""
+    },
+    "ca": {
+        "message": "ካታላንኛ",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ሴቧኖኛ",
+        "description": ""
+    },
+    "co": {
+        "message": "ኮርሲካኛ",
+        "description": ""
+    },
+    "cs": {
+        "message": "ቼክኛ",
+        "description": ""
+    },
+    "cy": {
+        "message": "ዌልሽ",
+        "description": ""
+    },
+    "da": {
+        "message": "ዴንሽኛ",
+        "description": ""
+    },
+    "de": {
+        "message": "ጀርመንኛ",
+        "description": ""
+    },
+    "el": {
+        "message": "ግሪክኛ",
+        "description": ""
+    },
+    "en": {
+        "message": "እንግሊዝኛ",
+        "description": ""
+    },
+    "eo": {
+        "message": "ኤስፐራንቶ",
+        "description": ""
+    },
+    "es": {
+        "message": "ስፓኒሽኛ",
+        "description": ""
+    },
+    "et": {
+        "message": "ኤስቶኒያኛ",
+        "description": ""
+    },
+    "eu": {
+        "message": "ባስክኛ",
+        "description": ""
+    },
+    "fa": {
+        "message": "ፐርሺያኛ",
+        "description": ""
+    },
+    "fi": {
+        "message": "ፊኒሽኛ",
+        "description": ""
+    },
+    "fr": {
+        "message": "ፈረንሳይኛ",
+        "description": ""
+    },
+    "fy": {
+        "message": "ፍሪስኛ",
+        "description": ""
+    },
+    "ga": {
+        "message": "አይሪሽ",
+        "description": ""
+    },
+    "gd": {
+        "message": "የስኮት ጌልክኛ",
+        "description": ""
+    },
+    "gl": {
+        "message": "ጋሊሺያኛ",
+        "description": ""
+    },
+    "gu": {
+        "message": "ጉጃራቲኛ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ሃውስኛ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ሃዌይኛ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ህንድኛ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ሞንግ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ክሮኤሽያኛ",
+        "description": ""
+    },
+    "ht": {
+        "message": "የሃይቲ ክረኦሌኛ",
+        "description": ""
+    },
+    "hu": {
+        "message": "ሀንጋሪኛ",
+        "description": ""
+    },
+    "hy": {
+        "message": "አርመኒያኛ",
+        "description": ""
+    },
+    "id": {
+        "message": "እንዶኔዢያኛ",
+        "description": ""
+    },
+    "ig": {
+        "message": "ኢግቦኛ",
+        "description": ""
+    },
+    "is": {
+        "message": "አይስላንድኛ",
+        "description": ""
+    },
+    "it": {
+        "message": "ጣሊያንኛ",
+        "description": ""
+    },
+    "iw": {
+        "message": "ዕብራይስጥ",
+        "description": ""
+    },
+    "ja": {
+        "message": "ጃፓንኛ",
+        "description": ""
+    },
+    "jw": {
+        "message": "ጃቫንኛ",
+        "description": ""
+    },
+    "ka": {
+        "message": "ጆርጂያኛ",
+        "description": ""
+    },
+    "kk": {
+        "message": "ካዛክኛ",
+        "description": ""
+    },
+    "km": {
+        "message": "ክመርኛ",
+        "description": ""
+    },
+    "kn": {
+        "message": "ካናዳኛ",
+        "description": ""
+    },
+    "ko": {
+        "message": "ኮሪያኛ",
+        "description": ""
+    },
+    "ku": {
+        "message": "ኩርድሽኛ",
+        "description": ""
+    },
+    "ky": {
+        "message": "ኪርጊዝኛ",
+        "description": ""
+    },
+    "la": {
+        "message": "ላቲንኛ",
+        "description": ""
+    },
+    "lb": {
+        "message": "ሎክሶምቦርግኛ",
+        "description": ""
+    },
+    "lo": {
+        "message": "ላኦ",
+        "description": ""
+    },
+    "lt": {
+        "message": "ሊትዌንኛ",
+        "description": ""
+    },
+    "lv": {
+        "message": "ላትቪያኛ",
+        "description": ""
+    },
+    "mg": {
+        "message": "ማላጋስኛ",
+        "description": ""
+    },
+    "mi": {
+        "message": "ማዮሪኛ",
+        "description": ""
+    },
+    "mk": {
+        "message": "ሜቄዶኒያኛ",
+        "description": ""
+    },
+    "ml": {
+        "message": "ማላያላምኛ",
+        "description": ""
+    },
+    "mn": {
+        "message": "ሞንጎሊያኛ",
+        "description": ""
+    },
+    "mr": {
+        "message": "ማራቲኛ",
+        "description": ""
+    },
+    "ms": {
+        "message": "ማላይኛ",
+        "description": ""
+    },
+    "mt": {
+        "message": "ማልቲስኛ",
+        "description": ""
+    },
+    "my": {
+        "message": "በርማኛ",
+        "description": ""
+    },
+    "ne": {
+        "message": "ኔፓሊኛ",
+        "description": ""
+    },
+    "nl": {
+        "message": "ደችኛ",
+        "description": ""
+    },
+    "no": {
+        "message": "ኖርዌጅያንኛ",
+        "description": ""
+    },
+    "ny": {
+        "message": "ቺቼዋኛ",
+        "description": ""
+    },
+    "pa": {
+        "message": "ፓንጃቢኛ",
+        "description": ""
+    },
+    "pl": {
+        "message": "ፖሊሽኛ",
+        "description": ""
+    },
+    "ps": {
+        "message": "ፓሽቶኛ",
+        "description": ""
+    },
+    "pt": {
+        "message": "ፖርቱጋሊኛ",
+        "description": ""
+    },
+    "ro": {
+        "message": "ሮማኒያንኛ",
+        "description": ""
+    },
+    "ru": {
+        "message": "ራሽያኛ",
+        "description": ""
+    },
+    "sd": {
+        "message": "ሲንድሂኛ",
+        "description": ""
+    },
+    "si": {
+        "message": "ሲንሃላ",
+        "description": ""
+    },
+    "sk": {
+        "message": "ስሎቫክኛ",
+        "description": ""
+    },
+    "sl": {
+        "message": "ስሎቬንያኛ",
+        "description": ""
+    },
+    "sm": {
+        "message": "ሳሞአንኛ",
+        "description": ""
+    },
+    "sn": {
+        "message": "ሾናኛ",
+        "description": ""
+    },
+    "so": {
+        "message": "ሱማልኛ",
+        "description": ""
+    },
+    "sq": {
+        "message": "አልባንያኛ",
+        "description": ""
+    },
+    "sr": {
+        "message": "ሰርቢያኛ",
+        "description": ""
+    },
+    "st": {
+        "message": "ሴሶቶኛ",
+        "description": ""
+    },
+    "su": {
+        "message": "ሱዳንኛ",
+        "description": ""
+    },
+    "sv": {
+        "message": "ስዊድንኛ",
+        "description": ""
+    },
+    "sw": {
+        "message": "ስዋሂሊኛ",
+        "description": ""
+    },
+    "ta": {
+        "message": "ታሚልኛ",
+        "description": ""
+    },
+    "te": {
+        "message": "ቴሉጉኛ",
+        "description": ""
+    },
+    "tg": {
+        "message": "ታጂኪኛ",
+        "description": ""
+    },
+    "th": {
+        "message": "ታይኛ",
+        "description": ""
+    },
+    "tl": {
+        "message": "ፊሊፕንስኛ",
+        "description": ""
+    },
+    "tr": {
+        "message": "ቱርክኛ",
+        "description": ""
+    },
+    "uk": {
+        "message": "ዩክሬንኛ",
+        "description": ""
+    },
+    "ur": {
+        "message": "ኡርዱኛ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ኡዝቤክኛ",
+        "description": ""
+    },
+    "vi": {
+        "message": "ቪትናምኛ",
+        "description": ""
+    },
+    "xh": {
+        "message": "ዞሳኛ",
+        "description": ""
+    },
+    "yi": {
+        "message": "ዪዲሽ",
+        "description": ""
+    },
+    "yo": {
+        "message": "ዮሩባኛ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ቻይንኛ",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ቻይንኛ  (ባሕላዊው)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ዙሉኛ",
+        "description": ""
+    }
+}

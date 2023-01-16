@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "gtranslate",
+    "version": "0.15.0",
+    "author": "Pau Tomàs",
+    "homepage_url": "https://github.com/pautomas",
+    "developer": {
+	"name": "Pau Tomàs",
+	"url": "https://github.com/pautomas"
+    },
+    "description": "__MSG_extensionDescription__",
+    "permissions": ["menus", "storage", "activeTab", "clipboardWrite", "<all_urls>"],
+    "icons": {
+	"48": "graphics/logo-no-text.svg",
+	"96": "graphics/logo-no-text.svg"
+    },
+    "web_accessible_resources": ["data/languages.json", "data/menuitem.svg"],
+    "default_locale": "en",
+
+    "applications": {
+	"gecko": {
+	    "id": "{aff87fa2-a58e-4edd-b852-0a20203c1e17}",
+	    "strict_min_version": "60.0"
+	}
+    },
+
+    "background": {"scripts": ["providers/google-translate.js", "background.js"]},
+    "content_scripts": [{
+	"matches": ["<all_urls>"],
+	"js": ["content.js"]
+    }],
+    "options_ui": {"page": "options.html", "browser_style": true}
+}

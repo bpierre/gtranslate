@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ആഫ്രിക്കാൻസ്",
+        "description": ""
+    },
+    "am": {
+        "message": "അമാറിക്",
+        "description": ""
+    },
+    "ar": {
+        "message": "അറബിക്",
+        "description": ""
+    },
+    "auto": {
+        "message": "ഭാഷ കണ്ടെത്തുക",
+        "description": ""
+    },
+    "az": {
+        "message": "അസർബൈജാനി",
+        "description": ""
+    },
+    "be": {
+        "message": "ബെലാറുഷ്യൻ",
+        "description": ""
+    },
+    "bg": {
+        "message": "ബൾഗേറിയൻ",
+        "description": ""
+    },
+    "bn": {
+        "message": "ബംഗാളി",
+        "description": ""
+    },
+    "bs": {
+        "message": "ബോസ്നിയൻ",
+        "description": ""
+    },
+    "ca": {
+        "message": "കാറ്റലൻ",
+        "description": ""
+    },
+    "ceb": {
+        "message": "സെബുവാനോ",
+        "description": ""
+    },
+    "co": {
+        "message": "കോർസിക്കൻ",
+        "description": ""
+    },
+    "cs": {
+        "message": "ചെക്ക്",
+        "description": ""
+    },
+    "cy": {
+        "message": "വെൽഷ്",
+        "description": ""
+    },
+    "da": {
+        "message": "ഡാനിഷ്",
+        "description": ""
+    },
+    "de": {
+        "message": "ജർമ്മൻ",
+        "description": ""
+    },
+    "el": {
+        "message": "ഗ്രീക്ക്",
+        "description": ""
+    },
+    "en": {
+        "message": "ഇംഗ്ലീഷ്",
+        "description": ""
+    },
+    "eo": {
+        "message": "എസ്‌പെരന്തോ",
+        "description": ""
+    },
+    "es": {
+        "message": "സ്പാനിഷ്",
+        "description": ""
+    },
+    "et": {
+        "message": "എസ്റ്റോണിയൻ",
+        "description": ""
+    },
+    "eu": {
+        "message": "ബാസ്ക്",
+        "description": ""
+    },
+    "fa": {
+        "message": "പേർഷ്യൻ",
+        "description": ""
+    },
+    "fi": {
+        "message": "ഫിന്നിഷ്",
+        "description": ""
+    },
+    "fr": {
+        "message": "ഫ്രെഞ്ച്",
+        "description": ""
+    },
+    "fy": {
+        "message": "ഫ്രിസ്യൻ",
+        "description": ""
+    },
+    "ga": {
+        "message": "ഐറിഷ്",
+        "description": ""
+    },
+    "gd": {
+        "message": "സ്കോട്ട്സ് ഗ്യാലിക്",
+        "description": ""
+    },
+    "gl": {
+        "message": "ഗലീഷ്യൻ",
+        "description": ""
+    },
+    "gu": {
+        "message": "ഗുജറാത്തി",
+        "description": ""
+    },
+    "ha": {
+        "message": "ഹൌസ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ഹവായിയൻ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ഹിന്ദി",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ഹമോംഗ്",
+        "description": ""
+    },
+    "hr": {
+        "message": "ക്രൊയേഷ്യൻ",
+        "description": ""
+    },
+    "ht": {
+        "message": "ഹെയ്തിയൻ ക്രയോൾ",
+        "description": ""
+    },
+    "hu": {
+        "message": "ഹംഗേറിയൻ",
+        "description": ""
+    },
+    "hy": {
+        "message": "അർമേനിയൻ",
+        "description": ""
+    },
+    "id": {
+        "message": "ഇന്തോനേഷ്യൻ",
+        "description": ""
+    },
+    "ig": {
+        "message": "ഇഗ്‌ബൊ",
+        "description": ""
+    },
+    "is": {
+        "message": "ഐസ്‌ലാൻഡിക്",
+        "description": ""
+    },
+    "it": {
+        "message": "ഇറ്റാലിയൻ",
+        "description": ""
+    },
+    "iw": {
+        "message": "ഹീബ്രു",
+        "description": ""
+    },
+    "ja": {
+        "message": "ജാപ്പനീസ്‌",
+        "description": ""
+    },
+    "jw": {
+        "message": "ജാവനീസ്",
+        "description": ""
+    },
+    "ka": {
+        "message": "ജോർജ്ജിയൻ",
+        "description": ""
+    },
+    "kk": {
+        "message": "കസാക്ക്",
+        "description": ""
+    },
+    "km": {
+        "message": "ഖെമർ",
+        "description": ""
+    },
+    "kn": {
+        "message": "കന്നട",
+        "description": ""
+    },
+    "ko": {
+        "message": "കൊറിയൻ",
+        "description": ""
+    },
+    "ku": {
+        "message": "കുർദ്ദിഷ്",
+        "description": ""
+    },
+    "ky": {
+        "message": "കിർഗിസ്",
+        "description": ""
+    },
+    "la": {
+        "message": "ലാറ്റിൻ",
+        "description": ""
+    },
+    "lb": {
+        "message": "ലക്‌സംബർഗിഷ്",
+        "description": ""
+    },
+    "lo": {
+        "message": "ലാവോ",
+        "description": ""
+    },
+    "lt": {
+        "message": "ലിത്വേനിയൻ",
+        "description": ""
+    },
+    "lv": {
+        "message": "ലാറ്റ്‌വിയൻ",
+        "description": ""
+    },
+    "mg": {
+        "message": "മലഗാസി",
+        "description": ""
+    },
+    "mi": {
+        "message": "മൗറി",
+        "description": ""
+    },
+    "mk": {
+        "message": "മാസഡോണിയൻ",
+        "description": ""
+    },
+    "ml": {
+        "message": "മലയാളം",
+        "description": ""
+    },
+    "mn": {
+        "message": "മംഗോളിയൻ",
+        "description": ""
+    },
+    "mr": {
+        "message": "മറാഠി",
+        "description": ""
+    },
+    "ms": {
+        "message": "മലയ്",
+        "description": ""
+    },
+    "mt": {
+        "message": "മാൾട്ടീസ്",
+        "description": ""
+    },
+    "my": {
+        "message": "ബർമീസ്",
+        "description": ""
+    },
+    "ne": {
+        "message": "നേപ്പാളി",
+        "description": ""
+    },
+    "nl": {
+        "message": "ഡച്ച്",
+        "description": ""
+    },
+    "no": {
+        "message": "നോർവീജിയൻ",
+        "description": ""
+    },
+    "ny": {
+        "message": "ചിച്ചേവാ",
+        "description": ""
+    },
+    "pa": {
+        "message": "പഞ്ചാബി",
+        "description": ""
+    },
+    "pl": {
+        "message": "പോളിഷ്",
+        "description": ""
+    },
+    "ps": {
+        "message": "പഷ്തോ",
+        "description": ""
+    },
+    "pt": {
+        "message": "പോർച്ചുഗീസ്",
+        "description": ""
+    },
+    "ro": {
+        "message": "റൊമേനിയൻ",
+        "description": ""
+    },
+    "ru": {
+        "message": "റഷ്യൻ",
+        "description": ""
+    },
+    "sd": {
+        "message": "സിന്ധി",
+        "description": ""
+    },
+    "si": {
+        "message": "സിംഹള",
+        "description": ""
+    },
+    "sk": {
+        "message": "സ്ലോവാക്",
+        "description": ""
+    },
+    "sl": {
+        "message": "സ്ലോവേനിയൻ",
+        "description": ""
+    },
+    "sm": {
+        "message": "സമോവൻ",
+        "description": ""
+    },
+    "sn": {
+        "message": "ഷോണ",
+        "description": ""
+    },
+    "so": {
+        "message": "സൊമാലി",
+        "description": ""
+    },
+    "sq": {
+        "message": "അൽബേനിയൻ",
+        "description": ""
+    },
+    "sr": {
+        "message": "സെർബിയൻ",
+        "description": ""
+    },
+    "st": {
+        "message": "സെസോതോ",
+        "description": ""
+    },
+    "su": {
+        "message": "സുഡാനീസ്",
+        "description": ""
+    },
+    "sv": {
+        "message": "സ്വീഡിഷ്",
+        "description": ""
+    },
+    "sw": {
+        "message": "സ്വാഹിലി",
+        "description": ""
+    },
+    "ta": {
+        "message": "തമിഴ്",
+        "description": ""
+    },
+    "te": {
+        "message": "തെലുങ്ക്",
+        "description": ""
+    },
+    "tg": {
+        "message": "താജിക്",
+        "description": ""
+    },
+    "th": {
+        "message": "തായ്",
+        "description": ""
+    },
+    "tl": {
+        "message": "ഫിലിപ്പിനോ",
+        "description": ""
+    },
+    "tr": {
+        "message": "ടർക്കിഷ്",
+        "description": ""
+    },
+    "uk": {
+        "message": "ഉക്രേനിയൻ",
+        "description": ""
+    },
+    "ur": {
+        "message": "ഉറുദു",
+        "description": ""
+    },
+    "uz": {
+        "message": "ഉസ്ബെക്ക്",
+        "description": ""
+    },
+    "vi": {
+        "message": "വിയറ്റ്നാമീസ്",
+        "description": ""
+    },
+    "xh": {
+        "message": "എക്സോസ",
+        "description": ""
+    },
+    "yi": {
+        "message": "യിദ്ദിഷ്",
+        "description": ""
+    },
+    "yo": {
+        "message": "യോറുബ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ചൈനീസ്",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ചൈനീസ് (പരമ്പരാഗതം)",
+        "description": ""
+    },
+    "zu": {
+        "message": "സുളു",
+        "description": ""
+    }
+}

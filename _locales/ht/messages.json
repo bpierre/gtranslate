@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afriken",
+        "description": ""
+    },
+    "am": {
+        "message": "Amharik",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arab",
+        "description": ""
+    },
+    "auto": {
+        "message": "Detekte lang",
+        "description": ""
+    },
+    "az": {
+        "message": "Azèbajani",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarisyen",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bilgaryen",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengal",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnyen",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "kòsiken",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tyèk",
+        "description": ""
+    },
+    "cy": {
+        "message": "Welsh",
+        "description": ""
+    },
+    "da": {
+        "message": "Danwa",
+        "description": ""
+    },
+    "de": {
+        "message": "Alman",
+        "description": ""
+    },
+    "el": {
+        "message": "Grèk",
+        "description": ""
+    },
+    "en": {
+        "message": "Anglè",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Panyòl",
+        "description": ""
+    },
+    "et": {
+        "message": "Estonyen",
+        "description": ""
+    },
+    "eu": {
+        "message": "Bask",
+        "description": ""
+    },
+    "fa": {
+        "message": "Pèsyen",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fenlandè",
+        "description": ""
+    },
+    "fr": {
+        "message": "Franse",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frisyen",
+        "description": ""
+    },
+    "ga": {
+        "message": "Ilandè",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gaelik Ekosè",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galisyen",
+        "description": ""
+    },
+    "gu": {
+        "message": "Goujarasi",
+        "description": ""
+    },
+    "ha": {
+        "message": "Aousa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Awayen",
+        "description": ""
+    },
+    "hi": {
+        "message": "Endou",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kwoasyen",
+        "description": ""
+    },
+    "ht": {
+        "message": "Kreyòl Ayisyen",
+        "description": ""
+    },
+    "hu": {
+        "message": "Onngaryen",
+        "description": ""
+    },
+    "hy": {
+        "message": "Amenyen",
+        "description": ""
+    },
+    "id": {
+        "message": "Endonezyen",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Islandè",
+        "description": ""
+    },
+    "it": {
+        "message": "Italyen",
+        "description": ""
+    },
+    "iw": {
+        "message": "Ebre",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japonè",
+        "description": ""
+    },
+    "jw": {
+        "message": "Javanwa",
+        "description": ""
+    },
+    "ka": {
+        "message": "Jorjyen",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazak",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmer Wouj",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kanada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koreyen",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurde (kurmandji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirjiz",
+        "description": ""
+    },
+    "la": {
+        "message": "Laten",
+        "description": ""
+    },
+    "lb": {
+        "message": "Liksanboujwa",
+        "description": ""
+    },
+    "lo": {
+        "message": "Lawosyen",
+        "description": ""
+    },
+    "lt": {
+        "message": "Lityanyen",
+        "description": ""
+    },
+    "lv": {
+        "message": "Letonyen",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malgach",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Masedonyen",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongolyen",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marati",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malè",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malt",
+        "description": ""
+    },
+    "my": {
+        "message": "Myanma (Burmese)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Olandè, Neyèlandè",
+        "description": ""
+    },
+    "no": {
+        "message": "Nòvejyen",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Polonè",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pachto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Pòtigè",
+        "description": ""
+    },
+    "ro": {
+        "message": "Romanyen",
+        "description": ""
+    },
+    "ru": {
+        "message": "Ris",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhalese",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slovenyen",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoyen",
+        "description": ""
+    },
+    "sn": {
+        "message": "Chona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somalyen",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albanyen",
+        "description": ""
+    },
+    "sr": {
+        "message": "Sèb",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesoto",
+        "description": ""
+    },
+    "su": {
+        "message": "Soudanè",
+        "description": ""
+    },
+    "sv": {
+        "message": "Syedwa",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swayili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Tay",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipyen",
+        "description": ""
+    },
+    "tr": {
+        "message": "Tuk",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ikrenyen",
+        "description": ""
+    },
+    "ur": {
+        "message": "Lang Oudou",
+        "description": ""
+    },
+    "uz": {
+        "message": "Izbèk",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vyetnamyen",
+        "description": ""
+    },
+    "xh": {
+        "message": "Ksosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Yidich",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yowouba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Chinwa",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Chinwa (Tradisyonèl)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zoulou",
+        "description": ""
+    }
+}

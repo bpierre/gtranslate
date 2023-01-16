@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "աֆրիկաանս",
+        "description": ""
+    },
+    "am": {
+        "message": "ամհարերեն",
+        "description": ""
+    },
+    "ar": {
+        "message": "արաբերեն",
+        "description": ""
+    },
+    "auto": {
+        "message": "Ճանաչել լեզուն",
+        "description": ""
+    },
+    "az": {
+        "message": "ադրբեջաներեն",
+        "description": ""
+    },
+    "be": {
+        "message": "բելառուսերեն",
+        "description": ""
+    },
+    "bg": {
+        "message": "բուլղարերեն",
+        "description": ""
+    },
+    "bn": {
+        "message": "բենգալերեն",
+        "description": ""
+    },
+    "bs": {
+        "message": "բոսներեն",
+        "description": ""
+    },
+    "ca": {
+        "message": "կատալաներեն",
+        "description": ""
+    },
+    "ceb": {
+        "message": "սեբուաներեն",
+        "description": ""
+    },
+    "co": {
+        "message": "կորսիկերեն",
+        "description": ""
+    },
+    "cs": {
+        "message": "չեխերեն",
+        "description": ""
+    },
+    "cy": {
+        "message": "վալերեն",
+        "description": ""
+    },
+    "da": {
+        "message": "դանիերեն",
+        "description": ""
+    },
+    "de": {
+        "message": "գերմաներեն",
+        "description": ""
+    },
+    "el": {
+        "message": "հունարեն",
+        "description": ""
+    },
+    "en": {
+        "message": "անգլերեն",
+        "description": ""
+    },
+    "eo": {
+        "message": "էսպերանտո",
+        "description": ""
+    },
+    "es": {
+        "message": "իսպաներեն",
+        "description": ""
+    },
+    "et": {
+        "message": "էստոներեն",
+        "description": ""
+    },
+    "eu": {
+        "message": "բասկերեն",
+        "description": ""
+    },
+    "fa": {
+        "message": "պարսկերեն",
+        "description": ""
+    },
+    "fi": {
+        "message": "ֆիններեն",
+        "description": ""
+    },
+    "fr": {
+        "message": "ֆրանսերեն",
+        "description": ""
+    },
+    "fy": {
+        "message": "ֆրիզերեն",
+        "description": ""
+    },
+    "ga": {
+        "message": "իռլանդերեն",
+        "description": ""
+    },
+    "gd": {
+        "message": "կելտական շոտլանդերեն",
+        "description": ""
+    },
+    "gl": {
+        "message": "գալիսերեն",
+        "description": ""
+    },
+    "gu": {
+        "message": "գուջարատերեն",
+        "description": ""
+    },
+    "ha": {
+        "message": "հաուսա",
+        "description": ""
+    },
+    "haw": {
+        "message": "հավայերեն",
+        "description": ""
+    },
+    "hi": {
+        "message": "հինդի",
+        "description": ""
+    },
+    "hmn": {
+        "message": "հմոնգ",
+        "description": ""
+    },
+    "hr": {
+        "message": "խորվաթերեն",
+        "description": ""
+    },
+    "ht": {
+        "message": "կրեոլերեն (Հայիթի)",
+        "description": ""
+    },
+    "hu": {
+        "message": "հունգարերեն",
+        "description": ""
+    },
+    "hy": {
+        "message": "հայերեն",
+        "description": ""
+    },
+    "id": {
+        "message": "ինդոնեզերեն",
+        "description": ""
+    },
+    "ig": {
+        "message": "իգբո",
+        "description": ""
+    },
+    "is": {
+        "message": "իսլանդերեն",
+        "description": ""
+    },
+    "it": {
+        "message": "իտալերեն",
+        "description": ""
+    },
+    "iw": {
+        "message": "եբրայերեն",
+        "description": ""
+    },
+    "ja": {
+        "message": "ճապոներեն",
+        "description": ""
+    },
+    "jw": {
+        "message": "ճավայերեն",
+        "description": ""
+    },
+    "ka": {
+        "message": "վրացերեն",
+        "description": ""
+    },
+    "kk": {
+        "message": "ղազախերեն",
+        "description": ""
+    },
+    "km": {
+        "message": "քմերերեն",
+        "description": ""
+    },
+    "kn": {
+        "message": "կաննադա",
+        "description": ""
+    },
+    "ko": {
+        "message": "կորեերեն",
+        "description": ""
+    },
+    "ku": {
+        "message": "քրդերեն (քուրմանջի)",
+        "description": ""
+    },
+    "ky": {
+        "message": "ղրղզերեն",
+        "description": ""
+    },
+    "la": {
+        "message": "լատիներեն",
+        "description": ""
+    },
+    "lb": {
+        "message": "լյուքսեմբուրգերեն",
+        "description": ""
+    },
+    "lo": {
+        "message": "լաոսերեն",
+        "description": ""
+    },
+    "lt": {
+        "message": "լիտվերեն",
+        "description": ""
+    },
+    "lv": {
+        "message": "լատիշերեն",
+        "description": ""
+    },
+    "mg": {
+        "message": "մալագասերեն",
+        "description": ""
+    },
+    "mi": {
+        "message": "մաորի",
+        "description": ""
+    },
+    "mk": {
+        "message": "մակեդոներեն",
+        "description": ""
+    },
+    "ml": {
+        "message": "մալայալամ",
+        "description": ""
+    },
+    "mn": {
+        "message": "մոնղոլերեն",
+        "description": ""
+    },
+    "mr": {
+        "message": "մարաթի",
+        "description": ""
+    },
+    "ms": {
+        "message": "մալայերեն",
+        "description": ""
+    },
+    "mt": {
+        "message": "մալթերեն",
+        "description": ""
+    },
+    "my": {
+        "message": "բիրմաներեն",
+        "description": ""
+    },
+    "ne": {
+        "message": "նեպալերեն",
+        "description": ""
+    },
+    "nl": {
+        "message": "հոլանդերեն",
+        "description": ""
+    },
+    "no": {
+        "message": "նորվեգերեն",
+        "description": ""
+    },
+    "ny": {
+        "message": "չիչևա",
+        "description": ""
+    },
+    "pa": {
+        "message": "փենջաբերեն",
+        "description": ""
+    },
+    "pl": {
+        "message": "լեհերեն",
+        "description": ""
+    },
+    "ps": {
+        "message": "փաշտուներեն",
+        "description": ""
+    },
+    "pt": {
+        "message": "պորտուգալերեն",
+        "description": ""
+    },
+    "ro": {
+        "message": "ռումիներեն",
+        "description": ""
+    },
+    "ru": {
+        "message": "ռուսերեն",
+        "description": ""
+    },
+    "sd": {
+        "message": "սինդհի",
+        "description": ""
+    },
+    "si": {
+        "message": "սինհալա",
+        "description": ""
+    },
+    "sk": {
+        "message": "սլովակերեն",
+        "description": ""
+    },
+    "sl": {
+        "message": "սլովեներեն",
+        "description": ""
+    },
+    "sm": {
+        "message": "սամոաներեն",
+        "description": ""
+    },
+    "sn": {
+        "message": "շոնա",
+        "description": ""
+    },
+    "so": {
+        "message": "սոմալերեն",
+        "description": ""
+    },
+    "sq": {
+        "message": "ալբաներեն",
+        "description": ""
+    },
+    "sr": {
+        "message": "սերբերեն",
+        "description": ""
+    },
+    "st": {
+        "message": "սեսոտո",
+        "description": ""
+    },
+    "su": {
+        "message": "սունդաներեն",
+        "description": ""
+    },
+    "sv": {
+        "message": "շվեդերեն",
+        "description": ""
+    },
+    "sw": {
+        "message": "սուահիլի",
+        "description": ""
+    },
+    "ta": {
+        "message": "թամիլերեն",
+        "description": ""
+    },
+    "te": {
+        "message": "տելուգու",
+        "description": ""
+    },
+    "tg": {
+        "message": "տաջիկերեն",
+        "description": ""
+    },
+    "th": {
+        "message": "թայերեն",
+        "description": ""
+    },
+    "tl": {
+        "message": "տագալերեն",
+        "description": ""
+    },
+    "tr": {
+        "message": "թուրքերեն",
+        "description": ""
+    },
+    "uk": {
+        "message": "ուկրաիներեն",
+        "description": ""
+    },
+    "ur": {
+        "message": "ուրդու",
+        "description": ""
+    },
+    "uz": {
+        "message": "ուզբեկերեն",
+        "description": ""
+    },
+    "vi": {
+        "message": "վիետնամերեն",
+        "description": ""
+    },
+    "xh": {
+        "message": "խոշերեն",
+        "description": ""
+    },
+    "yi": {
+        "message": "իդիշ",
+        "description": ""
+    },
+    "yo": {
+        "message": "յորուբերեն",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "չինարեն",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "չինարեն (ավանդական)",
+        "description": ""
+    },
+    "zu": {
+        "message": "զուլուսերեն",
+        "description": ""
+    }
+}

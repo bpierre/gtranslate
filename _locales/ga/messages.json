@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afracáinis",
+        "description": ""
+    },
+    "am": {
+        "message": "Amárais",
+        "description": ""
+    },
+    "ar": {
+        "message": "Araibis",
+        "description": ""
+    },
+    "auto": {
+        "message": "Aimsigh teanga",
+        "description": ""
+    },
+    "az": {
+        "message": "Asarbaiseáinis",
+        "description": ""
+    },
+    "be": {
+        "message": "Bealarúisis",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgáiris",
+        "description": ""
+    },
+    "bn": {
+        "message": "Beangáilis",
+        "description": ""
+    },
+    "bs": {
+        "message": "Boisnis",
+        "description": ""
+    },
+    "ca": {
+        "message": "Catalóinis",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Seabúáinis",
+        "description": ""
+    },
+    "co": {
+        "message": "Corsaicis",
+        "description": ""
+    },
+    "cs": {
+        "message": "Seicis",
+        "description": ""
+    },
+    "cy": {
+        "message": "Breatnais",
+        "description": ""
+    },
+    "da": {
+        "message": "Danmhairgis",
+        "description": ""
+    },
+    "de": {
+        "message": "Gearmáinis",
+        "description": ""
+    },
+    "el": {
+        "message": "Gréigis",
+        "description": ""
+    },
+    "en": {
+        "message": "Béarla",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spáinnis",
+        "description": ""
+    },
+    "et": {
+        "message": "Eastóinis",
+        "description": ""
+    },
+    "eu": {
+        "message": "Bascais",
+        "description": ""
+    },
+    "fa": {
+        "message": "Peirsis",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fionlainnis",
+        "description": ""
+    },
+    "fr": {
+        "message": "Fraincis",
+        "description": ""
+    },
+    "fy": {
+        "message": "Freaslainnis",
+        "description": ""
+    },
+    "ga": {
+        "message": "Gaeilge",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gaeilge na hAlban",
+        "description": ""
+    },
+    "gl": {
+        "message": "Gailísis",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gúisearáitis",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hásais",
+        "description": ""
+    },
+    "haw": {
+        "message": "Haváis",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hiondúis",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Mongais",
+        "description": ""
+    },
+    "hr": {
+        "message": "Cróitis",
+        "description": ""
+    },
+    "ht": {
+        "message": "Criól Háítí",
+        "description": ""
+    },
+    "hu": {
+        "message": "Ungáiris",
+        "description": ""
+    },
+    "hy": {
+        "message": "Airméinis",
+        "description": ""
+    },
+    "id": {
+        "message": "Indinéisis",
+        "description": ""
+    },
+    "ig": {
+        "message": "Íogbóis",
+        "description": ""
+    },
+    "is": {
+        "message": "Íoslainnis",
+        "description": ""
+    },
+    "it": {
+        "message": "Iodáilis",
+        "description": ""
+    },
+    "iw": {
+        "message": "Eabhrais",
+        "description": ""
+    },
+    "ja": {
+        "message": "Seapáinis",
+        "description": ""
+    },
+    "jw": {
+        "message": "Iávais",
+        "description": ""
+    },
+    "ka": {
+        "message": "Seoirsis",
+        "description": ""
+    },
+    "kk": {
+        "message": "Casaicis",
+        "description": ""
+    },
+    "km": {
+        "message": "Ciméiris",
+        "description": ""
+    },
+    "kn": {
+        "message": "Cannadais",
+        "description": ""
+    },
+    "ko": {
+        "message": "Cóiréis",
+        "description": ""
+    },
+    "ku": {
+        "message": "Coirdis (Curmainsis)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Cirgisis",
+        "description": ""
+    },
+    "la": {
+        "message": "Laidin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lucsambuirgis",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laoisis",
+        "description": ""
+    },
+    "lt": {
+        "message": "Liotuáinis",
+        "description": ""
+    },
+    "lv": {
+        "message": "Laitvis",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagáisis",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maorais",
+        "description": ""
+    },
+    "mk": {
+        "message": "Macadóinis",
+        "description": ""
+    },
+    "ml": {
+        "message": "Mailéalaimis",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongóilis",
+        "description": ""
+    },
+    "mr": {
+        "message": "Maraitis",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malaeis",
+        "description": ""
+    },
+    "mt": {
+        "message": "Máltais",
+        "description": ""
+    },
+    "my": {
+        "message": "Maenmar (Burmais)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Neipeailis",
+        "description": ""
+    },
+    "nl": {
+        "message": "Ollainnis",
+        "description": ""
+    },
+    "no": {
+        "message": "Ioruais",
+        "description": ""
+    },
+    "ny": {
+        "message": "Siséivis",
+        "description": ""
+    },
+    "pa": {
+        "message": "Puinseáibis",
+        "description": ""
+    },
+    "pl": {
+        "message": "Polainnis",
+        "description": ""
+    },
+    "ps": {
+        "message": "Paistis",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portaingéilis",
+        "description": ""
+    },
+    "ro": {
+        "message": "Rómáinis",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rúisis",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindis",
+        "description": ""
+    },
+    "si": {
+        "message": "Siolóinis",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slóvaicis",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slóivéinis",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samóis",
+        "description": ""
+    },
+    "sn": {
+        "message": "Seoinis",
+        "description": ""
+    },
+    "so": {
+        "message": "Somáilis",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albáinis",
+        "description": ""
+    },
+    "sr": {
+        "message": "Seirbis",
+        "description": ""
+    },
+    "st": {
+        "message": "Seasóitis",
+        "description": ""
+    },
+    "su": {
+        "message": "Súdáinis",
+        "description": ""
+    },
+    "sv": {
+        "message": "Sualainnis",
+        "description": ""
+    },
+    "sw": {
+        "message": "Svahaílis",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamailis",
+        "description": ""
+    },
+    "te": {
+        "message": "Teileagúis",
+        "description": ""
+    },
+    "tg": {
+        "message": "Taidsícis",
+        "description": ""
+    },
+    "th": {
+        "message": "Téalainnis",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipínis",
+        "description": ""
+    },
+    "tr": {
+        "message": "Tuircis",
+        "description": ""
+    },
+    "uk": {
+        "message": "Úcráinis",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdais",
+        "description": ""
+    },
+    "uz": {
+        "message": "Úisbéiceastáinis",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vítneaimis",
+        "description": ""
+    },
+    "xh": {
+        "message": "Cósais",
+        "description": ""
+    },
+    "yi": {
+        "message": "Giúdais",
+        "description": ""
+    },
+    "yo": {
+        "message": "Iarúibis",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Sínis",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Sínis (Traidisiúnta)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Súlúis",
+        "description": ""
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrika Dili",
+        "description": ""
+    },
+    "am": {
+        "message": "Habeşçe",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arapça",
+        "description": ""
+    },
+    "auto": {
+        "message": "Dili algıla",
+        "description": ""
+    },
+    "az": {
+        "message": "Azerice",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarusça",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgarca",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengalce",
+        "description": ""
+    },
+    "bs": {
+        "message": "Boşnakça",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalanca",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsika Dili",
+        "description": ""
+    },
+    "cs": {
+        "message": "Çekçe",
+        "description": ""
+    },
+    "cy": {
+        "message": "Galce",
+        "description": ""
+    },
+    "da": {
+        "message": "Danca",
+        "description": ""
+    },
+    "de": {
+        "message": "Almanca",
+        "description": ""
+    },
+    "el": {
+        "message": "Yunanca",
+        "description": ""
+    },
+    "en": {
+        "message": "İngilizce",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperantoca",
+        "description": ""
+    },
+    "es": {
+        "message": "İspanyolca",
+        "description": ""
+    },
+    "et": {
+        "message": "Estonyaca",
+        "description": ""
+    },
+    "eu": {
+        "message": "Baskça",
+        "description": ""
+    },
+    "fa": {
+        "message": "Farsça",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fince",
+        "description": ""
+    },
+    "fr": {
+        "message": "Fransızca",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frizon Dili",
+        "description": ""
+    },
+    "ga": {
+        "message": "İrlandaca",
+        "description": ""
+    },
+    "gd": {
+        "message": "Kuzey İskoç Dili",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galiçyaca",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gücerat Dili",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa Dili",
+        "description": ""
+    },
+    "haw": {
+        "message": "Havai Dili",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hintçe",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong Dili",
+        "description": ""
+    },
+    "hr": {
+        "message": "Hırvatça",
+        "description": ""
+    },
+    "ht": {
+        "message": "Haiti Creole Dili",
+        "description": ""
+    },
+    "hu": {
+        "message": "Macarca",
+        "description": ""
+    },
+    "hy": {
+        "message": "Ermenice",
+        "description": ""
+    },
+    "id": {
+        "message": "Endonezya Dili",
+        "description": ""
+    },
+    "ig": {
+        "message": "İgbo Dili",
+        "description": ""
+    },
+    "is": {
+        "message": "İzlandaca",
+        "description": ""
+    },
+    "it": {
+        "message": "İtalyanca",
+        "description": ""
+    },
+    "iw": {
+        "message": "İbranice",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japonca",
+        "description": ""
+    },
+    "jw": {
+        "message": "Cava Dili",
+        "description": ""
+    },
+    "ka": {
+        "message": "Gürcüce",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazakça",
+        "description": ""
+    },
+    "km": {
+        "message": "Kamboçyaca",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Korece",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kürtçe",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kırgızca",
+        "description": ""
+    },
+    "la": {
+        "message": "Latince",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lüksemburgca",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laoca",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litvanca",
+        "description": ""
+    },
+    "lv": {
+        "message": "Letonca",
+        "description": ""
+    },
+    "mg": {
+        "message": "Madagaskar Dili",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori Dili",
+        "description": ""
+    },
+    "mk": {
+        "message": "Makedonca",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Moğolca",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malezya Dili",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malta Dili",
+        "description": ""
+    },
+    "my": {
+        "message": "Burmaca",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepalce",
+        "description": ""
+    },
+    "nl": {
+        "message": "Felemenkçe",
+        "description": ""
+    },
+    "no": {
+        "message": "Norveççe",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chicheva",
+        "description": ""
+    },
+    "pa": {
+        "message": "Pencap Dili",
+        "description": ""
+    },
+    "pl": {
+        "message": "Lehçe",
+        "description": ""
+    },
+    "ps": {
+        "message": "Peştuca",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portekizce",
+        "description": ""
+    },
+    "ro": {
+        "message": "Romence",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rusça",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sint",
+        "description": ""
+    },
+    "si": {
+        "message": "Seylanca",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovakça",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slovence",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoaca",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somalice",
+        "description": ""
+    },
+    "sq": {
+        "message": "Arnavutça",
+        "description": ""
+    },
+    "sr": {
+        "message": "Sırpça",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho Dili",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundanizce",
+        "description": ""
+    },
+    "sv": {
+        "message": "İsveççe",
+        "description": ""
+    },
+    "sw": {
+        "message": "Svahili Dili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu Dili",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tacikce",
+        "description": ""
+    },
+    "th": {
+        "message": "Tay Dili",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipince",
+        "description": ""
+    },
+    "tr": {
+        "message": "Türkçe",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukraynaca",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urduca",
+        "description": ""
+    },
+    "uz": {
+        "message": "Özbekçe",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vietnamca",
+        "description": ""
+    },
+    "xh": {
+        "message": "Hosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Yidce",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Çince",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Çince (Geleneksel)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu",
+        "description": ""
+    }
+}

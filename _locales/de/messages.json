@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Amharisch",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabisch",
+        "description": ""
+    },
+    "auto": {
+        "message": "Sprache erkennen",
+        "description": ""
+    },
+    "az": {
+        "message": "Aserbaidschanisch",
+        "description": ""
+    },
+    "be": {
+        "message": "Weißrussisch",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgarisch",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengalisch",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnisch",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalanisch",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsisch",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tschechisch",
+        "description": ""
+    },
+    "cy": {
+        "message": "Walisisch",
+        "description": ""
+    },
+    "da": {
+        "message": "Dänisch",
+        "description": ""
+    },
+    "de": {
+        "message": "Deutsch",
+        "description": ""
+    },
+    "el": {
+        "message": "Griechisch",
+        "description": ""
+    },
+    "en": {
+        "message": "Englisch",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spanisch",
+        "description": ""
+    },
+    "et": {
+        "message": "Estnisch",
+        "description": ""
+    },
+    "eu": {
+        "message": "Baskisch",
+        "description": ""
+    },
+    "fa": {
+        "message": "Persisch",
+        "description": ""
+    },
+    "fi": {
+        "message": "Finnisch",
+        "description": ""
+    },
+    "fr": {
+        "message": "Französisch",
+        "description": ""
+    },
+    "fy": {
+        "message": "Friesisch",
+        "description": ""
+    },
+    "ga": {
+        "message": "Irisch",
+        "description": ""
+    },
+    "gd": {
+        "message": "Schottisch-Gälisch",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galizisch",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaiisch",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kroatisch",
+        "description": ""
+    },
+    "ht": {
+        "message": "Haitianisch",
+        "description": ""
+    },
+    "hu": {
+        "message": "Ungarisch",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armenisch",
+        "description": ""
+    },
+    "id": {
+        "message": "Indonesisch",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Isländisch",
+        "description": ""
+    },
+    "it": {
+        "message": "Italienisch",
+        "description": ""
+    },
+    "iw": {
+        "message": "Hebräisch",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japanisch",
+        "description": ""
+    },
+    "jw": {
+        "message": "Javanisch",
+        "description": ""
+    },
+    "ka": {
+        "message": "Georgisch",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kasachisch",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koreanisch",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurdisch (Kurmandschi)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirgisisch",
+        "description": ""
+    },
+    "la": {
+        "message": "Lateinisch",
+        "description": ""
+    },
+    "lb": {
+        "message": "Luxemburgisch",
+        "description": ""
+    },
+    "lo": {
+        "message": "Lao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litauisch",
+        "description": ""
+    },
+    "lv": {
+        "message": "Lettisch",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Mazedonisch",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongolisch",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malaysisch",
+        "description": ""
+    },
+    "mt": {
+        "message": "Maltesisch",
+        "description": ""
+    },
+    "my": {
+        "message": "Birmanisch",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepalesisch",
+        "description": ""
+    },
+    "nl": {
+        "message": "Niederländisch",
+        "description": ""
+    },
+    "no": {
+        "message": "Norwegisch",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Polnisch",
+        "description": ""
+    },
+    "ps": {
+        "message": "Paschtu",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugiesisch",
+        "description": ""
+    },
+    "ro": {
+        "message": "Rumänisch",
+        "description": ""
+    },
+    "ru": {
+        "message": "Russisch",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Singhalesisch",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slowakisch",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slowenisch",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoanisch",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albanisch",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serbisch",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundanesisch",
+        "description": ""
+    },
+    "sv": {
+        "message": "Schwedisch",
+        "description": ""
+    },
+    "sw": {
+        "message": "Suaheli",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tadschikisch",
+        "description": ""
+    },
+    "th": {
+        "message": "Thailändisch",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Türkisch",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukrainisch",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Usbekisch",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vietnamesisch",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Jiddisch",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Chinesisch",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Chinesisch (traditionell)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu",
+        "description": ""
+    }
+}

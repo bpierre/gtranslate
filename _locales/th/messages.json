@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ภาษาแอฟริกา",
+        "description": ""
+    },
+    "am": {
+        "message": "ภาษาอัมฮาริก",
+        "description": ""
+    },
+    "ar": {
+        "message": "ภาษาอาหรับ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ตรวจหาภาษา",
+        "description": ""
+    },
+    "az": {
+        "message": "ภาษาอาร์เซอร์ไบจัน",
+        "description": ""
+    },
+    "be": {
+        "message": "ภาษาเบลารูเชียน",
+        "description": ""
+    },
+    "bg": {
+        "message": "ภาษาบัลกาเรีย",
+        "description": ""
+    },
+    "bn": {
+        "message": "ภาษาเบงกาลี",
+        "description": ""
+    },
+    "bs": {
+        "message": "ภาษาบอสเนีย",
+        "description": ""
+    },
+    "ca": {
+        "message": "ภาษาคาตาลัน",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ภาษาซีบัวโน",
+        "description": ""
+    },
+    "co": {
+        "message": "ภาษาคอร์สิกา",
+        "description": ""
+    },
+    "cs": {
+        "message": "ภาษาเช็ก",
+        "description": ""
+    },
+    "cy": {
+        "message": "ภาษาเวลส์",
+        "description": ""
+    },
+    "da": {
+        "message": "ภาษาเดนมาร์ก",
+        "description": ""
+    },
+    "de": {
+        "message": "ภาษาเยอรมัน",
+        "description": ""
+    },
+    "el": {
+        "message": "ภาษากรีก",
+        "description": ""
+    },
+    "en": {
+        "message": "ภาษาอังกฤษ",
+        "description": ""
+    },
+    "eo": {
+        "message": "ภาษาเอสเปอแรนโต",
+        "description": ""
+    },
+    "es": {
+        "message": "ภาษาสเปน",
+        "description": ""
+    },
+    "et": {
+        "message": "ภาษาเอสโทเนีย",
+        "description": ""
+    },
+    "eu": {
+        "message": "ภาษาบาสก์",
+        "description": ""
+    },
+    "fa": {
+        "message": "ภาษาเปอร์เซีย",
+        "description": ""
+    },
+    "fi": {
+        "message": "ภาษาฟินแลนด์",
+        "description": ""
+    },
+    "fr": {
+        "message": "ภาษาฝรั่งเศส",
+        "description": ""
+    },
+    "fy": {
+        "message": "ภาษาฟริเชียน",
+        "description": ""
+    },
+    "ga": {
+        "message": "ภาษาไอริช",
+        "description": ""
+    },
+    "gd": {
+        "message": "ภาษาเกลิกในสก็อต",
+        "description": ""
+    },
+    "gl": {
+        "message": "ภาษากาลิเชียน",
+        "description": ""
+    },
+    "gu": {
+        "message": "ภาษากูจาราติ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ภาษาฮัวซา",
+        "description": ""
+    },
+    "haw": {
+        "message": "ภาษาฮาวาย",
+        "description": ""
+    },
+    "hi": {
+        "message": "ภาษาฮินดี",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ภาษาม้ง",
+        "description": ""
+    },
+    "hr": {
+        "message": "ภาษาโครเอเชีย",
+        "description": ""
+    },
+    "ht": {
+        "message": "ภาษาเฮติครีโอล",
+        "description": ""
+    },
+    "hu": {
+        "message": "ภาษาฮังการี",
+        "description": ""
+    },
+    "hy": {
+        "message": "ภาษาอาร์เมเนีย",
+        "description": ""
+    },
+    "id": {
+        "message": "ภาษาอินโดนีเซีย",
+        "description": ""
+    },
+    "ig": {
+        "message": "ภาษาอิกโบ",
+        "description": ""
+    },
+    "is": {
+        "message": "ภาษาไอซ์แลนดิก",
+        "description": ""
+    },
+    "it": {
+        "message": "ภาษาอิตาลี",
+        "description": ""
+    },
+    "iw": {
+        "message": "ภาษาฮิบรู",
+        "description": ""
+    },
+    "ja": {
+        "message": "ภาษาญี่ปุ่น",
+        "description": ""
+    },
+    "jw": {
+        "message": "ภาษาชวา",
+        "description": ""
+    },
+    "ka": {
+        "message": "ภาษาจอร์เจีย",
+        "description": ""
+    },
+    "kk": {
+        "message": "ภาษาคาซัค",
+        "description": ""
+    },
+    "km": {
+        "message": "ภาษาเขมร",
+        "description": ""
+    },
+    "kn": {
+        "message": "ภาษากันนาดา",
+        "description": ""
+    },
+    "ko": {
+        "message": "ภาษาเกาหลี",
+        "description": ""
+    },
+    "ku": {
+        "message": "ภาษาเคิร์ด",
+        "description": ""
+    },
+    "ky": {
+        "message": "ภาษาคีร์กิซ",
+        "description": ""
+    },
+    "la": {
+        "message": "ภาษาละติน",
+        "description": ""
+    },
+    "lb": {
+        "message": "ภาษาลักเซมเบิร์ก",
+        "description": ""
+    },
+    "lo": {
+        "message": "ภาษาลาว",
+        "description": ""
+    },
+    "lt": {
+        "message": "ภาษาลิทัวเนีย",
+        "description": ""
+    },
+    "lv": {
+        "message": "ภาษาลัทเวีย",
+        "description": ""
+    },
+    "mg": {
+        "message": "ภาษามาลากาซี",
+        "description": ""
+    },
+    "mi": {
+        "message": "ภาษาเมารี",
+        "description": ""
+    },
+    "mk": {
+        "message": "ภาษามาซีโดเนีย",
+        "description": ""
+    },
+    "ml": {
+        "message": "ภาษามาลายาลัม",
+        "description": ""
+    },
+    "mn": {
+        "message": "ภาษามองโกเลีย",
+        "description": ""
+    },
+    "mr": {
+        "message": "ภาษามาราฐี",
+        "description": ""
+    },
+    "ms": {
+        "message": "ภาษามาเลย์",
+        "description": ""
+    },
+    "mt": {
+        "message": "ภาษามัลทีส",
+        "description": ""
+    },
+    "my": {
+        "message": "ภาษาเมียนมา (พม่า)",
+        "description": ""
+    },
+    "ne": {
+        "message": "ภาษาเนปาล",
+        "description": ""
+    },
+    "nl": {
+        "message": "ภาษาดัตช์",
+        "description": ""
+    },
+    "no": {
+        "message": "ภาษานอร์เวย์",
+        "description": ""
+    },
+    "ny": {
+        "message": "ภาษาชิเชวา",
+        "description": ""
+    },
+    "pa": {
+        "message": "ภาษาปัญจาป",
+        "description": ""
+    },
+    "pl": {
+        "message": "ภาษาโปแลนด์",
+        "description": ""
+    },
+    "ps": {
+        "message": "ภาษาพาชตู",
+        "description": ""
+    },
+    "pt": {
+        "message": "ภาษาโปรตุเกส",
+        "description": ""
+    },
+    "ro": {
+        "message": "ภาษาโรมาเนีย",
+        "description": ""
+    },
+    "ru": {
+        "message": "ภาษารัสเซีย",
+        "description": ""
+    },
+    "sd": {
+        "message": "ภาษาสินธุ",
+        "description": ""
+    },
+    "si": {
+        "message": "ภาษาสิงหล",
+        "description": ""
+    },
+    "sk": {
+        "message": "ภาษาสโลวัก",
+        "description": ""
+    },
+    "sl": {
+        "message": "ภาษาสโลเวเนีย",
+        "description": ""
+    },
+    "sm": {
+        "message": "ภาษาซามัว",
+        "description": ""
+    },
+    "sn": {
+        "message": "ภาษาโชนา",
+        "description": ""
+    },
+    "so": {
+        "message": "ภาษาโซมาลี",
+        "description": ""
+    },
+    "sq": {
+        "message": "ภาษาอัลบาเนีย",
+        "description": ""
+    },
+    "sr": {
+        "message": "ภาษาเซอร์เบียน",
+        "description": ""
+    },
+    "st": {
+        "message": "ภาษาเซโซโท",
+        "description": ""
+    },
+    "su": {
+        "message": "ภาษาซุนดา",
+        "description": ""
+    },
+    "sv": {
+        "message": "ภาษาสวีเดน",
+        "description": ""
+    },
+    "sw": {
+        "message": "ภาษาสวาฮิลี",
+        "description": ""
+    },
+    "ta": {
+        "message": "ภาษาทมิฬ",
+        "description": ""
+    },
+    "te": {
+        "message": "ภาษาเตลูกู",
+        "description": ""
+    },
+    "tg": {
+        "message": "ภาษาทาจิก",
+        "description": ""
+    },
+    "th": {
+        "message": "ภาษาไทย",
+        "description": ""
+    },
+    "tl": {
+        "message": "ภาษาฟิลิปปินส์",
+        "description": ""
+    },
+    "tr": {
+        "message": "ภาษาตุรกี",
+        "description": ""
+    },
+    "uk": {
+        "message": "ภาษายูเครน",
+        "description": ""
+    },
+    "ur": {
+        "message": "ภาษาอูรดูร์",
+        "description": ""
+    },
+    "uz": {
+        "message": "ภาษาอุสเบกิสถาน",
+        "description": ""
+    },
+    "vi": {
+        "message": "ภาษาเวียดนาม",
+        "description": ""
+    },
+    "xh": {
+        "message": "ภาษาโซซา",
+        "description": ""
+    },
+    "yi": {
+        "message": "ภาษายิดดิช",
+        "description": ""
+    },
+    "yo": {
+        "message": "ภาษาโยรูบา",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ภาษาจีน",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ภาษาจีน (ดั้งเดิม)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ภาษาซูลู",
+        "description": ""
+    }
+}

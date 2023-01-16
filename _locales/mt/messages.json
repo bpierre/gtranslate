@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Amħari",
+        "description": ""
+    },
+    "ar": {
+        "message": "Għarbi",
+        "description": ""
+    },
+    "auto": {
+        "message": "Induna bil-lingwa",
+        "description": ""
+    },
+    "az": {
+        "message": "Ażerbajġani",
+        "description": ""
+    },
+    "be": {
+        "message": "Belarussu",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgaru",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bożnijak",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsikan",
+        "description": ""
+    },
+    "cs": {
+        "message": "Ċek",
+        "description": ""
+    },
+    "cy": {
+        "message": "Welsh",
+        "description": ""
+    },
+    "da": {
+        "message": "Daniż",
+        "description": ""
+    },
+    "de": {
+        "message": "Ġermaniż",
+        "description": ""
+    },
+    "el": {
+        "message": "Grieg",
+        "description": ""
+    },
+    "en": {
+        "message": "Ingliż",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spanjol",
+        "description": ""
+    },
+    "et": {
+        "message": "Estonjan",
+        "description": ""
+    },
+    "eu": {
+        "message": "Bask",
+        "description": ""
+    },
+    "fa": {
+        "message": "Persjan",
+        "description": ""
+    },
+    "fi": {
+        "message": "Finlandiż",
+        "description": ""
+    },
+    "fr": {
+        "message": "Franċiż",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frisjan",
+        "description": ""
+    },
+    "ga": {
+        "message": "Irlandiż",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gaelic tal-Iskoċċiżi",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galizjan",
+        "description": ""
+    },
+    "gu": {
+        "message": "Guġarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Ħawajjan",
+        "description": ""
+    },
+    "hi": {
+        "message": "Ħindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kroat",
+        "description": ""
+    },
+    "ht": {
+        "message": "Creole Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Ungeriż",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armen",
+        "description": ""
+    },
+    "id": {
+        "message": "Indoneżjan",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Islandiż",
+        "description": ""
+    },
+    "it": {
+        "message": "Taljan",
+        "description": ""
+    },
+    "iw": {
+        "message": "Ebrajk",
+        "description": ""
+    },
+    "ja": {
+        "message": "Ġappuniż",
+        "description": ""
+    },
+    "jw": {
+        "message": "Ġavaniż",
+        "description": ""
+    },
+    "ka": {
+        "message": "Ġeorġjan",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Korean",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurd (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirgiż",
+        "description": ""
+    },
+    "la": {
+        "message": "Latin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lussemburgiż",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laosjan",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litwen",
+        "description": ""
+    },
+    "lv": {
+        "message": "Latvjan",
+        "description": ""
+    },
+    "mg": {
+        "message": "Madagaskar",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Maċedonjan",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malajalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongoljan",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marati",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malasjan",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malti",
+        "description": ""
+    },
+    "my": {
+        "message": "Mjanmar (Burma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepaliż",
+        "description": ""
+    },
+    "nl": {
+        "message": "Olandiż",
+        "description": ""
+    },
+    "no": {
+        "message": "Norveġiż",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punġabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Pollakk",
+        "description": ""
+    },
+    "ps": {
+        "message": "Paxto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugiż",
+        "description": ""
+    },
+    "ro": {
+        "message": "Rumen",
+        "description": ""
+    },
+    "ru": {
+        "message": "Russu",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinħaliż",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovakk",
+        "description": ""
+    },
+    "sl": {
+        "message": "Sloven",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samojan",
+        "description": ""
+    },
+    "sn": {
+        "message": "Xona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somalu",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albaniż",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serb",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundaniż",
+        "description": ""
+    },
+    "sv": {
+        "message": "Svediż",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swaħili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Taġik",
+        "description": ""
+    },
+    "th": {
+        "message": "Tajlandiż",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filippin",
+        "description": ""
+    },
+    "tr": {
+        "message": "Tork",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ukren",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Użbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vjetnamiż",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xħosaniż",
+        "description": ""
+    },
+    "yi": {
+        "message": "Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Ċiniż",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Ċiniż (Tradizzjonali)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Żulu",
+        "description": ""
+    }
+}

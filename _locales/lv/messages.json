@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "afrikāņu",
+        "description": ""
+    },
+    "am": {
+        "message": "amharu",
+        "description": ""
+    },
+    "ar": {
+        "message": "arābu",
+        "description": ""
+    },
+    "auto": {
+        "message": "Noteikt valodu",
+        "description": ""
+    },
+    "az": {
+        "message": "azerbaidžāņu",
+        "description": ""
+    },
+    "be": {
+        "message": "baltkrievu",
+        "description": ""
+    },
+    "bg": {
+        "message": "bulgāru",
+        "description": ""
+    },
+    "bn": {
+        "message": "bengāļu",
+        "description": ""
+    },
+    "bs": {
+        "message": "bosniešu",
+        "description": ""
+    },
+    "ca": {
+        "message": "katalāņu",
+        "description": ""
+    },
+    "ceb": {
+        "message": "sebuāņu",
+        "description": ""
+    },
+    "co": {
+        "message": "korsikāņu",
+        "description": ""
+    },
+    "cs": {
+        "message": "čehu",
+        "description": ""
+    },
+    "cy": {
+        "message": "velsiešu",
+        "description": ""
+    },
+    "da": {
+        "message": "dāņu",
+        "description": ""
+    },
+    "de": {
+        "message": "vācu",
+        "description": ""
+    },
+    "el": {
+        "message": "grieķu",
+        "description": ""
+    },
+    "en": {
+        "message": "angļu",
+        "description": ""
+    },
+    "eo": {
+        "message": "esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "spāņu",
+        "description": ""
+    },
+    "et": {
+        "message": "igauņu",
+        "description": ""
+    },
+    "eu": {
+        "message": "basku",
+        "description": ""
+    },
+    "fa": {
+        "message": "persiešu",
+        "description": ""
+    },
+    "fi": {
+        "message": "somu",
+        "description": ""
+    },
+    "fr": {
+        "message": "franču",
+        "description": ""
+    },
+    "fy": {
+        "message": "frīzu",
+        "description": ""
+    },
+    "ga": {
+        "message": "īru",
+        "description": ""
+    },
+    "gd": {
+        "message": "skotu gēlu",
+        "description": ""
+    },
+    "gl": {
+        "message": "galisiešu",
+        "description": ""
+    },
+    "gu": {
+        "message": "gudžaratu",
+        "description": ""
+    },
+    "ha": {
+        "message": "hausu",
+        "description": ""
+    },
+    "haw": {
+        "message": "havajiešu",
+        "description": ""
+    },
+    "hi": {
+        "message": "hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "hmongu",
+        "description": ""
+    },
+    "hr": {
+        "message": "horvātu",
+        "description": ""
+    },
+    "ht": {
+        "message": "kreolu (Haiti)",
+        "description": ""
+    },
+    "hu": {
+        "message": "ungāru",
+        "description": ""
+    },
+    "hy": {
+        "message": "armēņu",
+        "description": ""
+    },
+    "id": {
+        "message": "indonēziešu",
+        "description": ""
+    },
+    "ig": {
+        "message": "igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "īslandiešu",
+        "description": ""
+    },
+    "it": {
+        "message": "itāļu",
+        "description": ""
+    },
+    "iw": {
+        "message": "ebreju (ivrits)",
+        "description": ""
+    },
+    "ja": {
+        "message": "japāņu",
+        "description": ""
+    },
+    "jw": {
+        "message": "javiešu",
+        "description": ""
+    },
+    "ka": {
+        "message": "gruzīnu",
+        "description": ""
+    },
+    "kk": {
+        "message": "kazahu",
+        "description": ""
+    },
+    "km": {
+        "message": "khmeru",
+        "description": ""
+    },
+    "kn": {
+        "message": "kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "korejiešu",
+        "description": ""
+    },
+    "ku": {
+        "message": "kurdu",
+        "description": ""
+    },
+    "ky": {
+        "message": "kirgīzu",
+        "description": ""
+    },
+    "la": {
+        "message": "latīņu",
+        "description": ""
+    },
+    "lb": {
+        "message": "luksemburgiešu",
+        "description": ""
+    },
+    "lo": {
+        "message": "laosiešu",
+        "description": ""
+    },
+    "lt": {
+        "message": "lietuviešu",
+        "description": ""
+    },
+    "lv": {
+        "message": "latviešu",
+        "description": ""
+    },
+    "mg": {
+        "message": "malagasu",
+        "description": ""
+    },
+    "mi": {
+        "message": "maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "maķedoniešu",
+        "description": ""
+    },
+    "ml": {
+        "message": "malajalamiešu",
+        "description": ""
+    },
+    "mn": {
+        "message": "mongoļu",
+        "description": ""
+    },
+    "mr": {
+        "message": "maratu",
+        "description": ""
+    },
+    "ms": {
+        "message": "malajiešu",
+        "description": ""
+    },
+    "mt": {
+        "message": "maltiešu",
+        "description": ""
+    },
+    "my": {
+        "message": "birmiešu",
+        "description": ""
+    },
+    "ne": {
+        "message": "nepāliešu",
+        "description": ""
+    },
+    "nl": {
+        "message": "holandiešu",
+        "description": ""
+    },
+    "no": {
+        "message": "norvēģu",
+        "description": ""
+    },
+    "ny": {
+        "message": "čičeva",
+        "description": ""
+    },
+    "pa": {
+        "message": "pandžabu",
+        "description": ""
+    },
+    "pl": {
+        "message": "poļu",
+        "description": ""
+    },
+    "ps": {
+        "message": "puštu",
+        "description": ""
+    },
+    "pt": {
+        "message": "portugāļu",
+        "description": ""
+    },
+    "ro": {
+        "message": "rumāņu",
+        "description": ""
+    },
+    "ru": {
+        "message": "krievu",
+        "description": ""
+    },
+    "sd": {
+        "message": "sindžu",
+        "description": ""
+    },
+    "si": {
+        "message": "singāļu",
+        "description": ""
+    },
+    "sk": {
+        "message": "slovāku",
+        "description": ""
+    },
+    "sl": {
+        "message": "slovēņu",
+        "description": ""
+    },
+    "sm": {
+        "message": "samoāņu",
+        "description": ""
+    },
+    "sn": {
+        "message": "šona",
+        "description": ""
+    },
+    "so": {
+        "message": "somāļu",
+        "description": ""
+    },
+    "sq": {
+        "message": "albāņu",
+        "description": ""
+    },
+    "sr": {
+        "message": "serbu",
+        "description": ""
+    },
+    "st": {
+        "message": "sesoto",
+        "description": ""
+    },
+    "su": {
+        "message": "sundaniešu",
+        "description": ""
+    },
+    "sv": {
+        "message": "zviedru",
+        "description": ""
+    },
+    "sw": {
+        "message": "svahilu",
+        "description": ""
+    },
+    "ta": {
+        "message": "tamilu",
+        "description": ""
+    },
+    "te": {
+        "message": "telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "tadžiku",
+        "description": ""
+    },
+    "th": {
+        "message": "taju",
+        "description": ""
+    },
+    "tl": {
+        "message": "filipīniešu",
+        "description": ""
+    },
+    "tr": {
+        "message": "turku",
+        "description": ""
+    },
+    "uk": {
+        "message": "ukraiņu",
+        "description": ""
+    },
+    "ur": {
+        "message": "urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "uzbeku",
+        "description": ""
+    },
+    "vi": {
+        "message": "vjetnamiešu",
+        "description": ""
+    },
+    "xh": {
+        "message": "khosu",
+        "description": ""
+    },
+    "yi": {
+        "message": "ebreju (jidišs)",
+        "description": ""
+    },
+    "yo": {
+        "message": "jorubiešu",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Ķīniešu",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ķīniešu (tradicionālā)",
+        "description": ""
+    },
+    "zu": {
+        "message": "zulu",
+        "description": ""
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "අප්‍රිකානු",
+        "description": ""
+    },
+    "am": {
+        "message": "ඇම්හැරික්",
+        "description": ""
+    },
+    "ar": {
+        "message": "අරාබි",
+        "description": ""
+    },
+    "auto": {
+        "message": "භාෂාව හඳුනාගන්න",
+        "description": ""
+    },
+    "az": {
+        "message": "අසර්බයිජානු",
+        "description": ""
+    },
+    "be": {
+        "message": "බෙලරුසියානු",
+        "description": ""
+    },
+    "bg": {
+        "message": "බල්ගේරියානු",
+        "description": ""
+    },
+    "bn": {
+        "message": "බෙංගාලි",
+        "description": ""
+    },
+    "bs": {
+        "message": "බොස්නියානු",
+        "description": ""
+    },
+    "ca": {
+        "message": "කැටලන්",
+        "description": ""
+    },
+    "ceb": {
+        "message": "සෙබුආනෝ",
+        "description": ""
+    },
+    "co": {
+        "message": "කෝර්සිකානු",
+        "description": ""
+    },
+    "cs": {
+        "message": "චෙක්",
+        "description": ""
+    },
+    "cy": {
+        "message": "වෙල්ස්",
+        "description": ""
+    },
+    "da": {
+        "message": "ඩෙන්මාර්ක",
+        "description": ""
+    },
+    "de": {
+        "message": "ජර්මානු",
+        "description": ""
+    },
+    "el": {
+        "message": "ග්‍රීක",
+        "description": ""
+    },
+    "en": {
+        "message": "ඉංග්‍රීසි",
+        "description": ""
+    },
+    "eo": {
+        "message": "එස්පැරන්ටෝ",
+        "description": ""
+    },
+    "es": {
+        "message": "ස්පාඤ්ඤ",
+        "description": ""
+    },
+    "et": {
+        "message": "එස්තෝනියානු",
+        "description": ""
+    },
+    "eu": {
+        "message": "බොස්කෝ",
+        "description": ""
+    },
+    "fa": {
+        "message": "පර්සියානු",
+        "description": ""
+    },
+    "fi": {
+        "message": "ෆිනිශ්",
+        "description": ""
+    },
+    "fr": {
+        "message": "ප්‍රංශ",
+        "description": ""
+    },
+    "fy": {
+        "message": "ෆ්‍රීසියානු",
+        "description": ""
+    },
+    "ga": {
+        "message": "අයිරිෂ්",
+        "description": ""
+    },
+    "gd": {
+        "message": "ස්කොට්ස් ගැලික්",
+        "description": ""
+    },
+    "gl": {
+        "message": "ගැලීසියානු",
+        "description": ""
+    },
+    "gu": {
+        "message": "ගුජරාටි",
+        "description": ""
+    },
+    "ha": {
+        "message": "හෝසා",
+        "description": ""
+    },
+    "haw": {
+        "message": "හවායි",
+        "description": ""
+    },
+    "hi": {
+        "message": "හින්දි",
+        "description": ""
+    },
+    "hmn": {
+        "message": "හමොන්ග්",
+        "description": ""
+    },
+    "hr": {
+        "message": "ක්‍රෝයේශියානු",
+        "description": ""
+    },
+    "ht": {
+        "message": "හයිටි භාෂාව",
+        "description": ""
+    },
+    "hu": {
+        "message": "හන්ගේරියානු",
+        "description": ""
+    },
+    "hy": {
+        "message": "ආර්මේනියානු",
+        "description": ""
+    },
+    "id": {
+        "message": "ඉන්දුනීසියානු",
+        "description": ""
+    },
+    "ig": {
+        "message": "ඉග්බෝ",
+        "description": ""
+    },
+    "is": {
+        "message": "අයිස්ලන්ත",
+        "description": ""
+    },
+    "it": {
+        "message": "ඉතාලි",
+        "description": ""
+    },
+    "iw": {
+        "message": "හීබෲ",
+        "description": ""
+    },
+    "ja": {
+        "message": "ජපන්",
+        "description": ""
+    },
+    "jw": {
+        "message": "ජාවා",
+        "description": ""
+    },
+    "ka": {
+        "message": "ජෝර්ජියානු",
+        "description": ""
+    },
+    "kk": {
+        "message": "කශාහ්",
+        "description": ""
+    },
+    "km": {
+        "message": "කාම්බෝජියානු",
+        "description": ""
+    },
+    "kn": {
+        "message": "කණ්ණඩ",
+        "description": ""
+    },
+    "ko": {
+        "message": "කොරියානු",
+        "description": ""
+    },
+    "ku": {
+        "message": "කුර්දිශ්",
+        "description": ""
+    },
+    "ky": {
+        "message": "කිර්ගිස්",
+        "description": ""
+    },
+    "la": {
+        "message": "ලතින්",
+        "description": ""
+    },
+    "lb": {
+        "message": "ලක්සැම්බර්ග්",
+        "description": ""
+    },
+    "lo": {
+        "message": "ලාඕතියානු",
+        "description": ""
+    },
+    "lt": {
+        "message": "ලිතුවේනියානු",
+        "description": ""
+    },
+    "lv": {
+        "message": "ලැට්වියානු",
+        "description": ""
+    },
+    "mg": {
+        "message": "මලගාසි",
+        "description": ""
+    },
+    "mi": {
+        "message": "මාවොරි",
+        "description": ""
+    },
+    "mk": {
+        "message": "මැසඩෝනියානු",
+        "description": ""
+    },
+    "ml": {
+        "message": "මලයාලම්",
+        "description": ""
+    },
+    "mn": {
+        "message": "මොංගෝලියානු",
+        "description": ""
+    },
+    "mr": {
+        "message": "මරාටි",
+        "description": ""
+    },
+    "ms": {
+        "message": "මැලේ",
+        "description": ""
+    },
+    "mt": {
+        "message": "මොල්ටිස්",
+        "description": ""
+    },
+    "my": {
+        "message": "බර්මීස්",
+        "description": ""
+    },
+    "ne": {
+        "message": "නේපාල",
+        "description": ""
+    },
+    "nl": {
+        "message": "ලංදේසි",
+        "description": ""
+    },
+    "no": {
+        "message": "නෝර්වේජියානු",
+        "description": ""
+    },
+    "ny": {
+        "message": "චිචෙවා",
+        "description": ""
+    },
+    "pa": {
+        "message": "ජන්ජාබ්",
+        "description": ""
+    },
+    "pl": {
+        "message": "පෝලන්ත",
+        "description": ""
+    },
+    "ps": {
+        "message": "පෂ්ටෝ",
+        "description": ""
+    },
+    "pt": {
+        "message": "පෘතුගීසි",
+        "description": ""
+    },
+    "ro": {
+        "message": "රුමේනියානු",
+        "description": ""
+    },
+    "ru": {
+        "message": "රුසියානු",
+        "description": ""
+    },
+    "sd": {
+        "message": "සින්ධි",
+        "description": ""
+    },
+    "si": {
+        "message": "සිංහල",
+        "description": ""
+    },
+    "sk": {
+        "message": "ස්ලෝවැක්",
+        "description": ""
+    },
+    "sl": {
+        "message": "ස්ලෝවේනියානු",
+        "description": ""
+    },
+    "sm": {
+        "message": "සමෝන්",
+        "description": ""
+    },
+    "sn": {
+        "message": "ෂෝනා",
+        "description": ""
+    },
+    "so": {
+        "message": "සෝමාලි",
+        "description": ""
+    },
+    "sq": {
+        "message": "ඇල්බේනියානු",
+        "description": ""
+    },
+    "sr": {
+        "message": "සර්බීයානු",
+        "description": ""
+    },
+    "st": {
+        "message": "සෙසොතෝ",
+        "description": ""
+    },
+    "su": {
+        "message": "සන්ඩන්ස්",
+        "description": ""
+    },
+    "sv": {
+        "message": "ස්වෙඩිශ්",
+        "description": ""
+    },
+    "sw": {
+        "message": "ස්වාහිලි",
+        "description": ""
+    },
+    "ta": {
+        "message": "දෙමළ",
+        "description": ""
+    },
+    "te": {
+        "message": "තෙලිඟු",
+        "description": ""
+    },
+    "tg": {
+        "message": "ටජික්",
+        "description": ""
+    },
+    "th": {
+        "message": "තායි",
+        "description": ""
+    },
+    "tl": {
+        "message": "පිලිපීන",
+        "description": ""
+    },
+    "tr": {
+        "message": "තුර්කි",
+        "description": ""
+    },
+    "uk": {
+        "message": "යුක්රේනියානු",
+        "description": ""
+    },
+    "ur": {
+        "message": "උර්දු",
+        "description": ""
+    },
+    "uz": {
+        "message": "උස්බෙකිස්ථානු",
+        "description": ""
+    },
+    "vi": {
+        "message": "වියට්නාම්",
+        "description": ""
+    },
+    "xh": {
+        "message": "ශෝසා",
+        "description": ""
+    },
+    "yi": {
+        "message": "යුදෙව්",
+        "description": ""
+    },
+    "yo": {
+        "message": "යොරූබා",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "චීන",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "චීන (සාම්ප්‍රදායික)",
+        "description": ""
+    },
+    "zu": {
+        "message": "සුලු",
+        "description": ""
+    }
+}

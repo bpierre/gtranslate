@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "افریقی",
+        "description": ""
+    },
+    "am": {
+        "message": "امہاری",
+        "description": ""
+    },
+    "ar": {
+        "message": "عربی",
+        "description": ""
+    },
+    "auto": {
+        "message": "زبان کی شناخت کریں",
+        "description": ""
+    },
+    "az": {
+        "message": "آذربائیجانی",
+        "description": ""
+    },
+    "be": {
+        "message": "بیلاروسی",
+        "description": ""
+    },
+    "bg": {
+        "message": "بلغاریائی",
+        "description": ""
+    },
+    "bn": {
+        "message": "بنگالی",
+        "description": ""
+    },
+    "bs": {
+        "message": "بوسنیائی",
+        "description": ""
+    },
+    "ca": {
+        "message": "کیٹیلان",
+        "description": ""
+    },
+    "ceb": {
+        "message": "سيبوانو",
+        "description": ""
+    },
+    "co": {
+        "message": "کورسیکن",
+        "description": ""
+    },
+    "cs": {
+        "message": "چیک",
+        "description": ""
+    },
+    "cy": {
+        "message": "ویلش",
+        "description": ""
+    },
+    "da": {
+        "message": "ڈینش",
+        "description": ""
+    },
+    "de": {
+        "message": "جرمن",
+        "description": ""
+    },
+    "el": {
+        "message": "یونانی",
+        "description": ""
+    },
+    "en": {
+        "message": "انگریزی",
+        "description": ""
+    },
+    "eo": {
+        "message": "اسپیرانٹو",
+        "description": ""
+    },
+    "es": {
+        "message": "ہسپانوی",
+        "description": ""
+    },
+    "et": {
+        "message": "ایسٹونیائی",
+        "description": ""
+    },
+    "eu": {
+        "message": "بسق",
+        "description": ""
+    },
+    "fa": {
+        "message": "فارسی",
+        "description": ""
+    },
+    "fi": {
+        "message": "فنش",
+        "description": ""
+    },
+    "fr": {
+        "message": "فرانسیسی",
+        "description": ""
+    },
+    "fy": {
+        "message": "فریسین",
+        "description": ""
+    },
+    "ga": {
+        "message": "آئرستانی",
+        "description": ""
+    },
+    "gd": {
+        "message": "اسکاٹس گیلک",
+        "description": ""
+    },
+    "gl": {
+        "message": "گیلیشیائی",
+        "description": ""
+    },
+    "gu": {
+        "message": "گجراتی",
+        "description": ""
+    },
+    "ha": {
+        "message": "ہؤسا",
+        "description": ""
+    },
+    "haw": {
+        "message": "ہوائی",
+        "description": ""
+    },
+    "hi": {
+        "message": "ہندی",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ہمونگ",
+        "description": ""
+    },
+    "hr": {
+        "message": "کروشیائی",
+        "description": ""
+    },
+    "ht": {
+        "message": "ہیشین کریول",
+        "description": ""
+    },
+    "hu": {
+        "message": "ہنگریائی",
+        "description": ""
+    },
+    "hy": {
+        "message": "آرمینیائی",
+        "description": ""
+    },
+    "id": {
+        "message": "انڈونیشیائی",
+        "description": ""
+    },
+    "ig": {
+        "message": "اِگبو",
+        "description": ""
+    },
+    "is": {
+        "message": "آئس لینڈک",
+        "description": ""
+    },
+    "it": {
+        "message": "اطالوی",
+        "description": ""
+    },
+    "iw": {
+        "message": "عبرانی",
+        "description": ""
+    },
+    "ja": {
+        "message": "جاپانی",
+        "description": ""
+    },
+    "jw": {
+        "message": "جاوانیز",
+        "description": ""
+    },
+    "ka": {
+        "message": "جارجیائی",
+        "description": ""
+    },
+    "kk": {
+        "message": "قزاخ",
+        "description": ""
+    },
+    "km": {
+        "message": "خمير",
+        "description": ""
+    },
+    "kn": {
+        "message": "کنّڑ",
+        "description": ""
+    },
+    "ko": {
+        "message": "کوریائی",
+        "description": ""
+    },
+    "ku": {
+        "message": "کردش",
+        "description": ""
+    },
+    "ky": {
+        "message": "کرغیز",
+        "description": ""
+    },
+    "la": {
+        "message": "لاطینی",
+        "description": ""
+    },
+    "lb": {
+        "message": "لگژمبرگی",
+        "description": ""
+    },
+    "lo": {
+        "message": "لاؤ",
+        "description": ""
+    },
+    "lt": {
+        "message": "لتھوانیائی",
+        "description": ""
+    },
+    "lv": {
+        "message": "لٹویائی",
+        "description": ""
+    },
+    "mg": {
+        "message": "میلاگاسی",
+        "description": ""
+    },
+    "mi": {
+        "message": "ماؤری",
+        "description": ""
+    },
+    "mk": {
+        "message": "مقدونیائی",
+        "description": ""
+    },
+    "ml": {
+        "message": "ملیالم",
+        "description": ""
+    },
+    "mn": {
+        "message": "منگولیائی",
+        "description": ""
+    },
+    "mr": {
+        "message": "مراٹھی",
+        "description": ""
+    },
+    "ms": {
+        "message": "مالے",
+        "description": ""
+    },
+    "mt": {
+        "message": "مالٹیز",
+        "description": ""
+    },
+    "my": {
+        "message": "میانمار (برمی)",
+        "description": ""
+    },
+    "ne": {
+        "message": "نیپالی",
+        "description": ""
+    },
+    "nl": {
+        "message": "ڈچ",
+        "description": ""
+    },
+    "no": {
+        "message": "نارویجین",
+        "description": ""
+    },
+    "ny": {
+        "message": "شي شوا",
+        "description": ""
+    },
+    "pa": {
+        "message": "پنجابی",
+        "description": ""
+    },
+    "pl": {
+        "message": "پولش",
+        "description": ""
+    },
+    "ps": {
+        "message": "پشتو",
+        "description": ""
+    },
+    "pt": {
+        "message": "پرتگالی",
+        "description": ""
+    },
+    "ro": {
+        "message": "رومانیائی",
+        "description": ""
+    },
+    "ru": {
+        "message": "روسی",
+        "description": ""
+    },
+    "sd": {
+        "message": "سندھی",
+        "description": ""
+    },
+    "si": {
+        "message": "سنہالا",
+        "description": ""
+    },
+    "sk": {
+        "message": "سلوواک",
+        "description": ""
+    },
+    "sl": {
+        "message": "سلووینیائی",
+        "description": ""
+    },
+    "sm": {
+        "message": "ساموآن",
+        "description": ""
+    },
+    "sn": {
+        "message": "شونا",
+        "description": ""
+    },
+    "so": {
+        "message": "صومالی",
+        "description": ""
+    },
+    "sq": {
+        "message": "البانیائی",
+        "description": ""
+    },
+    "sr": {
+        "message": "سربیائی",
+        "description": ""
+    },
+    "st": {
+        "message": "سیسوتھو",
+        "description": ""
+    },
+    "su": {
+        "message": "سنڈانیز",
+        "description": ""
+    },
+    "sv": {
+        "message": "سویڈش",
+        "description": ""
+    },
+    "sw": {
+        "message": "سواحلی",
+        "description": ""
+    },
+    "ta": {
+        "message": "تمل",
+        "description": ""
+    },
+    "te": {
+        "message": "تیلگو",
+        "description": ""
+    },
+    "tg": {
+        "message": "تاجک",
+        "description": ""
+    },
+    "th": {
+        "message": "تھائی",
+        "description": ""
+    },
+    "tl": {
+        "message": "فلپینو",
+        "description": ""
+    },
+    "tr": {
+        "message": "ترکش",
+        "description": ""
+    },
+    "uk": {
+        "message": "یوکرینیائی",
+        "description": ""
+    },
+    "ur": {
+        "message": "اردو",
+        "description": ""
+    },
+    "uz": {
+        "message": "ازبیک",
+        "description": ""
+    },
+    "vi": {
+        "message": "ویتنامی",
+        "description": ""
+    },
+    "xh": {
+        "message": "ژوسا",
+        "description": ""
+    },
+    "yi": {
+        "message": "یدّش",
+        "description": ""
+    },
+    "yo": {
+        "message": "یوروبا",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "چینی",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "چینی (روایتی)",
+        "description": ""
+    },
+    "zu": {
+        "message": "زولو",
+        "description": ""
+    }
+}

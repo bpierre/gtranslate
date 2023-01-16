@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Amharies",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabies",
+        "description": ""
+    },
+    "auto": {
+        "message": "Bespeur taal",
+        "description": ""
+    },
+    "az": {
+        "message": "Azerbeidjaans",
+        "description": ""
+    },
+    "be": {
+        "message": "Belo-Russies",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgaars",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengaals",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnies",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katalaans",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Korsikaans",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tsjeggies",
+        "description": ""
+    },
+    "cy": {
+        "message": "Wallies",
+        "description": ""
+    },
+    "da": {
+        "message": "Deens",
+        "description": ""
+    },
+    "de": {
+        "message": "Duits",
+        "description": ""
+    },
+    "el": {
+        "message": "Grieks",
+        "description": ""
+    },
+    "en": {
+        "message": "Engels",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spaans",
+        "description": ""
+    },
+    "et": {
+        "message": "Estlands",
+        "description": ""
+    },
+    "eu": {
+        "message": "Baskies",
+        "description": ""
+    },
+    "fa": {
+        "message": "Persies",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fins",
+        "description": ""
+    },
+    "fr": {
+        "message": "Frans",
+        "description": ""
+    },
+    "fy": {
+        "message": "Fries",
+        "description": ""
+    },
+    "ga": {
+        "message": "Iers",
+        "description": ""
+    },
+    "gd": {
+        "message": "Skotse Gallies",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galisies",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gudjarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaies",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kroaties",
+        "description": ""
+    },
+    "ht": {
+        "message": "Haïtiese Kreools",
+        "description": ""
+    },
+    "hu": {
+        "message": "Hongaars",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armeens",
+        "description": ""
+    },
+    "id": {
+        "message": "Indonesies",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Yslands",
+        "description": ""
+    },
+    "it": {
+        "message": "Italiaans",
+        "description": ""
+    },
+    "iw": {
+        "message": "Hebreeus",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japannees",
+        "description": ""
+    },
+    "jw": {
+        "message": "Javaans",
+        "description": ""
+    },
+    "ka": {
+        "message": "Georgies",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazak",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koreaans",
+        "description": ""
+    },
+    "ku": {
+        "message": "Koerdies",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirgisies",
+        "description": ""
+    },
+    "la": {
+        "message": "Latyn",
+        "description": ""
+    },
+    "lb": {
+        "message": "Luxemburgs",
+        "description": ""
+    },
+    "lo": {
+        "message": "Lao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Litaus",
+        "description": ""
+    },
+    "lv": {
+        "message": "Letties",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malgassies",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Masedonies",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malabaars",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongools",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Maleisies",
+        "description": ""
+    },
+    "mt": {
+        "message": "Maltees",
+        "description": ""
+    },
+    "my": {
+        "message": "Birmaans",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepalees",
+        "description": ""
+    },
+    "nl": {
+        "message": "Nederlands",
+        "description": ""
+    },
+    "no": {
+        "message": "Noors",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Pandjab",
+        "description": ""
+    },
+    "pl": {
+        "message": "Pools",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pasjto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugees",
+        "description": ""
+    },
+    "ro": {
+        "message": "Roemeens",
+        "description": ""
+    },
+    "ru": {
+        "message": "Russies",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Singalees",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slowaaks",
+        "description": ""
+    },
+    "sl": {
+        "message": "Sloweens",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoaans",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somalies",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albanees",
+        "description": ""
+    },
+    "sr": {
+        "message": "Serwies",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundanees",
+        "description": ""
+    },
+    "sv": {
+        "message": "Sweeds",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tadjik",
+        "description": ""
+    },
+    "th": {
+        "message": "Thai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filippyns",
+        "description": ""
+    },
+    "tr": {
+        "message": "Turks",
+        "description": ""
+    },
+    "uk": {
+        "message": "Oekraïne",
+        "description": ""
+    },
+    "ur": {
+        "message": "Oerdoe",
+        "description": ""
+    },
+    "uz": {
+        "message": "Oezbeeks",
+        "description": ""
+    },
+    "vi": {
+        "message": "Viëtnamees",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Jiddisj",
+        "description": ""
+    },
+    "yo": {
+        "message": "Joruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Chinees",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Chinees (Tradisioneel)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zoeloe",
+        "description": ""
+    }
+}

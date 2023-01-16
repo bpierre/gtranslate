@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "આફ્રિકી",
+        "description": ""
+    },
+    "am": {
+        "message": "ઍમ્હારિક",
+        "description": ""
+    },
+    "ar": {
+        "message": "અરબી",
+        "description": ""
+    },
+    "auto": {
+        "message": "ભાષા શોધો",
+        "description": ""
+    },
+    "az": {
+        "message": "ઍઝરબૈજાની",
+        "description": ""
+    },
+    "be": {
+        "message": "બેલારૂશિયન",
+        "description": ""
+    },
+    "bg": {
+        "message": "બલ્ગેરિયન",
+        "description": ""
+    },
+    "bn": {
+        "message": "બંગાળી",
+        "description": ""
+    },
+    "bs": {
+        "message": "બૉઝ્નિયન",
+        "description": ""
+    },
+    "ca": {
+        "message": "કતલાન",
+        "description": ""
+    },
+    "ceb": {
+        "message": "સિબુઆનો",
+        "description": ""
+    },
+    "co": {
+        "message": "કોર્સિકન",
+        "description": ""
+    },
+    "cs": {
+        "message": "ચેક",
+        "description": ""
+    },
+    "cy": {
+        "message": "વેલ્શ",
+        "description": ""
+    },
+    "da": {
+        "message": "ડૅનિશ",
+        "description": ""
+    },
+    "de": {
+        "message": "જર્મન",
+        "description": ""
+    },
+    "el": {
+        "message": "ગ્રીક",
+        "description": ""
+    },
+    "en": {
+        "message": "અંગ્રેજી",
+        "description": ""
+    },
+    "eo": {
+        "message": "ઍસ્પૅરેન્તો",
+        "description": ""
+    },
+    "es": {
+        "message": "સ્પૅનીશ",
+        "description": ""
+    },
+    "et": {
+        "message": "એસ્ટોનિયન",
+        "description": ""
+    },
+    "eu": {
+        "message": "બાસ્ક",
+        "description": ""
+    },
+    "fa": {
+        "message": "પર્શિયન",
+        "description": ""
+    },
+    "fi": {
+        "message": "ફિન્નિશ",
+        "description": ""
+    },
+    "fr": {
+        "message": "ફ્રેન્ચ",
+        "description": ""
+    },
+    "fy": {
+        "message": "ફ્રિશિયન",
+        "description": ""
+    },
+    "ga": {
+        "message": "આયરિશ",
+        "description": ""
+    },
+    "gd": {
+        "message": "સ્કોટ્સ ગેલિક",
+        "description": ""
+    },
+    "gl": {
+        "message": "ગૅલિશિયન",
+        "description": ""
+    },
+    "gu": {
+        "message": "ગુજરાતી",
+        "description": ""
+    },
+    "ha": {
+        "message": "હૌસા",
+        "description": ""
+    },
+    "haw": {
+        "message": "હવાઇયન",
+        "description": ""
+    },
+    "hi": {
+        "message": "હિન્દી",
+        "description": ""
+    },
+    "hmn": {
+        "message": "મૉન્ગ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ક્રોએશિયન",
+        "description": ""
+    },
+    "ht": {
+        "message": "હાઇટિઇન ક્રેઓલ",
+        "description": ""
+    },
+    "hu": {
+        "message": "હંગેરિયન",
+        "description": ""
+    },
+    "hy": {
+        "message": "આર્મેનિયન",
+        "description": ""
+    },
+    "id": {
+        "message": "ઇન્ડોનેશિયન",
+        "description": ""
+    },
+    "ig": {
+        "message": "ઇગ્બો",
+        "description": ""
+    },
+    "is": {
+        "message": "આઇસલૅન્ડિક",
+        "description": ""
+    },
+    "it": {
+        "message": "ઇટાલિયન",
+        "description": ""
+    },
+    "iw": {
+        "message": "હીબ્રૂ",
+        "description": ""
+    },
+    "ja": {
+        "message": "જાપાની",
+        "description": ""
+    },
+    "jw": {
+        "message": "જાવાનીઝ",
+        "description": ""
+    },
+    "ka": {
+        "message": "જ્યોર્જિયન",
+        "description": ""
+    },
+    "kk": {
+        "message": "કઝાક",
+        "description": ""
+    },
+    "km": {
+        "message": "ખ્મેર",
+        "description": ""
+    },
+    "kn": {
+        "message": "કન્નડ",
+        "description": ""
+    },
+    "ko": {
+        "message": "કોરીયન",
+        "description": ""
+    },
+    "ku": {
+        "message": "કુર્ડિશ",
+        "description": ""
+    },
+    "ky": {
+        "message": "કિર્ગિઝ",
+        "description": ""
+    },
+    "la": {
+        "message": "લેટિન",
+        "description": ""
+    },
+    "lb": {
+        "message": "લક્ઝમબર્ગિશ",
+        "description": ""
+    },
+    "lo": {
+        "message": "લાઓ",
+        "description": ""
+    },
+    "lt": {
+        "message": "લિથુઆનિયન",
+        "description": ""
+    },
+    "lv": {
+        "message": "લાતવી",
+        "description": ""
+    },
+    "mg": {
+        "message": "માલાગાસી",
+        "description": ""
+    },
+    "mi": {
+        "message": "માઓરી",
+        "description": ""
+    },
+    "mk": {
+        "message": "મેસેડોનિયન",
+        "description": ""
+    },
+    "ml": {
+        "message": "મલયાલમ",
+        "description": ""
+    },
+    "mn": {
+        "message": "મોંગોલિયન",
+        "description": ""
+    },
+    "mr": {
+        "message": "મરાઠી",
+        "description": ""
+    },
+    "ms": {
+        "message": "મલય",
+        "description": ""
+    },
+    "mt": {
+        "message": "માલ્ટિઝ",
+        "description": ""
+    },
+    "my": {
+        "message": "બર્મીઝ",
+        "description": ""
+    },
+    "ne": {
+        "message": "નેપાળી",
+        "description": ""
+    },
+    "nl": {
+        "message": "ડચ",
+        "description": ""
+    },
+    "no": {
+        "message": "નોર્વેજિયન",
+        "description": ""
+    },
+    "ny": {
+        "message": "ચિચેવા",
+        "description": ""
+    },
+    "pa": {
+        "message": "પંજાબી",
+        "description": ""
+    },
+    "pl": {
+        "message": "પોલિશ",
+        "description": ""
+    },
+    "ps": {
+        "message": "પાશ્તુન",
+        "description": ""
+    },
+    "pt": {
+        "message": "પોર્ટુગીઝ",
+        "description": ""
+    },
+    "ro": {
+        "message": "રોમૅનિયન",
+        "description": ""
+    },
+    "ru": {
+        "message": "રશિયન",
+        "description": ""
+    },
+    "sd": {
+        "message": "સિંધી",
+        "description": ""
+    },
+    "si": {
+        "message": "સિંહલી",
+        "description": ""
+    },
+    "sk": {
+        "message": "સ્લોવૅક",
+        "description": ""
+    },
+    "sl": {
+        "message": "સ્લોવેનિયન",
+        "description": ""
+    },
+    "sm": {
+        "message": "સમોઅન",
+        "description": ""
+    },
+    "sn": {
+        "message": "શોના",
+        "description": ""
+    },
+    "so": {
+        "message": "સોમાલી",
+        "description": ""
+    },
+    "sq": {
+        "message": "આલ્બેનિયન",
+        "description": ""
+    },
+    "sr": {
+        "message": "સર્બિયન",
+        "description": ""
+    },
+    "st": {
+        "message": "સેસોથો",
+        "description": ""
+    },
+    "su": {
+        "message": "સુદાનિઝ",
+        "description": ""
+    },
+    "sv": {
+        "message": "સ્વીડિશ",
+        "description": ""
+    },
+    "sw": {
+        "message": "સ્વાહિલી",
+        "description": ""
+    },
+    "ta": {
+        "message": "તમિલ",
+        "description": ""
+    },
+    "te": {
+        "message": "તેલુગુ",
+        "description": ""
+    },
+    "tg": {
+        "message": "તજિક",
+        "description": ""
+    },
+    "th": {
+        "message": "થાઇ",
+        "description": ""
+    },
+    "tl": {
+        "message": "ફિલિપિનો",
+        "description": ""
+    },
+    "tr": {
+        "message": "તુર્કી",
+        "description": ""
+    },
+    "uk": {
+        "message": "યુક્રેનિયન",
+        "description": ""
+    },
+    "ur": {
+        "message": "ઉર્દુ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ઉઝબેક",
+        "description": ""
+    },
+    "vi": {
+        "message": "વિયેતનામી",
+        "description": ""
+    },
+    "xh": {
+        "message": "ખોસા",
+        "description": ""
+    },
+    "yi": {
+        "message": "યિદ્દિશ",
+        "description": ""
+    },
+    "yo": {
+        "message": "યોરૂબા",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ચિની",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ચીની (પરંપરાગત)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ઝુલુ",
+        "description": ""
+    }
+}

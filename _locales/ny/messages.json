@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Chiafirikanzi",
+        "description": ""
+    },
+    "am": {
+        "message": "Chiamuhariki",
+        "description": ""
+    },
+    "ar": {
+        "message": "Chiarabiki",
+        "description": ""
+    },
+    "auto": {
+        "message": "Fufuzani chilankhulo",
+        "description": ""
+    },
+    "az": {
+        "message": "Chiazebajani",
+        "description": ""
+    },
+    "be": {
+        "message": "Chibelarashani",
+        "description": ""
+    },
+    "bg": {
+        "message": "Chibulugariani",
+        "description": ""
+    },
+    "bn": {
+        "message": "Chibengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Chiboziniyani",
+        "description": ""
+    },
+    "ca": {
+        "message": "Chikatalani",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Chikwebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Chikolusikani",
+        "description": ""
+    },
+    "cs": {
+        "message": "Chitcheki",
+        "description": ""
+    },
+    "cy": {
+        "message": "Chiwelushi",
+        "description": ""
+    },
+    "da": {
+        "message": "Chidanishi",
+        "description": ""
+    },
+    "de": {
+        "message": "Chijeremani",
+        "description": ""
+    },
+    "el": {
+        "message": "Chigiriki",
+        "description": ""
+    },
+    "en": {
+        "message": "Chingerezi",
+        "description": ""
+    },
+    "eo": {
+        "message": "Chiesiperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Chisipanishi",
+        "description": ""
+    },
+    "et": {
+        "message": "Chiesitoniani",
+        "description": ""
+    },
+    "eu": {
+        "message": "Chibasiki",
+        "description": ""
+    },
+    "fa": {
+        "message": "Chiperezi",
+        "description": ""
+    },
+    "fi": {
+        "message": "Chifinishi",
+        "description": ""
+    },
+    "fr": {
+        "message": "Chifulenchi",
+        "description": ""
+    },
+    "fy": {
+        "message": "Chifirisiyani",
+        "description": ""
+    },
+    "ga": {
+        "message": "Chiayirishi",
+        "description": ""
+    },
+    "gd": {
+        "message": "Chi sikoti chachigayeliki",
+        "description": ""
+    },
+    "gl": {
+        "message": "Chigalishani",
+        "description": ""
+    },
+    "gu": {
+        "message": "Chigujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Chihausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Chihawayani",
+        "description": ""
+    },
+    "hi": {
+        "message": "Chihindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Chihimong'i",
+        "description": ""
+    },
+    "hr": {
+        "message": "Chikuroweshani",
+        "description": ""
+    },
+    "ht": {
+        "message": "Chikiriyore cha ku Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Chihangariani",
+        "description": ""
+    },
+    "hy": {
+        "message": "Chiarumeniyani",
+        "description": ""
+    },
+    "id": {
+        "message": "Chiindoneziyani",
+        "description": ""
+    },
+    "ig": {
+        "message": "Chiibo",
+        "description": ""
+    },
+    "is": {
+        "message": "Chiayisilandiki",
+        "description": ""
+    },
+    "it": {
+        "message": "Chitaliyana",
+        "description": ""
+    },
+    "iw": {
+        "message": "Chiheberi",
+        "description": ""
+    },
+    "ja": {
+        "message": "Chijapanizi",
+        "description": ""
+    },
+    "jw": {
+        "message": "Chijavanizi",
+        "description": ""
+    },
+    "ka": {
+        "message": "Chijojiyani",
+        "description": ""
+    },
+    "kk": {
+        "message": "Chikazaki",
+        "description": ""
+    },
+    "km": {
+        "message": "Chikhima",
+        "description": ""
+    },
+    "kn": {
+        "message": "Chikanada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Chikoliani",
+        "description": ""
+    },
+    "ku": {
+        "message": "Chikudishi (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Chikirigizi",
+        "description": ""
+    },
+    "la": {
+        "message": "Chilatini",
+        "description": ""
+    },
+    "lb": {
+        "message": "Chilukusembogishi",
+        "description": ""
+    },
+    "lo": {
+        "message": "Chilao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Chilithuwania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Chilativia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Chimalagasi",
+        "description": ""
+    },
+    "mi": {
+        "message": "Chimaori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Chimasedoniyani",
+        "description": ""
+    },
+    "ml": {
+        "message": "Chimalayalamu",
+        "description": ""
+    },
+    "mn": {
+        "message": "Chimongoliyani",
+        "description": ""
+    },
+    "mr": {
+        "message": "Chimarathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Chimalayi",
+        "description": ""
+    },
+    "mt": {
+        "message": "Chimalutizi",
+        "description": ""
+    },
+    "my": {
+        "message": "Chimyanima (Chibuma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Chinepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Chidatchi",
+        "description": ""
+    },
+    "no": {
+        "message": "Chinoruwejani",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Chipunjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Chipolishi",
+        "description": ""
+    },
+    "ps": {
+        "message": "Chipashito",
+        "description": ""
+    },
+    "pt": {
+        "message": "Chipwitikizi",
+        "description": ""
+    },
+    "ro": {
+        "message": "Chiromaniani",
+        "description": ""
+    },
+    "ru": {
+        "message": "Chirashani",
+        "description": ""
+    },
+    "sd": {
+        "message": "Chisindi",
+        "description": ""
+    },
+    "si": {
+        "message": "Chisinihala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Chisilovaki",
+        "description": ""
+    },
+    "sl": {
+        "message": "Chisiloveniyani",
+        "description": ""
+    },
+    "sm": {
+        "message": "Chisamoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Chishona",
+        "description": ""
+    },
+    "so": {
+        "message": "Chisomali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Chialubaniyani",
+        "description": ""
+    },
+    "sr": {
+        "message": "Chiserubiani",
+        "description": ""
+    },
+    "st": {
+        "message": "Chisotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Chisundanizi",
+        "description": ""
+    },
+    "sv": {
+        "message": "Chiswideni",
+        "description": ""
+    },
+    "sw": {
+        "message": "Chiswahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Chitamilu",
+        "description": ""
+    },
+    "te": {
+        "message": "Chitelugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Chitajiki",
+        "description": ""
+    },
+    "th": {
+        "message": "Chithai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Chifilipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Chitekishi",
+        "description": ""
+    },
+    "uk": {
+        "message": "Chiyukireniyani",
+        "description": ""
+    },
+    "ur": {
+        "message": "Chiurudu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Chiuzubeki",
+        "description": ""
+    },
+    "vi": {
+        "message": "Chiviyetinamizi",
+        "description": ""
+    },
+    "xh": {
+        "message": "Chikhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Chiyidishi",
+        "description": ""
+    },
+    "yo": {
+        "message": "Chiyoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Chitchaina",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Chitchaina (Chamakolo)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Chizulu",
+        "description": ""
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "amharski",
+        "description": ""
+    },
+    "ar": {
+        "message": "arapski",
+        "description": ""
+    },
+    "auto": {
+        "message": "Odredi jezik",
+        "description": ""
+    },
+    "az": {
+        "message": "azerbajdžanski",
+        "description": ""
+    },
+    "be": {
+        "message": "bjeloruski",
+        "description": ""
+    },
+    "bg": {
+        "message": "bugarski",
+        "description": ""
+    },
+    "bn": {
+        "message": "bengalski",
+        "description": ""
+    },
+    "bs": {
+        "message": "bosanski",
+        "description": ""
+    },
+    "ca": {
+        "message": "katalonski",
+        "description": ""
+    },
+    "ceb": {
+        "message": "sebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "korzikanski",
+        "description": ""
+    },
+    "cs": {
+        "message": "češki",
+        "description": ""
+    },
+    "cy": {
+        "message": "velški",
+        "description": ""
+    },
+    "da": {
+        "message": "danski",
+        "description": ""
+    },
+    "de": {
+        "message": "njemački",
+        "description": ""
+    },
+    "el": {
+        "message": "grčki",
+        "description": ""
+    },
+    "en": {
+        "message": "engleski",
+        "description": ""
+    },
+    "eo": {
+        "message": "esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "španski",
+        "description": ""
+    },
+    "et": {
+        "message": "estonski",
+        "description": ""
+    },
+    "eu": {
+        "message": "baskijski",
+        "description": ""
+    },
+    "fa": {
+        "message": "perzijski",
+        "description": ""
+    },
+    "fi": {
+        "message": "finski",
+        "description": ""
+    },
+    "fr": {
+        "message": "francuski",
+        "description": ""
+    },
+    "fy": {
+        "message": "frizijski",
+        "description": ""
+    },
+    "ga": {
+        "message": "irski",
+        "description": ""
+    },
+    "gd": {
+        "message": "škotski gelski",
+        "description": ""
+    },
+    "gl": {
+        "message": "galicijski",
+        "description": ""
+    },
+    "gu": {
+        "message": "gudžarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "havajski",
+        "description": ""
+    },
+    "hi": {
+        "message": "hindski",
+        "description": ""
+    },
+    "hmn": {
+        "message": "hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "hrvatski",
+        "description": ""
+    },
+    "ht": {
+        "message": "haićanski kreolski",
+        "description": ""
+    },
+    "hu": {
+        "message": "mađarski",
+        "description": ""
+    },
+    "hy": {
+        "message": "armenski",
+        "description": ""
+    },
+    "id": {
+        "message": "indonežanski",
+        "description": ""
+    },
+    "ig": {
+        "message": "igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "islandski",
+        "description": ""
+    },
+    "it": {
+        "message": "talijanski",
+        "description": ""
+    },
+    "iw": {
+        "message": "hebrejski",
+        "description": ""
+    },
+    "ja": {
+        "message": "japanski",
+        "description": ""
+    },
+    "jw": {
+        "message": "javanski",
+        "description": ""
+    },
+    "ka": {
+        "message": "gruzijski",
+        "description": ""
+    },
+    "kk": {
+        "message": "kazaški",
+        "description": ""
+    },
+    "km": {
+        "message": "kmerski",
+        "description": ""
+    },
+    "kn": {
+        "message": "kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "korejski",
+        "description": ""
+    },
+    "ku": {
+        "message": "kurdski",
+        "description": ""
+    },
+    "ky": {
+        "message": "kirgiski",
+        "description": ""
+    },
+    "la": {
+        "message": "latinski",
+        "description": ""
+    },
+    "lb": {
+        "message": "luksemburški",
+        "description": ""
+    },
+    "lo": {
+        "message": "laoski",
+        "description": ""
+    },
+    "lt": {
+        "message": "litvanski",
+        "description": ""
+    },
+    "lv": {
+        "message": "letonski",
+        "description": ""
+    },
+    "mg": {
+        "message": "malagaški",
+        "description": ""
+    },
+    "mi": {
+        "message": "maorski",
+        "description": ""
+    },
+    "mk": {
+        "message": "makedonski",
+        "description": ""
+    },
+    "ml": {
+        "message": "malajalamski",
+        "description": ""
+    },
+    "mn": {
+        "message": "mongolski",
+        "description": ""
+    },
+    "mr": {
+        "message": "marati",
+        "description": ""
+    },
+    "ms": {
+        "message": "malajski",
+        "description": ""
+    },
+    "mt": {
+        "message": "malteški",
+        "description": ""
+    },
+    "my": {
+        "message": "burmanski",
+        "description": ""
+    },
+    "ne": {
+        "message": "nepalski",
+        "description": ""
+    },
+    "nl": {
+        "message": "holandski",
+        "description": ""
+    },
+    "no": {
+        "message": "norveški",
+        "description": ""
+    },
+    "ny": {
+        "message": "čičeva",
+        "description": ""
+    },
+    "pa": {
+        "message": "pendžabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "poljski",
+        "description": ""
+    },
+    "ps": {
+        "message": "paštu",
+        "description": ""
+    },
+    "pt": {
+        "message": "portugalski",
+        "description": ""
+    },
+    "ro": {
+        "message": "rumunski",
+        "description": ""
+    },
+    "ru": {
+        "message": "ruski",
+        "description": ""
+    },
+    "sd": {
+        "message": "sindi",
+        "description": ""
+    },
+    "si": {
+        "message": "sinhaleski",
+        "description": ""
+    },
+    "sk": {
+        "message": "slovački",
+        "description": ""
+    },
+    "sl": {
+        "message": "slovenački",
+        "description": ""
+    },
+    "sm": {
+        "message": "samoanski",
+        "description": ""
+    },
+    "sn": {
+        "message": "šona",
+        "description": ""
+    },
+    "so": {
+        "message": "somalski",
+        "description": ""
+    },
+    "sq": {
+        "message": "albanski",
+        "description": ""
+    },
+    "sr": {
+        "message": "srpski",
+        "description": ""
+    },
+    "st": {
+        "message": "sesoto",
+        "description": ""
+    },
+    "su": {
+        "message": "sundanski",
+        "description": ""
+    },
+    "sv": {
+        "message": "švedski",
+        "description": ""
+    },
+    "sw": {
+        "message": "svahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "tamilski",
+        "description": ""
+    },
+    "te": {
+        "message": "telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "tadžički",
+        "description": ""
+    },
+    "th": {
+        "message": "tajlandski",
+        "description": ""
+    },
+    "tl": {
+        "message": "filipinski",
+        "description": ""
+    },
+    "tr": {
+        "message": "turski",
+        "description": ""
+    },
+    "uk": {
+        "message": "ukrajinski",
+        "description": ""
+    },
+    "ur": {
+        "message": "urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "uzbečki",
+        "description": ""
+    },
+    "vi": {
+        "message": "vijetnamski",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "jidiš",
+        "description": ""
+    },
+    "yo": {
+        "message": "joruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "kineski",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Kineski (tradicionalni)",
+        "description": ""
+    },
+    "zu": {
+        "message": "zulu",
+        "description": ""
+    }
+}

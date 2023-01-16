@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "আফ্রিকান",
+        "description": ""
+    },
+    "am": {
+        "message": "আমহারিয়",
+        "description": ""
+    },
+    "ar": {
+        "message": "আরবী",
+        "description": ""
+    },
+    "auto": {
+        "message": "ভাষা সনাক্ত করুন",
+        "description": ""
+    },
+    "az": {
+        "message": "আজের বাইজানীয়",
+        "description": ""
+    },
+    "be": {
+        "message": "বেলারুশীয়",
+        "description": ""
+    },
+    "bg": {
+        "message": "বুলগেরীয়",
+        "description": ""
+    },
+    "bn": {
+        "message": "বাংলা",
+        "description": ""
+    },
+    "bs": {
+        "message": "বসনীয়",
+        "description": ""
+    },
+    "ca": {
+        "message": "কাতালান",
+        "description": ""
+    },
+    "ceb": {
+        "message": "চেবুয়ানো",
+        "description": ""
+    },
+    "co": {
+        "message": "করসিকেন",
+        "description": ""
+    },
+    "cs": {
+        "message": "চেক্‌",
+        "description": ""
+    },
+    "cy": {
+        "message": "ওয়েল্চ",
+        "description": ""
+    },
+    "da": {
+        "message": "ড্যানিশ",
+        "description": ""
+    },
+    "de": {
+        "message": "জার্মান",
+        "description": ""
+    },
+    "el": {
+        "message": "গ্রীক্‌",
+        "description": ""
+    },
+    "en": {
+        "message": "ইংরেজী",
+        "description": ""
+    },
+    "eo": {
+        "message": "স্পেরান্তো",
+        "description": ""
+    },
+    "es": {
+        "message": "স্পেনীয়",
+        "description": ""
+    },
+    "et": {
+        "message": "এস্তনীয়",
+        "description": ""
+    },
+    "eu": {
+        "message": "বাস্ক",
+        "description": ""
+    },
+    "fa": {
+        "message": "ফার্সি",
+        "description": ""
+    },
+    "fi": {
+        "message": "ফিনিশ",
+        "description": ""
+    },
+    "fr": {
+        "message": "ফরাসি",
+        "description": ""
+    },
+    "fy": {
+        "message": "ফ্রিজিয়ান",
+        "description": ""
+    },
+    "ga": {
+        "message": "আইরিশ",
+        "description": ""
+    },
+    "gd": {
+        "message": "স্কচ্ গাইলি",
+        "description": ""
+    },
+    "gl": {
+        "message": "গ্যালিশিয়",
+        "description": ""
+    },
+    "gu": {
+        "message": "গুজরাটি",
+        "description": ""
+    },
+    "ha": {
+        "message": "হাউসা",
+        "description": ""
+    },
+    "haw": {
+        "message": "হাওয়াইয়ান",
+        "description": ""
+    },
+    "hi": {
+        "message": "হিন্দি",
+        "description": ""
+    },
+    "hmn": {
+        "message": "মংগ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ক্রোয়েশা",
+        "description": ""
+    },
+    "ht": {
+        "message": "হাইতিয়ান ক্রেওল",
+        "description": ""
+    },
+    "hu": {
+        "message": "হাঙ্গেরীয়",
+        "description": ""
+    },
+    "hy": {
+        "message": "আর্মেনিয়ান",
+        "description": ""
+    },
+    "id": {
+        "message": "ইন্দোনেশিয়",
+        "description": ""
+    },
+    "ig": {
+        "message": "ইগবো",
+        "description": ""
+    },
+    "is": {
+        "message": "আইসল্যান্ডীয়",
+        "description": ""
+    },
+    "it": {
+        "message": "ইতালীয়",
+        "description": ""
+    },
+    "iw": {
+        "message": "হিব্রু",
+        "description": ""
+    },
+    "ja": {
+        "message": "জাপানি",
+        "description": ""
+    },
+    "jw": {
+        "message": "জাভানি",
+        "description": ""
+    },
+    "ka": {
+        "message": "জর্জিয়ান",
+        "description": ""
+    },
+    "kk": {
+        "message": "কজাখ",
+        "description": ""
+    },
+    "km": {
+        "message": "খেমের",
+        "description": ""
+    },
+    "kn": {
+        "message": "কান্নাড়া",
+        "description": ""
+    },
+    "ko": {
+        "message": "কোরিয়ান",
+        "description": ""
+    },
+    "ku": {
+        "message": "কুর্দিশ",
+        "description": ""
+    },
+    "ky": {
+        "message": "কির্গিজ",
+        "description": ""
+    },
+    "la": {
+        "message": "লাতিন",
+        "description": ""
+    },
+    "lb": {
+        "message": "লুক্সেমবার্গীয়",
+        "description": ""
+    },
+    "lo": {
+        "message": "লাও",
+        "description": ""
+    },
+    "lt": {
+        "message": "লিথুয়ানীয়",
+        "description": ""
+    },
+    "lv": {
+        "message": "লাতভিয়ান",
+        "description": ""
+    },
+    "mg": {
+        "message": "মালাগাসি",
+        "description": ""
+    },
+    "mi": {
+        "message": "মায়োরি",
+        "description": ""
+    },
+    "mk": {
+        "message": "ম্যাসিডোনিয়ান",
+        "description": ""
+    },
+    "ml": {
+        "message": "মালেয়ালাম",
+        "description": ""
+    },
+    "mn": {
+        "message": "মঙ্গোলিয়",
+        "description": ""
+    },
+    "mr": {
+        "message": "মারাঠি",
+        "description": ""
+    },
+    "ms": {
+        "message": "মালে",
+        "description": ""
+    },
+    "mt": {
+        "message": "মাল্টিজ",
+        "description": ""
+    },
+    "my": {
+        "message": "বার্মিজ",
+        "description": ""
+    },
+    "ne": {
+        "message": "নেপালী",
+        "description": ""
+    },
+    "nl": {
+        "message": "ডাচ",
+        "description": ""
+    },
+    "no": {
+        "message": "নরওয়েজীয়",
+        "description": ""
+    },
+    "ny": {
+        "message": "চিচেওয়া",
+        "description": ""
+    },
+    "pa": {
+        "message": "পাঞ্জাবি",
+        "description": ""
+    },
+    "pl": {
+        "message": "পোলীশ",
+        "description": ""
+    },
+    "ps": {
+        "message": "পশতু",
+        "description": ""
+    },
+    "pt": {
+        "message": "পর্তুগীজ",
+        "description": ""
+    },
+    "ro": {
+        "message": "রোমানীয়",
+        "description": ""
+    },
+    "ru": {
+        "message": "রুশ",
+        "description": ""
+    },
+    "sd": {
+        "message": "সিন্ধি",
+        "description": ""
+    },
+    "si": {
+        "message": "সিংহলি",
+        "description": ""
+    },
+    "sk": {
+        "message": "স্লোভাক",
+        "description": ""
+    },
+    "sl": {
+        "message": "স্লোভেনিয়",
+        "description": ""
+    },
+    "sm": {
+        "message": "সামোয়া",
+        "description": ""
+    },
+    "sn": {
+        "message": "সোনা",
+        "description": ""
+    },
+    "so": {
+        "message": "সোমালি",
+        "description": ""
+    },
+    "sq": {
+        "message": "আলবেনীয়",
+        "description": ""
+    },
+    "sr": {
+        "message": "সার্বিয়ান",
+        "description": ""
+    },
+    "st": {
+        "message": "সেসোথো",
+        "description": ""
+    },
+    "su": {
+        "message": "সুদানীজ",
+        "description": ""
+    },
+    "sv": {
+        "message": "সুইডিশ",
+        "description": ""
+    },
+    "sw": {
+        "message": "শোয়াইলি",
+        "description": ""
+    },
+    "ta": {
+        "message": "তামিল",
+        "description": ""
+    },
+    "te": {
+        "message": "তেলুগু",
+        "description": ""
+    },
+    "tg": {
+        "message": "তাজিক",
+        "description": ""
+    },
+    "th": {
+        "message": "থাই",
+        "description": ""
+    },
+    "tl": {
+        "message": "ফিলিপিনো",
+        "description": ""
+    },
+    "tr": {
+        "message": "তুর্কী",
+        "description": ""
+    },
+    "uk": {
+        "message": "ইউক্রেনীয়",
+        "description": ""
+    },
+    "ur": {
+        "message": "উর্দু",
+        "description": ""
+    },
+    "uz": {
+        "message": "উজবেক",
+        "description": ""
+    },
+    "vi": {
+        "message": "ভিয়েতনামিয়",
+        "description": ""
+    },
+    "xh": {
+        "message": "জোসা",
+        "description": ""
+    },
+    "yi": {
+        "message": "ইদ্দিশ",
+        "description": ""
+    },
+    "yo": {
+        "message": "ইউরোবা",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "চীনা",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "চীনা (ঐতিহ্যবাহী)",
+        "description": ""
+    },
+    "zu": {
+        "message": "জুলু",
+        "description": ""
+    }
+}

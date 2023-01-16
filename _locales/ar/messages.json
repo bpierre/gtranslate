@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "الافريقانية",
+        "description": ""
+    },
+    "am": {
+        "message": "الأمهرية",
+        "description": ""
+    },
+    "ar": {
+        "message": "العربية",
+        "description": ""
+    },
+    "auto": {
+        "message": "الكشف عن اللغة",
+        "description": ""
+    },
+    "az": {
+        "message": "الأذرية",
+        "description": ""
+    },
+    "be": {
+        "message": "البيلاروسية",
+        "description": ""
+    },
+    "bg": {
+        "message": "البلغارية",
+        "description": ""
+    },
+    "bn": {
+        "message": "البنغالية",
+        "description": ""
+    },
+    "bs": {
+        "message": "البوسنية",
+        "description": ""
+    },
+    "ca": {
+        "message": "القطلونية",
+        "description": ""
+    },
+    "ceb": {
+        "message": "السيبيوانية",
+        "description": ""
+    },
+    "co": {
+        "message": "الكورسيكي",
+        "description": ""
+    },
+    "cs": {
+        "message": "التشيكية",
+        "description": ""
+    },
+    "cy": {
+        "message": "الويلزية",
+        "description": ""
+    },
+    "da": {
+        "message": "الدانماركية",
+        "description": ""
+    },
+    "de": {
+        "message": "الألمانية",
+        "description": ""
+    },
+    "el": {
+        "message": "اليونانية",
+        "description": ""
+    },
+    "en": {
+        "message": "الإنجليزية",
+        "description": ""
+    },
+    "eo": {
+        "message": "الاسبرانتو",
+        "description": ""
+    },
+    "es": {
+        "message": "الإسبانية",
+        "description": ""
+    },
+    "et": {
+        "message": "الإستونية",
+        "description": ""
+    },
+    "eu": {
+        "message": "الباسكية",
+        "description": ""
+    },
+    "fa": {
+        "message": "الفارسية",
+        "description": ""
+    },
+    "fi": {
+        "message": "الفنلندية",
+        "description": ""
+    },
+    "fr": {
+        "message": "الفرنسية",
+        "description": ""
+    },
+    "fy": {
+        "message": "الفريزية",
+        "description": ""
+    },
+    "ga": {
+        "message": "الأيرلندية",
+        "description": ""
+    },
+    "gd": {
+        "message": "الاسكتلندية الغالية",
+        "description": ""
+    },
+    "gl": {
+        "message": "الجاليكية",
+        "description": ""
+    },
+    "gu": {
+        "message": "الغوجراتية",
+        "description": ""
+    },
+    "ha": {
+        "message": "الهوسا",
+        "description": ""
+    },
+    "haw": {
+        "message": "لغة هاواي",
+        "description": ""
+    },
+    "hi": {
+        "message": "الهندية",
+        "description": ""
+    },
+    "hmn": {
+        "message": "الهمونجية",
+        "description": ""
+    },
+    "hr": {
+        "message": "الكرواتية",
+        "description": ""
+    },
+    "ht": {
+        "message": "اللغة الكريولية الهايتية",
+        "description": ""
+    },
+    "hu": {
+        "message": "الهنغارية",
+        "description": ""
+    },
+    "hy": {
+        "message": "الارمنية",
+        "description": ""
+    },
+    "id": {
+        "message": "الإندونيسية",
+        "description": ""
+    },
+    "ig": {
+        "message": "الإيغبو",
+        "description": ""
+    },
+    "is": {
+        "message": "الآيسلندية",
+        "description": ""
+    },
+    "it": {
+        "message": "الإيطالية",
+        "description": ""
+    },
+    "iw": {
+        "message": "العبرية",
+        "description": ""
+    },
+    "ja": {
+        "message": "اليابانية",
+        "description": ""
+    },
+    "jw": {
+        "message": "الجاوية",
+        "description": ""
+    },
+    "ka": {
+        "message": "الجورجية",
+        "description": ""
+    },
+    "kk": {
+        "message": "الكازاكي",
+        "description": ""
+    },
+    "km": {
+        "message": "الخميرية",
+        "description": ""
+    },
+    "kn": {
+        "message": "الكانادا",
+        "description": ""
+    },
+    "ko": {
+        "message": "الكورية",
+        "description": ""
+    },
+    "ku": {
+        "message": "الكردية",
+        "description": ""
+    },
+    "ky": {
+        "message": "القيرغيزية",
+        "description": ""
+    },
+    "la": {
+        "message": "اللاتينية",
+        "description": ""
+    },
+    "lb": {
+        "message": "اللوكسمبورغية",
+        "description": ""
+    },
+    "lo": {
+        "message": "اللاوو",
+        "description": ""
+    },
+    "lt": {
+        "message": "الليتوانية",
+        "description": ""
+    },
+    "lv": {
+        "message": "اللاتفية",
+        "description": ""
+    },
+    "mg": {
+        "message": "المدغشقرية",
+        "description": ""
+    },
+    "mi": {
+        "message": "الماورية",
+        "description": ""
+    },
+    "mk": {
+        "message": "المقدونية",
+        "description": ""
+    },
+    "ml": {
+        "message": "المالايالامية",
+        "description": ""
+    },
+    "mn": {
+        "message": "المنغولية",
+        "description": ""
+    },
+    "mr": {
+        "message": "المهراتية",
+        "description": ""
+    },
+    "ms": {
+        "message": "الملايو",
+        "description": ""
+    },
+    "mt": {
+        "message": "المالطيّة",
+        "description": ""
+    },
+    "my": {
+        "message": "البورمية",
+        "description": ""
+    },
+    "ne": {
+        "message": "النيبالية",
+        "description": ""
+    },
+    "nl": {
+        "message": "الهولندية",
+        "description": ""
+    },
+    "no": {
+        "message": "النرويجية",
+        "description": ""
+    },
+    "ny": {
+        "message": "تشيتشوا",
+        "description": ""
+    },
+    "pa": {
+        "message": "البنجابية",
+        "description": ""
+    },
+    "pl": {
+        "message": "البولندية",
+        "description": ""
+    },
+    "ps": {
+        "message": "الباشتوية",
+        "description": ""
+    },
+    "pt": {
+        "message": "البرتغالية",
+        "description": ""
+    },
+    "ro": {
+        "message": "الرومانية",
+        "description": ""
+    },
+    "ru": {
+        "message": "الروسية",
+        "description": ""
+    },
+    "sd": {
+        "message": "السندية",
+        "description": ""
+    },
+    "si": {
+        "message": "السنهالية",
+        "description": ""
+    },
+    "sk": {
+        "message": "السلوفاكية",
+        "description": ""
+    },
+    "sl": {
+        "message": "السلوفينية",
+        "description": ""
+    },
+    "sm": {
+        "message": "الساموانية",
+        "description": ""
+    },
+    "sn": {
+        "message": "الشونا",
+        "description": ""
+    },
+    "so": {
+        "message": "الصومالية",
+        "description": ""
+    },
+    "sq": {
+        "message": "الألبانية",
+        "description": ""
+    },
+    "sr": {
+        "message": "الصربية",
+        "description": ""
+    },
+    "st": {
+        "message": "السيسوتو",
+        "description": ""
+    },
+    "su": {
+        "message": "الساندينيزية",
+        "description": ""
+    },
+    "sv": {
+        "message": "السويدية",
+        "description": ""
+    },
+    "sw": {
+        "message": "السواحيلية",
+        "description": ""
+    },
+    "ta": {
+        "message": "التاميلية",
+        "description": ""
+    },
+    "te": {
+        "message": "التيلوجو",
+        "description": ""
+    },
+    "tg": {
+        "message": "الطاجيكي",
+        "description": ""
+    },
+    "th": {
+        "message": "التايلاندية",
+        "description": ""
+    },
+    "tl": {
+        "message": "الفلبينية",
+        "description": ""
+    },
+    "tr": {
+        "message": "التركية",
+        "description": ""
+    },
+    "uk": {
+        "message": "الأوكرانية",
+        "description": ""
+    },
+    "ur": {
+        "message": "الأردية",
+        "description": ""
+    },
+    "uz": {
+        "message": "الأوزبكية",
+        "description": ""
+    },
+    "vi": {
+        "message": "الفيتنامية",
+        "description": ""
+    },
+    "xh": {
+        "message": "الخؤوصا",
+        "description": ""
+    },
+    "yi": {
+        "message": "الييدية",
+        "description": ""
+    },
+    "yo": {
+        "message": "اليورباية",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "الصينية",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "الصينية (التقليدية)",
+        "description": ""
+    },
+    "zu": {
+        "message": "الزولوية",
+        "description": ""
+    }
+}

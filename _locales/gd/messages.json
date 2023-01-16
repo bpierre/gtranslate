@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afraganais",
+        "description": ""
+    },
+    "am": {
+        "message": "Amtharais",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabais",
+        "description": ""
+    },
+    "auto": {
+        "message": "Mothaich dhan chànan",
+        "description": ""
+    },
+    "az": {
+        "message": "Asarbaideànais",
+        "description": ""
+    },
+    "be": {
+        "message": "Bealaruisis",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgarais",
+        "description": ""
+    },
+    "bn": {
+        "message": "Beangailis",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosnais",
+        "description": ""
+    },
+    "ca": {
+        "message": "Catalanais",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Corsais",
+        "description": ""
+    },
+    "cs": {
+        "message": "Seacais",
+        "description": ""
+    },
+    "cy": {
+        "message": "Cuimris",
+        "description": ""
+    },
+    "da": {
+        "message": "Danmhairgis",
+        "description": ""
+    },
+    "de": {
+        "message": "Gearmailtis",
+        "description": ""
+    },
+    "el": {
+        "message": "Grèigis",
+        "description": ""
+    },
+    "en": {
+        "message": "Beurla",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spàinntis",
+        "description": ""
+    },
+    "et": {
+        "message": "Eastoinis",
+        "description": ""
+    },
+    "eu": {
+        "message": "Basgais",
+        "description": ""
+    },
+    "fa": {
+        "message": "Peirsis",
+        "description": ""
+    },
+    "fi": {
+        "message": "Fionnlannais",
+        "description": ""
+    },
+    "fr": {
+        "message": "Fraingis",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frìoslannais",
+        "description": ""
+    },
+    "ga": {
+        "message": "Gaeilge",
+        "description": ""
+    },
+    "gd": {
+        "message": "Gàidhlig",
+        "description": ""
+    },
+    "gl": {
+        "message": "Gailìsis",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Cànan Hawaiʻi",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindis",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Cròthaisis",
+        "description": ""
+    },
+    "ht": {
+        "message": "Crìtheol Haidhti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Ungairis",
+        "description": ""
+    },
+    "hy": {
+        "message": "Airmeinis",
+        "description": ""
+    },
+    "id": {
+        "message": "Innd-Innsis",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Innis-Tìlis",
+        "description": ""
+    },
+    "it": {
+        "message": "Eadailtis",
+        "description": ""
+    },
+    "iw": {
+        "message": "Eabhra",
+        "description": ""
+    },
+    "ja": {
+        "message": "Seapanais",
+        "description": ""
+    },
+    "jw": {
+        "message": "Deàbhanais",
+        "description": ""
+    },
+    "ka": {
+        "message": "Cairtbheilis",
+        "description": ""
+    },
+    "kk": {
+        "message": "Casachais",
+        "description": ""
+    },
+    "km": {
+        "message": "Cmèar",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Coirèanais",
+        "description": ""
+    },
+    "ku": {
+        "message": "Cùrdais (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Cìorgasais",
+        "description": ""
+    },
+    "la": {
+        "message": "Laideann",
+        "description": ""
+    },
+    "lb": {
+        "message": "Lugsamburgais",
+        "description": ""
+    },
+    "lo": {
+        "message": "Làtho",
+        "description": ""
+    },
+    "lt": {
+        "message": "Liotuainis",
+        "description": ""
+    },
+    "lv": {
+        "message": "Laitbheis",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malagasais",
+        "description": ""
+    },
+    "mi": {
+        "message": "Māori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Masadonais",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongolais",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malaidhis",
+        "description": ""
+    },
+    "mt": {
+        "message": "Maltais",
+        "description": ""
+    },
+    "my": {
+        "message": "Miànmar (Burmais)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Neapàlais",
+        "description": ""
+    },
+    "nl": {
+        "message": "Duitsis",
+        "description": ""
+    },
+    "no": {
+        "message": "Nirribhis",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chicheŵa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Panjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Pòlainnis",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portagailis",
+        "description": ""
+    },
+    "ro": {
+        "message": "Romàinis",
+        "description": ""
+    },
+    "ru": {
+        "message": "Ruisis",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slòbhacais",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slòbhainis",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samothais",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Somàilis",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albàinis",
+        "description": ""
+    },
+    "sr": {
+        "message": "Sèirbis",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundanais",
+        "description": ""
+    },
+    "sv": {
+        "message": "Suainis",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Taimilis",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Taidigis",
+        "description": ""
+    },
+    "th": {
+        "message": "Cànan nan Tàidh",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipinis",
+        "description": ""
+    },
+    "tr": {
+        "message": "Turcais",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ucràinis",
+        "description": ""
+    },
+    "ur": {
+        "message": "Ùrdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Usbagais",
+        "description": ""
+    },
+    "vi": {
+        "message": "Bhiet-Namais",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Iùdhais",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Sìnis",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Sìonais (seann-nòsach)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu",
+        "description": ""
+    }
+}

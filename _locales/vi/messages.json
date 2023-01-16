@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Tiếng Hà Lan (Nam Phi)",
+        "description": ""
+    },
+    "am": {
+        "message": "Tiếng Amharic",
+        "description": ""
+    },
+    "ar": {
+        "message": "Tiếng Ả Rập",
+        "description": ""
+    },
+    "auto": {
+        "message": "Phát hiện ngôn ngữ",
+        "description": ""
+    },
+    "az": {
+        "message": "Tiếng Azerbaijan",
+        "description": ""
+    },
+    "be": {
+        "message": "Tiếng Belarus",
+        "description": ""
+    },
+    "bg": {
+        "message": "Tiếng Bulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Tiếng Bengal",
+        "description": ""
+    },
+    "bs": {
+        "message": "Tiếng Bosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Tiếng Catalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Tiếng Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Tiếng Corsi",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tiếng Séc",
+        "description": ""
+    },
+    "cy": {
+        "message": "Tiếng Xứ Wales",
+        "description": ""
+    },
+    "da": {
+        "message": "Tiếng Đan Mạch",
+        "description": ""
+    },
+    "de": {
+        "message": "Tiếng Đức",
+        "description": ""
+    },
+    "el": {
+        "message": "Tiếng Hy Lạp",
+        "description": ""
+    },
+    "en": {
+        "message": "Tiếng Anh",
+        "description": ""
+    },
+    "eo": {
+        "message": "Quốc tế ngữ",
+        "description": ""
+    },
+    "es": {
+        "message": "Tiếng Tây Ban Nha",
+        "description": ""
+    },
+    "et": {
+        "message": "Tiếng Estonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Tiếng Basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "Tiếng Ba Tư",
+        "description": ""
+    },
+    "fi": {
+        "message": "Tiếng Phần Lan",
+        "description": ""
+    },
+    "fr": {
+        "message": "Tiếng Pháp",
+        "description": ""
+    },
+    "fy": {
+        "message": "Tiếng Frisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Tiếng Ireland",
+        "description": ""
+    },
+    "gd": {
+        "message": "Tiếng Gael Scotland",
+        "description": ""
+    },
+    "gl": {
+        "message": "Tiếng Galicia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Tiếng Gujarat",
+        "description": ""
+    },
+    "ha": {
+        "message": "Tiếng Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Tiếng Hawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Tiếng Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Tiếng Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Tiếng Croatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Tiếng Creole ở Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Tiếng Hungary",
+        "description": ""
+    },
+    "hy": {
+        "message": "Tiếng Armenia",
+        "description": ""
+    },
+    "id": {
+        "message": "Tiếng Indonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Tiếng Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Tiếng Iceland",
+        "description": ""
+    },
+    "it": {
+        "message": "Tiếng Ý",
+        "description": ""
+    },
+    "iw": {
+        "message": "Tiếng Do Thái",
+        "description": ""
+    },
+    "ja": {
+        "message": "Tiếng Nhật",
+        "description": ""
+    },
+    "jw": {
+        "message": "Tiếng Java",
+        "description": ""
+    },
+    "ka": {
+        "message": "Tiếng George",
+        "description": ""
+    },
+    "kk": {
+        "message": "Tiếng Kazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Tiếng Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Tiếng Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Tiếng Hàn",
+        "description": ""
+    },
+    "ku": {
+        "message": "Tiếng Kurd",
+        "description": ""
+    },
+    "ky": {
+        "message": "Tiếng Kyrgyz",
+        "description": ""
+    },
+    "la": {
+        "message": "Tiếng Latinh",
+        "description": ""
+    },
+    "lb": {
+        "message": "Tiếng Luxembourg",
+        "description": ""
+    },
+    "lo": {
+        "message": "Tiếng Lào",
+        "description": ""
+    },
+    "lt": {
+        "message": "Tiếng Litva",
+        "description": ""
+    },
+    "lv": {
+        "message": "Tiếng Latvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Tiếng Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Tiếng Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Tiếng Macedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Tiếng Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Tiếng Mông Cổ",
+        "description": ""
+    },
+    "mr": {
+        "message": "Tiếng Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Tiếng Mã Lai",
+        "description": ""
+    },
+    "mt": {
+        "message": "Tiếng Malta",
+        "description": ""
+    },
+    "my": {
+        "message": "Tiếng Myanmar",
+        "description": ""
+    },
+    "ne": {
+        "message": "Tiếng Nepal",
+        "description": ""
+    },
+    "nl": {
+        "message": "Tiếng Hà Lan",
+        "description": ""
+    },
+    "no": {
+        "message": "Tiếng Na Uy",
+        "description": ""
+    },
+    "ny": {
+        "message": "Tiếng Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Tiếng Punjab",
+        "description": ""
+    },
+    "pl": {
+        "message": "Tiếng Ba Lan",
+        "description": ""
+    },
+    "ps": {
+        "message": "Tiếng Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Tiếng Bồ Đào Nha",
+        "description": ""
+    },
+    "ro": {
+        "message": "Tiếng Rumani",
+        "description": ""
+    },
+    "ru": {
+        "message": "Tiếng Nga",
+        "description": ""
+    },
+    "sd": {
+        "message": "Tiếng Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Tiếng Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Tiếng Slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "Tiếng Slovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Tiếng Samoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Tiếng Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Tiếng Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Tiếng Albania",
+        "description": ""
+    },
+    "sr": {
+        "message": "Tiếng Serbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Tiếng Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Tiếng Sunda",
+        "description": ""
+    },
+    "sv": {
+        "message": "Tiếng Thụy Điển",
+        "description": ""
+    },
+    "sw": {
+        "message": "Tiếng Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tiếng Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Tiếng Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tiếng Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Tiếng Thái",
+        "description": ""
+    },
+    "tl": {
+        "message": "Tiếng Filipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Tiếng Thổ Nhĩ Kỳ",
+        "description": ""
+    },
+    "uk": {
+        "message": "Tiếng Ukraina",
+        "description": ""
+    },
+    "ur": {
+        "message": "Tiếng Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Tiếng Uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Tiếng Việt",
+        "description": ""
+    },
+    "xh": {
+        "message": "Tiếng Bantu",
+        "description": ""
+    },
+    "yi": {
+        "message": "Tiếng Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Tiếng Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Tiếng Trung",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Tiếng Trung (Phồn thể)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Tiếng Zulu",
+        "description": ""
+    }
+}

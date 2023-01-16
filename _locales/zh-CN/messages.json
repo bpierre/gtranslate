@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "布尔语(南非荷兰语)",
+        "description": ""
+    },
+    "am": {
+        "message": "阿姆哈拉语",
+        "description": ""
+    },
+    "ar": {
+        "message": "阿拉伯语",
+        "description": ""
+    },
+    "auto": {
+        "message": "检测语言",
+        "description": ""
+    },
+    "az": {
+        "message": "阿塞拜疆语",
+        "description": ""
+    },
+    "be": {
+        "message": "白俄罗斯语",
+        "description": ""
+    },
+    "bg": {
+        "message": "保加利亚语",
+        "description": ""
+    },
+    "bn": {
+        "message": "孟加拉语",
+        "description": ""
+    },
+    "bs": {
+        "message": "波斯尼亚语",
+        "description": ""
+    },
+    "ca": {
+        "message": "加泰罗尼亚语",
+        "description": ""
+    },
+    "ceb": {
+        "message": "宿务语",
+        "description": ""
+    },
+    "co": {
+        "message": "科西嘉语",
+        "description": ""
+    },
+    "cs": {
+        "message": "捷克语",
+        "description": ""
+    },
+    "cy": {
+        "message": "威尔士语",
+        "description": ""
+    },
+    "da": {
+        "message": "丹麦语",
+        "description": ""
+    },
+    "de": {
+        "message": "德语",
+        "description": ""
+    },
+    "el": {
+        "message": "希腊语",
+        "description": ""
+    },
+    "en": {
+        "message": "英语",
+        "description": ""
+    },
+    "eo": {
+        "message": "世界语",
+        "description": ""
+    },
+    "es": {
+        "message": "西班牙语",
+        "description": ""
+    },
+    "et": {
+        "message": "爱沙尼亚语",
+        "description": ""
+    },
+    "eu": {
+        "message": "巴斯克语",
+        "description": ""
+    },
+    "fa": {
+        "message": "波斯语",
+        "description": ""
+    },
+    "fi": {
+        "message": "芬兰语",
+        "description": ""
+    },
+    "fr": {
+        "message": "法语",
+        "description": ""
+    },
+    "fy": {
+        "message": "弗里西语",
+        "description": ""
+    },
+    "ga": {
+        "message": "爱尔兰语",
+        "description": ""
+    },
+    "gd": {
+        "message": "苏格兰盖尔语",
+        "description": ""
+    },
+    "gl": {
+        "message": "加利西亚语",
+        "description": ""
+    },
+    "gu": {
+        "message": "古吉拉特语",
+        "description": ""
+    },
+    "ha": {
+        "message": "豪萨语",
+        "description": ""
+    },
+    "haw": {
+        "message": "夏威夷语",
+        "description": ""
+    },
+    "hi": {
+        "message": "印地语",
+        "description": ""
+    },
+    "hmn": {
+        "message": "苗语",
+        "description": ""
+    },
+    "hr": {
+        "message": "克罗地亚语",
+        "description": ""
+    },
+    "ht": {
+        "message": "海地克里奥尔语",
+        "description": ""
+    },
+    "hu": {
+        "message": "匈牙利语",
+        "description": ""
+    },
+    "hy": {
+        "message": "亚美尼亚语",
+        "description": ""
+    },
+    "id": {
+        "message": "印尼语",
+        "description": ""
+    },
+    "ig": {
+        "message": "伊博语",
+        "description": ""
+    },
+    "is": {
+        "message": "冰岛语",
+        "description": ""
+    },
+    "it": {
+        "message": "意大利语",
+        "description": ""
+    },
+    "iw": {
+        "message": "希伯来语",
+        "description": ""
+    },
+    "ja": {
+        "message": "日语",
+        "description": ""
+    },
+    "jw": {
+        "message": "印尼爪哇语",
+        "description": ""
+    },
+    "ka": {
+        "message": "格鲁吉亚语",
+        "description": ""
+    },
+    "kk": {
+        "message": "哈萨克语",
+        "description": ""
+    },
+    "km": {
+        "message": "高棉语",
+        "description": ""
+    },
+    "kn": {
+        "message": "卡纳达语",
+        "description": ""
+    },
+    "ko": {
+        "message": "韩语",
+        "description": ""
+    },
+    "ku": {
+        "message": "库尔德语",
+        "description": ""
+    },
+    "ky": {
+        "message": "吉尔吉斯语",
+        "description": ""
+    },
+    "la": {
+        "message": "拉丁语",
+        "description": ""
+    },
+    "lb": {
+        "message": "卢森堡语",
+        "description": ""
+    },
+    "lo": {
+        "message": "老挝语",
+        "description": ""
+    },
+    "lt": {
+        "message": "立陶宛语",
+        "description": ""
+    },
+    "lv": {
+        "message": "拉脱维亚语",
+        "description": ""
+    },
+    "mg": {
+        "message": "马尔加什语",
+        "description": ""
+    },
+    "mi": {
+        "message": "毛利语",
+        "description": ""
+    },
+    "mk": {
+        "message": "马其顿语",
+        "description": ""
+    },
+    "ml": {
+        "message": "马拉雅拉姆语",
+        "description": ""
+    },
+    "mn": {
+        "message": "蒙古语",
+        "description": ""
+    },
+    "mr": {
+        "message": "马拉地语",
+        "description": ""
+    },
+    "ms": {
+        "message": "马来语",
+        "description": ""
+    },
+    "mt": {
+        "message": "马耳他语",
+        "description": ""
+    },
+    "my": {
+        "message": "缅甸语",
+        "description": ""
+    },
+    "ne": {
+        "message": "尼泊尔语",
+        "description": ""
+    },
+    "nl": {
+        "message": "荷兰语",
+        "description": ""
+    },
+    "no": {
+        "message": "挪威语",
+        "description": ""
+    },
+    "ny": {
+        "message": "齐切瓦语",
+        "description": ""
+    },
+    "pa": {
+        "message": "旁遮普语",
+        "description": ""
+    },
+    "pl": {
+        "message": "波兰语",
+        "description": ""
+    },
+    "ps": {
+        "message": "普什图语",
+        "description": ""
+    },
+    "pt": {
+        "message": "葡萄牙语",
+        "description": ""
+    },
+    "ro": {
+        "message": "罗马尼亚语",
+        "description": ""
+    },
+    "ru": {
+        "message": "俄语",
+        "description": ""
+    },
+    "sd": {
+        "message": "信德语",
+        "description": ""
+    },
+    "si": {
+        "message": "僧伽罗语",
+        "description": ""
+    },
+    "sk": {
+        "message": "斯洛伐克语",
+        "description": ""
+    },
+    "sl": {
+        "message": "斯洛文尼亚语",
+        "description": ""
+    },
+    "sm": {
+        "message": "萨摩亚语",
+        "description": ""
+    },
+    "sn": {
+        "message": "修纳语",
+        "description": ""
+    },
+    "so": {
+        "message": "索马里语",
+        "description": ""
+    },
+    "sq": {
+        "message": "阿尔巴尼亚语",
+        "description": ""
+    },
+    "sr": {
+        "message": "塞尔维亚语",
+        "description": ""
+    },
+    "st": {
+        "message": "塞索托语",
+        "description": ""
+    },
+    "su": {
+        "message": "印尼巽他语",
+        "description": ""
+    },
+    "sv": {
+        "message": "瑞典语",
+        "description": ""
+    },
+    "sw": {
+        "message": "斯瓦希里语",
+        "description": ""
+    },
+    "ta": {
+        "message": "泰米尔语",
+        "description": ""
+    },
+    "te": {
+        "message": "泰卢固语",
+        "description": ""
+    },
+    "tg": {
+        "message": "塔吉克语",
+        "description": ""
+    },
+    "th": {
+        "message": "泰语",
+        "description": ""
+    },
+    "tl": {
+        "message": "菲律宾语",
+        "description": ""
+    },
+    "tr": {
+        "message": "土耳其语",
+        "description": ""
+    },
+    "uk": {
+        "message": "乌克兰语",
+        "description": ""
+    },
+    "ur": {
+        "message": "乌尔都语",
+        "description": ""
+    },
+    "uz": {
+        "message": "乌兹别克语",
+        "description": ""
+    },
+    "vi": {
+        "message": "越南语",
+        "description": ""
+    },
+    "xh": {
+        "message": "南非科萨语",
+        "description": ""
+    },
+    "yi": {
+        "message": "意第绪语",
+        "description": ""
+    },
+    "yo": {
+        "message": "约鲁巴语",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "中文",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "中文(繁体)",
+        "description": ""
+    },
+    "zu": {
+        "message": "南非祖鲁语",
+        "description": ""
+    }
+}

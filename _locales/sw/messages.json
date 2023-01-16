@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Kiafrikana",
+        "description": ""
+    },
+    "am": {
+        "message": "Kiamhariki",
+        "description": ""
+    },
+    "ar": {
+        "message": "Kiarabu",
+        "description": ""
+    },
+    "auto": {
+        "message": "Tambua lugha",
+        "description": ""
+    },
+    "az": {
+        "message": "Kiazebaijani",
+        "description": ""
+    },
+    "be": {
+        "message": "Kibelarusi",
+        "description": ""
+    },
+    "bg": {
+        "message": "Kibulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Kibengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Kibosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Kikatalani",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Kisebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Kikorsika",
+        "description": ""
+    },
+    "cs": {
+        "message": "Kicheki",
+        "description": ""
+    },
+    "cy": {
+        "message": "Kiwelshi",
+        "description": ""
+    },
+    "da": {
+        "message": "Kidenmaki",
+        "description": ""
+    },
+    "de": {
+        "message": "Kijerumani",
+        "description": ""
+    },
+    "el": {
+        "message": "Kigiriki",
+        "description": ""
+    },
+    "en": {
+        "message": "Kiingereza",
+        "description": ""
+    },
+    "eo": {
+        "message": "Kiesperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Kihispania",
+        "description": ""
+    },
+    "et": {
+        "message": "Kiestonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Kibaski",
+        "description": ""
+    },
+    "fa": {
+        "message": "Kiajemi",
+        "description": ""
+    },
+    "fi": {
+        "message": "Kifini",
+        "description": ""
+    },
+    "fr": {
+        "message": "Kifaransa",
+        "description": ""
+    },
+    "fy": {
+        "message": "Kifrisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Kiayalandi",
+        "description": ""
+    },
+    "gd": {
+        "message": "Kigaeli-Skoti",
+        "description": ""
+    },
+    "gl": {
+        "message": "Kigalisia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Kigujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Kihausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Kihawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Kihindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Kihmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Kikroeshia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Krioli ya Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Kihungari",
+        "description": ""
+    },
+    "hy": {
+        "message": "Kiarmenia",
+        "description": ""
+    },
+    "id": {
+        "message": "Kiindonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Kiigbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Kiaislandi",
+        "description": ""
+    },
+    "it": {
+        "message": "Kiitaliano",
+        "description": ""
+    },
+    "iw": {
+        "message": "Kiebrania",
+        "description": ""
+    },
+    "ja": {
+        "message": "Kijapani",
+        "description": ""
+    },
+    "jw": {
+        "message": "Kijava",
+        "description": ""
+    },
+    "ka": {
+        "message": "Kijiojia",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kikazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Kikambodia",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kikannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Kikorea",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kikurdi",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kikirgizi",
+        "description": ""
+    },
+    "la": {
+        "message": "Kilatini",
+        "description": ""
+    },
+    "lb": {
+        "message": "Kilasembagi",
+        "description": ""
+    },
+    "lo": {
+        "message": "Kilao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Kilithuania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Kilatvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Kimalagasi",
+        "description": ""
+    },
+    "mi": {
+        "message": "Kimaori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Kimasedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Kimalayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Kimongolia",
+        "description": ""
+    },
+    "mr": {
+        "message": "Kimarathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Kimalei",
+        "description": ""
+    },
+    "mt": {
+        "message": "Kimalta",
+        "description": ""
+    },
+    "my": {
+        "message": "Kiburma",
+        "description": ""
+    },
+    "ne": {
+        "message": "Kinepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Kiholanzi",
+        "description": ""
+    },
+    "no": {
+        "message": "Kinorwe",
+        "description": ""
+    },
+    "ny": {
+        "message": "Kichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Kipunjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Kipolandi",
+        "description": ""
+    },
+    "ps": {
+        "message": "Kipashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Kireno",
+        "description": ""
+    },
+    "ro": {
+        "message": "Kiromania",
+        "description": ""
+    },
+    "ru": {
+        "message": "Kirusi",
+        "description": ""
+    },
+    "sd": {
+        "message": "Kisindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Kisinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Kislovakia",
+        "description": ""
+    },
+    "sl": {
+        "message": "Kislovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Kisamoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Kishona",
+        "description": ""
+    },
+    "so": {
+        "message": "Kisomali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Kialbania",
+        "description": ""
+    },
+    "sr": {
+        "message": "Kiserbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Kisotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Kisunda",
+        "description": ""
+    },
+    "sv": {
+        "message": "Kiswidi",
+        "description": ""
+    },
+    "sw": {
+        "message": "Kiswahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Kitamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Kitelugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Kitajiki",
+        "description": ""
+    },
+    "th": {
+        "message": "Kithai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Kifilipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Kituruki",
+        "description": ""
+    },
+    "uk": {
+        "message": "Kiukrani",
+        "description": ""
+    },
+    "ur": {
+        "message": "Kiurdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Kiuzbeki",
+        "description": ""
+    },
+    "vi": {
+        "message": "Kivietnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "Kixhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Kiyidi",
+        "description": ""
+    },
+    "yo": {
+        "message": "Kiyoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Kichina",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Kichina (cha Kitamaduni)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Kizulu",
+        "description": ""
+    }
+}

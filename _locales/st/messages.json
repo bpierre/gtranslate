@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Seburu",
+        "description": ""
+    },
+    "am": {
+        "message": "Se-amhari",
+        "description": ""
+    },
+    "ar": {
+        "message": "Searab",
+        "description": ""
+    },
+    "auto": {
+        "message": "Fumana puo",
+        "description": ""
+    },
+    "az": {
+        "message": "Se-azerbaijani",
+        "description": ""
+    },
+    "be": {
+        "message": "Se-belarusia",
+        "description": ""
+    },
+    "bg": {
+        "message": "Se-bulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Se-bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Se-bosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Se-catalia",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Se-cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Sekosika",
+        "description": ""
+    },
+    "cs": {
+        "message": "Se-czech",
+        "description": ""
+    },
+    "cy": {
+        "message": "Se-welsh",
+        "description": ""
+    },
+    "da": {
+        "message": "Sedenishe",
+        "description": ""
+    },
+    "de": {
+        "message": "Sejeremane",
+        "description": ""
+    },
+    "el": {
+        "message": "Segerike",
+        "description": ""
+    },
+    "en": {
+        "message": "Senyesemane",
+        "description": ""
+    },
+    "eo": {
+        "message": "Se-esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Sespain",
+        "description": ""
+    },
+    "et": {
+        "message": "Se-estonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Se-basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "Se-persia",
+        "description": ""
+    },
+    "fi": {
+        "message": "Sefinnishe",
+        "description": ""
+    },
+    "fr": {
+        "message": "Sefora",
+        "description": ""
+    },
+    "fy": {
+        "message": "Se-frisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Se-irish",
+        "description": ""
+    },
+    "gd": {
+        "message": "Se-scots gaelic",
+        "description": ""
+    },
+    "gl": {
+        "message": "Se-galicia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Se-gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Sehausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Se-hawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Sehindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Se-hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Se-croatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Se-Creole sa Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Se-hungaria",
+        "description": ""
+    },
+    "hy": {
+        "message": "Searmenia",
+        "description": ""
+    },
+    "id": {
+        "message": "Se-indonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Se-igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Se-iceland",
+        "description": ""
+    },
+    "it": {
+        "message": "Setaliana",
+        "description": ""
+    },
+    "iw": {
+        "message": "Seheberu",
+        "description": ""
+    },
+    "ja": {
+        "message": "Sejapane",
+        "description": ""
+    },
+    "jw": {
+        "message": "Se-javane",
+        "description": ""
+    },
+    "ka": {
+        "message": "Se-geogia",
+        "description": ""
+    },
+    "kk": {
+        "message": "Se-kazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Se-khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Se-kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Sekorea",
+        "description": ""
+    },
+    "ku": {
+        "message": "Se-kurdish",
+        "description": ""
+    },
+    "ky": {
+        "message": "Se-kyrgyz",
+        "description": ""
+    },
+    "la": {
+        "message": "Se-latino",
+        "description": ""
+    },
+    "lb": {
+        "message": "Se-Luxembourgish",
+        "description": ""
+    },
+    "lo": {
+        "message": "Se-lao",
+        "description": ""
+    },
+    "lt": {
+        "message": "Se-lithuania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Se-latvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Se-malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Semaori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Semasedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Se-malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Se-mongolia",
+        "description": ""
+    },
+    "mr": {
+        "message": "Semarathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Se-malay",
+        "description": ""
+    },
+    "mt": {
+        "message": "Se-maltese",
+        "description": ""
+    },
+    "my": {
+        "message": "Se-Burmese",
+        "description": ""
+    },
+    "ne": {
+        "message": "Senepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "Sedache",
+        "description": ""
+    },
+    "no": {
+        "message": "Se-norway",
+        "description": ""
+    },
+    "ny": {
+        "message": "Se-Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Se-punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Sepolishe",
+        "description": ""
+    },
+    "ps": {
+        "message": "Se-pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Sepotokise",
+        "description": ""
+    },
+    "ro": {
+        "message": "Seromania",
+        "description": ""
+    },
+    "ru": {
+        "message": "Serussia",
+        "description": ""
+    },
+    "sd": {
+        "message": "Se-sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Se-slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "Se-slovania",
+        "description": ""
+    },
+    "sm": {
+        "message": "Se-Samoan",
+        "description": ""
+    },
+    "sn": {
+        "message": "Seshona",
+        "description": ""
+    },
+    "so": {
+        "message": "Sesomali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Se-albanian",
+        "description": ""
+    },
+    "sr": {
+        "message": "Se-serbian",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Se-sundanese",
+        "description": ""
+    },
+    "sv": {
+        "message": "Sedanishe",
+        "description": ""
+    },
+    "sw": {
+        "message": "Seswahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Se-tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Se-telegu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Se-tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Sethai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Sefilipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Se-theki",
+        "description": ""
+    },
+    "uk": {
+        "message": "Se-ukrania",
+        "description": ""
+    },
+    "ur": {
+        "message": "Se-urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Se-uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Se-vietnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "se Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Se-yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Se-yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Sechaena",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Sechaena",
+        "description": ""
+    },
+    "zu": {
+        "message": "se-Zulu",
+        "description": ""
+    }
+}

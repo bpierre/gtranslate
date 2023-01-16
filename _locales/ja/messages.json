@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "アフリカーンス語",
+        "description": ""
+    },
+    "am": {
+        "message": "アムハラ語",
+        "description": ""
+    },
+    "ar": {
+        "message": "アラビア語",
+        "description": ""
+    },
+    "auto": {
+        "message": "言語を検出する",
+        "description": ""
+    },
+    "az": {
+        "message": "アゼルバイジャン語",
+        "description": ""
+    },
+    "be": {
+        "message": "ベラルーシ語",
+        "description": ""
+    },
+    "bg": {
+        "message": "ブルガリア語",
+        "description": ""
+    },
+    "bn": {
+        "message": "ベンガル語",
+        "description": ""
+    },
+    "bs": {
+        "message": "ボスニア語",
+        "description": ""
+    },
+    "ca": {
+        "message": "カタルーニャ語",
+        "description": ""
+    },
+    "ceb": {
+        "message": "セブアノ語",
+        "description": ""
+    },
+    "co": {
+        "message": "コルシカ語",
+        "description": ""
+    },
+    "cs": {
+        "message": "チェコ語",
+        "description": ""
+    },
+    "cy": {
+        "message": "ウェールズ語",
+        "description": ""
+    },
+    "da": {
+        "message": "デンマーク語",
+        "description": ""
+    },
+    "de": {
+        "message": "ドイツ語",
+        "description": ""
+    },
+    "el": {
+        "message": "ギリシャ語",
+        "description": ""
+    },
+    "en": {
+        "message": "英語",
+        "description": ""
+    },
+    "eo": {
+        "message": "エスペラント語",
+        "description": ""
+    },
+    "es": {
+        "message": "スペイン語",
+        "description": ""
+    },
+    "et": {
+        "message": "エストニア語",
+        "description": ""
+    },
+    "eu": {
+        "message": "バスク語",
+        "description": ""
+    },
+    "fa": {
+        "message": "ペルシャ語",
+        "description": ""
+    },
+    "fi": {
+        "message": "フィンランド語",
+        "description": ""
+    },
+    "fr": {
+        "message": "フランス語",
+        "description": ""
+    },
+    "fy": {
+        "message": "フリジア語",
+        "description": ""
+    },
+    "ga": {
+        "message": "アイルランド語",
+        "description": ""
+    },
+    "gd": {
+        "message": "スコットランド ゲール語",
+        "description": ""
+    },
+    "gl": {
+        "message": "ガリシア語",
+        "description": ""
+    },
+    "gu": {
+        "message": "グジャラト語",
+        "description": ""
+    },
+    "ha": {
+        "message": "ハウサ語",
+        "description": ""
+    },
+    "haw": {
+        "message": "ハワイ語",
+        "description": ""
+    },
+    "hi": {
+        "message": "ヒンディー語",
+        "description": ""
+    },
+    "hmn": {
+        "message": "モン語",
+        "description": ""
+    },
+    "hr": {
+        "message": "クロアチア語",
+        "description": ""
+    },
+    "ht": {
+        "message": "ハイチ語",
+        "description": ""
+    },
+    "hu": {
+        "message": "ハンガリー語",
+        "description": ""
+    },
+    "hy": {
+        "message": "アルメニア語",
+        "description": ""
+    },
+    "id": {
+        "message": "インドネシア語",
+        "description": ""
+    },
+    "ig": {
+        "message": "イボ語",
+        "description": ""
+    },
+    "is": {
+        "message": "アイスランド語",
+        "description": ""
+    },
+    "it": {
+        "message": "イタリア語",
+        "description": ""
+    },
+    "iw": {
+        "message": "ヘブライ語",
+        "description": ""
+    },
+    "ja": {
+        "message": "日本語",
+        "description": ""
+    },
+    "jw": {
+        "message": "ジャワ語",
+        "description": ""
+    },
+    "ka": {
+        "message": "ジョージア(グルジア)語",
+        "description": ""
+    },
+    "kk": {
+        "message": "カザフ語",
+        "description": ""
+    },
+    "km": {
+        "message": "クメール語",
+        "description": ""
+    },
+    "kn": {
+        "message": "カンナダ語",
+        "description": ""
+    },
+    "ko": {
+        "message": "韓国語",
+        "description": ""
+    },
+    "ku": {
+        "message": "クルド語",
+        "description": ""
+    },
+    "ky": {
+        "message": "キルギス語",
+        "description": ""
+    },
+    "la": {
+        "message": "ラテン語",
+        "description": ""
+    },
+    "lb": {
+        "message": "ルクセンブルク語",
+        "description": ""
+    },
+    "lo": {
+        "message": "ラオ語",
+        "description": ""
+    },
+    "lt": {
+        "message": "リトアニア語",
+        "description": ""
+    },
+    "lv": {
+        "message": "ラトビア語",
+        "description": ""
+    },
+    "mg": {
+        "message": "マラガシ語",
+        "description": ""
+    },
+    "mi": {
+        "message": "マオリ語",
+        "description": ""
+    },
+    "mk": {
+        "message": "マケドニア語",
+        "description": ""
+    },
+    "ml": {
+        "message": "マラヤーラム語",
+        "description": ""
+    },
+    "mn": {
+        "message": "モンゴル語",
+        "description": ""
+    },
+    "mr": {
+        "message": "マラーティー語",
+        "description": ""
+    },
+    "ms": {
+        "message": "マレー語",
+        "description": ""
+    },
+    "mt": {
+        "message": "マルタ語",
+        "description": ""
+    },
+    "my": {
+        "message": "ミャンマー語",
+        "description": ""
+    },
+    "ne": {
+        "message": "ネパール語",
+        "description": ""
+    },
+    "nl": {
+        "message": "オランダ語",
+        "description": ""
+    },
+    "no": {
+        "message": "ノルウェー語",
+        "description": ""
+    },
+    "ny": {
+        "message": "チェワ語",
+        "description": ""
+    },
+    "pa": {
+        "message": "パンジャブ語",
+        "description": ""
+    },
+    "pl": {
+        "message": "ポーランド語",
+        "description": ""
+    },
+    "ps": {
+        "message": "パシュト語",
+        "description": ""
+    },
+    "pt": {
+        "message": "ポルトガル語",
+        "description": ""
+    },
+    "ro": {
+        "message": "ルーマニア語",
+        "description": ""
+    },
+    "ru": {
+        "message": "ロシア語",
+        "description": ""
+    },
+    "sd": {
+        "message": "シンド語",
+        "description": ""
+    },
+    "si": {
+        "message": "シンハラ語",
+        "description": ""
+    },
+    "sk": {
+        "message": "スロバキア語",
+        "description": ""
+    },
+    "sl": {
+        "message": "スロベニア語",
+        "description": ""
+    },
+    "sm": {
+        "message": "サモア語",
+        "description": ""
+    },
+    "sn": {
+        "message": "ショナ語",
+        "description": ""
+    },
+    "so": {
+        "message": "ソマリ語",
+        "description": ""
+    },
+    "sq": {
+        "message": "アルバニア語",
+        "description": ""
+    },
+    "sr": {
+        "message": "セルビア語",
+        "description": ""
+    },
+    "st": {
+        "message": "ソト語",
+        "description": ""
+    },
+    "su": {
+        "message": "スンダ語",
+        "description": ""
+    },
+    "sv": {
+        "message": "スウェーデン語",
+        "description": ""
+    },
+    "sw": {
+        "message": "スワヒリ語",
+        "description": ""
+    },
+    "ta": {
+        "message": "タミル語",
+        "description": ""
+    },
+    "te": {
+        "message": "テルグ語",
+        "description": ""
+    },
+    "tg": {
+        "message": "タジク語",
+        "description": ""
+    },
+    "th": {
+        "message": "タイ語",
+        "description": ""
+    },
+    "tl": {
+        "message": "タガログ語",
+        "description": ""
+    },
+    "tr": {
+        "message": "トルコ語",
+        "description": ""
+    },
+    "uk": {
+        "message": "ウクライナ語",
+        "description": ""
+    },
+    "ur": {
+        "message": "ウルドゥ語",
+        "description": ""
+    },
+    "uz": {
+        "message": "ウズベク語",
+        "description": ""
+    },
+    "vi": {
+        "message": "ベトナム語",
+        "description": ""
+    },
+    "xh": {
+        "message": "コーサ語",
+        "description": ""
+    },
+    "yi": {
+        "message": "イディッシュ語",
+        "description": ""
+    },
+    "yo": {
+        "message": "ヨルバ語",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "中国語",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "中国語(繁体)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ズールー語",
+        "description": ""
+    }
+}

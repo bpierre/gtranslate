@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ອາຟຣິການ",
+        "description": ""
+    },
+    "am": {
+        "message": "ອຳຮາຣິກ",
+        "description": ""
+    },
+    "ar": {
+        "message": "ອາຣາບິກ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ກວດສອບພາສາ",
+        "description": ""
+    },
+    "az": {
+        "message": "ອະເຊີໄບຈານິ",
+        "description": ""
+    },
+    "be": {
+        "message": "ເບລາຣັສຊຽນ",
+        "description": ""
+    },
+    "bg": {
+        "message": "ບັງກາຣຽນ",
+        "description": ""
+    },
+    "bn": {
+        "message": "ເບັງກາລີ",
+        "description": ""
+    },
+    "bs": {
+        "message": "ບອສນຽນ",
+        "description": ""
+    },
+    "ca": {
+        "message": "ຄາຕາແລນ",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ຊີບົວໂນ",
+        "description": ""
+    },
+    "co": {
+        "message": "ຄໍສິແຄນ",
+        "description": ""
+    },
+    "cs": {
+        "message": "ເຊກ",
+        "description": ""
+    },
+    "cy": {
+        "message": "ເວວ",
+        "description": ""
+    },
+    "da": {
+        "message": "ແດນນິຊ",
+        "description": ""
+    },
+    "de": {
+        "message": "ເຢຍລະມັນ",
+        "description": ""
+    },
+    "el": {
+        "message": "ກຣີກ",
+        "description": ""
+    },
+    "en": {
+        "message": "ອັງກິດ",
+        "description": ""
+    },
+    "eo": {
+        "message": "ເອສເປີຣັນໂຕ",
+        "description": ""
+    },
+    "es": {
+        "message": "ສະແປນນິຊ",
+        "description": ""
+    },
+    "et": {
+        "message": "ເອສໂຕນຽນ",
+        "description": ""
+    },
+    "eu": {
+        "message": "ແບກສເກິ",
+        "description": ""
+    },
+    "fa": {
+        "message": "ເປີຊຽນ",
+        "description": ""
+    },
+    "fi": {
+        "message": "ຟິນນິສ",
+        "description": ""
+    },
+    "fr": {
+        "message": "ຝຣັ່ງ",
+        "description": ""
+    },
+    "fy": {
+        "message": "ຟຣິຊຽນ",
+        "description": ""
+    },
+    "ga": {
+        "message": "ໄອຣິຊ",
+        "description": ""
+    },
+    "gd": {
+        "message": "ສະກັອດ ແກລິກ",
+        "description": ""
+    },
+    "gl": {
+        "message": "ກາລິຊຽນ",
+        "description": ""
+    },
+    "gu": {
+        "message": "ກູຈາຣາຕີ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ເຮົາຊາ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ຮາວາຍອຽນ",
+        "description": ""
+    },
+    "hi": {
+        "message": "ຮິນດິ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ມົ້ງ",
+        "description": ""
+    },
+    "hr": {
+        "message": "ໂຄຣເອທຽນ",
+        "description": ""
+    },
+    "ht": {
+        "message": "ໄຮທຽນ ຄຣີໂອ",
+        "description": ""
+    },
+    "hu": {
+        "message": "ຮັງກາຣຽນ",
+        "description": ""
+    },
+    "hy": {
+        "message": "ອາເມນຽນ",
+        "description": ""
+    },
+    "id": {
+        "message": "ອິນໂດເນຊຽນ",
+        "description": ""
+    },
+    "ig": {
+        "message": "ອິກໂບ",
+        "description": ""
+    },
+    "is": {
+        "message": "ໄອສແລນດິດ",
+        "description": ""
+    },
+    "it": {
+        "message": "ອິຕາລຽນ",
+        "description": ""
+    },
+    "iw": {
+        "message": "ຮີບຣິວ",
+        "description": ""
+    },
+    "ja": {
+        "message": "ຍີ່ປຸ່ນ",
+        "description": ""
+    },
+    "jw": {
+        "message": "ຈາວານີສ",
+        "description": ""
+    },
+    "ka": {
+        "message": "ຈໍຈຽນ",
+        "description": ""
+    },
+    "kk": {
+        "message": "ຄາຊັກ",
+        "description": ""
+    },
+    "km": {
+        "message": "ຂະແມ",
+        "description": ""
+    },
+    "kn": {
+        "message": "ຄັນນາດາ",
+        "description": ""
+    },
+    "ko": {
+        "message": "ເກົາຫຼີ",
+        "description": ""
+    },
+    "ku": {
+        "message": "ເຄີດິສ",
+        "description": ""
+    },
+    "ky": {
+        "message": "ກີກີສ",
+        "description": ""
+    },
+    "la": {
+        "message": "ລາຕິນ",
+        "description": ""
+    },
+    "lb": {
+        "message": "ລັກເຊມເບີກກິສ",
+        "description": ""
+    },
+    "lo": {
+        "message": "ລາວ",
+        "description": ""
+    },
+    "lt": {
+        "message": "ລິທົວນຽນ",
+        "description": ""
+    },
+    "lv": {
+        "message": "ລັດວຽນ",
+        "description": ""
+    },
+    "mg": {
+        "message": "ມາກາລາຊີ",
+        "description": ""
+    },
+    "mi": {
+        "message": "ເມົາຣີ",
+        "description": ""
+    },
+    "mk": {
+        "message": "ມາເຊໂດນຽນ",
+        "description": ""
+    },
+    "ml": {
+        "message": "ມາເລຢາລາມ",
+        "description": ""
+    },
+    "mn": {
+        "message": "ມອງໂກລຽນ",
+        "description": ""
+    },
+    "mr": {
+        "message": "ມາຣາທີ",
+        "description": ""
+    },
+    "ms": {
+        "message": "ມາເລ",
+        "description": ""
+    },
+    "mt": {
+        "message": "ມານທິສ",
+        "description": ""
+    },
+    "my": {
+        "message": "ມຽນມາ",
+        "description": ""
+    },
+    "ne": {
+        "message": "ເນປານລີ",
+        "description": ""
+    },
+    "nl": {
+        "message": "ດັດຊ໌",
+        "description": ""
+    },
+    "no": {
+        "message": "ນໍເວກຽນ",
+        "description": ""
+    },
+    "ny": {
+        "message": "ຊິເຊວາ",
+        "description": ""
+    },
+    "pa": {
+        "message": "ປັນຈາບິ",
+        "description": ""
+    },
+    "pl": {
+        "message": "ໂປລິຊ",
+        "description": ""
+    },
+    "ps": {
+        "message": "ພາສໂທ",
+        "description": ""
+    },
+    "pt": {
+        "message": "ປໍຕູກີສ",
+        "description": ""
+    },
+    "ro": {
+        "message": "ໂຣມານຽນ",
+        "description": ""
+    },
+    "ru": {
+        "message": "ຣັດຊຽນ",
+        "description": ""
+    },
+    "sd": {
+        "message": "ສິນທິ",
+        "description": ""
+    },
+    "si": {
+        "message": "​ສິງ​ຫາ​ລາ",
+        "description": ""
+    },
+    "sk": {
+        "message": "ສະໂລແວັກ",
+        "description": ""
+    },
+    "sl": {
+        "message": "ສະໂລເວນຽນ",
+        "description": ""
+    },
+    "sm": {
+        "message": "ຊາໂມນ",
+        "description": ""
+    },
+    "sn": {
+        "message": "ໂຊນາ",
+        "description": ""
+    },
+    "so": {
+        "message": "ໂຊມາລີ",
+        "description": ""
+    },
+    "sq": {
+        "message": "ອັລບານຽນ",
+        "description": ""
+    },
+    "sr": {
+        "message": "ເຊີບຽນ",
+        "description": ""
+    },
+    "st": {
+        "message": "ເຊໂຊໂທ",
+        "description": ""
+    },
+    "su": {
+        "message": "ຊັນດານນີສ",
+        "description": ""
+    },
+    "sv": {
+        "message": "ສະວີດິຊ",
+        "description": ""
+    },
+    "sw": {
+        "message": "ຊວາຮີລີ",
+        "description": ""
+    },
+    "ta": {
+        "message": "ທາມິລ",
+        "description": ""
+    },
+    "te": {
+        "message": "ເຕລູກູ",
+        "description": ""
+    },
+    "tg": {
+        "message": "ທາຈິກ",
+        "description": ""
+    },
+    "th": {
+        "message": "ໄທ",
+        "description": ""
+    },
+    "tl": {
+        "message": "ຟິລິບປິນໂນ",
+        "description": ""
+    },
+    "tr": {
+        "message": "ເຕີກິສ",
+        "description": ""
+    },
+    "uk": {
+        "message": "ຢູເຄຣນຽນ",
+        "description": ""
+    },
+    "ur": {
+        "message": "ອາຣດູ",
+        "description": ""
+    },
+    "uz": {
+        "message": "ອຸສເບກ",
+        "description": ""
+    },
+    "vi": {
+        "message": "ຫວຽດນາມ",
+        "description": ""
+    },
+    "xh": {
+        "message": "ໂຊຊາ",
+        "description": ""
+    },
+    "yi": {
+        "message": "ຢິດດິສ",
+        "description": ""
+    },
+    "yo": {
+        "message": "ຢໍຣູບາ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ຈີນ",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ຈີນ (ດັ້ງເດີມ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ຊູລູ",
+        "description": ""
+    }
+}

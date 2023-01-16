@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "африкаанча",
+        "description": ""
+    },
+    "am": {
+        "message": "амхарча",
+        "description": ""
+    },
+    "ar": {
+        "message": "арабча",
+        "description": ""
+    },
+    "auto": {
+        "message": "Тилди аныктоо",
+        "description": ""
+    },
+    "az": {
+        "message": "азербайжанча",
+        "description": ""
+    },
+    "be": {
+        "message": "беларусча",
+        "description": ""
+    },
+    "bg": {
+        "message": "болгарча",
+        "description": ""
+    },
+    "bn": {
+        "message": "бенгаличе",
+        "description": ""
+    },
+    "bs": {
+        "message": "боснияча",
+        "description": ""
+    },
+    "ca": {
+        "message": "каталанча",
+        "description": ""
+    },
+    "ceb": {
+        "message": "себуанча",
+        "description": ""
+    },
+    "co": {
+        "message": "корсикача",
+        "description": ""
+    },
+    "cs": {
+        "message": "чехче",
+        "description": ""
+    },
+    "cy": {
+        "message": "валлийче",
+        "description": ""
+    },
+    "da": {
+        "message": "датча",
+        "description": ""
+    },
+    "de": {
+        "message": "немисче",
+        "description": ""
+    },
+    "el": {
+        "message": "грекче",
+        "description": ""
+    },
+    "en": {
+        "message": "англисче",
+        "description": ""
+    },
+    "eo": {
+        "message": "эсперанто",
+        "description": ""
+    },
+    "es": {
+        "message": "испанча",
+        "description": ""
+    },
+    "et": {
+        "message": "эстончо",
+        "description": ""
+    },
+    "eu": {
+        "message": "баскча",
+        "description": ""
+    },
+    "fa": {
+        "message": "фарсча",
+        "description": ""
+    },
+    "fi": {
+        "message": "финче",
+        "description": ""
+    },
+    "fr": {
+        "message": "французча",
+        "description": ""
+    },
+    "fy": {
+        "message": "фризче",
+        "description": ""
+    },
+    "ga": {
+        "message": "ирландча",
+        "description": ""
+    },
+    "gd": {
+        "message": "шотландиялык кельтче",
+        "description": ""
+    },
+    "gl": {
+        "message": "галисийче",
+        "description": ""
+    },
+    "gu": {
+        "message": "гужаратиче",
+        "description": ""
+    },
+    "ha": {
+        "message": "хаусача",
+        "description": ""
+    },
+    "haw": {
+        "message": "гавайча",
+        "description": ""
+    },
+    "hi": {
+        "message": "хиндиче",
+        "description": ""
+    },
+    "hmn": {
+        "message": "хмонгчо",
+        "description": ""
+    },
+    "hr": {
+        "message": "хорватча",
+        "description": ""
+    },
+    "ht": {
+        "message": "гаитилик креолчо",
+        "description": ""
+    },
+    "hu": {
+        "message": "Венгерче",
+        "description": ""
+    },
+    "hy": {
+        "message": "армянча",
+        "description": ""
+    },
+    "id": {
+        "message": "индонезияча",
+        "description": ""
+    },
+    "ig": {
+        "message": "игбочо",
+        "description": ""
+    },
+    "is": {
+        "message": "исландча",
+        "description": ""
+    },
+    "it": {
+        "message": "италиянча",
+        "description": ""
+    },
+    "iw": {
+        "message": "ивритче",
+        "description": ""
+    },
+    "ja": {
+        "message": "жапончо",
+        "description": ""
+    },
+    "jw": {
+        "message": "яванча",
+        "description": ""
+    },
+    "ka": {
+        "message": "грузинче",
+        "description": ""
+    },
+    "kk": {
+        "message": "казакча",
+        "description": ""
+    },
+    "km": {
+        "message": "кхмерче",
+        "description": ""
+    },
+    "kn": {
+        "message": "каннадача",
+        "description": ""
+    },
+    "ko": {
+        "message": "корейче",
+        "description": ""
+    },
+    "ku": {
+        "message": "курманжиче",
+        "description": ""
+    },
+    "ky": {
+        "message": "кыргызча",
+        "description": ""
+    },
+    "la": {
+        "message": "латынча",
+        "description": ""
+    },
+    "lb": {
+        "message": "люксембургча",
+        "description": ""
+    },
+    "lo": {
+        "message": "лаосчо",
+        "description": ""
+    },
+    "lt": {
+        "message": "литвача",
+        "description": ""
+    },
+    "lv": {
+        "message": "латышча",
+        "description": ""
+    },
+    "mg": {
+        "message": "малагасиче",
+        "description": ""
+    },
+    "mi": {
+        "message": "маориче",
+        "description": ""
+    },
+    "mk": {
+        "message": "македончо",
+        "description": ""
+    },
+    "ml": {
+        "message": "малайаламча",
+        "description": ""
+    },
+    "mn": {
+        "message": "монголчо",
+        "description": ""
+    },
+    "mr": {
+        "message": "маратхиче",
+        "description": ""
+    },
+    "ms": {
+        "message": "малайча",
+        "description": ""
+    },
+    "mt": {
+        "message": "мальтача",
+        "description": ""
+    },
+    "my": {
+        "message": "бирманча",
+        "description": ""
+    },
+    "ne": {
+        "message": "непалча",
+        "description": ""
+    },
+    "nl": {
+        "message": "нидерландча",
+        "description": ""
+    },
+    "no": {
+        "message": "норвежче",
+        "description": ""
+    },
+    "ny": {
+        "message": "чичевача",
+        "description": ""
+    },
+    "pa": {
+        "message": "пунжабиче",
+        "description": ""
+    },
+    "pl": {
+        "message": "полякча",
+        "description": ""
+    },
+    "ps": {
+        "message": "пуштуча",
+        "description": ""
+    },
+    "pt": {
+        "message": "португалча",
+        "description": ""
+    },
+    "ro": {
+        "message": "румынча",
+        "description": ""
+    },
+    "ru": {
+        "message": "орусча",
+        "description": ""
+    },
+    "sd": {
+        "message": "синдхиче",
+        "description": ""
+    },
+    "si": {
+        "message": "сингалча",
+        "description": ""
+    },
+    "sk": {
+        "message": "словакча",
+        "description": ""
+    },
+    "sl": {
+        "message": "словенче",
+        "description": ""
+    },
+    "sm": {
+        "message": "самоача",
+        "description": ""
+    },
+    "sn": {
+        "message": "шонача",
+        "description": ""
+    },
+    "so": {
+        "message": "сомаличе",
+        "description": ""
+    },
+    "sq": {
+        "message": "албанча",
+        "description": ""
+    },
+    "sr": {
+        "message": "сербче",
+        "description": ""
+    },
+    "st": {
+        "message": "сесоточо",
+        "description": ""
+    },
+    "su": {
+        "message": "сунданча",
+        "description": ""
+    },
+    "sv": {
+        "message": "шведче",
+        "description": ""
+    },
+    "sw": {
+        "message": "суахиличе",
+        "description": ""
+    },
+    "ta": {
+        "message": "тамилче",
+        "description": ""
+    },
+    "te": {
+        "message": "телугуча",
+        "description": ""
+    },
+    "tg": {
+        "message": "тажикче",
+        "description": ""
+    },
+    "th": {
+        "message": "тайча",
+        "description": ""
+    },
+    "tl": {
+        "message": "филиппинче",
+        "description": ""
+    },
+    "tr": {
+        "message": "түркчө",
+        "description": ""
+    },
+    "uk": {
+        "message": "украинче",
+        "description": ""
+    },
+    "ur": {
+        "message": "урдуча",
+        "description": ""
+    },
+    "uz": {
+        "message": "өзбекче",
+        "description": ""
+    },
+    "vi": {
+        "message": "вьетнамча",
+        "description": ""
+    },
+    "xh": {
+        "message": "кхосача",
+        "description": ""
+    },
+    "yi": {
+        "message": "идишче",
+        "description": ""
+    },
+    "yo": {
+        "message": "йорубача",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "кытайча",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "кытайча (салттуу)",
+        "description": ""
+    },
+    "zu": {
+        "message": "зулуча",
+        "description": ""
+    }
+}

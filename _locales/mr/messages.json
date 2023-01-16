@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "अफ्रिकान्स",
+        "description": ""
+    },
+    "am": {
+        "message": "अम्हारिक",
+        "description": ""
+    },
+    "ar": {
+        "message": "अरबी",
+        "description": ""
+    },
+    "auto": {
+        "message": "भाषा शोधा",
+        "description": ""
+    },
+    "az": {
+        "message": "अझरबैजानी",
+        "description": ""
+    },
+    "be": {
+        "message": "बेलारुशियन",
+        "description": ""
+    },
+    "bg": {
+        "message": "बल्गेरियन",
+        "description": ""
+    },
+    "bn": {
+        "message": "बंगाली",
+        "description": ""
+    },
+    "bs": {
+        "message": "बोस्नियन",
+        "description": ""
+    },
+    "ca": {
+        "message": "कॅटलान",
+        "description": ""
+    },
+    "ceb": {
+        "message": "सेबुआनो",
+        "description": ""
+    },
+    "co": {
+        "message": "कोर्सिकन",
+        "description": ""
+    },
+    "cs": {
+        "message": "झेक",
+        "description": ""
+    },
+    "cy": {
+        "message": "वेल्श",
+        "description": ""
+    },
+    "da": {
+        "message": "डॅनिश",
+        "description": ""
+    },
+    "de": {
+        "message": "जर्मन",
+        "description": ""
+    },
+    "el": {
+        "message": "ग्रीक",
+        "description": ""
+    },
+    "en": {
+        "message": "इंग्रजी",
+        "description": ""
+    },
+    "eo": {
+        "message": "एस्परँटो",
+        "description": ""
+    },
+    "es": {
+        "message": "स्पॅनिश",
+        "description": ""
+    },
+    "et": {
+        "message": "एस्टोनियन",
+        "description": ""
+    },
+    "eu": {
+        "message": "बास्क",
+        "description": ""
+    },
+    "fa": {
+        "message": "फारसी",
+        "description": ""
+    },
+    "fi": {
+        "message": "फिन्निश",
+        "description": ""
+    },
+    "fr": {
+        "message": "फ्रेंच",
+        "description": ""
+    },
+    "fy": {
+        "message": "फ्रिशियन",
+        "description": ""
+    },
+    "ga": {
+        "message": "आयरिश",
+        "description": ""
+    },
+    "gd": {
+        "message": "स्कॉट्स गेलिक",
+        "description": ""
+    },
+    "gl": {
+        "message": "गॅलिशियन",
+        "description": ""
+    },
+    "gu": {
+        "message": "गुजराथी",
+        "description": ""
+    },
+    "ha": {
+        "message": "हौसा",
+        "description": ""
+    },
+    "haw": {
+        "message": "हवाइयन",
+        "description": ""
+    },
+    "hi": {
+        "message": "हिन्दी",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ह्मॉन्ग",
+        "description": ""
+    },
+    "hr": {
+        "message": "क्रोएशियन",
+        "description": ""
+    },
+    "ht": {
+        "message": "हैतीयन क्रेओल",
+        "description": ""
+    },
+    "hu": {
+        "message": "हंगेरियन",
+        "description": ""
+    },
+    "hy": {
+        "message": "अर्मेनियन",
+        "description": ""
+    },
+    "id": {
+        "message": "इंडोनेशियन",
+        "description": ""
+    },
+    "ig": {
+        "message": "इग्बो",
+        "description": ""
+    },
+    "is": {
+        "message": "आइसलँडिक",
+        "description": ""
+    },
+    "it": {
+        "message": "इटालियन",
+        "description": ""
+    },
+    "iw": {
+        "message": "हिब्रू",
+        "description": ""
+    },
+    "ja": {
+        "message": "जपानी",
+        "description": ""
+    },
+    "jw": {
+        "message": "जावानीज",
+        "description": ""
+    },
+    "ka": {
+        "message": "जॉर्जियन",
+        "description": ""
+    },
+    "kk": {
+        "message": "कझाक",
+        "description": ""
+    },
+    "km": {
+        "message": "ख्मेर",
+        "description": ""
+    },
+    "kn": {
+        "message": "कन्नड",
+        "description": ""
+    },
+    "ko": {
+        "message": "कोरियन",
+        "description": ""
+    },
+    "ku": {
+        "message": "कुर्दिश (कुर्मांजी)",
+        "description": ""
+    },
+    "ky": {
+        "message": "किरगीझ",
+        "description": ""
+    },
+    "la": {
+        "message": "लॅटिन",
+        "description": ""
+    },
+    "lb": {
+        "message": "लक्झेंबर्गिश",
+        "description": ""
+    },
+    "lo": {
+        "message": "लाओ",
+        "description": ""
+    },
+    "lt": {
+        "message": "लिथुआनियन",
+        "description": ""
+    },
+    "lv": {
+        "message": "लाट्वियन",
+        "description": ""
+    },
+    "mg": {
+        "message": "मालागासे",
+        "description": ""
+    },
+    "mi": {
+        "message": "माओरी",
+        "description": ""
+    },
+    "mk": {
+        "message": "मॅसेडोनियन",
+        "description": ""
+    },
+    "ml": {
+        "message": "मल्याळम",
+        "description": ""
+    },
+    "mn": {
+        "message": "मंगोलियन",
+        "description": ""
+    },
+    "mr": {
+        "message": "मराठी",
+        "description": ""
+    },
+    "ms": {
+        "message": "मलय",
+        "description": ""
+    },
+    "mt": {
+        "message": "माल्टीज",
+        "description": ""
+    },
+    "my": {
+        "message": "म्यानमार (बर्मीज)",
+        "description": ""
+    },
+    "ne": {
+        "message": "नेपाळी",
+        "description": ""
+    },
+    "nl": {
+        "message": "डच",
+        "description": ""
+    },
+    "no": {
+        "message": "नॉर्वेजियन",
+        "description": ""
+    },
+    "ny": {
+        "message": "चिचेवा",
+        "description": ""
+    },
+    "pa": {
+        "message": "पंजाबी",
+        "description": ""
+    },
+    "pl": {
+        "message": "पोलिश",
+        "description": ""
+    },
+    "ps": {
+        "message": "पश्तो",
+        "description": ""
+    },
+    "pt": {
+        "message": "पोर्तुगीज",
+        "description": ""
+    },
+    "ro": {
+        "message": "रोमानियन",
+        "description": ""
+    },
+    "ru": {
+        "message": "रशियन",
+        "description": ""
+    },
+    "sd": {
+        "message": "सिंधी",
+        "description": ""
+    },
+    "si": {
+        "message": "सिंहला",
+        "description": ""
+    },
+    "sk": {
+        "message": "स्लोव्हाक",
+        "description": ""
+    },
+    "sl": {
+        "message": "स्लोव्हेनियन",
+        "description": ""
+    },
+    "sm": {
+        "message": "समोअन",
+        "description": ""
+    },
+    "sn": {
+        "message": "शोना",
+        "description": ""
+    },
+    "so": {
+        "message": "सोमाली",
+        "description": ""
+    },
+    "sq": {
+        "message": "अल्बानियन",
+        "description": ""
+    },
+    "sr": {
+        "message": "सर्बियन",
+        "description": ""
+    },
+    "st": {
+        "message": "सिसोठो",
+        "description": ""
+    },
+    "su": {
+        "message": "सुदानी",
+        "description": ""
+    },
+    "sv": {
+        "message": "स्वीडिश",
+        "description": ""
+    },
+    "sw": {
+        "message": "स्वाहिली",
+        "description": ""
+    },
+    "ta": {
+        "message": "तमिळ",
+        "description": ""
+    },
+    "te": {
+        "message": "तेलगू",
+        "description": ""
+    },
+    "tg": {
+        "message": "ताजिक",
+        "description": ""
+    },
+    "th": {
+        "message": "थाई",
+        "description": ""
+    },
+    "tl": {
+        "message": "फिलिपिनो",
+        "description": ""
+    },
+    "tr": {
+        "message": "तुर्की",
+        "description": ""
+    },
+    "uk": {
+        "message": "युक्रेनियन",
+        "description": ""
+    },
+    "ur": {
+        "message": "उर्दू",
+        "description": ""
+    },
+    "uz": {
+        "message": "उझ्बेक",
+        "description": ""
+    },
+    "vi": {
+        "message": "व्हिएतनामी",
+        "description": ""
+    },
+    "xh": {
+        "message": "खोसा",
+        "description": ""
+    },
+    "yi": {
+        "message": "यिद्दिश",
+        "description": ""
+    },
+    "yo": {
+        "message": "योरुबा",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "चीनी",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "चीनी (पारंपारिक)",
+        "description": ""
+    },
+    "zu": {
+        "message": "झुलु",
+        "description": ""
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Африқоӣ",
+        "description": ""
+    },
+    "am": {
+        "message": "Амхорӣ",
+        "description": ""
+    },
+    "ar": {
+        "message": "Aрабӣ",
+        "description": ""
+    },
+    "auto": {
+        "message": "Муайян кардани забон",
+        "description": ""
+    },
+    "az": {
+        "message": "Озарӣ",
+        "description": ""
+    },
+    "be": {
+        "message": "Белорусӣ",
+        "description": ""
+    },
+    "bg": {
+        "message": "Булғорӣ",
+        "description": ""
+    },
+    "bn": {
+        "message": "Бенгалӣ",
+        "description": ""
+    },
+    "bs": {
+        "message": "Босниявӣ",
+        "description": ""
+    },
+    "ca": {
+        "message": "Каталанӣ",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Себуано",
+        "description": ""
+    },
+    "co": {
+        "message": "Корсикӣ",
+        "description": ""
+    },
+    "cs": {
+        "message": "Чехӣ",
+        "description": ""
+    },
+    "cy": {
+        "message": "Велсӣ",
+        "description": ""
+    },
+    "da": {
+        "message": "Даниягӣ",
+        "description": ""
+    },
+    "de": {
+        "message": "Oлмонӣ",
+        "description": ""
+    },
+    "el": {
+        "message": "Юнонӣ",
+        "description": ""
+    },
+    "en": {
+        "message": "Инглисӣ",
+        "description": ""
+    },
+    "eo": {
+        "message": "Эсперантӣ",
+        "description": ""
+    },
+    "es": {
+        "message": "Испанӣ",
+        "description": ""
+    },
+    "et": {
+        "message": "Эстонӣ",
+        "description": ""
+    },
+    "eu": {
+        "message": "Баски",
+        "description": ""
+    },
+    "fa": {
+        "message": "Форсӣ",
+        "description": ""
+    },
+    "fi": {
+        "message": "Финнӣ",
+        "description": ""
+    },
+    "fr": {
+        "message": "Фaрoнсавӣ",
+        "description": ""
+    },
+    "fy": {
+        "message": "Фризӣ",
+        "description": ""
+    },
+    "ga": {
+        "message": "Ирлондӣ",
+        "description": ""
+    },
+    "gd": {
+        "message": "Шотландӣ-Галикӣ",
+        "description": ""
+    },
+    "gl": {
+        "message": "Голикиёӣ",
+        "description": ""
+    },
+    "gu": {
+        "message": "Гуҷаратӣ",
+        "description": ""
+    },
+    "ha": {
+        "message": "Ҳауса",
+        "description": ""
+    },
+    "haw": {
+        "message": "Ҳавайигӣ",
+        "description": ""
+    },
+    "hi": {
+        "message": "Ҳиндӣ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Ҳмонг",
+        "description": ""
+    },
+    "hr": {
+        "message": "Керуотӣ",
+        "description": ""
+    },
+    "ht": {
+        "message": "Креолии ҳаитигӣ",
+        "description": ""
+    },
+    "hu": {
+        "message": "Маҷорӣ",
+        "description": ""
+    },
+    "hy": {
+        "message": "Арманӣ",
+        "description": ""
+    },
+    "id": {
+        "message": "Индонезӣ",
+        "description": ""
+    },
+    "ig": {
+        "message": "Ибо",
+        "description": ""
+    },
+    "is": {
+        "message": "Исландӣ",
+        "description": ""
+    },
+    "it": {
+        "message": "Итoлёӣ",
+        "description": ""
+    },
+    "iw": {
+        "message": "Яҳудӣ",
+        "description": ""
+    },
+    "ja": {
+        "message": "Жопунӣ",
+        "description": ""
+    },
+    "jw": {
+        "message": "Ҷовонӣ",
+        "description": ""
+    },
+    "ka": {
+        "message": "Гурҷӣ",
+        "description": ""
+    },
+    "kk": {
+        "message": "Қазоқӣ",
+        "description": ""
+    },
+    "km": {
+        "message": "Хмерӣ",
+        "description": ""
+    },
+    "kn": {
+        "message": "Канада",
+        "description": ""
+    },
+    "ko": {
+        "message": "Kореӣ",
+        "description": ""
+    },
+    "ku": {
+        "message": "Курдӣ",
+        "description": ""
+    },
+    "ky": {
+        "message": "Қирғизӣ",
+        "description": ""
+    },
+    "la": {
+        "message": "Лотинӣ",
+        "description": ""
+    },
+    "lb": {
+        "message": "Люксембургӣ",
+        "description": ""
+    },
+    "lo": {
+        "message": "Лаосӣ",
+        "description": ""
+    },
+    "lt": {
+        "message": "Литвонӣ",
+        "description": ""
+    },
+    "lv": {
+        "message": "Латвиягӣ",
+        "description": ""
+    },
+    "mg": {
+        "message": "Малагасигӣ",
+        "description": ""
+    },
+    "mi": {
+        "message": "Маорӣ",
+        "description": ""
+    },
+    "mk": {
+        "message": "Мақдунӣ",
+        "description": ""
+    },
+    "ml": {
+        "message": "Малаялам",
+        "description": ""
+    },
+    "mn": {
+        "message": "Муғулӣ",
+        "description": ""
+    },
+    "mr": {
+        "message": "Mаратҳӣ",
+        "description": ""
+    },
+    "ms": {
+        "message": "Mалайӣ",
+        "description": ""
+    },
+    "mt": {
+        "message": "Малтавӣ",
+        "description": ""
+    },
+    "my": {
+        "message": "Бирманӣ",
+        "description": ""
+    },
+    "ne": {
+        "message": "Непалӣ",
+        "description": ""
+    },
+    "nl": {
+        "message": "Ҳолландӣ",
+        "description": ""
+    },
+    "no": {
+        "message": "Hорвегӣ",
+        "description": ""
+    },
+    "ny": {
+        "message": "Чичева",
+        "description": ""
+    },
+    "pa": {
+        "message": "Панҷобӣ",
+        "description": ""
+    },
+    "pl": {
+        "message": "Лаҳистонӣ",
+        "description": ""
+    },
+    "ps": {
+        "message": "Пaшту",
+        "description": ""
+    },
+    "pt": {
+        "message": "Пуртуғолӣ",
+        "description": ""
+    },
+    "ro": {
+        "message": "Pуминӣ",
+        "description": ""
+    },
+    "ru": {
+        "message": "Pусӣ",
+        "description": ""
+    },
+    "sd": {
+        "message": "Cиндӣ",
+        "description": ""
+    },
+    "si": {
+        "message": "Сингалӣ",
+        "description": ""
+    },
+    "sk": {
+        "message": "Cловакӣ",
+        "description": ""
+    },
+    "sl": {
+        "message": "Cловенӣ",
+        "description": ""
+    },
+    "sm": {
+        "message": "Самоагӣ",
+        "description": ""
+    },
+    "sn": {
+        "message": "Шона",
+        "description": ""
+    },
+    "so": {
+        "message": "Cомалиягӣ",
+        "description": ""
+    },
+    "sq": {
+        "message": "Aлбанӣ",
+        "description": ""
+    },
+    "sr": {
+        "message": "Cербӣ",
+        "description": ""
+    },
+    "st": {
+        "message": "Cесотоӣ",
+        "description": ""
+    },
+    "su": {
+        "message": "Судонӣ",
+        "description": ""
+    },
+    "sv": {
+        "message": "Суъидӣ",
+        "description": ""
+    },
+    "sw": {
+        "message": "Суахили",
+        "description": ""
+    },
+    "ta": {
+        "message": "Тамилӣ",
+        "description": ""
+    },
+    "te": {
+        "message": "Телугу",
+        "description": ""
+    },
+    "tg": {
+        "message": "Тоҷикӣ",
+        "description": ""
+    },
+    "th": {
+        "message": "Tайӣ",
+        "description": ""
+    },
+    "tl": {
+        "message": "Филиппинӣ",
+        "description": ""
+    },
+    "tr": {
+        "message": "Tуркӣ",
+        "description": ""
+    },
+    "uk": {
+        "message": "Укройнӣ",
+        "description": ""
+    },
+    "ur": {
+        "message": "Урду",
+        "description": ""
+    },
+    "uz": {
+        "message": "Узбек",
+        "description": ""
+    },
+    "vi": {
+        "message": "Bиетномӣ",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xузoӣ",
+        "description": ""
+    },
+    "yi": {
+        "message": "Идиш",
+        "description": ""
+    },
+    "yo": {
+        "message": "Ёрубоӣ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Чинӣ",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Чинӣ (анъанавӣ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Зулу",
+        "description": ""
+    }
+}

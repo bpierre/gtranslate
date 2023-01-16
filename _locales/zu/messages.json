@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "isi-Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "isi-Amharic",
+        "description": ""
+    },
+    "ar": {
+        "message": "isi-Arabic",
+        "description": ""
+    },
+    "auto": {
+        "message": "Hlonza ulimi",
+        "description": ""
+    },
+    "az": {
+        "message": "isi-Azerbaijani",
+        "description": ""
+    },
+    "be": {
+        "message": "isi-Belarusian",
+        "description": ""
+    },
+    "bg": {
+        "message": "isi-Bulgarian",
+        "description": ""
+    },
+    "bn": {
+        "message": "isi-Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "isi-Bosnian",
+        "description": ""
+    },
+    "ca": {
+        "message": "isi-Catalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "isi-Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "isi-Corsican",
+        "description": ""
+    },
+    "cs": {
+        "message": "isi-Czech",
+        "description": ""
+    },
+    "cy": {
+        "message": "isi-Welsh",
+        "description": ""
+    },
+    "da": {
+        "message": "isi-Danish",
+        "description": ""
+    },
+    "de": {
+        "message": "isi-German",
+        "description": ""
+    },
+    "el": {
+        "message": "isi-Greek",
+        "description": ""
+    },
+    "en": {
+        "message": "isi-English",
+        "description": ""
+    },
+    "eo": {
+        "message": "isi-Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "isi-Spanish",
+        "description": ""
+    },
+    "et": {
+        "message": "isi-Estonian",
+        "description": ""
+    },
+    "eu": {
+        "message": "isi-Basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "isi-Persian",
+        "description": ""
+    },
+    "fi": {
+        "message": "isi-Finnish",
+        "description": ""
+    },
+    "fr": {
+        "message": "isi-French",
+        "description": ""
+    },
+    "fy": {
+        "message": "isi-Frasian",
+        "description": ""
+    },
+    "ga": {
+        "message": "isi-Irish",
+        "description": ""
+    },
+    "gd": {
+        "message": "isi-Scots Gaelic",
+        "description": ""
+    },
+    "gl": {
+        "message": "isi-Galician",
+        "description": ""
+    },
+    "gu": {
+        "message": "isi-Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "isi-Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "isi-Hawaiin",
+        "description": ""
+    },
+    "hi": {
+        "message": "isi-Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "isi-Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "isi-Croatian",
+        "description": ""
+    },
+    "ht": {
+        "message": "isi-Haitian Creole",
+        "description": ""
+    },
+    "hu": {
+        "message": "isi-Hangarian",
+        "description": ""
+    },
+    "hy": {
+        "message": "isi-Armenian",
+        "description": ""
+    },
+    "id": {
+        "message": "isi-Indonesian",
+        "description": ""
+    },
+    "ig": {
+        "message": "isi-Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "isi-Icelandic",
+        "description": ""
+    },
+    "it": {
+        "message": "isi-Italian",
+        "description": ""
+    },
+    "iw": {
+        "message": "isi-Hebrew",
+        "description": ""
+    },
+    "ja": {
+        "message": "isi-Japanese",
+        "description": ""
+    },
+    "jw": {
+        "message": "isi-Javanese",
+        "description": ""
+    },
+    "ka": {
+        "message": "isi-Georgian",
+        "description": ""
+    },
+    "kk": {
+        "message": "isi-Kazakh",
+        "description": ""
+    },
+    "km": {
+        "message": "isi-Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "isi-Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "isi-Korean",
+        "description": ""
+    },
+    "ku": {
+        "message": "isi-Kurdish",
+        "description": ""
+    },
+    "ky": {
+        "message": "isi-Kyrgyz",
+        "description": ""
+    },
+    "la": {
+        "message": "isi-Latin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Isi-Luxembourgish",
+        "description": ""
+    },
+    "lo": {
+        "message": "isi-Lao",
+        "description": ""
+    },
+    "lt": {
+        "message": "isi-Lithuanian",
+        "description": ""
+    },
+    "lv": {
+        "message": "isi-Latvian",
+        "description": ""
+    },
+    "mg": {
+        "message": "isi-Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "isi-Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "isi-Macedonian",
+        "description": ""
+    },
+    "ml": {
+        "message": "isi-Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "isi-Mongolian",
+        "description": ""
+    },
+    "mr": {
+        "message": "isi-Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "isi-Malay",
+        "description": ""
+    },
+    "mt": {
+        "message": "isi-Maltese",
+        "description": ""
+    },
+    "my": {
+        "message": "Isi-Burmese",
+        "description": ""
+    },
+    "ne": {
+        "message": "isi-Nepali",
+        "description": ""
+    },
+    "nl": {
+        "message": "isi-Dutch",
+        "description": ""
+    },
+    "no": {
+        "message": "isi-Norwegian",
+        "description": ""
+    },
+    "ny": {
+        "message": "isi-Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "isi-Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "isi-Polish",
+        "description": ""
+    },
+    "ps": {
+        "message": "isi-Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "isi-Portuguese",
+        "description": ""
+    },
+    "ro": {
+        "message": "isi-Romanian",
+        "description": ""
+    },
+    "ru": {
+        "message": "isi-Russian",
+        "description": ""
+    },
+    "sd": {
+        "message": "isi-Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Isi-Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "isi-Slovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "isi-Slovenian",
+        "description": ""
+    },
+    "sm": {
+        "message": "Isi-Samoan",
+        "description": ""
+    },
+    "sn": {
+        "message": "isi-Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "isi-Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "isi-Albania",
+        "description": ""
+    },
+    "sr": {
+        "message": "isi-Serbian",
+        "description": ""
+    },
+    "st": {
+        "message": "iSesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "isi-Sundanese",
+        "description": ""
+    },
+    "sv": {
+        "message": "isi-Swedish",
+        "description": ""
+    },
+    "sw": {
+        "message": "isi-Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "isi-Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "isi-Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "isi-Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "isi-Thai",
+        "description": ""
+    },
+    "tl": {
+        "message": "isi-Filipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "isi-Turkish",
+        "description": ""
+    },
+    "uk": {
+        "message": "isi-Ukrainian",
+        "description": ""
+    },
+    "ur": {
+        "message": "isi-Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "isi-Uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "isi-Vietnamese",
+        "description": ""
+    },
+    "xh": {
+        "message": "isiXhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "isi-Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "isi-Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "isi-Chinese",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "isi-Chinese (Traditional)",
+        "description": ""
+    },
+    "zu": {
+        "message": "isiZulu",
+        "description": ""
+    }
+}

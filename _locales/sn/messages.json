@@ -1,0 +1,418 @@
+{
+    "af": {
+        "message": "ChiAfurikanzi",
+        "description": ""
+    },
+    "am": {
+        "message": "ChiAmharic",
+        "description": ""
+    },
+    "ar": {
+        "message": "ChiArabhu",
+        "description": ""
+    },
+    "auto": {
+        "message": "Ziva zita remutauro",
+        "description": ""
+    },
+    "az": {
+        "message": "ChiAzabhaijani",
+        "description": ""
+    },
+    "be": {
+        "message": "ChiBelarusia",
+        "description": ""
+    },
+    "bg": {
+        "message": "ChiBulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "ChiBengari",
+        "description": ""
+    },
+    "bs": {
+        "message": "ChiBoziniya",
+        "description": ""
+    },
+    "ca": {
+        "message": "ChiCatalan",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ChiCebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "ChiKosiki",
+        "description": ""
+    },
+    "cs": {
+        "message": "ChiCheki",
+        "description": ""
+    },
+    "cy": {
+        "message": "ChiWereshi",
+        "description": ""
+    },
+    "da": {
+        "message": "ChiDhachi",
+        "description": ""
+    },
+    "de": {
+        "message": "ChiJerimani",
+        "description": ""
+    },
+    "el": {
+        "message": "ChiGiriki",
+        "description": ""
+    },
+    "en": {
+        "message": "chirungu",
+        "description": ""
+    },
+    "eo": {
+        "message": "ChiEsperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "ChiSipanishi",
+        "description": ""
+    },
+    "et": {
+        "message": "ChiEstonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "ChiBasque",
+        "description": ""
+    },
+    "fa": {
+        "message": "ChiPezhiya",
+        "description": ""
+    },
+    "fi": {
+        "message": "ChiFinishi",
+        "description": ""
+    },
+    "fr": {
+        "message": "ChiFurenji",
+        "description": ""
+    },
+    "fy": {
+        "message": "ChiFrisia",
+        "description": ""
+    },
+    "ga": {
+        "message": "ChiIrish",
+        "description": ""
+    },
+    "gd": {
+        "message": "ChiSikoti",
+        "description": ""
+    },
+    "gl": {
+        "message": "ChiGalicia",
+        "description": ""
+    },
+    "gu": {
+        "message": "ChiGujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "ChiHausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "ChiHawai",
+        "description": ""
+    },
+    "hi": {
+        "message": "ChiHindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ChiHmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "ChiCroatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "ChiCreole chekuHaiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "ChiHungaria",
+        "description": ""
+    },
+    "hy": {
+        "message": "ChiArmenia",
+        "description": ""
+    },
+    "id": {
+        "message": "ChiIndonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "ChiIgbo",
+        "description": ""
+    },
+    "is": {
+        "message": "ChekuIceland",
+        "description": ""
+    },
+    "it": {
+        "message": "ChiTariyana",
+        "description": ""
+    },
+    "iw": {
+        "message": "ChiHebheru",
+        "description": ""
+    },
+    "ja": {
+        "message": "ChiJapanizi",
+        "description": ""
+    },
+    "jw": {
+        "message": "ChiJavanese",
+        "description": ""
+    },
+    "ka": {
+        "message": "ChiJojia",
+        "description": ""
+    },
+    "kk": {
+        "message": "ChiKazaki",
+        "description": ""
+    },
+    "km": {
+        "message": "ChiKhmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "ChiKannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "ChiKoriya",
+        "description": ""
+    },
+    "ku": {
+        "message": "ChiKurdish (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "ChiKirigizi",
+        "description": ""
+    },
+    "la": {
+        "message": "ChiRatini",
+        "description": ""
+    },
+    "lb": {
+        "message": "ChiLuxembourg",
+        "description": ""
+    },
+    "lo": {
+        "message": "ChiLao",
+        "description": ""
+    },
+    "lt": {
+        "message": "ChiLithuania",
+        "description": ""
+    },
+    "lv": {
+        "message": "ChiLatvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "ChiMaragasi",
+        "description": ""
+    },
+    "mi": {
+        "message": "ChiMaori",
+        "description": ""
+    },
+    "mk": {
+        "message": "ChiMakedhoniya",
+        "description": ""
+    },
+    "ml": {
+        "message": "ChiMalayam",
+        "description": ""
+    },
+    "mn": {
+        "message": "ChiMongolia",
+        "description": ""
+    },
+    "mr": {
+        "message": "ChiMarathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "ChiMalay",
+        "description": ""
+    },
+    "mt": {
+        "message": "ChiMaltese",
+        "description": ""
+    },
+    "my": {
+        "message": "ChiMyanmar (ChekuBurma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "ChiNepari",
+        "description": ""
+    },
+    "no": {
+        "message": "ChiNorweji",
+        "description": ""
+    },
+    "ny": {
+        "message": "ChiChewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "ChiPunjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "ChiPorishi",
+        "description": ""
+    },
+    "ps": {
+        "message": "ChiPashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Chiputukezi",
+        "description": ""
+    },
+    "ro": {
+        "message": "ChiRomania",
+        "description": ""
+    },
+    "ru": {
+        "message": "ChiRashiya",
+        "description": ""
+    },
+    "sd": {
+        "message": "ChiSindi",
+        "description": ""
+    },
+    "si": {
+        "message": "ChiSinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "ChiSlovak",
+        "description": ""
+    },
+    "sl": {
+        "message": "ChiSlovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "ChiSamoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "ChiShona",
+        "description": ""
+    },
+    "so": {
+        "message": "ChiSomali",
+        "description": ""
+    },
+    "sq": {
+        "message": "ChiAlbania",
+        "description": ""
+    },
+    "sr": {
+        "message": "ChiSebhiya",
+        "description": ""
+    },
+    "st": {
+        "message": "ChiSutu",
+        "description": ""
+    },
+    "su": {
+        "message": "ChiSundani",
+        "description": ""
+    },
+    "sv": {
+        "message": "ChiSiwidhi",
+        "description": ""
+    },
+    "sw": {
+        "message": "ChiSwahilli",
+        "description": ""
+    },
+    "ta": {
+        "message": "ChiTamil",
+        "description": ""
+    },
+    "te": {
+        "message": "ChiTelugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "ChiTajiki",
+        "description": ""
+    },
+    "th": {
+        "message": "ChiThai",
+        "description": ""
+    },
+    "tl": {
+        "message": "ChiFiripino",
+        "description": ""
+    },
+    "tr": {
+        "message": "ChiTurkey",
+        "description": ""
+    },
+    "uk": {
+        "message": "ChiUkrain",
+        "description": ""
+    },
+    "ur": {
+        "message": "ChiUrdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "ChiUzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "ChiVietnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "mu Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "ChiYidhi",
+        "description": ""
+    },
+    "yo": {
+        "message": "ChiYoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "chiChina",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "chiChina (Chechinyakare)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ChiZulu",
+        "description": ""
+    }
+}

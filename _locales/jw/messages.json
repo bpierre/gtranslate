@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Basa Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Basa Amharik",
+        "description": ""
+    },
+    "ar": {
+        "message": "Basa Arab",
+        "description": ""
+    },
+    "auto": {
+        "message": "Deteksi basa",
+        "description": ""
+    },
+    "az": {
+        "message": "Basa Azerbaijan",
+        "description": ""
+    },
+    "be": {
+        "message": "Basa Belarusia",
+        "description": ""
+    },
+    "bg": {
+        "message": "Basa Bulgaria",
+        "description": ""
+    },
+    "bn": {
+        "message": "Basa Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Basa Bosnia",
+        "description": ""
+    },
+    "ca": {
+        "message": "Basa Katala",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Basa Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Basa Korsika",
+        "description": ""
+    },
+    "cs": {
+        "message": "Basa Ceko",
+        "description": ""
+    },
+    "cy": {
+        "message": "Basa Wales",
+        "description": ""
+    },
+    "da": {
+        "message": "Basa Denmark",
+        "description": ""
+    },
+    "de": {
+        "message": "Basa Jerman",
+        "description": ""
+    },
+    "el": {
+        "message": "Basa Yunani",
+        "description": ""
+    },
+    "en": {
+        "message": "Basa Inggris",
+        "description": ""
+    },
+    "eo": {
+        "message": "Basa Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Basa Spanyol",
+        "description": ""
+    },
+    "et": {
+        "message": "Basa Estonia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Basa Basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "Basa Persia",
+        "description": ""
+    },
+    "fi": {
+        "message": "Basa Finlandia",
+        "description": ""
+    },
+    "fr": {
+        "message": "Basa Prancis",
+        "description": ""
+    },
+    "fy": {
+        "message": "Basa Farisi",
+        "description": ""
+    },
+    "ga": {
+        "message": "Basa Irlandia",
+        "description": ""
+    },
+    "gd": {
+        "message": "Basa Scots Gaelik",
+        "description": ""
+    },
+    "gl": {
+        "message": "Basa Galisia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Basa Gujarat",
+        "description": ""
+    },
+    "ha": {
+        "message": "Basa Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Basa Hawai",
+        "description": ""
+    },
+    "hi": {
+        "message": "Basa India",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Basa Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Basa Kroasia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Basa Haiti Kreol",
+        "description": ""
+    },
+    "hu": {
+        "message": "Basa Hungaria",
+        "description": ""
+    },
+    "hy": {
+        "message": "Basa Armenia",
+        "description": ""
+    },
+    "id": {
+        "message": "Basa Indonesia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Basa Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Basa Islandia",
+        "description": ""
+    },
+    "it": {
+        "message": "Basa Italia",
+        "description": ""
+    },
+    "iw": {
+        "message": "Basa Ibrani",
+        "description": ""
+    },
+    "ja": {
+        "message": "Basa Jepang",
+        "description": ""
+    },
+    "jw": {
+        "message": "Basa Jawa",
+        "description": ""
+    },
+    "ka": {
+        "message": "Basa Georgia",
+        "description": ""
+    },
+    "kk": {
+        "message": "Basa Kazakhstan",
+        "description": ""
+    },
+    "km": {
+        "message": "Basa Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Basa Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Basa Korea",
+        "description": ""
+    },
+    "ku": {
+        "message": "Bahasa Kurdi (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Basa Kirgiz",
+        "description": ""
+    },
+    "la": {
+        "message": "Basa Latin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Basa Luksembourg",
+        "description": ""
+    },
+    "lo": {
+        "message": "Basa Laos",
+        "description": ""
+    },
+    "lt": {
+        "message": "Basa Lituania",
+        "description": ""
+    },
+    "lv": {
+        "message": "Basa Latvia",
+        "description": ""
+    },
+    "mg": {
+        "message": "Basa Malagasi",
+        "description": ""
+    },
+    "mi": {
+        "message": "Basa Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Basa Makedonia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Basa Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Basa Mongol",
+        "description": ""
+    },
+    "mr": {
+        "message": "Basa Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Basa Malaysia",
+        "description": ""
+    },
+    "mt": {
+        "message": "Basa Malta",
+        "description": ""
+    },
+    "my": {
+        "message": "Basa Myanmar (Burma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Basa Nepal",
+        "description": ""
+    },
+    "nl": {
+        "message": "Basa Londo",
+        "description": ""
+    },
+    "no": {
+        "message": "Basa Norwegia",
+        "description": ""
+    },
+    "ny": {
+        "message": "Basa Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Basa Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Basa Polandia",
+        "description": ""
+    },
+    "ps": {
+        "message": "Basa Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Basa Portugis",
+        "description": ""
+    },
+    "ro": {
+        "message": "Basa Romawi",
+        "description": ""
+    },
+    "ru": {
+        "message": "Basa Rusia",
+        "description": ""
+    },
+    "sd": {
+        "message": "Basa Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Basa Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Basa Slovakia",
+        "description": ""
+    },
+    "sl": {
+        "message": "Basa Slovenia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Basa Samoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Basa Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Basa Somalia",
+        "description": ""
+    },
+    "sq": {
+        "message": "Basa Albania",
+        "description": ""
+    },
+    "sr": {
+        "message": "Basa Serbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Basa Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Basa Sunda",
+        "description": ""
+    },
+    "sv": {
+        "message": "Basa Swedia",
+        "description": ""
+    },
+    "sw": {
+        "message": "Basa Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Basa Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Basa Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Basa Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Basa Thailand",
+        "description": ""
+    },
+    "tl": {
+        "message": "Basa Tagalog",
+        "description": ""
+    },
+    "tr": {
+        "message": "Basa Turki",
+        "description": ""
+    },
+    "uk": {
+        "message": "Basa Ukrania",
+        "description": ""
+    },
+    "ur": {
+        "message": "Basa Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Basa Uzbekistan",
+        "description": ""
+    },
+    "vi": {
+        "message": "Basa Vietnam",
+        "description": ""
+    },
+    "xh": {
+        "message": "Basa Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Basa Yahudi",
+        "description": ""
+    },
+    "yo": {
+        "message": "Basa Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Basa Cina",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Basa Cina (Kuna)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Basa Zulu",
+        "description": ""
+    }
+}

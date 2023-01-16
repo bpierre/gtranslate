@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Harshen Afirkanci",
+        "description": ""
+    },
+    "am": {
+        "message": "Harshen Amharik",
+        "description": ""
+    },
+    "ar": {
+        "message": "Larabci",
+        "description": ""
+    },
+    "auto": {
+        "message": "Tsinkayo harshe",
+        "description": ""
+    },
+    "az": {
+        "message": "Harshen Azerbaijanci",
+        "description": ""
+    },
+    "be": {
+        "message": "Harshen Belarushiyanci",
+        "description": ""
+    },
+    "bg": {
+        "message": "Harshen Bulgariyanci",
+        "description": ""
+    },
+    "bn": {
+        "message": "Harshen Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Harshen Bosniyanci",
+        "description": ""
+    },
+    "ca": {
+        "message": "Harshen Kataloniyanchi",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Harshen Cebuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Harshen Kosika",
+        "description": ""
+    },
+    "cs": {
+        "message": "Harshen Czech",
+        "description": ""
+    },
+    "cy": {
+        "message": "Harshen Welsh",
+        "description": ""
+    },
+    "da": {
+        "message": "Harshen Danish",
+        "description": ""
+    },
+    "de": {
+        "message": "Jamusanci",
+        "description": ""
+    },
+    "el": {
+        "message": "Harshen Girka",
+        "description": ""
+    },
+    "en": {
+        "message": "Harshen Turanci",
+        "description": ""
+    },
+    "eo": {
+        "message": "Harshen Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Sifaniyanci",
+        "description": ""
+    },
+    "et": {
+        "message": "Harshen Istoniyanchi",
+        "description": ""
+    },
+    "eu": {
+        "message": "Harshen Basque",
+        "description": ""
+    },
+    "fa": {
+        "message": "Harshen Farisanci",
+        "description": ""
+    },
+    "fi": {
+        "message": "Harshen Finnish",
+        "description": ""
+    },
+    "fr": {
+        "message": "Faransanci",
+        "description": ""
+    },
+    "fy": {
+        "message": "Harshen Firsi",
+        "description": ""
+    },
+    "ga": {
+        "message": "Harshen Irish",
+        "description": ""
+    },
+    "gd": {
+        "message": "Harshen Gaelic na Scots",
+        "description": ""
+    },
+    "gl": {
+        "message": "Harshen Galic",
+        "description": ""
+    },
+    "gu": {
+        "message": "Harshen Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Harshen Hawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Harshen Indiyanci",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Harshen Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Harshen Croatia",
+        "description": ""
+    },
+    "ht": {
+        "message": "Harshen Creole na Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Harshen Hongeriyanchi",
+        "description": ""
+    },
+    "hy": {
+        "message": "Harshen Armeniyanci",
+        "description": ""
+    },
+    "id": {
+        "message": "Harshen Indonesiya",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Harshen Icelandic",
+        "description": ""
+    },
+    "it": {
+        "message": "Italiyanci",
+        "description": ""
+    },
+    "iw": {
+        "message": "Harshen Hebrew",
+        "description": ""
+    },
+    "ja": {
+        "message": "Jafananchi",
+        "description": ""
+    },
+    "jw": {
+        "message": "Harshen Javanisanci",
+        "description": ""
+    },
+    "ka": {
+        "message": "Harshen Jojiyanci",
+        "description": ""
+    },
+    "kk": {
+        "message": "Harshen Karzakh",
+        "description": ""
+    },
+    "km": {
+        "message": "Harshen Khmer",
+        "description": ""
+    },
+    "kn": {
+        "message": "Harshen Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Koriyanci",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurdish (Kurmanji)",
+        "description": ""
+    },
+    "ky": {
+        "message": "Harshen Kirgizanci",
+        "description": ""
+    },
+    "la": {
+        "message": "Harshen Latin",
+        "description": ""
+    },
+    "lb": {
+        "message": "Harshen Luxembourg",
+        "description": ""
+    },
+    "lo": {
+        "message": "Harshen Laotian",
+        "description": ""
+    },
+    "lt": {
+        "message": "Harshen Lituweniyanchi",
+        "description": ""
+    },
+    "lv": {
+        "message": "Harshen Latbiyanchi",
+        "description": ""
+    },
+    "mg": {
+        "message": "Harshen Malagasy",
+        "description": ""
+    },
+    "mi": {
+        "message": "Harshen Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Harshen Masedoniya",
+        "description": ""
+    },
+    "ml": {
+        "message": "Harshen Maleyalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Harshen Mongolia",
+        "description": ""
+    },
+    "mr": {
+        "message": "Harshen Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Harshen Malay",
+        "description": ""
+    },
+    "mt": {
+        "message": "Harshen Maltese",
+        "description": ""
+    },
+    "my": {
+        "message": "Harshen Myanmar (Burma)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Harshen Nepal",
+        "description": ""
+    },
+    "nl": {
+        "message": "Harshen Dutch",
+        "description": ""
+    },
+    "no": {
+        "message": "Harshen Norway",
+        "description": ""
+    },
+    "ny": {
+        "message": "Harshen Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Harshen Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Harshen Polish",
+        "description": ""
+    },
+    "ps": {
+        "message": "Harshen Pashtanci",
+        "description": ""
+    },
+    "pt": {
+        "message": "Harshen Portugal",
+        "description": ""
+    },
+    "ro": {
+        "message": "Harshen Romaniyanchi",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rashiyanchi",
+        "description": ""
+    },
+    "sd": {
+        "message": "Harshen Sindiyanci",
+        "description": ""
+    },
+    "si": {
+        "message": "Sinhala",
+        "description": ""
+    },
+    "sk": {
+        "message": "Basulake",
+        "description": ""
+    },
+    "sl": {
+        "message": "Harshen Sulobeniya",
+        "description": ""
+    },
+    "sm": {
+        "message": "Harshen Samoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Harshen Shona",
+        "description": ""
+    },
+    "so": {
+        "message": "Harshen Somaliya",
+        "description": ""
+    },
+    "sq": {
+        "message": "Harshen Albaniya",
+        "description": ""
+    },
+    "sr": {
+        "message": "Harshen Serbia",
+        "description": ""
+    },
+    "st": {
+        "message": "Harshen Sesotanci",
+        "description": ""
+    },
+    "su": {
+        "message": "Harshen Sudan",
+        "description": ""
+    },
+    "sv": {
+        "message": "Harshen Swedish",
+        "description": ""
+    },
+    "sw": {
+        "message": "Harshen Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Harshen Tamil",
+        "description": ""
+    },
+    "te": {
+        "message": "Harshen Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Harshen Tajik",
+        "description": ""
+    },
+    "th": {
+        "message": "Harshen Tayanci",
+        "description": ""
+    },
+    "tl": {
+        "message": "Harshen Filipino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Harshen Turkiyya",
+        "description": ""
+    },
+    "uk": {
+        "message": "Harshen Ukrain",
+        "description": ""
+    },
+    "ur": {
+        "message": "Harshen Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Harshen Uzbek",
+        "description": ""
+    },
+    "vi": {
+        "message": "Harshen Vietnamese",
+        "description": ""
+    },
+    "xh": {
+        "message": "Harshen Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Harshen Yiddish",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yarabanchi",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Harshen Sinanci",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Harshen Sinanci (Na Gargajiya)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Harshen Zulu",
+        "description": ""
+    }
+}

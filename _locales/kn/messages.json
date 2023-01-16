@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "ಆಫ್ರಿಕಾನ್ಸ್",
+        "description": ""
+    },
+    "am": {
+        "message": "ಅಮಹಾರಿಕ್",
+        "description": ""
+    },
+    "ar": {
+        "message": "ಅರಬ್ಬಿ",
+        "description": ""
+    },
+    "auto": {
+        "message": "ಭಾಷೆಯನ್ನು ಪತ್ತೆಮಾಡಿ",
+        "description": ""
+    },
+    "az": {
+        "message": "ಅಜರ್ಬೈಜಾನಿ",
+        "description": ""
+    },
+    "be": {
+        "message": "ಬೆಲರೂಸಿಯನ್",
+        "description": ""
+    },
+    "bg": {
+        "message": "ಬಲ್ಗೇರಿಯನ್",
+        "description": ""
+    },
+    "bn": {
+        "message": "ಬಂಗಾಳಿ",
+        "description": ""
+    },
+    "bs": {
+        "message": "ಬೋಸ್ನಿಯನ್",
+        "description": ""
+    },
+    "ca": {
+        "message": "ಕ್ಯಾಟಲನ್",
+        "description": ""
+    },
+    "ceb": {
+        "message": "ಸಿಬ್ಯುವಾನೊ",
+        "description": ""
+    },
+    "co": {
+        "message": "ಕೊರ್ಸಿಕನ್",
+        "description": ""
+    },
+    "cs": {
+        "message": "ಝೆಕ್‌",
+        "description": ""
+    },
+    "cy": {
+        "message": "ವೆಲ್ಶ್",
+        "description": ""
+    },
+    "da": {
+        "message": "ಡ್ಯಾನಿಷ್",
+        "description": ""
+    },
+    "de": {
+        "message": "ಜರ್ಮನ್",
+        "description": ""
+    },
+    "el": {
+        "message": "ಗ್ರೀಕ್",
+        "description": ""
+    },
+    "en": {
+        "message": "ಇಂಗ್ಲಿಷ್‌‌",
+        "description": ""
+    },
+    "eo": {
+        "message": "ಎಸ್ಪೆರಾಂಟೋ",
+        "description": ""
+    },
+    "es": {
+        "message": "ಸ್ಪ್ಯಾನಿಷ್",
+        "description": ""
+    },
+    "et": {
+        "message": "ಎಸ್ಟೋನಿಯನ್",
+        "description": ""
+    },
+    "eu": {
+        "message": "ಬಾಸ್ಕ್",
+        "description": ""
+    },
+    "fa": {
+        "message": "ಫಾರ್ಸಿ",
+        "description": ""
+    },
+    "fi": {
+        "message": "ಫಿನ್ನಿಷ್",
+        "description": ""
+    },
+    "fr": {
+        "message": "ಫ್ರೆಂಚ್",
+        "description": ""
+    },
+    "fy": {
+        "message": "ಫ್ರಿಸಿಯನ್",
+        "description": ""
+    },
+    "ga": {
+        "message": "ಐರಿಷ್",
+        "description": ""
+    },
+    "gd": {
+        "message": "ಸ್ಕಾಟ್ಸ್ ಗ್ಯಾಲಿಕ್",
+        "description": ""
+    },
+    "gl": {
+        "message": "ಗ್ಯಾಲೀಷಿಯನ್",
+        "description": ""
+    },
+    "gu": {
+        "message": "ಗುಜರಾತಿ",
+        "description": ""
+    },
+    "ha": {
+        "message": "ಹೌಸಾ",
+        "description": ""
+    },
+    "haw": {
+        "message": "ಹವಾಯಿಯನ್",
+        "description": ""
+    },
+    "hi": {
+        "message": "ಹಿಂದಿ",
+        "description": ""
+    },
+    "hmn": {
+        "message": "ಹಮಾಂಗ್",
+        "description": ""
+    },
+    "hr": {
+        "message": "ಕ್ರೊಯೇಷಿಯನ್",
+        "description": ""
+    },
+    "ht": {
+        "message": "ಹಯಥಿಯನ್‌ ಕ್ರಿಯೋಲ್‌",
+        "description": ""
+    },
+    "hu": {
+        "message": "ಹಂಗೇರಿಯನ್",
+        "description": ""
+    },
+    "hy": {
+        "message": "ಆರ್ಮೇನಿಯನ್",
+        "description": ""
+    },
+    "id": {
+        "message": "ಇಂಡೋನೇಷಿಯನ್",
+        "description": ""
+    },
+    "ig": {
+        "message": "ಇಗ್ಬೋ",
+        "description": ""
+    },
+    "is": {
+        "message": "ಐಸ್‌ಲ್ಯಾಂಡಿಕ್‌",
+        "description": ""
+    },
+    "it": {
+        "message": "ಇಟಾಲಿಯನ್",
+        "description": ""
+    },
+    "iw": {
+        "message": "ಹೀಬ್ರೂ",
+        "description": ""
+    },
+    "ja": {
+        "message": "ಜಪಾನಿ",
+        "description": ""
+    },
+    "jw": {
+        "message": "ಜಾವಾನೀಸ್",
+        "description": ""
+    },
+    "ka": {
+        "message": "ಜಾರ್ಜಿಯನ್",
+        "description": ""
+    },
+    "kk": {
+        "message": "ಕಝಕ್",
+        "description": ""
+    },
+    "km": {
+        "message": "ಖಮೆರ್",
+        "description": ""
+    },
+    "kn": {
+        "message": "ಕನ್ನಡ",
+        "description": ""
+    },
+    "ko": {
+        "message": "ಕೊರಿಯನ್",
+        "description": ""
+    },
+    "ku": {
+        "message": "ಕುರ್ದಿಶ್",
+        "description": ""
+    },
+    "ky": {
+        "message": "ಕಿರ್ಗಿಜ್",
+        "description": ""
+    },
+    "la": {
+        "message": "ಲ್ಯಾಟಿನ್",
+        "description": ""
+    },
+    "lb": {
+        "message": "ಲಕ್ಸಂಬರ್ಗಿಶ್",
+        "description": ""
+    },
+    "lo": {
+        "message": "ಲಾವೋ",
+        "description": ""
+    },
+    "lt": {
+        "message": "ಲಿಥುವೇನಿಯನ್",
+        "description": ""
+    },
+    "lv": {
+        "message": "ಲ್ಯಾಟ್ವಿಯನ್‌",
+        "description": ""
+    },
+    "mg": {
+        "message": "ಮಲಗಾಸಿ",
+        "description": ""
+    },
+    "mi": {
+        "message": "ಮಾವೋರಿ",
+        "description": ""
+    },
+    "mk": {
+        "message": "ಮ್ಯಾಸೆಡೋನಿಯನ್",
+        "description": ""
+    },
+    "ml": {
+        "message": "ಮಲಯಾಳಂ",
+        "description": ""
+    },
+    "mn": {
+        "message": "ಮಂಗೋಲಿಯನ್",
+        "description": ""
+    },
+    "mr": {
+        "message": "ಮರಾಠಿ",
+        "description": ""
+    },
+    "ms": {
+        "message": "ಮಲಯ",
+        "description": ""
+    },
+    "mt": {
+        "message": "ಮಾಲ್ಟೀಸ್",
+        "description": ""
+    },
+    "my": {
+        "message": "ಬರ್ಮೀಸ್",
+        "description": ""
+    },
+    "ne": {
+        "message": "ನೇಪಾಳಿ",
+        "description": ""
+    },
+    "nl": {
+        "message": "ಡಚ್",
+        "description": ""
+    },
+    "no": {
+        "message": "ನಾರ್ವೇಜಿಯನ್‌",
+        "description": ""
+    },
+    "ny": {
+        "message": "ಚಿಚೆವಾ",
+        "description": ""
+    },
+    "pa": {
+        "message": "ಪಂಜಾಬಿ",
+        "description": ""
+    },
+    "pl": {
+        "message": "ಪೋಲಿಷ್",
+        "description": ""
+    },
+    "ps": {
+        "message": "ಪಶ್ತೊ",
+        "description": ""
+    },
+    "pt": {
+        "message": "ಪೋರ್ಚುಗೀಸ್",
+        "description": ""
+    },
+    "ro": {
+        "message": "ರೊಮೇನಿಯನ್",
+        "description": ""
+    },
+    "ru": {
+        "message": "ರಷಿಯನ್",
+        "description": ""
+    },
+    "sd": {
+        "message": "ಸಿಂಧಿ",
+        "description": ""
+    },
+    "si": {
+        "message": "ಸಿಂಹಳಿ",
+        "description": ""
+    },
+    "sk": {
+        "message": "ಸ್ಲೊವಾಕ್",
+        "description": ""
+    },
+    "sl": {
+        "message": "ಸ್ಲೊವೆನಿಯನ್",
+        "description": ""
+    },
+    "sm": {
+        "message": "ಸಮೋನ್",
+        "description": ""
+    },
+    "sn": {
+        "message": "ಶೋನಾ",
+        "description": ""
+    },
+    "so": {
+        "message": "ಸೊಮಾಲಿ",
+        "description": ""
+    },
+    "sq": {
+        "message": "ಆಲ್ಬೇನಿಯನ್",
+        "description": ""
+    },
+    "sr": {
+        "message": "ಸರ್ಬಿಯನ್",
+        "description": ""
+    },
+    "st": {
+        "message": "ಸೆಸೊತೊ",
+        "description": ""
+    },
+    "su": {
+        "message": "ಸುಂಡಾನೀಸ್‌",
+        "description": ""
+    },
+    "sv": {
+        "message": "ಸ್ವೀಡಿಷ್",
+        "description": ""
+    },
+    "sw": {
+        "message": "ಸ್ವಾಹಿಲಿ",
+        "description": ""
+    },
+    "ta": {
+        "message": "ತಮಿಳು",
+        "description": ""
+    },
+    "te": {
+        "message": "ತೆಲುಗು",
+        "description": ""
+    },
+    "tg": {
+        "message": "ತಜಿಕ್",
+        "description": ""
+    },
+    "th": {
+        "message": "ಥಾಯ್",
+        "description": ""
+    },
+    "tl": {
+        "message": "ಫಿಲಿಪಿನೋ",
+        "description": ""
+    },
+    "tr": {
+        "message": "ಟರ್ಕಿಷ್",
+        "description": ""
+    },
+    "uk": {
+        "message": "ಯುಕ್ರೇನಿಯನ್",
+        "description": ""
+    },
+    "ur": {
+        "message": "ಉರ್ದು",
+        "description": ""
+    },
+    "uz": {
+        "message": "ಉಜ್ಬೆಕ್",
+        "description": ""
+    },
+    "vi": {
+        "message": "ವಿಯೆಟ್ನಾಮಿ",
+        "description": ""
+    },
+    "xh": {
+        "message": "ಕ್ಷೋಸ",
+        "description": ""
+    },
+    "yi": {
+        "message": "ಯಿಡ್ಡಿಶ್",
+        "description": ""
+    },
+    "yo": {
+        "message": "ಯೊರುಬಾ",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "ಚೀನಿ",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "ಚೀನಿ (ಸಾಂಪ್ರದಾಯಿಕ)",
+        "description": ""
+    },
+    "zu": {
+        "message": "ಜುಲು",
+        "description": ""
+    }
+}

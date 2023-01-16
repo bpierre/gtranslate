@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "afrikanso",
+        "description": ""
+    },
+    "am": {
+        "message": "amharų",
+        "description": ""
+    },
+    "ar": {
+        "message": "arabų",
+        "description": ""
+    },
+    "auto": {
+        "message": "Nustatyti kalbą",
+        "description": ""
+    },
+    "az": {
+        "message": "azerbaidžaniečių",
+        "description": ""
+    },
+    "be": {
+        "message": "baltarusių",
+        "description": ""
+    },
+    "bg": {
+        "message": "bulgarų",
+        "description": ""
+    },
+    "bn": {
+        "message": "bengalų",
+        "description": ""
+    },
+    "bs": {
+        "message": "bosnių",
+        "description": ""
+    },
+    "ca": {
+        "message": "kataloniečių",
+        "description": ""
+    },
+    "ceb": {
+        "message": "sebuanų",
+        "description": ""
+    },
+    "co": {
+        "message": "korsikiečių",
+        "description": ""
+    },
+    "cs": {
+        "message": "čekų",
+        "description": ""
+    },
+    "cy": {
+        "message": "valų",
+        "description": ""
+    },
+    "da": {
+        "message": "danų",
+        "description": ""
+    },
+    "de": {
+        "message": "vokiečių",
+        "description": ""
+    },
+    "el": {
+        "message": "graikų",
+        "description": ""
+    },
+    "en": {
+        "message": "anglų",
+        "description": ""
+    },
+    "eo": {
+        "message": "esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "ispanų",
+        "description": ""
+    },
+    "et": {
+        "message": "estų",
+        "description": ""
+    },
+    "eu": {
+        "message": "baskų",
+        "description": ""
+    },
+    "fa": {
+        "message": "persų",
+        "description": ""
+    },
+    "fi": {
+        "message": "suomių",
+        "description": ""
+    },
+    "fr": {
+        "message": "prancūzų",
+        "description": ""
+    },
+    "fy": {
+        "message": "fryzų",
+        "description": ""
+    },
+    "ga": {
+        "message": "airių",
+        "description": ""
+    },
+    "gd": {
+        "message": "škotų (gėlų)",
+        "description": ""
+    },
+    "gl": {
+        "message": "galisų",
+        "description": ""
+    },
+    "gu": {
+        "message": "gudžaratų",
+        "description": ""
+    },
+    "ha": {
+        "message": "hausų",
+        "description": ""
+    },
+    "haw": {
+        "message": "havajiečių",
+        "description": ""
+    },
+    "hi": {
+        "message": "hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "hmongų",
+        "description": ""
+    },
+    "hr": {
+        "message": "kroatų",
+        "description": ""
+    },
+    "ht": {
+        "message": "haičio kreolų",
+        "description": ""
+    },
+    "hu": {
+        "message": "vengrų",
+        "description": ""
+    },
+    "hy": {
+        "message": "armėnų",
+        "description": ""
+    },
+    "id": {
+        "message": "indoneziečių",
+        "description": ""
+    },
+    "ig": {
+        "message": "igbų",
+        "description": ""
+    },
+    "is": {
+        "message": "islandų",
+        "description": ""
+    },
+    "it": {
+        "message": "italų",
+        "description": ""
+    },
+    "iw": {
+        "message": "hebrajų",
+        "description": ""
+    },
+    "ja": {
+        "message": "japonų",
+        "description": ""
+    },
+    "jw": {
+        "message": "javiečių",
+        "description": ""
+    },
+    "ka": {
+        "message": "gruzinų",
+        "description": ""
+    },
+    "kk": {
+        "message": "kazachų",
+        "description": ""
+    },
+    "km": {
+        "message": "khmerų",
+        "description": ""
+    },
+    "kn": {
+        "message": "kanadų",
+        "description": ""
+    },
+    "ko": {
+        "message": "korėjiečių",
+        "description": ""
+    },
+    "ku": {
+        "message": "kurdų",
+        "description": ""
+    },
+    "ky": {
+        "message": "kirgizų",
+        "description": ""
+    },
+    "la": {
+        "message": "lotynų",
+        "description": ""
+    },
+    "lb": {
+        "message": "liuksemburgiečių",
+        "description": ""
+    },
+    "lo": {
+        "message": "laosiečių",
+        "description": ""
+    },
+    "lt": {
+        "message": "lietuvių",
+        "description": ""
+    },
+    "lv": {
+        "message": "latvių",
+        "description": ""
+    },
+    "mg": {
+        "message": "malagasių",
+        "description": ""
+    },
+    "mi": {
+        "message": "maorių",
+        "description": ""
+    },
+    "mk": {
+        "message": "makedoniečių",
+        "description": ""
+    },
+    "ml": {
+        "message": "malajalių",
+        "description": ""
+    },
+    "mn": {
+        "message": "mongolų",
+        "description": ""
+    },
+    "mr": {
+        "message": "maratų",
+        "description": ""
+    },
+    "ms": {
+        "message": "malajiečių",
+        "description": ""
+    },
+    "mt": {
+        "message": "maltiečių",
+        "description": ""
+    },
+    "my": {
+        "message": "birmiečių",
+        "description": ""
+    },
+    "ne": {
+        "message": "nepaliečių",
+        "description": ""
+    },
+    "nl": {
+        "message": "olandų",
+        "description": ""
+    },
+    "no": {
+        "message": "norvegų",
+        "description": ""
+    },
+    "ny": {
+        "message": "čičeva",
+        "description": ""
+    },
+    "pa": {
+        "message": "pandžabų",
+        "description": ""
+    },
+    "pl": {
+        "message": "lenkų",
+        "description": ""
+    },
+    "ps": {
+        "message": "puštunų (afganų)",
+        "description": ""
+    },
+    "pt": {
+        "message": "portugalų",
+        "description": ""
+    },
+    "ro": {
+        "message": "rumunų",
+        "description": ""
+    },
+    "ru": {
+        "message": "rusų",
+        "description": ""
+    },
+    "sd": {
+        "message": "sindų",
+        "description": ""
+    },
+    "si": {
+        "message": "sinhalų",
+        "description": ""
+    },
+    "sk": {
+        "message": "slovakų",
+        "description": ""
+    },
+    "sl": {
+        "message": "slovėnų",
+        "description": ""
+    },
+    "sm": {
+        "message": "samojiečių",
+        "description": ""
+    },
+    "sn": {
+        "message": "šonų",
+        "description": ""
+    },
+    "so": {
+        "message": "somaliečių",
+        "description": ""
+    },
+    "sq": {
+        "message": "albanų",
+        "description": ""
+    },
+    "sr": {
+        "message": "serbų",
+        "description": ""
+    },
+    "st": {
+        "message": "sesuto",
+        "description": ""
+    },
+    "su": {
+        "message": "sundų",
+        "description": ""
+    },
+    "sv": {
+        "message": "švedų",
+        "description": ""
+    },
+    "sw": {
+        "message": "svahilių",
+        "description": ""
+    },
+    "ta": {
+        "message": "tamilų",
+        "description": ""
+    },
+    "te": {
+        "message": "telugų",
+        "description": ""
+    },
+    "tg": {
+        "message": "tadžikų",
+        "description": ""
+    },
+    "th": {
+        "message": "tajų",
+        "description": ""
+    },
+    "tl": {
+        "message": "tagalų",
+        "description": ""
+    },
+    "tr": {
+        "message": "turkų",
+        "description": ""
+    },
+    "uk": {
+        "message": "ukrainiečių",
+        "description": ""
+    },
+    "ur": {
+        "message": "urdų",
+        "description": ""
+    },
+    "uz": {
+        "message": "uzbekų",
+        "description": ""
+    },
+    "vi": {
+        "message": "vietnamiečių",
+        "description": ""
+    },
+    "xh": {
+        "message": "kosų",
+        "description": ""
+    },
+    "yi": {
+        "message": "jidiš (žydų)",
+        "description": ""
+    },
+    "yo": {
+        "message": "jorubų",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Kinų",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "kinų (tradicinė)",
+        "description": ""
+    },
+    "zu": {
+        "message": "zulusų",
+        "description": ""
+    }
+}

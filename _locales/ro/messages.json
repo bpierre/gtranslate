@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Afrikaans",
+        "description": ""
+    },
+    "am": {
+        "message": "Amharică",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arabă",
+        "description": ""
+    },
+    "auto": {
+        "message": "Selectați limba",
+        "description": ""
+    },
+    "az": {
+        "message": "Azerbaidjană",
+        "description": ""
+    },
+    "be": {
+        "message": "Bielorusă",
+        "description": ""
+    },
+    "bg": {
+        "message": "Bulgară",
+        "description": ""
+    },
+    "bn": {
+        "message": "Bengali",
+        "description": ""
+    },
+    "bs": {
+        "message": "Bosniacă",
+        "description": ""
+    },
+    "ca": {
+        "message": "Catalană",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Cebuană",
+        "description": ""
+    },
+    "co": {
+        "message": "Corsicană",
+        "description": ""
+    },
+    "cs": {
+        "message": "Cehă",
+        "description": ""
+    },
+    "cy": {
+        "message": "Galeză",
+        "description": ""
+    },
+    "da": {
+        "message": "Daneză",
+        "description": ""
+    },
+    "de": {
+        "message": "Germană",
+        "description": ""
+    },
+    "el": {
+        "message": "Greacă",
+        "description": ""
+    },
+    "en": {
+        "message": "Engleză",
+        "description": ""
+    },
+    "eo": {
+        "message": "Esperanto",
+        "description": ""
+    },
+    "es": {
+        "message": "Spaniolă",
+        "description": ""
+    },
+    "et": {
+        "message": "Estonă",
+        "description": ""
+    },
+    "eu": {
+        "message": "Bască",
+        "description": ""
+    },
+    "fa": {
+        "message": "Persană",
+        "description": ""
+    },
+    "fi": {
+        "message": "Finlandeză",
+        "description": ""
+    },
+    "fr": {
+        "message": "Franceză",
+        "description": ""
+    },
+    "fy": {
+        "message": "Frizonă",
+        "description": ""
+    },
+    "ga": {
+        "message": "Irlandeză",
+        "description": ""
+    },
+    "gd": {
+        "message": "Galica scoțiană",
+        "description": ""
+    },
+    "gl": {
+        "message": "Galiciană",
+        "description": ""
+    },
+    "gu": {
+        "message": "Gujarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hausa",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaiiană",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hindi",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Hmong",
+        "description": ""
+    },
+    "hr": {
+        "message": "Croată",
+        "description": ""
+    },
+    "ht": {
+        "message": "Creolă haitiană",
+        "description": ""
+    },
+    "hu": {
+        "message": "Maghiară",
+        "description": ""
+    },
+    "hy": {
+        "message": "Armeană",
+        "description": ""
+    },
+    "id": {
+        "message": "Indoneziană",
+        "description": ""
+    },
+    "ig": {
+        "message": "Igbo",
+        "description": ""
+    },
+    "is": {
+        "message": "Islandeză",
+        "description": ""
+    },
+    "it": {
+        "message": "Italiană",
+        "description": ""
+    },
+    "iw": {
+        "message": "Ebraică",
+        "description": ""
+    },
+    "ja": {
+        "message": "Japoneză",
+        "description": ""
+    },
+    "jw": {
+        "message": "Javaneză",
+        "description": ""
+    },
+    "ka": {
+        "message": "Gruzină",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kazahă",
+        "description": ""
+    },
+    "km": {
+        "message": "Khmeră",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kannada",
+        "description": ""
+    },
+    "ko": {
+        "message": "Coreeană",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kurdă",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kirghiză",
+        "description": ""
+    },
+    "la": {
+        "message": "Latină",
+        "description": ""
+    },
+    "lb": {
+        "message": "Luxemburgheză",
+        "description": ""
+    },
+    "lo": {
+        "message": "Laoțiană",
+        "description": ""
+    },
+    "lt": {
+        "message": "Lituaniană",
+        "description": ""
+    },
+    "lv": {
+        "message": "Letonă",
+        "description": ""
+    },
+    "mg": {
+        "message": "Malgașă",
+        "description": ""
+    },
+    "mi": {
+        "message": "Maori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Macedoneană",
+        "description": ""
+    },
+    "ml": {
+        "message": "Malayalam",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongolă",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marathi",
+        "description": ""
+    },
+    "ms": {
+        "message": "Malaeză",
+        "description": ""
+    },
+    "mt": {
+        "message": "Malteză",
+        "description": ""
+    },
+    "my": {
+        "message": "Birmană",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepaleză",
+        "description": ""
+    },
+    "nl": {
+        "message": "Neerlandeză",
+        "description": ""
+    },
+    "no": {
+        "message": "Norvegiană",
+        "description": ""
+    },
+    "ny": {
+        "message": "Chichewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punjabi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Poloneză",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pashto",
+        "description": ""
+    },
+    "pt": {
+        "message": "Portugheză",
+        "description": ""
+    },
+    "ro": {
+        "message": "Română",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rusă",
+        "description": ""
+    },
+    "sd": {
+        "message": "Sindhi",
+        "description": ""
+    },
+    "si": {
+        "message": "Singhaleză",
+        "description": ""
+    },
+    "sk": {
+        "message": "Slovacă",
+        "description": ""
+    },
+    "sl": {
+        "message": "Slovenă",
+        "description": ""
+    },
+    "sm": {
+        "message": "Samoană",
+        "description": ""
+    },
+    "sn": {
+        "message": "Shonă",
+        "description": ""
+    },
+    "so": {
+        "message": "Somali",
+        "description": ""
+    },
+    "sq": {
+        "message": "Albaneză",
+        "description": ""
+    },
+    "sr": {
+        "message": "Sârbă",
+        "description": ""
+    },
+    "st": {
+        "message": "Sesotho",
+        "description": ""
+    },
+    "su": {
+        "message": "Sundaneză",
+        "description": ""
+    },
+    "sv": {
+        "message": "Suedeză",
+        "description": ""
+    },
+    "sw": {
+        "message": "Swahili",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamilă",
+        "description": ""
+    },
+    "te": {
+        "message": "Telugu",
+        "description": ""
+    },
+    "tg": {
+        "message": "Tadjică",
+        "description": ""
+    },
+    "th": {
+        "message": "Thailandeză",
+        "description": ""
+    },
+    "tl": {
+        "message": "Filipineză",
+        "description": ""
+    },
+    "tr": {
+        "message": "Turcă",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ucraineană",
+        "description": ""
+    },
+    "ur": {
+        "message": "Urdu",
+        "description": ""
+    },
+    "uz": {
+        "message": "Uzbecă",
+        "description": ""
+    },
+    "vi": {
+        "message": "Vietnameză",
+        "description": ""
+    },
+    "xh": {
+        "message": "Xhosa",
+        "description": ""
+    },
+    "yi": {
+        "message": "Idiș",
+        "description": ""
+    },
+    "yo": {
+        "message": "Yoruba",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Chineză",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Chineză (Tradițională)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Zulu",
+        "description": ""
+    }
+}

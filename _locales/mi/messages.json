@@ -1,0 +1,422 @@
+{
+    "af": {
+        "message": "Awherikāna",
+        "description": ""
+    },
+    "am": {
+        "message": "Amariki",
+        "description": ""
+    },
+    "ar": {
+        "message": "Arapi",
+        "description": ""
+    },
+    "auto": {
+        "message": "tautuhi reo",
+        "description": ""
+    },
+    "az": {
+        "message": "Ahepaitani",
+        "description": ""
+    },
+    "be": {
+        "message": "Peraruhia",
+        "description": ""
+    },
+    "bg": {
+        "message": "Purukāriana",
+        "description": ""
+    },
+    "bn": {
+        "message": "Pēnekari",
+        "description": ""
+    },
+    "bs": {
+        "message": "Pōngiana",
+        "description": ""
+    },
+    "ca": {
+        "message": "Katarāna",
+        "description": ""
+    },
+    "ceb": {
+        "message": "Hepuano",
+        "description": ""
+    },
+    "co": {
+        "message": "Kohikana",
+        "description": ""
+    },
+    "cs": {
+        "message": "Tieke",
+        "description": ""
+    },
+    "cy": {
+        "message": "Wēra",
+        "description": ""
+    },
+    "da": {
+        "message": "Tenemāka",
+        "description": ""
+    },
+    "de": {
+        "message": "Tiamana",
+        "description": ""
+    },
+    "el": {
+        "message": "Kiriki",
+        "description": ""
+    },
+    "en": {
+        "message": "Ingarihi",
+        "description": ""
+    },
+    "eo": {
+        "message": "Eperānato",
+        "description": ""
+    },
+    "es": {
+        "message": "Pāniora",
+        "description": ""
+    },
+    "et": {
+        "message": "Etōnia",
+        "description": ""
+    },
+    "eu": {
+        "message": "Pākihi",
+        "description": ""
+    },
+    "fa": {
+        "message": "Perēhia",
+        "description": ""
+    },
+    "fi": {
+        "message": "Hinerangi",
+        "description": ""
+    },
+    "fr": {
+        "message": "Wīwī",
+        "description": ""
+    },
+    "fy": {
+        "message": "Whirihia",
+        "description": ""
+    },
+    "ga": {
+        "message": "Airihi",
+        "description": ""
+    },
+    "gd": {
+        "message": "Tuauri Kotarangi",
+        "description": ""
+    },
+    "gl": {
+        "message": "Karihia",
+        "description": ""
+    },
+    "gu": {
+        "message": "Kutarati",
+        "description": ""
+    },
+    "ha": {
+        "message": "Hauha",
+        "description": ""
+    },
+    "haw": {
+        "message": "Hawaii",
+        "description": ""
+    },
+    "hi": {
+        "message": "Hīni",
+        "description": ""
+    },
+    "hmn": {
+        "message": "Himōngo",
+        "description": ""
+    },
+    "hr": {
+        "message": "Koroātiana",
+        "description": ""
+    },
+    "ht": {
+        "message": "Kereore Haiti",
+        "description": ""
+    },
+    "hu": {
+        "message": "Hanekeria",
+        "description": ""
+    },
+    "hy": {
+        "message": "Amēniana",
+        "description": ""
+    },
+    "id": {
+        "message": "Initonīhia",
+        "description": ""
+    },
+    "ig": {
+        "message": "Ikipō",
+        "description": ""
+    },
+    "is": {
+        "message": "Tiorangi",
+        "description": ""
+    },
+    "it": {
+        "message": "Itāriana",
+        "description": ""
+    },
+    "iw": {
+        "message": "Hiperu",
+        "description": ""
+    },
+    "ja": {
+        "message": "Hapanihi",
+        "description": ""
+    },
+    "jw": {
+        "message": "Hāwanihi",
+        "description": ""
+    },
+    "ka": {
+        "message": "Hōriāna",
+        "description": ""
+    },
+    "kk": {
+        "message": "Kataka",
+        "description": ""
+    },
+    "km": {
+        "message": "Kīma",
+        "description": ""
+    },
+    "kn": {
+        "message": "Kanata",
+        "description": ""
+    },
+    "ko": {
+        "message": "Kōreana",
+        "description": ""
+    },
+    "ku": {
+        "message": "Kūrihi",
+        "description": ""
+    },
+    "ky": {
+        "message": "Kiaki",
+        "description": ""
+    },
+    "la": {
+        "message": "Rātini",
+        "description": ""
+    },
+    "lb": {
+        "message": "Rakapuō",
+        "description": ""
+    },
+    "lo": {
+        "message": "Rāoho",
+        "description": ""
+    },
+    "lt": {
+        "message": "Rituānia",
+        "description": ""
+    },
+    "lv": {
+        "message": "Rāwhiana",
+        "description": ""
+    },
+    "mg": {
+        "message": "Marakāhi",
+        "description": ""
+    },
+    "mi": {
+        "message": "Māori",
+        "description": ""
+    },
+    "mk": {
+        "message": "Makerōnia",
+        "description": ""
+    },
+    "ml": {
+        "message": "Mareiarama",
+        "description": ""
+    },
+    "mn": {
+        "message": "Mongōriana",
+        "description": ""
+    },
+    "mr": {
+        "message": "Marati",
+        "description": ""
+    },
+    "ms": {
+        "message": "Marei",
+        "description": ""
+    },
+    "mt": {
+        "message": "Māratihi",
+        "description": ""
+    },
+    "my": {
+        "message": "Pēma (Purumīhi)",
+        "description": ""
+    },
+    "ne": {
+        "message": "Nepōri",
+        "description": ""
+    },
+    "nl": {
+        "message": "Tati",
+        "description": ""
+    },
+    "no": {
+        "message": "Nōwei",
+        "description": ""
+    },
+    "ny": {
+        "message": "Hihewa",
+        "description": ""
+    },
+    "pa": {
+        "message": "Punatāpi",
+        "description": ""
+    },
+    "pl": {
+        "message": "Pōrana",
+        "description": ""
+    },
+    "ps": {
+        "message": "Pahitū",
+        "description": ""
+    },
+    "pt": {
+        "message": "Potukīhi",
+        "description": ""
+    },
+    "ro": {
+        "message": "Romānia",
+        "description": ""
+    },
+    "ru": {
+        "message": "Rūhia",
+        "description": ""
+    },
+    "sd": {
+        "message": "Hinihi",
+        "description": ""
+    },
+    "si": {
+        "message": "Hinihara",
+        "description": ""
+    },
+    "sk": {
+        "message": "Horowākia",
+        "description": ""
+    },
+    "sl": {
+        "message": "Horowinia",
+        "description": ""
+    },
+    "sm": {
+        "message": "Hāmoa",
+        "description": ""
+    },
+    "sn": {
+        "message": "Hona",
+        "description": ""
+    },
+    "so": {
+        "message": "Hūmārie",
+        "description": ""
+    },
+    "sq": {
+        "message": "Arapeinia",
+        "description": ""
+    },
+    "sr": {
+        "message": "Herepia",
+        "description": ""
+    },
+    "st": {
+        "message": "Hehoto",
+        "description": ""
+    },
+    "su": {
+        "message": "Hutanihi",
+        "description": ""
+    },
+    "sv": {
+        "message": "Huitene",
+        "description": ""
+    },
+    "sw": {
+        "message": "Warehiri",
+        "description": ""
+    },
+    "ta": {
+        "message": "Tamiro",
+        "description": ""
+    },
+    "te": {
+        "message": "Teruku",
+        "description": ""
+    },
+    "tg": {
+        "message": "Takiri",
+        "description": ""
+    },
+    "th": {
+        "message": "Tai",
+        "description": ""
+    },
+    "tl": {
+        "message": "Whiripino",
+        "description": ""
+    },
+    "tr": {
+        "message": "Korukoru",
+        "description": ""
+    },
+    "uk": {
+        "message": "Ūkareiana",
+        "description": ""
+    },
+    "ur": {
+        "message": "Ūru",
+        "description": ""
+    },
+    "uz": {
+        "message": "Uhipeke",
+        "description": ""
+    },
+    "vi": {
+        "message": "Whitināmu",
+        "description": ""
+    },
+    "xh": {
+        "message": "Kohōta",
+        "description": ""
+    },
+    "yi": {
+        "message": "Iatihi",
+        "description": ""
+    },
+    "yo": {
+        "message": "Iorupa",
+        "description": ""
+    },
+    "zh-cn": {
+        "message": "Hainamana",
+        "description": ""
+    },
+    "zh-tw": {
+        "message": "Haina (Onamata)",
+        "description": ""
+    },
+    "zu": {
+        "message": "Huru",
+        "description": ""
+    }
+}
